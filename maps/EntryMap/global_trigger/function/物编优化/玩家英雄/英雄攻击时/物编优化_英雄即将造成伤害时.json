@@ -1,72 +1,23 @@
 {
     "action": [
         {
-            "action_type": "IF_THEN_ELSE", 
+            "action_type": "STORAGE_BOX", 
             "args_list": [
                 {
                     "arg_type": 100021, 
-                    "args_list": [
-                        {
-                            "args_list": [
-                                {
-                                    "arg_type": 100014, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "ABILITY", 
-                                                "即将造成伤害的技能", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": 2
-                                }, 
-                                {
-                                    "arg_type": 100035, 
-                                    "args_list": [
-                                        "!="
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100014, 
-                                    "args_list": [], 
-                                    "sub_type": "NONE_ABILITY"
-                                }
-                            ], 
-                            "condition_type": "ABILITY_ENTITY_COMPARE", 
-                            "element_id": 195661829000145, 
-                            "enable": true
-                        }
-                    ], 
+                    "args_list": [], 
                     "sub_type": 1
                 }, 
                 {
                     "arg_type": 100022, 
                     "args_list": [
                         {
-                            "action_type": "SET_VARIABLE", 
+                            "action_type": "IF_THEN_ELSE", 
                             "args_list": [
                                 {
-                                    "arg_type": 100030, 
+                                    "arg_type": 100021, 
                                     "args_list": [
                                         {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "FLOAT", 
-                                                "提取技能暴击概率", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100000, 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100011, 
                                             "args_list": [
                                                 {
                                                     "arg_type": 100014, 
@@ -83,218 +34,33 @@
                                                     "sub_type": 2
                                                 }, 
                                                 {
-                                                    "arg_type": 100003, 
+                                                    "arg_type": 100035, 
                                                     "args_list": [
-                                                        "武功数值表格"
+                                                        "!="
                                                     ], 
                                                     "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100014, 
+                                                    "args_list": [], 
+                                                    "sub_type": "NONE_ABILITY"
                                                 }
                                             ], 
-                                            "sub_type": "GET_TABLE_KV"
-                                        }, 
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                "暴击率"
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "sub_type": "GET_FLOAT_TABLE_VAR_1D"
-                                }
-                            ], 
-                            "bp": false, 
-                            "element_id": 195661829000056, 
-                            "enable": true
-                        }, 
-                        {
-                            "action_type": "SET_VARIABLE", 
-                            "args_list": [
-                                {
-                                    "arg_type": 100030, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "FLOAT", 
-                                                "提取技能暴击成长值", 
-                                                "local"
-                                            ]
+                                            "condition_type": "ABILITY_ENTITY_COMPARE", 
+                                            "element_id": 195661829000145, 
+                                            "enable": true
                                         }
                                     ], 
                                     "sub_type": 1
                                 }, 
                                 {
-                                    "arg_type": 100000, 
+                                    "arg_type": 100022, 
                                     "args_list": [
                                         {
-                                            "arg_type": 100000, 
+                                            "action_type": "SET_VARIABLE", 
                                             "args_list": [
                                                 {
-                                                    "arg_type": 100011, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100014, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "ABILITY", 
-                                                                        "即将造成伤害的技能", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 2
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                "武功数值表格"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_TABLE_KV"
-                                                }, 
-                                                {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        "暴击率每级成长"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "sub_type": "GET_FLOAT_TABLE_VAR_1D"
-                                        }, 
-                                        {
-                                            "arg_type": 100017, 
-                                            "args_list": [
-                                                "*"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100002, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100014, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "ABILITY", 
-                                                                        "即将造成伤害的技能", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 2
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100079, 
-                                                            "args_list": [
-                                                                "ability_level"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_ABILITY_INT_ATTR"
-                                                }, 
-                                                {
-                                                    "arg_type": 100017, 
-                                                    "args_list": [
-                                                        "-"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100002, 
-                                                    "args_list": [
-                                                        1
-                                                    ], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "sub_type": "ARITHMETIC_OPERATION"
-                                        }
-                                    ], 
-                                    "sub_type": "ARITHMETIC_OPERATION"
-                                }
-                            ], 
-                            "bp": false, 
-                            "element_id": 195661829000063, 
-                            "enable": true
-                        }, 
-                        {
-                            "action_type": "SET_VARIABLE", 
-                            "args_list": [
-                                {
-                                    "arg_type": 100030, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "FLOAT", 
-                                                "提取技能计算暴击概率", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100000, 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100006, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "UNIT_ENTITY", 
-                                                                "即将进行攻击的英雄单位", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 11
-                                                }, 
-                                                {
-                                                    "arg_type": 100301, 
-                                                    "args_list": [
-                                                        "ATTR_RESULT"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100042, 
-                                                    "args_list": [
-                                                        "critical_chance"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "sub_type": "GET_UNIT_ATTR"
-                                        }, 
-                                        {
-                                            "arg_type": 100017, 
-                                            "args_list": [
-                                                "+"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100000, 
+                                                    "arg_type": 100030, 
                                                     "args_list": [
                                                         {
                                                             "__tuple__": true, 
@@ -305,17 +71,58 @@
                                                             ]
                                                         }
                                                     ], 
-                                                    "sub_type": 2
-                                                }, 
-                                                {
-                                                    "arg_type": 100017, 
-                                                    "args_list": [
-                                                        "+"
-                                                    ], 
                                                     "sub_type": 1
                                                 }, 
                                                 {
                                                     "arg_type": 100000, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100011, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100014, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "ABILITY", 
+                                                                                "即将造成伤害的技能", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 2
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        "武功数值表格"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_TABLE_KV"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "暴击率"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "GET_FLOAT_TABLE_VAR_1D"
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 195661829000056, 
+                                            "enable": true
+                                        }, 
+                                        {
+                                            "action_type": "SET_VARIABLE", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100030, 
                                                     "args_list": [
                                                         {
                                                             "__tuple__": true, 
@@ -326,46 +133,113 @@
                                                             ]
                                                         }
                                                     ], 
-                                                    "sub_type": 2
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100000, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100000, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100011, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100014, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "ABILITY", 
+                                                                                        "即将造成伤害的技能", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 2
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100003, 
+                                                                            "args_list": [
+                                                                                "武功数值表格"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_TABLE_KV"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        "暴击率每级成长"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_FLOAT_TABLE_VAR_1D"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100017, 
+                                                            "args_list": [
+                                                                "*"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100000, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100014, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "ABILITY", 
+                                                                                        "即将造成伤害的技能", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 2
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100079, 
+                                                                            "args_list": [
+                                                                                "ability_level"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_ABILITY_INT_ATTR"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100017, 
+                                                                    "args_list": [
+                                                                        "-"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        1
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "ARITHMETIC_OPERATION"
+                                                        }
+                                                    ], 
+                                                    "sub_type": "ARITHMETIC_OPERATION"
                                                 }
                                             ], 
-                                            "sub_type": "ARITHMETIC_OPERATION"
-                                        }
-                                    ], 
-                                    "sub_type": "ARITHMETIC_OPERATION"
-                                }
-                            ], 
-                            "bp": false, 
-                            "element_id": 195661829000120, 
-                            "enable": true
-                        }, 
-                        {
-                            "action_type": "PROBABILITY_DO_ACTION", 
-                            "args_list": [
-                                {
-                                    "arg_type": 100000, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "FLOAT", 
-                                                "提取技能计算暴击概率", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": 2
-                                }, 
-                                {
-                                    "arg_type": 100001, 
-                                    "args_list": [
-                                        true
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100022, 
-                                    "args_list": [
+                                            "bp": false, 
+                                            "element_id": 195661829000063, 
+                                            "enable": true
+                                        }, 
                                         {
                                             "action_type": "SET_VARIABLE", 
                                             "args_list": [
@@ -375,11 +249,190 @@
                                                         {
                                                             "__tuple__": true, 
                                                             "items": [
-                                                                "BOOLEAN", 
-                                                                "是否本次攻击产生暴击", 
+                                                                "FLOAT", 
+                                                                "提取技能计算暴击概率", 
                                                                 "local"
                                                             ]
                                                         }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100000, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100000, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100006, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "UNIT_ENTITY", 
+                                                                                "即将进行攻击的英雄单位", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 11
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100301, 
+                                                                    "args_list": [
+                                                                        "ATTR_RESULT"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100042, 
+                                                                    "args_list": [
+                                                                        "critical_chance"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_UNIT_ATTR"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100017, 
+                                                            "args_list": [
+                                                                "+"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100000, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100000, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "FLOAT", 
+                                                                                "提取技能暴击概率", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 2
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100017, 
+                                                                    "args_list": [
+                                                                        "+"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100000, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "FLOAT", 
+                                                                                "提取技能暴击成长值", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 2
+                                                                }
+                                                            ], 
+                                                            "sub_type": "ARITHMETIC_OPERATION"
+                                                        }
+                                                    ], 
+                                                    "sub_type": "ARITHMETIC_OPERATION"
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 195661829000120, 
+                                            "enable": true
+                                        }, 
+                                        {
+                                            "action_type": "PROBABILITY_DO_ACTION", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100000, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "FLOAT", 
+                                                                "提取技能计算暴击概率", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 2
+                                                }, 
+                                                {
+                                                    "arg_type": 100001, 
+                                                    "args_list": [
+                                                        true
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100022, 
+                                                    "args_list": [
+                                                        {
+                                                            "action_type": "SET_VARIABLE", 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100030, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "BOOLEAN", 
+                                                                                "是否本次攻击产生暴击", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100001, 
+                                                                    "args_list": [
+                                                                        true
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "bp": false, 
+                                                            "element_id": 1412006947000105, 
+                                                            "enable": true
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100022, 
+                                                    "args_list": [], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 195661829000044, 
+                                            "enable": true, 
+                                            "fake_op": []
+                                        }
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100022, 
+                                    "args_list": [
+                                        {
+                                            "action_type": "PROBABILITY_DO_ACTION", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100000, 
+                                                    "args_list": [
+                                                        3.0
                                                     ], 
                                                     "sub_type": 1
                                                 }, 
@@ -389,105 +442,83 @@
                                                         true
                                                     ], 
                                                     "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100022, 
+                                                    "args_list": [
+                                                        {
+                                                            "action_type": "SET_VARIABLE", 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100030, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "BOOLEAN", 
+                                                                                "是否本次攻击产生暴击", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100001, 
+                                                                    "args_list": [
+                                                                        true
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "bp": false, 
+                                                            "element_id": 1412006947000139, 
+                                                            "enable": true
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100022, 
+                                                    "args_list": [], 
+                                                    "sub_type": 1
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 1412006947000105, 
-                                            "enable": true
+                                            "element_id": 1412006947000122, 
+                                            "enable": true, 
+                                            "fake_op": []
                                         }
                                     ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100022, 
-                                    "args_list": [], 
                                     "sub_type": 1
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 195661829000044, 
-                            "enable": true, 
-                            "fake_op": []
+                            "element_id": 195661829000130, 
+                            "enable": false, 
+                            "fake_op": [
+                                2
+                            ]
                         }
                     ], 
                     "sub_type": 1
                 }, 
                 {
                     "arg_type": 100022, 
+                    "args_list": [], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100003, 
                     "args_list": [
-                        {
-                            "action_type": "PROBABILITY_DO_ACTION", 
-                            "args_list": [
-                                {
-                                    "arg_type": 100000, 
-                                    "args_list": [
-                                        3.0
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100001, 
-                                    "args_list": [
-                                        true
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100022, 
-                                    "args_list": [
-                                        {
-                                            "action_type": "SET_VARIABLE", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100030, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "BOOLEAN", 
-                                                                "是否本次攻击产生暴击", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100001, 
-                                                    "args_list": [
-                                                        true
-                                                    ], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "element_id": 1412006947000139, 
-                                            "enable": true
-                                        }
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100022, 
-                                    "args_list": [], 
-                                    "sub_type": 1
-                                }
-                            ], 
-                            "bp": false, 
-                            "element_id": 1412006947000122, 
-                            "enable": true, 
-                            "fake_op": []
-                        }
+                        "旧的武功判定暴击率"
                     ], 
                     "sub_type": 1
                 }
             ], 
             "bp": false, 
-            "element_id": 195661829000130, 
-            "enable": true, 
-            "fake_op": [
-                2
-            ]
+            "element_id": 179556536000148, 
+            "enable": true
         }, 
         {
             "action_type": 400342, 
