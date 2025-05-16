@@ -6,14 +6,11 @@
                 {
                     "arg_type": 100030, 
                     "args_list": [
-                        {
-                            "__tuple__": true, 
-                            "items": [
-                                "UI_COMP", 
-                                "提示展示列表", 
-                                "local"
-                            ]
-                        }
+                        [
+                            "UI_COMP", 
+                            "UI_提示展示列表", 
+                            "local"
+                        ]
                     ], 
                     "sub_type": 1
                 }, 
@@ -29,10 +26,87 @@
             "element_id": 960094447000002, 
             "enable": true
         }, 
-        775545072, 
-        121233649, 
-        1919811827, 
-        641327346
+        {
+            "action_type": "SET_VARIABLE", 
+            "args_list": [
+                {
+                    "arg_type": 100030, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "UI_COMP", 
+                                "UI_清除提示按钮", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100070, 
+                    "args_list": [
+                        "4fd004c5-4075-4797-a188-f96f38103291"
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 960094447000005, 
+            "enable": true
+        }, 
+        {
+            "action_type": "CREATE_UI_COMP_EVENT_EX_EX", 
+            "args_list": [
+                {
+                    "arg_type": 100070, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "UI_COMP", 
+                                "UI_清除提示按钮", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": "VARIABLE"
+                }, 
+                {
+                    "arg_type": 100072, 
+                    "args_list": [
+                        30
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        "清除提示点击事件"
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 960094447000029, 
+            "enable": true, 
+            "op_arg": [
+                null, 
+                {
+                    "arg_type": 100001, 
+                    "args_list": [
+                        false
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "op_arg_enable": [
+                false, 
+                false
+            ]
+        }, 
+        641327346, 
+        259748120
     ], 
     "call_enabled": true, 
     "condition": [], 
@@ -48,99 +122,54 @@
     "group_id": 0, 
     "p_trigger_id": null, 
     "sub_trigger": {
-        "121233649": {
+        "259748120": {
             "action": [
                 {
-                    "action_type": "SET_VARIABLE", 
+                    "action_type": "ITER_UI_COMP_DO", 
                     "args_list": [
-                        {
-                            "arg_type": 1001558, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "UI_PREFAB_INSTANCE", 
-                                        "UI_通用提示元件"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": "VARIABLE"
-                        }, 
-                        {
-                            "arg_type": 1001558, 
-                            "args_list": [
-                                {
-                                    "arg_type": 100025, 
-                                    "args_list": [], 
-                                    "sub_type": "TRIGGER_PLAYER"
-                                }, 
-                                {
-                                    "arg_type": 1001556, 
-                                    "args_list": [
-                                        "e4a38ea4-466a-457b-96c9-3a524c126575"
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100070, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "UI_COMP", 
-                                                "提示展示列表", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": "VARIABLE"
-                                }
-                            ], 
-                            "sub_type": "CREATE_UI_PREFAB_INSTANCE"
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 121233649000002, 
-                    "enable": true
-                }, 
-                {
-                    "action_type": "SEND_CUSTOM_EVENT", 
-                    "args_list": [
-                        {
-                            "arg_type": 100238, 
-                            "args_list": [
-                                1826902038
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 1001558, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "UI_PREFAB_INSTANCE", 
-                                        "UI_通用提示元件"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": "VARIABLE"
-                        }, 
                         {
                             "arg_type": 100025, 
                             "args_list": [], 
                             "sub_type": "TRIGGER_PLAYER"
                         }, 
                         {
-                            "arg_type": 100003, 
+                            "arg_type": 100070, 
                             "args_list": [
-                                "提示测试002，提示完成~"
+                                [
+                                    "UI_COMP", 
+                                    "UI_提示展示列表", 
+                                    "local"
+                                ]
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "DEL_UI_COMP", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [], 
+                                            "sub_type": "TRIGGER_PLAYER"
+                                        }, 
+                                        {
+                                            "arg_type": 100070, 
+                                            "args_list": [], 
+                                            "sub_type": "FOR_EACH_UI_COMP"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 259748120000011, 
+                                    "enable": true
+                                }
                             ], 
                             "sub_type": 1
                         }
                     ], 
                     "bp": false, 
-                    "element_id": 121233649000003, 
+                    "element_id": 259748120000018, 
                     "enable": true
                 }
             ], 
@@ -151,23 +180,29 @@
                 {
                     "args_list": [
                         {
-                            "arg_type": 200220, 
+                            "arg_type": 100067, 
                             "args_list": [
-                                3
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "清除提示点击事件"
+                                    ], 
+                                    "sub_type": 1
+                                }
                             ], 
-                            "sub_type": 1
+                            "sub_type": "STR_TO_UI_EVENT"
                         }
                     ], 
-                    "element_id": 121233649000001, 
+                    "element_id": 259748120000002, 
                     "enable": true, 
-                    "event_type": "KEYBOARD_KEY_DOWN_EVENT"
+                    "event_type": "TRIGGER_COMPONENT_EVENT"
                 }
             ], 
             "group_id": 0, 
             "is_conf": true, 
             "p_trigger_id": 960094447, 
-            "trigger_id": 121233649, 
-            "trigger_name": "提示测试_2", 
+            "trigger_id": 259748120, 
+            "trigger_name": "清除提示", 
             "valid": true, 
             "var_data": [
                 {}, 
@@ -177,41 +212,6 @@
         }, 
         "641327346": {
             "action": [
-                {
-                    "action_type": "DISPLAY_INFO_TO_PLAYER", 
-                    "args_list": [
-                        {
-                            "arg_type": 100025, 
-                            "args_list": [
-                                {
-                                    "arg_type": 100240, 
-                                    "args_list": [
-                                        "玩家"
-                                    ], 
-                                    "sub_type": 1
-                                }
-                            ], 
-                            "sub_type": "GET_CUS_EVENT_PARAM"
-                        }, 
-                        {
-                            "arg_type": 100003, 
-                            "args_list": [
-                                "发送1次提示！来源：测试"
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100001, 
-                            "args_list": [
-                                false
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 641327346000010, 
-                    "enable": true
-                }, 
                 {
                     "action_type": "SET_VARIABLE", 
                     "args_list": [
@@ -233,14 +233,34 @@
                             "arg_type": 1001558, 
                             "args_list": [
                                 {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "UI_PREFAB_INSTANCE", 
-                                        "UI_通用提示元件"
-                                    ]
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100240, 
+                                            "args_list": [
+                                                "玩家"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "sub_type": "GET_CUS_EVENT_PARAM"
+                                }, 
+                                {
+                                    "arg_type": 1001556, 
+                                    "args_list": [
+                                        "e4a38ea4-466a-457b-96c9-3a524c126575"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100070, 
+                                    "args_list": [
+                                        "1948d7a7-9a1d-44ae-b122-a00b8057ddac"
+                                    ], 
+                                    "sub_type": 1
                                 }
                             ], 
-                            "sub_type": "VARIABLE"
+                            "sub_type": "CREATE_UI_PREFAB_INSTANCE"
                         }
                     ], 
                     "bp": false, 
@@ -492,253 +512,6 @@
                 {}, 
                 []
             ]
-        }, 
-        "775545072": {
-            "action": [
-                {
-                    "action_type": "SET_VARIABLE", 
-                    "args_list": [
-                        {
-                            "arg_type": 1001558, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "UI_PREFAB_INSTANCE", 
-                                        "UI_通用提示元件"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": "VARIABLE"
-                        }, 
-                        {
-                            "arg_type": 1001558, 
-                            "args_list": [
-                                {
-                                    "arg_type": 100025, 
-                                    "args_list": [], 
-                                    "sub_type": "TRIGGER_PLAYER"
-                                }, 
-                                {
-                                    "arg_type": 1001556, 
-                                    "args_list": [
-                                        "e4a38ea4-466a-457b-96c9-3a524c126575"
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100070, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "UI_COMP", 
-                                                "提示展示列表", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": "VARIABLE"
-                                }
-                            ], 
-                            "sub_type": "CREATE_UI_PREFAB_INSTANCE"
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 775545072000002, 
-                    "enable": true
-                }, 
-                {
-                    "action_type": "SEND_CUSTOM_EVENT", 
-                    "args_list": [
-                        {
-                            "arg_type": 100238, 
-                            "args_list": [
-                                1826902038
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 1001558, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "UI_PREFAB_INSTANCE", 
-                                        "UI_通用提示元件"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": "VARIABLE"
-                        }, 
-                        {
-                            "arg_type": 100025, 
-                            "args_list": [], 
-                            "sub_type": "TRIGGER_PLAYER"
-                        }, 
-                        {
-                            "arg_type": 100003, 
-                            "args_list": [
-                                "提示测试001，提示完成~"
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 775545072000003, 
-                    "enable": true
-                }
-            ], 
-            "call_enabled": true, 
-            "condition": [], 
-            "enabled": false, 
-            "event": [
-                {
-                    "args_list": [
-                        {
-                            "arg_type": 200220, 
-                            "args_list": [
-                                2
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "element_id": 775545072000001, 
-                    "enable": true, 
-                    "event_type": "KEYBOARD_KEY_DOWN_EVENT"
-                }
-            ], 
-            "group_id": 0, 
-            "is_conf": true, 
-            "p_trigger_id": 960094447, 
-            "trigger_id": 775545072, 
-            "trigger_name": "提示测试", 
-            "valid": true, 
-            "var_data": [
-                {}, 
-                {}, 
-                []
-            ]
-        }, 
-        "1919811827": {
-            "action": [
-                {
-                    "action_type": "SET_VARIABLE", 
-                    "args_list": [
-                        {
-                            "arg_type": 1001558, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "UI_PREFAB_INSTANCE", 
-                                        "UI_通用提示元件"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": "VARIABLE"
-                        }, 
-                        {
-                            "arg_type": 1001558, 
-                            "args_list": [
-                                {
-                                    "arg_type": 100025, 
-                                    "args_list": [], 
-                                    "sub_type": "TRIGGER_PLAYER"
-                                }, 
-                                {
-                                    "arg_type": 1001556, 
-                                    "args_list": [
-                                        "e4a38ea4-466a-457b-96c9-3a524c126575"
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100070, 
-                                    "args_list": [
-                                        "1948d7a7-9a1d-44ae-b122-a00b8057ddac"
-                                    ], 
-                                    "sub_type": 1
-                                }
-                            ], 
-                            "sub_type": "CREATE_UI_PREFAB_INSTANCE"
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 1919811827000002, 
-                    "enable": true
-                }, 
-                {
-                    "action_type": "SEND_CUSTOM_EVENT", 
-                    "args_list": [
-                        {
-                            "arg_type": 100238, 
-                            "args_list": [
-                                1826902038
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 1001558, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "UI_PREFAB_INSTANCE", 
-                                        "UI_通用提示元件"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": "VARIABLE"
-                        }, 
-                        {
-                            "arg_type": 100025, 
-                            "args_list": [], 
-                            "sub_type": "TRIGGER_PLAYER"
-                        }, 
-                        {
-                            "arg_type": 100003, 
-                            "args_list": [
-                                "提示测试003，提示完成~"
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 1919811827000003, 
-                    "enable": true
-                }
-            ], 
-            "call_enabled": true, 
-            "condition": [], 
-            "enabled": false, 
-            "event": [
-                {
-                    "args_list": [
-                        {
-                            "arg_type": 200220, 
-                            "args_list": [
-                                4
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "element_id": 1919811827000001, 
-                    "enable": true, 
-                    "event_type": "KEYBOARD_KEY_DOWN_EVENT"
-                }
-            ], 
-            "group_id": 0, 
-            "is_conf": true, 
-            "p_trigger_id": 960094447, 
-            "trigger_id": 1919811827, 
-            "trigger_name": "提示测试_3", 
-            "valid": true, 
-            "var_data": [
-                {}, 
-                {}, 
-                []
-            ]
         }
     }, 
     "trigger_id": 960094447, 
@@ -748,19 +521,22 @@
         {
             "NEW_TIMER": {}, 
             "UI_COMP": {
-                "提示展示列表": ""
+                "UI_提示展示列表": "", 
+                "UI_清除提示按钮": ""
             }, 
             "UI_PREFAB_INSTANCE": {
                 "UI_通用提示": ""
             }
         }, 
         {
-            "UI_通用提示": 0, 
-            "提示展示列表": 0
+            "UI_提示展示列表": 0, 
+            "UI_清除提示按钮": 0, 
+            "UI_通用提示": 0
         }, 
         [
             "UI_通用提示", 
-            "提示展示列表"
+            "UI_提示展示列表", 
+            "UI_清除提示按钮"
         ]
     ]
 }
