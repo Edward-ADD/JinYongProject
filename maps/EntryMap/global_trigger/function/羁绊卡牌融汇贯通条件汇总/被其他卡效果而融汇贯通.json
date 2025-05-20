@@ -1,6 +1,75 @@
 {
     "action": [
         {
+            "action_type": "SET_VARIABLE", 
+            "args_list": [
+                {
+                    "arg_type": 100030, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "ABILITY_NAME", 
+                                "提取父类技能类型", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100039, 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                "1ec1d4a2-4312-4cbc-bed7-f1a9382d0d53"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100014, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "ABILITY", 
+                                                "传入流派技能", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "卡牌ID值"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_INTEGER_KV"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "父级融汇贯通技能"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "sub_type": "GET_ABILITY_NAME_TABLE_VAR_ND"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 895414563000449, 
+            "enable": true
+        }, 
+        {
             "action_type": "IF_THEN_ELSE", 
             "args_list": [
                 {
@@ -26,28 +95,15 @@
                                     "arg_type": 100039, 
                                     "args_list": [
                                         {
-                                            "arg_type": 100014, 
-                                            "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "ABILITY", 
-                                                        "传入流派技能", 
-                                                        "local"
-                                                    ]
-                                                }
-                                            ], 
-                                            "sub_type": 2
-                                        }, 
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                "父级吞噬技能"
-                                            ], 
-                                            "sub_type": 1
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "ABILITY_NAME", 
+                                                "提取父类技能类型", 
+                                                "local"
+                                            ]
                                         }
                                     ], 
-                                    "sub_type": "GET_ABILITY_NAME_KV"
+                                    "sub_type": "VARIABLE"
                                 }
                             ], 
                             "condition_type": "CHECK_HAS_ABILITY_TYPE", 
@@ -144,28 +200,15 @@
                                                                     "arg_type": 100039, 
                                                                     "args_list": [
                                                                         {
-                                                                            "arg_type": 100014, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "__tuple__": true, 
-                                                                                    "items": [
-                                                                                        "ABILITY", 
-                                                                                        "传入流派技能", 
-                                                                                        "local"
-                                                                                    ]
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": 2
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100003, 
-                                                                            "args_list": [
-                                                                                "父级吞噬技能"
-                                                                            ], 
-                                                                            "sub_type": 1
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "ABILITY_NAME", 
+                                                                                "提取父类技能类型", 
+                                                                                "local"
+                                                                            ]
                                                                         }
                                                                     ], 
-                                                                    "sub_type": "GET_ABILITY_NAME_KV"
+                                                                    "sub_type": "VARIABLE"
                                                                 }
                                                             ], 
                                                             "condition_type": "ABILITY_COMPARE", 
@@ -329,28 +372,15 @@
                                                                                     "arg_type": 100039, 
                                                                                     "args_list": [
                                                                                         {
-                                                                                            "arg_type": 100014, 
-                                                                                            "args_list": [
-                                                                                                {
-                                                                                                    "__tuple__": true, 
-                                                                                                    "items": [
-                                                                                                        "ABILITY", 
-                                                                                                        "传入流派技能", 
-                                                                                                        "local"
-                                                                                                    ]
-                                                                                                }
-                                                                                            ], 
-                                                                                            "sub_type": 2
-                                                                                        }, 
-                                                                                        {
-                                                                                            "arg_type": 100003, 
-                                                                                            "args_list": [
-                                                                                                "父级吞噬技能"
-                                                                                            ], 
-                                                                                            "sub_type": 1
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "ABILITY_NAME", 
+                                                                                                "提取父类技能类型", 
+                                                                                                "local"
+                                                                                            ]
                                                                                         }
                                                                                     ], 
-                                                                                    "sub_type": "GET_ABILITY_NAME_KV"
+                                                                                    "sub_type": "VARIABLE"
                                                                                 }
                                                                             ], 
                                                                             "condition_type": "ABILITY_COMPARE", 
@@ -435,29 +465,74 @@
                                         {
                                             "args_list": [
                                                 {
-                                                    "arg_type": 100014, 
+                                                    "arg_type": 100011, 
                                                     "args_list": [
                                                         {
                                                             "__tuple__": true, 
                                                             "items": [
-                                                                "ABILITY", 
-                                                                "提取父类技能", 
-                                                                "local"
+                                                                "TABLE", 
+                                                                "全局表_记录杀敌数技能表"
                                                             ]
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100025, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100006, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "UNIT_ENTITY", 
+                                                                                        "判定吞噬的单位", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 11
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "OWNER_PLAYER"
+                                                                }
+                                                            ], 
+                                                            "sub_type": "PLAYER_ID_NUMBER"
                                                         }
                                                     ], 
-                                                    "sub_type": 2
+                                                    "sub_type": "VARIABLE"
                                                 }, 
                                                 {
-                                                    "arg_type": 100003, 
+                                                    "arg_type": 100002, 
                                                     "args_list": [
-                                                        "融会贯通效果4计数"
+                                                        {
+                                                            "arg_type": 100014, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "ABILITY", 
+                                                                        "提取父类技能", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 2
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "卡牌ID值"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
                                                     ], 
-                                                    "sub_type": 1
+                                                    "sub_type": "GET_INTEGER_KV"
                                                 }
                                             ], 
-                                            "condition_type": "HAS_KV_ANY", 
-                                            "element_id": 895414563000037, 
+                                            "condition_type": "TABLE_HAS_KEY", 
+                                            "element_id": 895414563000520, 
                                             "enable": true
                                         }
                                     ], 
@@ -478,18 +553,70 @@
                                                                     "arg_type": 100002, 
                                                                     "args_list": [
                                                                         {
-                                                                            "arg_type": 100014, 
+                                                                            "arg_type": 100011, 
                                                                             "args_list": [
                                                                                 {
                                                                                     "__tuple__": true, 
                                                                                     "items": [
-                                                                                        "ABILITY", 
-                                                                                        "提取父类技能", 
-                                                                                        "local"
+                                                                                        "TABLE", 
+                                                                                        "全局表_记录杀敌数技能表"
                                                                                     ]
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100002, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100025, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "arg_type": 100006, 
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "__tuple__": true, 
+                                                                                                            "items": [
+                                                                                                                "UNIT_ENTITY", 
+                                                                                                                "判定吞噬的单位", 
+                                                                                                                "local"
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "sub_type": 11
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": "OWNER_PLAYER"
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "PLAYER_ID_NUMBER"
                                                                                 }
                                                                             ], 
-                                                                            "sub_type": 2
+                                                                            "sub_type": "VARIABLE"
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100002, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100014, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "ABILITY", 
+                                                                                                "提取父类技能", 
+                                                                                                "local"
+                                                                                            ]
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": 2
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100003, 
+                                                                                    "args_list": [
+                                                                                        "卡牌ID值"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "GET_INTEGER_KV"
                                                                         }, 
                                                                         {
                                                                             "arg_type": 100003, 
@@ -499,7 +626,7 @@
                                                                             "sub_type": 1
                                                                         }
                                                                     ], 
-                                                                    "sub_type": "GET_INTEGER_KV"
+                                                                    "sub_type": "GET_INTEGER_TABLE_VAR_ND"
                                                                 }, 
                                                                 {
                                                                     "arg_type": 100015, 
@@ -635,21 +762,73 @@
                                                             "enable": true
                                                         }, 
                                                         {
-                                                            "action_type": "SET_ENTITY_KV", 
+                                                            "action_type": "SET_TABLE_VALUE_ND", 
                                                             "args_list": [
                                                                 {
-                                                                    "arg_type": 100014, 
+                                                                    "arg_type": 100011, 
                                                                     "args_list": [
                                                                         {
                                                                             "__tuple__": true, 
                                                                             "items": [
-                                                                                "ABILITY", 
-                                                                                "提取父类技能", 
-                                                                                "local"
+                                                                                "TABLE", 
+                                                                                "全局表_记录杀敌数技能表"
                                                                             ]
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100002, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100025, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100006, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "__tuple__": true, 
+                                                                                                    "items": [
+                                                                                                        "UNIT_ENTITY", 
+                                                                                                        "判定吞噬的单位", 
+                                                                                                        "local"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": 11
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "OWNER_PLAYER"
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "PLAYER_ID_NUMBER"
                                                                         }
                                                                     ], 
-                                                                    "sub_type": 2
+                                                                    "sub_type": "VARIABLE"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100014, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "ABILITY", 
+                                                                                        "提取父类技能", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 2
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100003, 
+                                                                            "args_list": [
+                                                                                "卡牌ID值"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_INTEGER_KV"
                                                                 }, 
                                                                 {
                                                                     "arg_type": 100003, 
@@ -665,18 +844,70 @@
                                                                             "arg_type": 100002, 
                                                                             "args_list": [
                                                                                 {
-                                                                                    "arg_type": 100014, 
+                                                                                    "arg_type": 100011, 
                                                                                     "args_list": [
                                                                                         {
                                                                                             "__tuple__": true, 
                                                                                             "items": [
-                                                                                                "ABILITY", 
-                                                                                                "提取父类技能", 
-                                                                                                "local"
+                                                                                                "TABLE", 
+                                                                                                "全局表_记录杀敌数技能表"
                                                                                             ]
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100002, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "arg_type": 100025, 
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100006, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "__tuple__": true, 
+                                                                                                                    "items": [
+                                                                                                                        "UNIT_ENTITY", 
+                                                                                                                        "判定吞噬的单位", 
+                                                                                                                        "local"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": 11
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "sub_type": "OWNER_PLAYER"
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": "PLAYER_ID_NUMBER"
                                                                                         }
                                                                                     ], 
-                                                                                    "sub_type": 2
+                                                                                    "sub_type": "VARIABLE"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100002, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100014, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "__tuple__": true, 
+                                                                                                    "items": [
+                                                                                                        "ABILITY", 
+                                                                                                        "提取父类技能", 
+                                                                                                        "local"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": 2
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100003, 
+                                                                                            "args_list": [
+                                                                                                "卡牌ID值"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "GET_INTEGER_KV"
                                                                                 }, 
                                                                                 {
                                                                                     "arg_type": 100003, 
@@ -686,24 +917,10 @@
                                                                                     "sub_type": 1
                                                                                 }
                                                                             ], 
-                                                                            "sub_type": "GET_INTEGER_KV"
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100016, 
-                                                                            "args_list": [
-                                                                                "-"
-                                                                            ], 
-                                                                            "sub_type": 1
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100002, 
-                                                                            "args_list": [
-                                                                                1
-                                                                            ], 
-                                                                            "sub_type": 1
+                                                                            "sub_type": "GET_INTEGER_TABLE_VAR_ND"
                                                                         }
                                                                     ], 
-                                                                    "sub_type": "MATH_OPERATION"
+                                                                    "sub_type": "INT_PLUS_ONE"
                                                                 }
                                                             ], 
                                                             "bp": false, 
@@ -937,6 +1154,9 @@
                 "传入流派技能": null, 
                 "提取父类技能": null
             }, 
+            "ABILITY_NAME": {
+                "提取父类技能类型": 0
+            }, 
             "ABILITY_TYPE": {}, 
             "NEW_TIMER": {}, 
             "UNIT_ENTITY": {
@@ -946,10 +1166,12 @@
         {
             "传入流派技能": 0, 
             "判定吞噬的单位": 0, 
-            "提取父类技能": 0
+            "提取父类技能": 0, 
+            "提取父类技能类型": 0
         }, 
         [
             "提取父类技能", 
+            "提取父类技能类型", 
             "传入流派技能", 
             "判定吞噬的单位"
         ]

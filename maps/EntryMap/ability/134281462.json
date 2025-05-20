@@ -58,6 +58,21 @@
             "variable_length_dict": {
                 "\u63d0\u53d6\u5b58\u6863\u7684\u82f1\u96c4\u7c7b\u578b": 0
             }
+        }, 
+        "1601495042": {
+            "variable_dict": {
+                "FLOAT": {
+                    "\u63d0\u53d6\u6b66\u529f\u8868\u683c\u653b\u51fb\u8303\u56f4": 0.0, 
+                    "\u63d0\u53d6\u6b66\u529f\u8868\u683c\u653b\u51fb\u8303\u56f4\u6210\u957f": 0.0, 
+                    "\u63d0\u53d6\u89d2\u8272\u7684\u5c5e\u6027": 0.0
+                }, 
+                "NEW_TIMER": {}
+            }, 
+            "variable_length_dict": {
+                "\u63d0\u53d6\u6b66\u529f\u8868\u683c\u653b\u51fb\u8303\u56f4": 0, 
+                "\u63d0\u53d6\u6b66\u529f\u8868\u683c\u653b\u51fb\u8303\u56f4\u6210\u957f": 0, 
+                "\u63d0\u53d6\u89d2\u8272\u7684\u5c5e\u6027": 0
+            }
         }
     }, 
     "trigger_dict": {
@@ -2361,7 +2376,7 @@
                                                                                         {
                                                                                             "arg_type": 100066, 
                                                                                             "args_list": [
-                                                                                                101688
+                                                                                                134267205
                                                                                             ], 
                                                                                             "sub_type": 1
                                                                                         }, 
@@ -2493,7 +2508,7 @@
                                                                                         {
                                                                                             "arg_type": 100066, 
                                                                                             "args_list": [
-                                                                                                101688
+                                                                                                134267205
                                                                                             ], 
                                                                                             "sub_type": 1
                                                                                         }, 
@@ -4280,35 +4295,6 @@
                     ], 
                     "bp": false, 
                     "element_id": 887723488000018, 
-                    "enable": false
-                }, 
-                {
-                    "action_type": "SET_VARIABLE", 
-                    "args_list": [
-                        {
-                            "arg_type": 100030, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "INTEGER", 
-                                        "\u63d0\u53d6\u5b58\u6863\u5927\u62db\u7b49\u7ea7", 
-                                        "actor"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100002, 
-                            "args_list": [
-                                1
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 683282435000024, 
                     "enable": true
                 }, 
                 {
@@ -4371,6 +4357,131 @@
                     "bp": false, 
                     "element_id": 683282435000021, 
                     "enable": false
+                }, 
+                {
+                    "action_type": "IF_THEN_ELSE", 
+                    "args_list": [
+                        {
+                            "arg_type": 100021, 
+                            "args_list": [
+                                {
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "INTEGER", 
+                                                        "\u63d0\u53d6\u5b58\u6863\u5927\u62db\u7b49\u7ea7", 
+                                                        "actor"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 6
+                                        }, 
+                                        {
+                                            "arg_type": 100015, 
+                                            "args_list": [
+                                                "<="
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                0
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "condition_type": "FLOAT_COMPARE", 
+                                    "element_id": 1552973827000003, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "SET_ABILITY_INT_ATTR", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100014, 
+                                            "args_list": [], 
+                                            "sub_type": "CUR_ABILITY"
+                                        }, 
+                                        {
+                                            "arg_type": 100079, 
+                                            "args_list": [
+                                                "ability_level"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                1
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 1552973827000004, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "SET_ABILITY_INT_ATTR", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100014, 
+                                            "args_list": [], 
+                                            "sub_type": "CUR_ABILITY"
+                                        }, 
+                                        {
+                                            "arg_type": 100079, 
+                                            "args_list": [
+                                                "ability_level"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "INTEGER", 
+                                                        "\u63d0\u53d6\u5b58\u6863\u5927\u62db\u7b49\u7ea7", 
+                                                        "actor"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 6
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 1552973827000005, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1552973827000006, 
+                    "enable": false, 
+                    "fake_op": [
+                        2
+                    ]
                 }
             ], 
             "call_enabled": true, 
@@ -4388,7 +4499,7 @@
             "p_trigger_id": null, 
             "trigger_id": 683282435, 
             "trigger_name": "\u6280\u80fd\u83b7\u5f97\u65f6", 
-            "valid": true, 
+            "valid": false, 
             "var_data": [
                 {
                     "INTEGER": {}, 
@@ -4403,6 +4514,45 @@
                     "\u63d0\u53d6\u5b58\u6863\u7684\u82f1\u96c4\u7c7b\u578b"
                 ]
             ]
+        }, 
+        "1601495042": {
+            "action": [], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": true, 
+            "event": [
+                {
+                    "args_list": [], 
+                    "element_id": 1295450115000001, 
+                    "enable": true, 
+                    "event_type": "ABILITY_LEVEL_CHANGED"
+                }
+            ], 
+            "group_id": 134281462, 
+            "p_trigger_id": null, 
+            "trigger_id": 1601495042, 
+            "trigger_name": "\u6280\u80fd\u5347\u7ea7\u65f6", 
+            "valid": true, 
+            "var_data": [
+                {
+                    "FLOAT": {
+                        "\u63d0\u53d6\u6b66\u529f\u8868\u683c\u653b\u51fb\u8303\u56f4": 0.0, 
+                        "\u63d0\u53d6\u6b66\u529f\u8868\u683c\u653b\u51fb\u8303\u56f4\u6210\u957f": 0.0, 
+                        "\u63d0\u53d6\u89d2\u8272\u7684\u5c5e\u6027": 0.0
+                    }, 
+                    "NEW_TIMER": {}
+                }, 
+                {
+                    "\u63d0\u53d6\u6b66\u529f\u8868\u683c\u653b\u51fb\u8303\u56f4": 0, 
+                    "\u63d0\u53d6\u6b66\u529f\u8868\u683c\u653b\u51fb\u8303\u56f4\u6210\u957f": 0, 
+                    "\u63d0\u53d6\u89d2\u8272\u7684\u5c5e\u6027": 0
+                }, 
+                [
+                    "\u63d0\u53d6\u89d2\u8272\u7684\u5c5e\u6027", 
+                    "\u63d0\u53d6\u6b66\u529f\u8868\u683c\u653b\u51fb\u8303\u56f4", 
+                    "\u63d0\u53d6\u6b66\u529f\u8868\u683c\u653b\u51fb\u8303\u56f4\u6210\u957f"
+                ]
+            ]
         }
     }, 
     "trigger_group_info": [
@@ -4414,6 +4564,13 @@
                     "items": [
                         683282435, 
                         "\u6280\u80fd\u83b7\u5f97\u65f6"
+                    ]
+                }, 
+                {
+                    "__tuple__": true, 
+                    "items": [
+                        1601495042, 
+                        "\u6280\u80fd\u5347\u7ea7\u65f6"
                     ]
                 }, 
                 {

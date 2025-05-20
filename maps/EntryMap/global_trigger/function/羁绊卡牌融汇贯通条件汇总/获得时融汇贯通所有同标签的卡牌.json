@@ -1,6 +1,75 @@
 {
     "action": [
         {
+            "action_type": "SET_VARIABLE", 
+            "args_list": [
+                {
+                    "arg_type": 100030, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "STRING", 
+                                "提取传入技能的流派标签", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                "1ec1d4a2-4312-4cbc-bed7-f1a9382d0d53"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100014, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "ABILITY", 
+                                                "传入流派技能", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "卡牌ID值"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_INTEGER_KV"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "流派名字"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "sub_type": "GET_STRING_TABLE_VAR_ND"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1430196505000228, 
+            "enable": true
+        }, 
+        {
             "action_type": "ITER_ABILITY_DO", 
             "args_list": [
                 {
@@ -28,12 +97,34 @@
                     "arg_type": 100022, 
                     "args_list": [
                         {
-                            "action_type": "IF_THEN_ELSE", 
+                            "action_type": "SET_VARIABLE", 
                             "args_list": [
                                 {
-                                    "arg_type": 100021, 
+                                    "arg_type": 100030, 
                                     "args_list": [
                                         {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "STRING", 
+                                                "提取遍历技能组里的技能标签", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100011, 
+                                            "args_list": [
+                                                "1ec1d4a2-4312-4cbc-bed7-f1a9382d0d53"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
                                             "args_list": [
                                                 {
                                                     "arg_type": 100014, 
@@ -43,53 +134,71 @@
                                                 {
                                                     "arg_type": 100003, 
                                                     "args_list": [
-                                                        {
-                                                            "arg_type": 100011, 
-                                                            "args_list": [
-                                                                "dc9ea780-0615-4935-b67b-93864c4f1dc5"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100014, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "ABILITY", 
-                                                                                "传入流派技能", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": 2
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100221, 
-                                                                    "args_list": [
-                                                                        "name"
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }
-                                                            ], 
-                                                            "sub_type": "GET_ABILITY_STR_ATTR"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                "流派名字"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
+                                                        "卡牌ID值"
                                                     ], 
-                                                    "sub_type": "GET_STRING_TABLE_VAR_ND"
+                                                    "sub_type": 1
                                                 }
                                             ], 
-                                            "condition_type": "ABILITY_HAS_TAG", 
-                                            "element_id": 966246695000067, 
+                                            "sub_type": "GET_INTEGER_KV"
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                "流派名字"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "sub_type": "GET_STRING_TABLE_VAR_ND"
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1430196505000252, 
+                            "enable": true
+                        }, 
+                        {
+                            "action_type": "IF_THEN_ELSE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100021, 
+                                    "args_list": [
+                                        {
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        [
+                                                            "STRING", 
+                                                            "提取传入技能的流派标签", 
+                                                            "local"
+                                                        ]
+                                                    ], 
+                                                    "sub_type": 2
+                                                }, 
+                                                {
+                                                    "arg_type": 100035, 
+                                                    "args_list": [
+                                                        "=="
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "STRING", 
+                                                                "提取遍历技能组里的技能标签", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 2
+                                                }
+                                            ], 
+                                            "condition_type": "STRING_COMPARE", 
+                                            "element_id": 1430196505000246, 
                                             "enable": true
                                         }
                                     ], 
@@ -285,6 +394,10 @@
             }, 
             "ABILITY_TYPE": {}, 
             "NEW_TIMER": {}, 
+            "STRING": {
+                "提取传入技能的流派标签": "", 
+                "提取遍历技能组里的技能标签": ""
+            }, 
             "TABLE": {
                 "羁绊卡牌_表_记录同类型的吞噬技能": null
             }, 
@@ -295,12 +408,16 @@
         {
             "传入流派技能": 0, 
             "判定吞噬的单位": 0, 
+            "提取传入技能的流派标签": 0, 
+            "提取遍历技能组里的技能标签": 0, 
             "羁绊卡牌_表_记录同类型的吞噬技能": 0
         }, 
         [
             "传入流派技能", 
             "判定吞噬的单位", 
-            "羁绊卡牌_表_记录同类型的吞噬技能"
+            "羁绊卡牌_表_记录同类型的吞噬技能", 
+            "提取传入技能的流派标签", 
+            "提取遍历技能组里的技能标签"
         ]
     ]
 }

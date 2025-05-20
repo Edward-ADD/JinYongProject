@@ -1,6 +1,72 @@
 {
     "action": [
         {
+            "action_type": "SET_VARIABLE", 
+            "args_list": [
+                {
+                    "arg_type": 100030, 
+                    "args_list": [
+                        [
+                            "INTEGER", 
+                            "提取传入技能融汇贯通效果所需角色等级", 
+                            "local"
+                        ]
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100002, 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                "1ec1d4a2-4312-4cbc-bed7-f1a9382d0d53"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100014, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "ABILITY", 
+                                                "传入流派技能", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "卡牌ID值"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_INTEGER_KV"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "融汇贯通效果所需角色等级"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "sub_type": "GET_INTEGER_TABLE_VAR_ND"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1430196505000275, 
+            "enable": true
+        }, 
+        {
             "action_type": "IF_THEN_ELSE", 
             "args_list": [
                 {
@@ -38,29 +104,13 @@
                                 {
                                     "arg_type": 100002, 
                                     "args_list": [
-                                        {
-                                            "arg_type": 100014, 
-                                            "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "ABILITY", 
-                                                        "传入流派技能", 
-                                                        "local"
-                                                    ]
-                                                }
-                                            ], 
-                                            "sub_type": 2
-                                        }, 
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                "融汇贯通效果10所需等级"
-                                            ], 
-                                            "sub_type": 1
-                                        }
+                                        [
+                                            "INTEGER", 
+                                            "提取传入技能融汇贯通效果所需角色等级", 
+                                            "local"
+                                        ]
                                     ], 
-                                    "sub_type": "GET_INTEGER_KV"
+                                    "sub_type": 6
                                 }
                             ], 
                             "condition_type": "FLOAT_COMPARE", 
@@ -270,6 +320,7 @@
             }, 
             "ABILITY_TYPE": {}, 
             "INTEGER": {
+                "提取传入技能融汇贯通效果所需角色等级": 0, 
                 "提取融汇效果9计数判定": 0
             }, 
             "NEW_TIMER": {}, 
@@ -280,10 +331,12 @@
         {
             "传入流派技能": 0, 
             "判定吞噬的单位": 0, 
+            "提取传入技能融汇贯通效果所需角色等级": 0, 
             "提取融汇效果9计数判定": 0
         }, 
         [
             "提取融汇效果9计数判定", 
+            "提取传入技能融汇贯通效果所需角色等级", 
             "传入流派技能", 
             "判定吞噬的单位"
         ]

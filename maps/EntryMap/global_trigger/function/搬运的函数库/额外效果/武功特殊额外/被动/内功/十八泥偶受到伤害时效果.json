@@ -1,0 +1,507 @@
+{
+    "action": [
+        {
+            "action_type": "IF_THEN_ELSE", 
+            "args_list": [
+                {
+                    "arg_type": 100021, 
+                    "args_list": [
+                        {
+                            "args_list": [
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "UNIT_ENTITY", 
+                                                "传入的技能拥有者", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 11
+                                }, 
+                                {
+                                    "arg_type": 100046, 
+                                    "args_list": [
+                                        134247197
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "condition_type": "UNIT_HAS_MODIFIER", 
+                            "element_id": 1727803833000001, 
+                            "enable": true
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "SET_VARIABLE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100030, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "INTEGER", 
+                                                "提取十八泥偶的层数", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100076, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100006, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "UNIT_ENTITY", 
+                                                                "传入的技能拥有者", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 11
+                                                }, 
+                                                {
+                                                    "arg_type": 100046, 
+                                                    "args_list": [
+                                                        134247197
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_LAST_MODIFIER_INSTANCE"
+                                        }
+                                    ], 
+                                    "sub_type": "GET_MOD_STACK"
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1727803833000002, 
+                            "enable": true
+                        }, 
+                        {
+                            "action_type": "STORAGE_BOX", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100021, 
+                                    "args_list": [], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100022, 
+                                    "args_list": [
+                                        {
+                                            "action_type": "IF_THEN_ELSE", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100021, 
+                                                    "args_list": [
+                                                        {
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "INTEGER", 
+                                                                                "提取先天功的层数", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 6
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100015, 
+                                                                    "args_list": [
+                                                                        ">="
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        7
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "condition_type": "FLOAT_COMPARE", 
+                                                            "element_id": 1727803833000003, 
+                                                            "enable": true
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100022, 
+                                                    "args_list": [
+                                                        {
+                                                            "action_type": "APPLY_DAMAGE", 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100006, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "UNIT_ENTITY", 
+                                                                                "传入的技能拥有者", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 11
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100014, 
+                                                                    "args_list": [], 
+                                                                    "sub_type": "NONE_ABILITY"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100006, 
+                                                                    "args_list": [
+                                                                        [
+                                                                            "UNIT_ENTITY", 
+                                                                            "传入的被攻击的目标", 
+                                                                            "local"
+                                                                        ]
+                                                                    ], 
+                                                                    "sub_type": 11
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100064, 
+                                                                    "args_list": [
+                                                                        0
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100000, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100000, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "FLOAT", 
+                                                                                        "传入的伤害数值", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 2
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100017, 
+                                                                            "args_list": [
+                                                                                "*"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100000, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100000, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100002, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "__tuple__": true, 
+                                                                                                    "items": [
+                                                                                                        "INTEGER", 
+                                                                                                        "提取十八泥偶的层数", 
+                                                                                                        "local"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": 6
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100017, 
+                                                                                            "args_list": [
+                                                                                                "*"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100002, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "__tuple__": true, 
+                                                                                                    "items": [
+                                                                                                        "INTEGER", 
+                                                                                                        "提取十八泥偶的层数", 
+                                                                                                        "local"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": 6
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "ARITHMETIC_OPERATION"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100017, 
+                                                                                    "args_list": [
+                                                                                        "/"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100000, 
+                                                                                    "args_list": [
+                                                                                        30.0
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "ARITHMETIC_OPERATION"
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "ARITHMETIC_OPERATION"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100001, 
+                                                                    "args_list": [
+                                                                        true
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "bp": false, 
+                                                            "element_id": 1727803833000004, 
+                                                            "enable": true, 
+                                                            "op_arg": [
+                                                                {
+                                                                    "arg_type": 100001, 
+                                                                    "args_list": [
+                                                                        true
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100001, 
+                                                                    "args_list": [
+                                                                        true
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100001, 
+                                                                    "args_list": [
+                                                                        true
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                null, 
+                                                                null, 
+                                                                null, 
+                                                                null, 
+                                                                null, 
+                                                                null
+                                                            ], 
+                                                            "op_arg_enable": [
+                                                                false, 
+                                                                false, 
+                                                                false, 
+                                                                false, 
+                                                                false, 
+                                                                false, 
+                                                                false, 
+                                                                false, 
+                                                                false
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100022, 
+                                                    "args_list": [], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 1727803833000005, 
+                                            "enable": true, 
+                                            "fake_op": []
+                                        }
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100022, 
+                                    "args_list": [], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "反伤"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1727803833000006, 
+                            "enable": true
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1727803833000007, 
+            "enable": true, 
+            "fake_op": []
+        }
+    ], 
+    "call_enabled": true, 
+    "condition": [], 
+    "enabled": true, 
+    "event": [], 
+    "func_category": "t_function", 
+    "func_comment": "", 
+    "func_des": "十八泥偶结算特殊功能，拥有武功的单位：{传入的技能拥有者}", 
+    "func_id": "f9d55666cc1211efa6a87b0553f9dbe1", 
+    "func_name": "十八泥偶受到伤害时效果", 
+    "func_param_list": [
+        {
+            "__tuple__": true, 
+            "items": [
+                "传入的技能拥有者", 
+                true
+            ]
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                "传入的伤害数值", 
+                false
+            ]
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                "传入的被攻击的目标", 
+                false
+            ]
+        }
+    ], 
+    "group_id": "u95fazWDEfCNkBu3KFgeak", 
+    "is_func": true, 
+    "is_official_func": false, 
+    "p_trigger_id": null, 
+    "trigger_id": 1727803833, 
+    "trigger_name": "十八泥偶受到伤害时效果", 
+    "valid": true, 
+    "var_data": [
+        {
+            "ABILITY": {}, 
+            "ANGLE": {
+                "提取方向": 0.0
+            }, 
+            "BOOLEAN": {}, 
+            "FLOAT": {
+                "传入的伤害数值": 0.0, 
+                "提取以负引正受伤变回血效果": 0.0, 
+                "提取先天功13层的公式计算值": 0.0, 
+                "提取先天功13层的累积总值": 0.0, 
+                "提取先天功13层的触发值": 0.0, 
+                "提取易筋经护盾值": 0.0, 
+                "提取易筋经护盾冷却时间": 0.0, 
+                "提取易筋经生命比例": 0.0, 
+                "提取特效所需缩放为100的比例值": 0.0, 
+                "提取特效放大比例": 0.0
+            }, 
+            "INTEGER": {
+                "提取先天功13层的受击次数": 0, 
+                "提取先天功的层数": 0, 
+                "提取十八泥偶的层数": 0, 
+                "提取易筋经的层数": 0, 
+                "提取洗髓经的层数": 0
+            }, 
+            "MODIFIER_ENTITY": {
+                "提取易筋经护盾魔法效果": 0
+            }, 
+            "SFX_ENTITY": {
+                "提取攻击特效": 0
+            }, 
+            "UNIT_ENTITY": {
+                "传入的技能拥有者": 0, 
+                "传入的被攻击的目标": 0
+            }, 
+            "UNIT_GROUP": {}
+        }, 
+        {
+            "传入的伤害数值": 0, 
+            "传入的技能拥有者": 0, 
+            "传入的被攻击的目标": 0, 
+            "提取以负引正受伤变回血效果": 0, 
+            "提取先天功13层的公式计算值": 0, 
+            "提取先天功13层的受击次数": 0, 
+            "提取先天功13层的累积总值": 0, 
+            "提取先天功13层的触发值": 0, 
+            "提取先天功的层数": 0, 
+            "提取十八泥偶的层数": 0, 
+            "提取攻击特效": 0, 
+            "提取方向": 0, 
+            "提取易筋经护盾值": 0, 
+            "提取易筋经护盾冷却时间": 0, 
+            "提取易筋经护盾魔法效果": 0, 
+            "提取易筋经生命比例": 0, 
+            "提取易筋经的层数": 0, 
+            "提取洗髓经的层数": 0, 
+            "提取特效所需缩放为100的比例值": 0, 
+            "提取特效放大比例": 0
+        }, 
+        [
+            "传入的技能拥有者", 
+            "提取以负引正受伤变回血效果", 
+            "提取洗髓经的层数", 
+            "提取易筋经的层数", 
+            "提取易筋经护盾冷却时间", 
+            "提取易筋经护盾魔法效果", 
+            "提取先天功的层数", 
+            "提取易筋经护盾值", 
+            "提取易筋经生命比例", 
+            "提取先天功13层的受击次数", 
+            "提取先天功13层的公式计算值", 
+            "提取方向", 
+            "提取先天功13层的累积总值", 
+            "提取特效放大比例", 
+            "提取特效所需缩放为100的比例值", 
+            "提取先天功13层的触发值", 
+            "提取攻击特效", 
+            "传入的伤害数值", 
+            "提取十八泥偶的层数", 
+            "传入的被攻击的目标"
+        ]
+    ]
+}

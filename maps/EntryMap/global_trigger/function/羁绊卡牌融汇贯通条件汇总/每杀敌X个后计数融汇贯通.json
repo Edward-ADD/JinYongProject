@@ -1,6 +1,75 @@
 {
     "action": [
         {
+            "action_type": "SET_VARIABLE", 
+            "args_list": [
+                {
+                    "arg_type": 100030, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "INTEGER", 
+                                "提取传入技能所需杀敌数", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100002, 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                "1ec1d4a2-4312-4cbc-bed7-f1a9382d0d53"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100014, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "ABILITY", 
+                                                "传入流派技能", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "卡牌ID值"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_INTEGER_KV"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "融汇贯通所需杀敌数"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "sub_type": "GET_INTEGER_TABLE_VAR_ND"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1430196505000275, 
+            "enable": true
+        }, 
+        {
             "action_type": "SET_TABLE_VALUE_ND", 
             "args_list": [
                 {
@@ -43,7 +112,7 @@
                     "sub_type": "VARIABLE"
                 }, 
                 {
-                    "arg_type": 100003, 
+                    "arg_type": 100002, 
                     "args_list": [
                         {
                             "arg_type": 100014, 
@@ -60,14 +129,14 @@
                             "sub_type": 2
                         }, 
                         {
-                            "arg_type": 100221, 
+                            "arg_type": 100003, 
                             "args_list": [
-                                "name"
+                                "卡牌ID值"
                             ], 
                             "sub_type": 1
                         }
                     ], 
-                    "sub_type": "GET_ABILITY_STR_ATTR"
+                    "sub_type": "GET_INTEGER_KV"
                 }, 
                 {
                     "arg_type": 100003, 
@@ -138,40 +207,6 @@
                     "sub_type": "VARIABLE"
                 }, 
                 {
-                    "arg_type": 100003, 
-                    "args_list": [
-                        {
-                            "arg_type": 100014, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "ABILITY", 
-                                        "传入流派技能", 
-                                        "local"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": 2
-                        }, 
-                        {
-                            "arg_type": 100221, 
-                            "args_list": [
-                                "name"
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "sub_type": "GET_ABILITY_STR_ATTR"
-                }, 
-                {
-                    "arg_type": 100003, 
-                    "args_list": [
-                        "所需杀敌数"
-                    ], 
-                    "sub_type": 1
-                }, 
-                {
                     "arg_type": 100002, 
                     "args_list": [
                         {
@@ -191,12 +226,33 @@
                         {
                             "arg_type": 100003, 
                             "args_list": [
-                                "武功所需杀敌数"
+                                "卡牌ID值"
                             ], 
                             "sub_type": 1
                         }
                     ], 
                     "sub_type": "GET_INTEGER_KV"
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        "所需杀敌数"
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100002, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "INTEGER", 
+                                "提取传入技能所需杀敌数", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 6
                 }
             ], 
             "bp": false, 
@@ -246,7 +302,7 @@
                     "sub_type": "VARIABLE"
                 }, 
                 {
-                    "arg_type": 100003, 
+                    "arg_type": 100002, 
                     "args_list": [
                         {
                             "arg_type": 100014, 
@@ -263,14 +319,14 @@
                             "sub_type": 2
                         }, 
                         {
-                            "arg_type": 100221, 
+                            "arg_type": 100003, 
                             "args_list": [
-                                "name"
+                                "卡牌ID值"
                             ], 
                             "sub_type": 1
                         }
                     ], 
-                    "sub_type": "GET_ABILITY_STR_ATTR"
+                    "sub_type": "GET_INTEGER_KV"
                 }, 
                 {
                     "arg_type": 100003, 
@@ -289,6 +345,94 @@
             ], 
             "bp": false, 
             "element_id": 1965936926000052, 
+            "enable": true
+        }, 
+        {
+            "action_type": "SET_TABLE_VALUE_ND", 
+            "args_list": [
+                {
+                    "arg_type": 100011, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "TABLE", 
+                                "全局表_记录杀敌数技能表"
+                            ]
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100006, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "UNIT_ENTITY", 
+                                                        "判定吞噬的单位", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 11
+                                        }
+                                    ], 
+                                    "sub_type": "OWNER_PLAYER"
+                                }
+                            ], 
+                            "sub_type": "PLAYER_ID_NUMBER"
+                        }
+                    ], 
+                    "sub_type": "VARIABLE"
+                }, 
+                {
+                    "arg_type": 100002, 
+                    "args_list": [
+                        {
+                            "arg_type": 100014, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "ABILITY", 
+                                        "传入流派技能", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": 2
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "卡牌ID值"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "sub_type": "GET_INTEGER_KV"
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        "融会贯通效果4计数"
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100002, 
+                    "args_list": [
+                        0
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 578760994000099, 
             "enable": true
         }
     ], 
@@ -329,17 +473,22 @@
             "ABILITY": {
                 "传入流派技能": null
             }, 
+            "INTEGER": {
+                "提取传入技能所需杀敌数": 0
+            }, 
             "UNIT_ENTITY": {
                 "判定吞噬的单位": 0
             }
         }, 
         {
             "传入流派技能": 0, 
-            "判定吞噬的单位": 0
+            "判定吞噬的单位": 0, 
+            "提取传入技能所需杀敌数": 0
         }, 
         [
             "传入流派技能", 
-            "判定吞噬的单位"
+            "判定吞噬的单位", 
+            "提取传入技能所需杀敌数"
         ]
     ]
 }

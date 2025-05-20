@@ -1,34 +1,84 @@
 {
     "action": [
         {
+            "action_type": "SET_VARIABLE", 
+            "args_list": [
+                {
+                    "arg_type": 100030, 
+                    "args_list": [
+                        [
+                            "INTEGER", 
+                            "提取传入技能所需倒计时秒数", 
+                            "local"
+                        ]
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100002, 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                "1ec1d4a2-4312-4cbc-bed7-f1a9382d0d53"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100014, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "ABILITY", 
+                                                "传入流派技能", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "卡牌ID值"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_INTEGER_KV"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "融汇贯通倒计时"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "sub_type": "GET_INTEGER_TABLE_VAR_ND"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1430196505000275, 
+            "enable": true
+        }, 
+        {
             "action_type": "RUN_ONCE_TIMER_NO_SAVE", 
             "args_list": [
                 {
                     "arg_type": 100002, 
                     "args_list": [
-                        {
-                            "arg_type": 100014, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "ABILITY", 
-                                        "传入流派技能", 
-                                        "local"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": 2
-                        }, 
-                        {
-                            "arg_type": 100003, 
-                            "args_list": [
-                                "同流派融汇贯通倒计时"
-                            ], 
-                            "sub_type": 1
-                        }
+                        [
+                            "INTEGER", 
+                            "提取传入技能所需倒计时秒数", 
+                            "local"
+                        ]
                     ], 
-                    "sub_type": "GET_INTEGER_KV"
+                    "sub_type": 6
                 }, 
                 {
                     "arg_type": 100022, 
@@ -79,7 +129,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 840646942000059, 
+                            "element_id": 840646942000230, 
                             "enable": true, 
                             "op_arg": [
                                 null, 
@@ -138,7 +188,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 840646942000060, 
+                            "element_id": 840646942000231, 
                             "enable": true
                         }, 
                         {
@@ -173,7 +223,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 1430196505000224, 
+                            "element_id": 840646942000232, 
                             "enable": true
                         }
                     ], 
@@ -230,6 +280,7 @@
                 "传入流派技能": null
             }, 
             "INTEGER": {
+                "提取传入技能所需倒计时秒数": 0, 
                 "提取判定数量计数": 0
             }, 
             "NEW_TIMER": {}, 
@@ -241,10 +292,12 @@
         {
             "传入流派技能": 0, 
             "判定吞噬的单位": 0, 
+            "提取传入技能所需倒计时秒数": 0, 
             "提取判定数量计数": 0
         }, 
         [
             "提取判定数量计数", 
+            "提取传入技能所需倒计时秒数", 
             "判定吞噬的单位", 
             "传入流派技能"
         ]
