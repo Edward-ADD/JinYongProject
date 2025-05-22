@@ -1,0 +1,485 @@
+{
+    "action": [
+        1561854437
+    ], 
+    "call_enabled": true, 
+    "condition": [], 
+    "enabled": true, 
+    "event": [
+        [
+            1709166528, 
+            "关卡功能", 
+            990646756, 
+            "event_type"
+        ], 
+        {
+            "args_list": [], 
+            "element_id": 990646756000003, 
+            "enable": true, 
+            "event_type": "INIT_FINISHED"
+        }
+    ], 
+    "group_id": "0LM32Tb7EfC3TV+oEdZKKD", 
+    "p_trigger_id": null, 
+    "sub_trigger": {
+        "1561854437": {
+            "action": [
+                {
+                    "action_type": "SET_VARIABLE", 
+                    "args_list": [
+                        {
+                            "arg_type": 100030, 
+                            "args_list": [
+                                [
+                                    "UNIT_NAME", 
+                                    "提取精英怪单位类型", 
+                                    "local"
+                                ]
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100116, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100011, 
+                                    "args_list": [
+                                        "6c071eab-23b3-405d-97d4-63dd65df2145"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "INTEGER", 
+                                                "战斗信息_当前地图难度"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 6
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "精英怪"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_UNIT_NAME_TABLE_VAR_ND"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1450427118000018, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "PICK_PLAYER_DO_ACTION", 
+                    "args_list": [
+                        {
+                            "arg_type": 100027, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100020, 
+                                    "args_list": [
+                                        1
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "TEAM_PLAYER"
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "IF_THEN_ELSE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100021, 
+                                            "args_list": [
+                                                {
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100180, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100025, 
+                                                                    "args_list": [], 
+                                                                    "sub_type": "PICKED_PLAYER"
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_ROLE_STATUS"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100035, 
+                                                            "args_list": [
+                                                                "=="
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100180, 
+                                                            "args_list": [
+                                                                1
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "condition_type": "PLAYER_STATE_COMPARE", 
+                                                    "element_id": 1561854437000076, 
+                                                    "enable": true
+                                                }
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100022, 
+                                            "args_list": [
+                                                {
+                                                    "action_type": "SET_VARIABLE", 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100030, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "POINT", 
+                                                                        "提取精英怪生成点", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100004, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100009, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100011, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "TABLE", 
+                                                                                        "表_防守模式敌人出生区域"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "VARIABLE"
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100002, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100025, 
+                                                                                    "args_list": [], 
+                                                                                    "sub_type": "PICKED_PLAYER"
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "PLAYER_ID_NUMBER"
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_RECTANGLE_TABLE_VAR_1D"
+                                                                }
+                                                            ], 
+                                                            "sub_type": "RECTANGLE_C_POINT"
+                                                        }
+                                                    ], 
+                                                    "bp": false, 
+                                                    "element_id": 1561854437000103, 
+                                                    "enable": true
+                                                }, 
+                                                {
+                                                    "action_type": "SET_VARIABLE", 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100030, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "UNIT_ENTITY", 
+                                                                        "提取精英怪单位", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100006, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100116, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "UNIT_NAME", 
+                                                                                "提取精英怪单位类型", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 2
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100004, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "POINT", 
+                                                                                "提取精英怪生成点", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 19
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100225, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100004, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "POINT", 
+                                                                                        "提取精英怪生成点", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 19
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100004, 
+                                                                            "args_list": [
+                                                                                10000
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_POINTS_ANGLE"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100025, 
+                                                                    "args_list": [
+                                                                        31
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "op_arg": [
+                                                                null
+                                                            ], 
+                                                            "op_arg_enable": [
+                                                                false
+                                                            ], 
+                                                            "sub_type": "CREATE_UNIT_NEW"
+                                                        }
+                                                    ], 
+                                                    "bp": false, 
+                                                    "element_id": 1450427118000010, 
+                                                    "enable": true
+                                                }, 
+                                                {
+                                                    "action_type": "UNIT_RELEASE_COMMAND", 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100006, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "UNIT_ENTITY", 
+                                                                        "提取精英怪单位", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 11
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100216, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100004, 
+                                                                    "args_list": [
+                                                                        10000
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "op_arg": [
+                                                                null
+                                                            ], 
+                                                            "op_arg_enable": [
+                                                                false
+                                                            ], 
+                                                            "sub_type": "UNIT_COMMAND_ATTACK_MOVE"
+                                                        }
+                                                    ], 
+                                                    "bp": false, 
+                                                    "element_id": 778928190000037, 
+                                                    "enable": true, 
+                                                    "op_arg": [
+                                                        {
+                                                            "arg_type": 100001, 
+                                                            "args_list": [
+                                                                true
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        null
+                                                    ], 
+                                                    "op_arg_enable": [
+                                                        false, 
+                                                        false
+                                                    ]
+                                                }, 
+                                                {
+                                                    "action_type": "ADD_MODIFIER", 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100006, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "UNIT_ENTITY", 
+                                                                        "提取精英怪单位", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 11
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100046, 
+                                                            "args_list": [
+                                                                134226232
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "bp": false, 
+                                                    "element_id": 1450427118000050, 
+                                                    "enable": true, 
+                                                    "op_arg": [
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null
+                                                    ], 
+                                                    "op_arg_enable": [
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100022, 
+                                            "args_list": [], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 1561854437000067, 
+                                    "enable": true, 
+                                    "fake_op": []
+                                }
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1561854437000056, 
+                    "enable": true
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": false, 
+            "event": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 100238, 
+                            "args_list": [
+                                1062338474
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "element_id": 1561854437000003, 
+                    "enable": true, 
+                    "event_type": "RECEIVE_CUSTOM_EVENT"
+                }
+            ], 
+            "group_id": 0, 
+            "is_conf": true, 
+            "p_trigger_id": 990646756, 
+            "trigger_id": 1561854437, 
+            "trigger_name": "关卡功能_创建木头精英怪", 
+            "valid": true, 
+            "var_data": [
+                {
+                    "NEW_TIMER": {}, 
+                    "POINT": {
+                        "提取精英怪生成点": {
+                            "__tuple__": true, 
+                            "items": [
+                                0, 
+                                0, 
+                                0
+                            ]
+                        }
+                    }, 
+                    "UNIT_ENTITY": {
+                        "提取精英怪单位": 0
+                    }, 
+                    "UNIT_NAME": {
+                        "提取精英怪单位类型": 0
+                    }
+                }, 
+                {
+                    "提取精英怪单位": 0, 
+                    "提取精英怪单位类型": 0, 
+                    "提取精英怪生成点": 0
+                }, 
+                [
+                    "提取精英怪单位类型", 
+                    "提取精英怪单位", 
+                    "提取精英怪生成点"
+                ]
+            ]
+        }
+    }, 
+    "trigger_id": 990646756, 
+    "trigger_name": "GameModeManager", 
+    "valid": true, 
+    "var_data": [
+        {}, 
+        {}, 
+        []
+    ]
+}

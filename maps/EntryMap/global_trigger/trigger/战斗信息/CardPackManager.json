@@ -1545,7 +1545,7 @@
                                 {
                                     "arg_type": 100070, 
                                     "args_list": [
-                                        "ccd882f1-8ceb-482e-a780-df7babf005df"
+                                        "9dd0bee1-5d13-412c-99b4-b055750500a4"
                                     ], 
                                     "sub_type": 1
                                 }
@@ -2746,7 +2746,7 @@
                     "action_type": "SET_VARIABLE", 
                     "args_list": [
                         {
-                            "arg_type": 100030, 
+                            "arg_type": 100201, 
                             "args_list": [
                                 {
                                     "__tuple__": true, 
@@ -2757,8 +2757,21 @@
                                     ]
                                 }
                             ], 
-                            "sub_type": 1
+                            "sub_type": 3
                         }, 
+                        {
+                            "arg_type": 100201, 
+                            "args_list": [], 
+                            "sub_type": "CREATE_RANDOM_POOL"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 403427589000303, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "TRAVERSE_RANDOM_POOL", 
+                    "args_list": [
                         {
                             "arg_type": 100201, 
                             "args_list": [
@@ -2790,10 +2803,86 @@
                                 }
                             ], 
                             "sub_type": 3
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "SET_RANDOM_POOL_VALUE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100201, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "RANDOM_POOL", 
+                                                        "提取随机池", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 3
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [], 
+                                            "sub_type": "FOR_EACH_SELECTED_RP_VALUE"
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100201, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "RANDOM_POOL", 
+                                                                "全局随机池_羁绊卡牌初始池组"
+                                                            ]
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100025, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100240, 
+                                                                            "args_list": [
+                                                                                "触发事件的玩家"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_CUS_EVENT_PARAM"
+                                                                }
+                                                            ], 
+                                                            "sub_type": "PLAYER_ID_NUMBER"
+                                                        }
+                                                    ], 
+                                                    "sub_type": 3
+                                                }, 
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [], 
+                                                    "sub_type": "FOR_EACH_SELECTED_RP_VALUE"
+                                                }
+                                            ], 
+                                            "sub_type": "GET_RANDOM_POOL_POINTED_WEIGHT"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 403427589000234, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
                         }
                     ], 
                     "bp": false, 
-                    "element_id": 403427589000044, 
+                    "element_id": 403427589000229, 
                     "enable": true
                 }, 
                 {
@@ -3684,6 +3773,34 @@
                                     "bp": false, 
                                     "element_id": 968761604000030, 
                                     "enable": true
+                                }, 
+                                {
+                                    "action_type": "SEND_CUSTOM_EVENT", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100238, 
+                                            "args_list": [
+                                                1909920238
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100240, 
+                                                    "args_list": [
+                                                        "触发事件的玩家"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_CUS_EVENT_PARAM"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 722100503000200, 
+                                    "enable": true
                                 }
                             ], 
                             "sub_type": 1
@@ -3941,6 +4058,34 @@
                                                                     "bp": false, 
                                                                     "element_id": 1891733772000095, 
                                                                     "enable": true
+                                                                }, 
+                                                                {
+                                                                    "action_type": "SEND_CUSTOM_EVENT", 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100238, 
+                                                                            "args_list": [
+                                                                                1909920238
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100025, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100240, 
+                                                                                    "args_list": [
+                                                                                        "触发事件的玩家"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "GET_CUS_EVENT_PARAM"
+                                                                        }
+                                                                    ], 
+                                                                    "bp": false, 
+                                                                    "element_id": 722100503000209, 
+                                                                    "enable": true
                                                                 }
                                                             ], 
                                                             "sub_type": 1
@@ -3974,7 +4119,7 @@
                                                                         {
                                                                             "arg_type": 100003, 
                                                                             "args_list": [
-                                                                                "木头数量不足！"
+                                                                                "#FFAA55木头数量不足！"
                                                                             ], 
                                                                             "sub_type": 1
                                                                         }
@@ -4026,7 +4171,7 @@
                                                         {
                                                             "arg_type": 100003, 
                                                             "args_list": [
-                                                                "数据异常，次数重置为0"
+                                                                "#FFAA55数据异常，#FFFFFF次数重置为0"
                                                             ], 
                                                             "sub_type": 1
                                                         }
@@ -4272,7 +4417,7 @@
                                         {
                                             "arg_type": 100003, 
                                             "args_list": [
-                                                "学习卡池已满！"
+                                                "学习卡池#FFAA55已满！"
                                             ], 
                                             "sub_type": 1
                                         }
@@ -5009,7 +5154,7 @@
                         {
                             "arg_type": 100070, 
                             "args_list": [
-                                "ccd882f1-8ceb-482e-a780-df7babf005df"
+                                "9dd0bee1-5d13-412c-99b4-b055750500a4"
                             ], 
                             "sub_type": 1
                         }, 
@@ -5107,7 +5252,7 @@
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 1369161995000127, 
+                                    "element_id": 1369161995000310, 
                                     "enable": true
                                 }, 
                                 {
@@ -5201,7 +5346,7 @@
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 1369161995000242, 
+                                    "element_id": 1369161995000311, 
                                     "enable": true
                                 }, 
                                 {
@@ -5295,7 +5440,7 @@
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 1369161995000245, 
+                                    "element_id": 1369161995000312, 
                                     "enable": true
                                 }, 
                                 {
@@ -5359,7 +5504,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1369161995000035, 
+                                                    "element_id": 1369161995000313, 
                                                     "enable": true
                                                 }, 
                                                 {
@@ -5412,7 +5557,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1369161995000050, 
+                                                    "element_id": 1369161995000314, 
                                                     "enable": true
                                                 }, 
                                                 {
@@ -5465,7 +5610,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1369161995000065, 
+                                                    "element_id": 1369161995000315, 
                                                     "enable": true
                                                 }, 
                                                 {
@@ -5518,7 +5663,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1369161995000018, 
+                                                    "element_id": 1369161995000316, 
                                                     "enable": true
                                                 }, 
                                                 {
@@ -5571,7 +5716,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1369161995000272, 
+                                                    "element_id": 1369161995000317, 
                                                     "enable": true
                                                 }
                                             ], 
@@ -5591,7 +5736,7 @@
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 1369161995000094, 
+                                    "element_id": 1369161995000318, 
                                     "enable": true
                                 }, 
                                 {
@@ -5664,7 +5809,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1369161995000100, 
+                                                    "element_id": 1369161995000319, 
                                                     "enable": true
                                                 }, 
                                                 {
@@ -5719,7 +5864,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1369161995000140, 
+                                                    "element_id": 1369161995000320, 
                                                     "enable": true
                                                 }, 
                                                 {
@@ -5768,7 +5913,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1369161995000155, 
+                                                    "element_id": 1369161995000321, 
                                                     "enable": true
                                                 }, 
                                                 {
@@ -5830,7 +5975,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1369161995000170, 
+                                                    "element_id": 1369161995000322, 
                                                     "enable": true
                                                 }, 
                                                 {
@@ -5888,7 +6033,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1369161995000291, 
+                                                    "element_id": 1369161995000323, 
                                                     "enable": true
                                                 }
                                             ], 
@@ -5908,7 +6053,7 @@
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 1369161995000097, 
+                                    "element_id": 1369161995000324, 
                                     "enable": true
                                 }, 
                                 {
@@ -5950,7 +6095,7 @@
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 1369161995000118, 
+                                    "element_id": 1369161995000325, 
                                     "enable": true
                                 }
                             ], 
@@ -6038,7 +6183,7 @@
                     "action_type": "SET_VARIABLE", 
                     "args_list": [
                         {
-                            "arg_type": 100030, 
+                            "arg_type": 100201, 
                             "args_list": [
                                 {
                                     "__tuple__": true, 
@@ -6049,8 +6194,21 @@
                                     ]
                                 }
                             ], 
-                            "sub_type": 1
+                            "sub_type": 3
                         }, 
+                        {
+                            "arg_type": 100201, 
+                            "args_list": [], 
+                            "sub_type": "CREATE_RANDOM_POOL"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 403427589000303, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "TRAVERSE_RANDOM_POOL", 
+                    "args_list": [
                         {
                             "arg_type": 100201, 
                             "args_list": [
@@ -6082,10 +6240,86 @@
                                 }
                             ], 
                             "sub_type": 3
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "SET_RANDOM_POOL_VALUE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100201, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "RANDOM_POOL", 
+                                                        "提取随机池", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 3
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [], 
+                                            "sub_type": "FOR_EACH_SELECTED_RP_VALUE"
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100201, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "RANDOM_POOL", 
+                                                                "全局随机池_羁绊卡牌初始池组"
+                                                            ]
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100025, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100240, 
+                                                                            "args_list": [
+                                                                                "触发事件的玩家"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_CUS_EVENT_PARAM"
+                                                                }
+                                                            ], 
+                                                            "sub_type": "PLAYER_ID_NUMBER"
+                                                        }
+                                                    ], 
+                                                    "sub_type": 3
+                                                }, 
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [], 
+                                                    "sub_type": "FOR_EACH_SELECTED_RP_VALUE"
+                                                }
+                                            ], 
+                                            "sub_type": "GET_RANDOM_POOL_POINTED_WEIGHT"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 1767244041000237, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
                         }
                     ], 
                     "bp": false, 
-                    "element_id": 403427589000044, 
+                    "element_id": 1767244041000232, 
                     "enable": true
                 }, 
                 {

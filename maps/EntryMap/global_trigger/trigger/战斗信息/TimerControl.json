@@ -31,42 +31,13 @@
                                 {
                                     "arg_type": 100070, 
                                     "args_list": [
-                                        "35c26014-368d-4a64-9b3b-7ae343b3fb2d"
+                                        "6bdb6f3b-fd51-4d6e-8de1-a02b277b3d06"
                                     ], 
                                     "sub_type": 1
                                 }
                             ], 
                             "bp": false, 
                             "element_id": 1606488286000002, 
-                            "enable": true
-                        }, 
-                        {
-                            "action_type": "SET_VARIABLE", 
-                            "args_list": [
-                                {
-                                    "arg_type": 100030, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "UI_COMP", 
-                                                "文本_最大回合数", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100070, 
-                                    "args_list": [
-                                        "f5c071ba-f97e-47ed-aaa0-bd57f02abdff"
-                                    ], 
-                                    "sub_type": 1
-                                }
-                            ], 
-                            "bp": false, 
-                            "element_id": 1606488286000003, 
                             "enable": true
                         }, 
                         {
@@ -89,7 +60,7 @@
                                 {
                                     "arg_type": 100070, 
                                     "args_list": [
-                                        "dcb3e360-421e-4a63-85f7-12e1db0401cc"
+                                        "fea3a9b0-cbd8-4ec0-b929-292eaf3a7704"
                                     ], 
                                     "sub_type": 1
                                 }
@@ -116,7 +87,7 @@
             ], 
             "bp": false, 
             "element_id": 1606488286000005, 
-            "enable": false
+            "enable": true
         }, 
         {
             "action_type": "STORAGE_BOX", 
@@ -290,14 +261,14 @@
                             "arg_type": 100027, 
                             "args_list": [
                                 {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "PLAYER_GROUP", 
-                                        "玩家游玩组"
-                                    ]
+                                    "arg_type": 100020, 
+                                    "args_list": [
+                                        1
+                                    ], 
+                                    "sub_type": 1
                                 }
                             ], 
-                            "sub_type": 14
+                            "sub_type": "TEAM_PLAYER"
                         }, 
                         {
                             "arg_type": 100070, 
@@ -317,102 +288,126 @@
                             "arg_type": 100003, 
                             "args_list": [
                                 {
-                                    "arg_type": 100002, 
+                                    "arg_type": 100003, 
                                     "args_list": [
                                         {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "INTEGER", 
-                                                "战斗信息_游戏回合"
-                                            ]
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "INTEGER", 
+                                                        "战斗信息_游戏回合"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 6
                                         }
                                     ], 
-                                    "sub_type": 6
+                                    "op_arg": [
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                0
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "op_arg_enable": [
+                                        false
+                                    ], 
+                                    "sub_type": "INT_TO_STR"
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                "/"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "INTEGER", 
+                                                                "战斗信息_本轮游戏最大回合数"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 6
+                                                }
+                                            ], 
+                                            "op_arg": [
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        0
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "op_arg_enable": [
+                                                false
+                                            ], 
+                                            "sub_type": "INT_TO_STR"
+                                        }
+                                    ], 
+                                    "op_arg": [
+                                        null, 
+                                        null, 
+                                        null, 
+                                        null, 
+                                        null, 
+                                        null, 
+                                        null, 
+                                        null
+                                    ], 
+                                    "op_arg_enable": [
+                                        false, 
+                                        false, 
+                                        false, 
+                                        false, 
+                                        false, 
+                                        false, 
+                                        false, 
+                                        false
+                                    ], 
+                                    "sub_type": "STR_JOIN"
                                 }
                             ], 
                             "op_arg": [
-                                {
-                                    "arg_type": 100002, 
-                                    "args_list": [
-                                        0
-                                    ], 
-                                    "sub_type": 1
-                                }
+                                null, 
+                                null, 
+                                null, 
+                                null, 
+                                null, 
+                                null, 
+                                null, 
+                                null
                             ], 
                             "op_arg_enable": [
+                                false, 
+                                false, 
+                                false, 
+                                false, 
+                                false, 
+                                false, 
+                                false, 
                                 false
                             ], 
-                            "sub_type": "INT_TO_STR"
+                            "sub_type": "STR_JOIN"
                         }
                     ], 
                     "bp": false, 
                     "element_id": 650186975000004, 
-                    "enable": true
-                }, 
-                {
-                    "action_type": "SET_UI_COMP_TEXT", 
-                    "args_list": [
-                        {
-                            "arg_type": 100027, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "PLAYER_GROUP", 
-                                        "玩家游玩组"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": 14
-                        }, 
-                        {
-                            "arg_type": 100070, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "UI_COMP", 
-                                        "文本_最大回合数", 
-                                        "local"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": "VARIABLE"
-                        }, 
-                        {
-                            "arg_type": 100003, 
-                            "args_list": [
-                                {
-                                    "arg_type": 100002, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "INTEGER", 
-                                                "战斗信息_本轮游戏最大回合数"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": 6
-                                }
-                            ], 
-                            "op_arg": [
-                                {
-                                    "arg_type": 100002, 
-                                    "args_list": [
-                                        0
-                                    ], 
-                                    "sub_type": 1
-                                }
-                            ], 
-                            "op_arg_enable": [
-                                false
-                            ], 
-                            "sub_type": "INT_TO_STR"
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 650186975000005, 
                     "enable": true
                 }, 
                 {
@@ -574,14 +569,14 @@
                                             "arg_type": 100027, 
                                             "args_list": [
                                                 {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "PLAYER_GROUP", 
-                                                        "玩家游玩组"
-                                                    ]
+                                                    "arg_type": 100020, 
+                                                    "args_list": [
+                                                        1
+                                                    ], 
+                                                    "sub_type": 1
                                                 }
                                             ], 
-                                            "sub_type": 14
+                                            "sub_type": "TEAM_PLAYER"
                                         }, 
                                         {
                                             "arg_type": 100070, 
@@ -2050,14 +2045,14 @@
                                                                                                                                             "arg_type": 100027, 
                                                                                                                                             "args_list": [
                                                                                                                                                 {
-                                                                                                                                                    "__tuple__": true, 
-                                                                                                                                                    "items": [
-                                                                                                                                                        "PLAYER_GROUP", 
-                                                                                                                                                        "玩家游玩组"
-                                                                                                                                                    ]
+                                                                                                                                                    "arg_type": 100020, 
+                                                                                                                                                    "args_list": [
+                                                                                                                                                        1
+                                                                                                                                                    ], 
+                                                                                                                                                    "sub_type": 1
                                                                                                                                                 }
                                                                                                                                             ], 
-                                                                                                                                            "sub_type": 14
+                                                                                                                                            "sub_type": "TEAM_PLAYER"
                                                                                                                                         }, 
                                                                                                                                         {
                                                                                                                                             "arg_type": 100070, 
@@ -2324,18 +2319,15 @@
             "NEW_TIMER": {}, 
             "UI_COMP": {
                 "文本_当前回合数": "", 
-                "文本_当前时间数": "", 
-                "文本_最大回合数": ""
+                "文本_当前时间数": ""
             }
         }, 
         {
             "文本_当前回合数": 0, 
-            "文本_当前时间数": 0, 
-            "文本_最大回合数": 0
+            "文本_当前时间数": 0
         }, 
         [
             "文本_当前回合数", 
-            "文本_最大回合数", 
             "文本_当前时间数"
         ]
     ]
