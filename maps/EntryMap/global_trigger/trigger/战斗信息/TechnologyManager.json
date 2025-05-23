@@ -1598,42 +1598,230 @@
                                     "enable": true
                                 }, 
                                 {
-                                    "action_type": "SET_VARIABLE", 
+                                    "action_type": "IF_THEN_ELSE", 
                                     "args_list": [
                                         {
-                                            "arg_type": 100030, 
+                                            "arg_type": 100021, 
                                             "args_list": [
                                                 {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "STRING", 
-                                                        "提取神器下一级的升级类型", 
-                                                        "local"
-                                                    ]
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100031, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "ITEM_ENTITY", 
+                                                                                "提取已拥有的神器物品", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 4
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100325, 
+                                                                    "args_list": [
+                                                                        "stack_cnt"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_ITEM_INT_ATTR"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100015, 
+                                                            "args_list": [
+                                                                ">="
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100011, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100011, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "TABLE", 
+                                                                                        "表_装备信息集合表", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "VARIABLE"
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100003, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "STRING", 
+                                                                                        "提取装备科技交互类型", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 2
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_TABLE_TABLE_VAR_1D"
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_TABLE_LENGTH"
+                                                        }
+                                                    ], 
+                                                    "condition_type": "FLOAT_COMPARE", 
+                                                    "element_id": 673898961000340, 
+                                                    "enable": true
                                                 }
                                             ], 
                                             "sub_type": 1
                                         }, 
                                         {
-                                            "arg_type": 100003, 
+                                            "arg_type": 100022, 
                                             "args_list": [
                                                 {
-                                                    "arg_type": 100011, 
+                                                    "action_type": "SEND_CUSTOM_EVENT", 
                                                     "args_list": [
                                                         {
-                                                            "arg_type": 100011, 
+                                                            "arg_type": 100238, 
+                                                            "args_list": [
+                                                                1826902038
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100025, 
+                                                            "args_list": [], 
+                                                            "sub_type": "TRIGGER_PLAYER"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "该神器已经升满级了噢！"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "bp": false, 
+                                                    "element_id": 673898961000353, 
+                                                    "enable": true
+                                                }
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100022, 
+                                            "args_list": [
+                                                {
+                                                    "action_type": "SET_VARIABLE", 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100030, 
                                                             "args_list": [
                                                                 {
                                                                     "__tuple__": true, 
                                                                     "items": [
-                                                                        "TABLE", 
-                                                                        "表_装备信息集合表", 
+                                                                        "STRING", 
+                                                                        "提取神器下一级的升级类型", 
                                                                         "local"
                                                                     ]
                                                                 }
                                                             ], 
-                                                            "sub_type": "VARIABLE"
+                                                            "sub_type": 1
                                                         }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100011, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100011, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "TABLE", 
+                                                                                        "表_装备信息集合表", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "VARIABLE"
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100003, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "STRING", 
+                                                                                        "提取装备科技交互类型", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 2
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_TABLE_TABLE_VAR_1D"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100031, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "ITEM_ENTITY", 
+                                                                                        "提取已拥有的神器物品", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 4
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100325, 
+                                                                            "args_list": [
+                                                                                "stack_cnt"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_ITEM_INT_ATTR"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        "升级类型"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_STRING_TABLE_VAR_ND"
+                                                        }
+                                                    ], 
+                                                    "bp": false, 
+                                                    "element_id": 673898961000187, 
+                                                    "enable": true
+                                                }, 
+                                                {
+                                                    "action_type": "SWITCH", 
+                                                    "args_list": [
                                                         {
                                                             "arg_type": 100003, 
                                                             "args_list": [
@@ -1641,222 +1829,34 @@
                                                                     "__tuple__": true, 
                                                                     "items": [
                                                                         "STRING", 
-                                                                        "提取装备科技交互类型", 
+                                                                        "提取神器下一级的升级类型", 
                                                                         "local"
                                                                     ]
                                                                 }
                                                             ], 
                                                             "sub_type": 2
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_TABLE_TABLE_VAR_1D"
-                                                }, 
-                                                {
-                                                    "arg_type": 100002, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100031, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "ITEM_ENTITY", 
-                                                                        "提取已拥有的神器物品", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 4
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100325, 
-                                                            "args_list": [
-                                                                "stack_cnt"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_ITEM_INT_ATTR"
-                                                }, 
-                                                {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        "升级类型"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "sub_type": "GET_STRING_TABLE_VAR_ND"
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 673898961000187, 
-                                    "enable": true
-                                }, 
-                                {
-                                    "action_type": "SWITCH", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "STRING", 
-                                                        "提取神器下一级的升级类型", 
-                                                        "local"
-                                                    ]
-                                                }
-                                            ], 
-                                            "sub_type": 2
-                                        }, 
-                                        {
-                                            "arg_type": 100022, 
-                                            "args_list": [
-                                                {
-                                                    "action_type": "CASE", 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                "金币"
-                                                            ], 
-                                                            "sub_type": 1
                                                         }, 
                                                         {
                                                             "arg_type": 100022, 
                                                             "args_list": [
                                                                 {
-                                                                    "action_type": "SET_VARIABLE", 
+                                                                    "action_type": "CASE", 
                                                                     "args_list": [
                                                                         {
-                                                                            "arg_type": 100030, 
+                                                                            "arg_type": 100003, 
                                                                             "args_list": [
-                                                                                {
-                                                                                    "__tuple__": true, 
-                                                                                    "items": [
-                                                                                        "INTEGER", 
-                                                                                        "提取装备升级价格", 
-                                                                                        "local"
-                                                                                    ]
-                                                                                }
+                                                                                "金币"
                                                                             ], 
                                                                             "sub_type": 1
                                                                         }, 
                                                                         {
-                                                                            "arg_type": 100002, 
+                                                                            "arg_type": 100022, 
                                                                             "args_list": [
                                                                                 {
-                                                                                    "arg_type": 100011, 
+                                                                                    "action_type": "SET_VARIABLE", 
                                                                                     "args_list": [
                                                                                         {
-                                                                                            "arg_type": 100011, 
-                                                                                            "args_list": [
-                                                                                                {
-                                                                                                    "__tuple__": true, 
-                                                                                                    "items": [
-                                                                                                        "TABLE", 
-                                                                                                        "表_装备信息集合表", 
-                                                                                                        "local"
-                                                                                                    ]
-                                                                                                }
-                                                                                            ], 
-                                                                                            "sub_type": "VARIABLE"
-                                                                                        }, 
-                                                                                        {
-                                                                                            "arg_type": 100003, 
-                                                                                            "args_list": [
-                                                                                                {
-                                                                                                    "__tuple__": true, 
-                                                                                                    "items": [
-                                                                                                        "STRING", 
-                                                                                                        "提取装备科技交互类型", 
-                                                                                                        "local"
-                                                                                                    ]
-                                                                                                }
-                                                                                            ], 
-                                                                                            "sub_type": 2
-                                                                                        }
-                                                                                    ], 
-                                                                                    "sub_type": "GET_TABLE_TABLE_VAR_1D"
-                                                                                }, 
-                                                                                {
-                                                                                    "arg_type": 100002, 
-                                                                                    "args_list": [
-                                                                                        {
-                                                                                            "arg_type": 100031, 
-                                                                                            "args_list": [
-                                                                                                {
-                                                                                                    "__tuple__": true, 
-                                                                                                    "items": [
-                                                                                                        "ITEM_ENTITY", 
-                                                                                                        "提取已拥有的神器物品", 
-                                                                                                        "local"
-                                                                                                    ]
-                                                                                                }
-                                                                                            ], 
-                                                                                            "sub_type": 4
-                                                                                        }, 
-                                                                                        {
-                                                                                            "arg_type": 100325, 
-                                                                                            "args_list": [
-                                                                                                "stack_cnt"
-                                                                                            ], 
-                                                                                            "sub_type": 1
-                                                                                        }
-                                                                                    ], 
-                                                                                    "sub_type": "GET_ITEM_INT_ATTR"
-                                                                                }, 
-                                                                                {
-                                                                                    "arg_type": 100003, 
-                                                                                    "args_list": [
-                                                                                        "消耗数量"
-                                                                                    ], 
-                                                                                    "sub_type": 1
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": "GET_INTEGER_TABLE_VAR_ND"
-                                                                        }
-                                                                    ], 
-                                                                    "bp": false, 
-                                                                    "element_id": 673898961000160, 
-                                                                    "enable": true
-                                                                }, 
-                                                                {
-                                                                    "action_type": "IF_THEN_ELSE", 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "arg_type": 100021, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "args_list": [
-                                                                                        {
-                                                                                            "arg_type": 100000, 
-                                                                                            "args_list": [
-                                                                                                {
-                                                                                                    "arg_type": 100025, 
-                                                                                                    "args_list": [], 
-                                                                                                    "sub_type": "TRIGGER_PLAYER"
-                                                                                                }, 
-                                                                                                {
-                                                                                                    "arg_type": 100037, 
-                                                                                                    "args_list": [
-                                                                                                        "official_res_1"
-                                                                                                    ], 
-                                                                                                    "sub_type": 1
-                                                                                                }
-                                                                                            ], 
-                                                                                            "sub_type": "GET_ROLE_RES"
-                                                                                        }, 
-                                                                                        {
-                                                                                            "arg_type": 100015, 
-                                                                                            "args_list": [
-                                                                                                ">="
-                                                                                            ], 
-                                                                                            "sub_type": 1
-                                                                                        }, 
-                                                                                        {
-                                                                                            "arg_type": 100002, 
+                                                                                            "arg_type": 100030, 
                                                                                             "args_list": [
                                                                                                 {
                                                                                                     "__tuple__": true, 
@@ -1867,153 +1867,338 @@
                                                                                                     ]
                                                                                                 }
                                                                                             ], 
-                                                                                            "sub_type": 6
-                                                                                        }
-                                                                                    ], 
-                                                                                    "condition_type": "FLOAT_COMPARE", 
-                                                                                    "element_id": 673898961000241, 
-                                                                                    "enable": true
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": 1
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100022, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "action_type": "ROLE_CHANGE_RES", 
-                                                                                    "args_list": [
-                                                                                        {
-                                                                                            "arg_type": 100025, 
-                                                                                            "args_list": [], 
-                                                                                            "sub_type": "TRIGGER_PLAYER"
-                                                                                        }, 
-                                                                                        {
-                                                                                            "arg_type": 100037, 
-                                                                                            "args_list": [
-                                                                                                "official_res_1"
-                                                                                            ], 
                                                                                             "sub_type": 1
                                                                                         }, 
                                                                                         {
-                                                                                            "arg_type": 100000, 
+                                                                                            "arg_type": 100002, 
                                                                                             "args_list": [
                                                                                                 {
-                                                                                                    "arg_type": 100002, 
+                                                                                                    "arg_type": 100011, 
                                                                                                     "args_list": [
-                                                                                                        -1
+                                                                                                        {
+                                                                                                            "arg_type": 100011, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "__tuple__": true, 
+                                                                                                                    "items": [
+                                                                                                                        "TABLE", 
+                                                                                                                        "表_装备信息集合表", 
+                                                                                                                        "local"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": "VARIABLE"
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100003, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "__tuple__": true, 
+                                                                                                                    "items": [
+                                                                                                                        "STRING", 
+                                                                                                                        "提取装备科技交互类型", 
+                                                                                                                        "local"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": 2
+                                                                                                        }
                                                                                                     ], 
-                                                                                                    "sub_type": 1
-                                                                                                }, 
-                                                                                                {
-                                                                                                    "arg_type": 100017, 
-                                                                                                    "args_list": [
-                                                                                                        "*"
-                                                                                                    ], 
-                                                                                                    "sub_type": 1
+                                                                                                    "sub_type": "GET_TABLE_TABLE_VAR_1D"
                                                                                                 }, 
                                                                                                 {
                                                                                                     "arg_type": 100002, 
                                                                                                     "args_list": [
                                                                                                         {
-                                                                                                            "__tuple__": true, 
-                                                                                                            "items": [
-                                                                                                                "INTEGER", 
-                                                                                                                "提取装备升级价格", 
-                                                                                                                "local"
-                                                                                                            ]
+                                                                                                            "arg_type": 100031, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "__tuple__": true, 
+                                                                                                                    "items": [
+                                                                                                                        "ITEM_ENTITY", 
+                                                                                                                        "提取已拥有的神器物品", 
+                                                                                                                        "local"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": 4
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100325, 
+                                                                                                            "args_list": [
+                                                                                                                "stack_cnt"
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
                                                                                                         }
                                                                                                     ], 
-                                                                                                    "sub_type": 6
+                                                                                                    "sub_type": "GET_ITEM_INT_ATTR"
+                                                                                                }, 
+                                                                                                {
+                                                                                                    "arg_type": 100003, 
+                                                                                                    "args_list": [
+                                                                                                        "消耗数量"
+                                                                                                    ], 
+                                                                                                    "sub_type": 1
                                                                                                 }
                                                                                             ], 
-                                                                                            "sub_type": "ARITHMETIC_OPERATION"
+                                                                                            "sub_type": "GET_INTEGER_TABLE_VAR_ND"
                                                                                         }
                                                                                     ], 
                                                                                     "bp": false, 
-                                                                                    "element_id": 673898961000255, 
+                                                                                    "element_id": 673898961000160, 
                                                                                     "enable": true
                                                                                 }, 
                                                                                 {
-                                                                                    "action_type": "ADD_ITEM_STACK", 
+                                                                                    "action_type": "IF_THEN_ELSE", 
                                                                                     "args_list": [
                                                                                         {
-                                                                                            "arg_type": 100031, 
+                                                                                            "arg_type": 100021, 
                                                                                             "args_list": [
                                                                                                 {
-                                                                                                    "__tuple__": true, 
-                                                                                                    "items": [
-                                                                                                        "ITEM_ENTITY", 
-                                                                                                        "提取已拥有的神器物品", 
-                                                                                                        "local"
-                                                                                                    ]
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100000, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "arg_type": 100025, 
+                                                                                                                    "args_list": [], 
+                                                                                                                    "sub_type": "TRIGGER_PLAYER"
+                                                                                                                }, 
+                                                                                                                {
+                                                                                                                    "arg_type": 100037, 
+                                                                                                                    "args_list": [
+                                                                                                                        "official_res_1"
+                                                                                                                    ], 
+                                                                                                                    "sub_type": 1
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": "GET_ROLE_RES"
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100015, 
+                                                                                                            "args_list": [
+                                                                                                                ">="
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100002, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "__tuple__": true, 
+                                                                                                                    "items": [
+                                                                                                                        "INTEGER", 
+                                                                                                                        "提取装备升级价格", 
+                                                                                                                        "local"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": 6
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "condition_type": "FLOAT_COMPARE", 
+                                                                                                    "element_id": 673898961000241, 
+                                                                                                    "enable": true
                                                                                                 }
                                                                                             ], 
-                                                                                            "sub_type": 4
+                                                                                            "sub_type": 1
                                                                                         }, 
                                                                                         {
-                                                                                            "arg_type": 100002, 
+                                                                                            "arg_type": 100022, 
                                                                                             "args_list": [
-                                                                                                1
+                                                                                                {
+                                                                                                    "action_type": "ROLE_CHANGE_RES", 
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100025, 
+                                                                                                            "args_list": [], 
+                                                                                                            "sub_type": "TRIGGER_PLAYER"
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100037, 
+                                                                                                            "args_list": [
+                                                                                                                "official_res_1"
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100000, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "arg_type": 100002, 
+                                                                                                                    "args_list": [
+                                                                                                                        -1
+                                                                                                                    ], 
+                                                                                                                    "sub_type": 1
+                                                                                                                }, 
+                                                                                                                {
+                                                                                                                    "arg_type": 100017, 
+                                                                                                                    "args_list": [
+                                                                                                                        "*"
+                                                                                                                    ], 
+                                                                                                                    "sub_type": 1
+                                                                                                                }, 
+                                                                                                                {
+                                                                                                                    "arg_type": 100002, 
+                                                                                                                    "args_list": [
+                                                                                                                        {
+                                                                                                                            "__tuple__": true, 
+                                                                                                                            "items": [
+                                                                                                                                "INTEGER", 
+                                                                                                                                "提取装备升级价格", 
+                                                                                                                                "local"
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ], 
+                                                                                                                    "sub_type": 6
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": "ARITHMETIC_OPERATION"
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "bp": false, 
+                                                                                                    "element_id": 673898961000255, 
+                                                                                                    "enable": true
+                                                                                                }, 
+                                                                                                {
+                                                                                                    "action_type": "ADD_ITEM_STACK", 
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100031, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "__tuple__": true, 
+                                                                                                                    "items": [
+                                                                                                                        "ITEM_ENTITY", 
+                                                                                                                        "提取已拥有的神器物品", 
+                                                                                                                        "local"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": 4
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100002, 
+                                                                                                            "args_list": [
+                                                                                                                1
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "bp": false, 
+                                                                                                    "element_id": 673898961000303, 
+                                                                                                    "enable": true
+                                                                                                }, 
+                                                                                                {
+                                                                                                    "action_type": "SEND_CUSTOM_EVENT", 
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100238, 
+                                                                                                            "args_list": [
+                                                                                                                1346416466
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100025, 
+                                                                                                            "args_list": [], 
+                                                                                                            "sub_type": "TRIGGER_PLAYER"
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "bp": false, 
+                                                                                                    "element_id": 673898961000318, 
+                                                                                                    "enable": true
+                                                                                                }, 
+                                                                                                {
+                                                                                                    "action_type": "SEND_CUSTOM_EVENT", 
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100238, 
+                                                                                                            "args_list": [
+                                                                                                                2022317263
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100025, 
+                                                                                                            "args_list": [], 
+                                                                                                            "sub_type": "TRIGGER_PLAYER"
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100002, 
+                                                                                                            "args_list": [
+                                                                                                                [
+                                                                                                                    "INTEGER", 
+                                                                                                                    "循环装备槽交互i值", 
+                                                                                                                    "local"
+                                                                                                                ]
+                                                                                                            ], 
+                                                                                                            "sub_type": 6
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "bp": false, 
+                                                                                                    "element_id": 673898961000328, 
+                                                                                                    "enable": true
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100022, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "action_type": "SEND_CUSTOM_EVENT", 
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100238, 
+                                                                                                            "args_list": [
+                                                                                                                1826902038
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100025, 
+                                                                                                            "args_list": [], 
+                                                                                                            "sub_type": "TRIGGER_PLAYER"
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100003, 
+                                                                                                            "args_list": [
+                                                                                                                "#FFFFFF您的#FFAA55金币不足#FFFFFF以升级神器"
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "bp": false, 
+                                                                                                    "element_id": 673898961000287, 
+                                                                                                    "enable": true
+                                                                                                }
                                                                                             ], 
                                                                                             "sub_type": 1
                                                                                         }
                                                                                     ], 
                                                                                     "bp": false, 
-                                                                                    "element_id": 673898961000303, 
-                                                                                    "enable": true
-                                                                                }, 
-                                                                                {
-                                                                                    "action_type": "SEND_CUSTOM_EVENT", 
-                                                                                    "args_list": [
-                                                                                        {
-                                                                                            "arg_type": 100238, 
-                                                                                            "args_list": [
-                                                                                                1346416466
-                                                                                            ], 
-                                                                                            "sub_type": 1
-                                                                                        }, 
-                                                                                        {
-                                                                                            "arg_type": 100025, 
-                                                                                            "args_list": [], 
-                                                                                            "sub_type": "TRIGGER_PLAYER"
-                                                                                        }
-                                                                                    ], 
-                                                                                    "bp": false, 
-                                                                                    "element_id": 673898961000318, 
-                                                                                    "enable": true
-                                                                                }, 
-                                                                                {
-                                                                                    "action_type": "SEND_CUSTOM_EVENT", 
-                                                                                    "args_list": [
-                                                                                        {
-                                                                                            "arg_type": 100238, 
-                                                                                            "args_list": [
-                                                                                                2022317263
-                                                                                            ], 
-                                                                                            "sub_type": 1
-                                                                                        }, 
-                                                                                        {
-                                                                                            "arg_type": 100025, 
-                                                                                            "args_list": [], 
-                                                                                            "sub_type": "TRIGGER_PLAYER"
-                                                                                        }, 
-                                                                                        {
-                                                                                            "arg_type": 100002, 
-                                                                                            "args_list": [
-                                                                                                [
-                                                                                                    "INTEGER", 
-                                                                                                    "循环装备槽交互i值", 
-                                                                                                    "local"
-                                                                                                ]
-                                                                                            ], 
-                                                                                            "sub_type": 6
-                                                                                        }
-                                                                                    ], 
-                                                                                    "bp": false, 
-                                                                                    "element_id": 673898961000328, 
-                                                                                    "enable": true
+                                                                                    "element_id": 673898961000237, 
+                                                                                    "enable": true, 
+                                                                                    "fake_op": [
+                                                                                        2
+                                                                                    ]
                                                                                 }
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "bp": false, 
+                                                                    "element_id": 673898961000201, 
+                                                                    "enable": true
+                                                                }, 
+                                                                {
+                                                                    "action_type": "CASE", 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100003, 
+                                                                            "args_list": [
+                                                                                "杀敌计算"
                                                                             ], 
                                                                             "sub_type": 1
                                                                         }, 
@@ -2038,13 +2223,13 @@
                                                                                         {
                                                                                             "arg_type": 100003, 
                                                                                             "args_list": [
-                                                                                                "#FFFFFF您的#FFAA55金币不足#FFFFFF以升级神器"
+                                                                                                "升级需要一定#FFAA55杀敌数量"
                                                                                             ], 
                                                                                             "sub_type": 1
                                                                                         }
                                                                                     ], 
                                                                                     "bp": false, 
-                                                                                    "element_id": 673898961000287, 
+                                                                                    "element_id": 673898961000223, 
                                                                                     "enable": true
                                                                                 }
                                                                             ], 
@@ -2052,58 +2237,7 @@
                                                                         }
                                                                     ], 
                                                                     "bp": false, 
-                                                                    "element_id": 673898961000237, 
-                                                                    "enable": true, 
-                                                                    "fake_op": [
-                                                                        2
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "bp": false, 
-                                                    "element_id": 673898961000201, 
-                                                    "enable": true
-                                                }, 
-                                                {
-                                                    "action_type": "CASE", 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                "杀敌计算"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100022, 
-                                                            "args_list": [
-                                                                {
-                                                                    "action_type": "SEND_CUSTOM_EVENT", 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "arg_type": 100238, 
-                                                                            "args_list": [
-                                                                                1826902038
-                                                                            ], 
-                                                                            "sub_type": 1
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100025, 
-                                                                            "args_list": [], 
-                                                                            "sub_type": "TRIGGER_PLAYER"
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100003, 
-                                                                            "args_list": [
-                                                                                "升级需要一定#FFAA55杀敌数量"
-                                                                            ], 
-                                                                            "sub_type": 1
-                                                                        }
-                                                                    ], 
-                                                                    "bp": false, 
-                                                                    "element_id": 673898961000223, 
+                                                                    "element_id": 673898961000206, 
                                                                     "enable": true
                                                                 }
                                                             ], 
@@ -2111,7 +2245,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 673898961000206, 
+                                                    "element_id": 673898961000197, 
                                                     "enable": true
                                                 }
                                             ], 
@@ -2119,8 +2253,11 @@
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 673898961000197, 
-                                    "enable": true
+                                    "element_id": 673898961000331, 
+                                    "enable": true, 
+                                    "fake_op": [
+                                        2
+                                    ]
                                 }
                             ], 
                             "sub_type": 1
