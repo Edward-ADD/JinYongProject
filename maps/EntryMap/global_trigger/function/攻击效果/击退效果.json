@@ -1,6 +1,50 @@
 {
     "action": [
         {
+            "action_type": "REMOVE_UNIT_MOVER", 
+            "args_list": [
+                {
+                    "arg_type": 100006, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "UNIT_ENTITY", 
+                                "被击退的目标单位", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 11
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1267437764000024, 
+            "enable": false
+        }, 
+        {
+            "action_type": "BREAK_UNIT_MOVER", 
+            "args_list": [
+                {
+                    "arg_type": 100006, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "UNIT_ENTITY", 
+                                "被击退的目标单位", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 11
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1267437764000031, 
+            "enable": true
+        }, 
+        {
             "action_type": "IF_THEN_ELSE", 
             "args_list": [
                 {
@@ -177,9 +221,16 @@
                                 {
                                     "arg_type": 100000, 
                                     "args_list": [
-                                        1000.0
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "FLOAT", 
+                                                "击退速度", 
+                                                "local"
+                                            ]
+                                        }
                                     ], 
-                                    "sub_type": 1
+                                    "sub_type": 2
                                 }, 
                                 {
                                     "arg_type": 100000, 
@@ -225,7 +276,7 @@
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 1267437764000004, 
+                                            "element_id": 1267437764000016, 
                                             "enable": true
                                         }
                                     ], 
@@ -344,7 +395,7 @@
     "event": [], 
     "func_category": "t_function", 
     "func_comment": "用于给武器攻击效果添加击退", 
-    "func_des": "发起攻击的目标：{发起攻击的目标}，被攻击的目标：{被击退的目标单位}，攻击者的击退值：{发起攻击的击退属性值}", 
+    "func_des": "发起攻击的目标：{发起攻击的目标}，被攻击的目标：{被击退的目标单位}，攻击者的击退值：{发起攻击的击退属性值}，击退速度效果：{击退速度}", 
     "func_id": "41c7b5f7969f11ef8182435b8fad9bfc", 
     "func_name": "击退效果", 
     "func_param_list": [
@@ -368,6 +419,13 @@
                 "发起攻击的目标", 
                 true
             ]
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                "击退速度", 
+                true
+            ]
         }
     ], 
     "group_id": "Tn48YS-WEfCk7g2rEsnuRO", 
@@ -380,6 +438,7 @@
     "var_data": [
         {
             "FLOAT": {
+                "击退速度": 0.0, 
                 "发起攻击的击退属性值": 0.0, 
                 "提取冲刺距离": 0.0
             }, 
@@ -393,6 +452,7 @@
             }
         }, 
         {
+            "击退速度": 0, 
             "发起攻击的击退属性值": 0, 
             "发起攻击的目标": 0, 
             "提取冲刺距离": 0, 
@@ -404,7 +464,8 @@
             "发起攻击的击退属性值", 
             "被击退的目标单位", 
             "发起攻击的目标", 
-            "提取冲刺距离"
+            "提取冲刺距离", 
+            "击退速度"
         ]
     ]
 }
