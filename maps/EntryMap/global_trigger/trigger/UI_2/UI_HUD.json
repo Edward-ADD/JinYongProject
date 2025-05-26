@@ -1700,7 +1700,8 @@
                         54870480, 
                         1323389401, 
                         1179890136, 
-                        1269658081
+                        1269658081, 
+                        64774636
                     ], 
                     "sub_type": 1
                 }, 
@@ -1719,7 +1720,7 @@
             ], 
             "bp": false, 
             "element_id": 1507471604001447, 
-            "enable": true
+            "enable": false
         }, 
         {
             "action_type": "STORAGE_BOX", 
@@ -1769,9 +1770,7 @@
                     "arg_type": 100022, 
                     "args_list": [
                         1131557314, 
-                        1869754819, 
                         577909188, 
-                        745681349, 
                         1165111750, 
                         326250951
                     ], 
@@ -2330,6 +2329,75 @@
             "p_trigger_id": 1507471604, 
             "trigger_id": 54870480, 
             "trigger_name": "W", 
+            "valid": true, 
+            "var_data": [
+                {}, 
+                {}, 
+                []
+            ]
+        }, 
+        "64774636": {
+            "action": [
+                {
+                    "action_type": "ADD_UNIT_LEVEL", 
+                    "args_list": [
+                        {
+                            "arg_type": 100006, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        1
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "玩家的单位角色"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_UNIT_ENTITY_KV"
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                15
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 64774636000011, 
+                    "enable": true
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": false, 
+            "event": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 200220, 
+                            "args_list": [
+                                7
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "element_id": 64774636000004, 
+                    "enable": true, 
+                    "event_type": "KEYBOARD_KEY_DOWN_EVENT"
+                }
+            ], 
+            "group_id": 0, 
+            "is_conf": true, 
+            "p_trigger_id": 1507471604, 
+            "trigger_id": 64774636, 
+            "trigger_name": "6", 
             "valid": true, 
             "var_data": [
                 {}, 
@@ -3033,6 +3101,26 @@
         "577909188": {
             "action": [
                 {
+                    "action_type": "SEND_CUSTOM_EVENT", 
+                    "args_list": [
+                        {
+                            "arg_type": 100238, 
+                            "args_list": [
+                                1867785385
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1505313252000016, 
+                    "enable": true
+                }, 
+                {
                     "action_type": "IF_THEN_ELSE", 
                     "args_list": [
                         {
@@ -3149,7 +3237,13 @@
                                     "op_arg": [
                                         null, 
                                         null, 
-                                        null, 
+                                        {
+                                            "arg_type": 100000, 
+                                            "args_list": [
+                                                2.0
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
                                         {
                                             "arg_type": 100340, 
                                             "args_list": [
@@ -3161,7 +3255,7 @@
                                     "op_arg_enable": [
                                         false, 
                                         false, 
-                                        false, 
+                                        true, 
                                         true
                                     ]
                                 }, 
@@ -3171,7 +3265,7 @@
                                         {
                                             "arg_type": 100002, 
                                             "args_list": [
-                                                5
+                                                2
                                             ], 
                                             "sub_type": 1
                                         }, 
@@ -3292,7 +3386,13 @@
                                     "op_arg": [
                                         null, 
                                         null, 
-                                        null, 
+                                        {
+                                            "arg_type": 100000, 
+                                            "args_list": [
+                                                2.0
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
                                         {
                                             "arg_type": 100340, 
                                             "args_list": [
@@ -3304,7 +3404,7 @@
                                     "op_arg_enable": [
                                         false, 
                                         false, 
-                                        false, 
+                                        true, 
                                         true
                                     ]
                                 }, 
@@ -3405,6 +3505,20 @@
                     "element_id": 577909188000001, 
                     "enable": true, 
                     "event_type": "TRIGGER_COMPONENT_EVENT"
+                }, 
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 200220, 
+                            "args_list": [
+                                46
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "element_id": 745681349000001, 
+                    "enable": true, 
+                    "event_type": "KEYBOARD_KEY_DOWN_EVENT"
                 }
             ], 
             "group_id": 0, 
@@ -3421,6 +3535,26 @@
         }, 
         "678572494": {
             "action": [
+                {
+                    "action_type": "SEND_CUSTOM_EVENT", 
+                    "args_list": [
+                        {
+                            "arg_type": 100238, 
+                            "args_list": [
+                                1867785385
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1505313252000016, 
+                    "enable": true
+                }, 
                 {
                     "action_type": "IF_THEN_ELSE", 
                     "args_list": [
@@ -3637,389 +3771,6 @@
                 []
             ]
         }, 
-        "745681349": {
-            "action": [
-                {
-                    "action_type": "IF_THEN_ELSE", 
-                    "args_list": [
-                        {
-                            "arg_type": 100021, 
-                            "args_list": [
-                                {
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100001, 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100025, 
-                                                    "args_list": [], 
-                                                    "sub_type": "TRIGGER_PLAYER"
-                                                }, 
-                                                {
-                                                    "arg_type": 100070, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "UI_COMP", 
-                                                                "UI_详细属性查看控件", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": "VARIABLE"
-                                                }
-                                            ], 
-                                            "sub_type": "GET_UI_COMP_VISIBLE"
-                                        }, 
-                                        {
-                                            "arg_type": 100035, 
-                                            "args_list": [
-                                                "=="
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100001, 
-                                            "args_list": [
-                                                true
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "condition_type": "BOOL_COMPARE", 
-                                    "element_id": 745681349000002, 
-                                    "enable": true
-                                }
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100022, 
-                            "args_list": [
-                                {
-                                    "action_type": "PLAY_SOUND_FOR_PLAYER", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100025, 
-                                            "args_list": [], 
-                                            "sub_type": "TRIGGER_PLAYER"
-                                        }, 
-                                        {
-                                            "arg_type": 100084, 
-                                            "args_list": [
-                                                134260341
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100001, 
-                                            "args_list": [
-                                                false
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 1010041305000005, 
-                                    "enable": true, 
-                                    "op_arg": [
-                                        null, 
-                                        null, 
-                                        null
-                                    ], 
-                                    "op_arg_enable": [
-                                        false, 
-                                        false, 
-                                        false
-                                    ]
-                                }, 
-                                {
-                                    "action_type": "PLAY_UI_COMP_ANIM_NEW", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100025, 
-                                            "args_list": [], 
-                                            "sub_type": "TRIGGER_PLAYER"
-                                        }, 
-                                        {
-                                            "arg_type": 100239, 
-                                            "args_list": [
-                                                "192e1612-cce6-43bf-a2ae-444543a9dc05"
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 1131557314000018, 
-                                    "enable": true, 
-                                    "op_arg": [
-                                        null, 
-                                        null, 
-                                        null, 
-                                        {
-                                            "arg_type": 100340, 
-                                            "args_list": [
-                                                0
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "op_arg_enable": [
-                                        false, 
-                                        false, 
-                                        false, 
-                                        true
-                                    ]
-                                }, 
-                                {
-                                    "action_type": "RUN_ONCE_TIMER_BY_FRAME_NO_SAVE", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100002, 
-                                            "args_list": [
-                                                5
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100022, 
-                                            "args_list": [
-                                                {
-                                                    "action_type": "SET_UI_COMP_VISIBLE", 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100025, 
-                                                            "args_list": [], 
-                                                            "sub_type": "TRIGGER_PLAYER"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100001, 
-                                                            "args_list": [
-                                                                false
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100070, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "UI_COMP", 
-                                                                        "UI_详细属性查看控件", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": "VARIABLE"
-                                                        }
-                                                    ], 
-                                                    "bp": false, 
-                                                    "element_id": 577909188000003, 
-                                                    "enable": true
-                                                }
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 577909188000008, 
-                                    "enable": true, 
-                                    "local_var": {
-                                        "__tuple__": true, 
-                                        "items": [
-                                            {}, 
-                                            {}
-                                        ]
-                                    }
-                                }
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100022, 
-                            "args_list": [
-                                {
-                                    "action_type": "PLAY_SOUND_FOR_PLAYER", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100025, 
-                                            "args_list": [], 
-                                            "sub_type": "TRIGGER_PLAYER"
-                                        }, 
-                                        {
-                                            "arg_type": 100084, 
-                                            "args_list": [
-                                                134260341
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100001, 
-                                            "args_list": [
-                                                false
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 745681349000040, 
-                                    "enable": true, 
-                                    "op_arg": [
-                                        null, 
-                                        null, 
-                                        null
-                                    ], 
-                                    "op_arg_enable": [
-                                        false, 
-                                        false, 
-                                        false
-                                    ]
-                                }, 
-                                {
-                                    "action_type": "PLAY_UI_COMP_ANIM_NEW", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100025, 
-                                            "args_list": [], 
-                                            "sub_type": "TRIGGER_PLAYER"
-                                        }, 
-                                        {
-                                            "arg_type": 100239, 
-                                            "args_list": [
-                                                "d24a0db8-bf7c-436d-b957-8e0986d0b145"
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 1131557314000011, 
-                                    "enable": true, 
-                                    "op_arg": [
-                                        null, 
-                                        null, 
-                                        null, 
-                                        {
-                                            "arg_type": 100340, 
-                                            "args_list": [
-                                                0
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "op_arg_enable": [
-                                        false, 
-                                        false, 
-                                        false, 
-                                        true
-                                    ]
-                                }, 
-                                {
-                                    "action_type": "RUN_ONCE_TIMER_BY_FRAME_NO_SAVE", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100002, 
-                                            "args_list": [
-                                                1
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100022, 
-                                            "args_list": [
-                                                {
-                                                    "action_type": "SET_UI_COMP_VISIBLE", 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100025, 
-                                                            "args_list": [], 
-                                                            "sub_type": "TRIGGER_PLAYER"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100001, 
-                                                            "args_list": [
-                                                                true
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100070, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "UI_COMP", 
-                                                                        "UI_详细属性查看控件", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": "VARIABLE"
-                                                        }
-                                                    ], 
-                                                    "bp": false, 
-                                                    "element_id": 745681349000004, 
-                                                    "enable": true
-                                                }
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 745681349000030, 
-                                    "enable": true, 
-                                    "local_var": {
-                                        "__tuple__": true, 
-                                        "items": [
-                                            {}, 
-                                            {}
-                                        ]
-                                    }
-                                }
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 745681349000005, 
-                    "enable": true, 
-                    "fake_op": [
-                        2
-                    ]
-                }
-            ], 
-            "call_enabled": true, 
-            "condition": [], 
-            "enabled": false, 
-            "event": [
-                {
-                    "args_list": [
-                        {
-                            "arg_type": 200220, 
-                            "args_list": [
-                                46
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "element_id": 745681349000001, 
-                    "enable": true, 
-                    "event_type": "KEYBOARD_KEY_DOWN_EVENT"
-                }
-            ], 
-            "group_id": 0, 
-            "is_conf": true, 
-            "p_trigger_id": 1507471604, 
-            "trigger_id": 745681349, 
-            "trigger_name": "详细属性查看显示（C)", 
-            "valid": true, 
-            "var_data": [
-                {}, 
-                {}, 
-                []
-            ]
-        }, 
         "812790216": {
             "action": [
                 {
@@ -4047,6 +3798,26 @@
                     ], 
                     "bp": false, 
                     "element_id": 812790216000002, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "SEND_CUSTOM_EVENT", 
+                    "args_list": [
+                        {
+                            "arg_type": 100238, 
+                            "args_list": [
+                                1867785385
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1505313252000016, 
                     "enable": true
                 }, 
                 {
@@ -4200,6 +3971,26 @@
                     "args_list": [], 
                     "bp": false, 
                     "element_id": 1030894029000002, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "SEND_CUSTOM_EVENT", 
+                    "args_list": [
+                        {
+                            "arg_type": 100238, 
+                            "args_list": [
+                                1867785385
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1505313252000016, 
                     "enable": true
                 }, 
                 {
@@ -4551,6 +4342,26 @@
         "1098002890": {
             "action": [
                 {
+                    "action_type": "SEND_CUSTOM_EVENT", 
+                    "args_list": [
+                        {
+                            "arg_type": 100238, 
+                            "args_list": [
+                                1867785385
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1505313252000016, 
+                    "enable": true
+                }, 
+                {
                     "action_type": "SET_UI_COMP_VISIBLE", 
                     "args_list": [
                         {
@@ -4617,6 +4428,26 @@
         }, 
         "1131557314": {
             "action": [
+                {
+                    "action_type": "SEND_CUSTOM_EVENT", 
+                    "args_list": [
+                        {
+                            "arg_type": 100238, 
+                            "args_list": [
+                                1867785385
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1505313252000016, 
+                    "enable": true
+                }, 
                 {
                     "action_type": "IF_THEN_ELSE", 
                     "args_list": [
@@ -4731,7 +4562,13 @@
                                     "op_arg": [
                                         null, 
                                         null, 
-                                        null, 
+                                        {
+                                            "arg_type": 100000, 
+                                            "args_list": [
+                                                2.0
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
                                         {
                                             "arg_type": 100340, 
                                             "args_list": [
@@ -4743,7 +4580,7 @@
                                     "op_arg_enable": [
                                         false, 
                                         false, 
-                                        false, 
+                                        true, 
                                         true
                                     ]
                                 }, 
@@ -4753,7 +4590,7 @@
                                         {
                                             "arg_type": 100002, 
                                             "args_list": [
-                                                5
+                                                2
                                             ], 
                                             "sub_type": 1
                                         }, 
@@ -4788,7 +4625,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1131557314000003, 
+                                                    "element_id": 1131557314000063, 
                                                     "enable": true
                                                 }
                                             ], 
@@ -4871,7 +4708,13 @@
                                     "op_arg": [
                                         null, 
                                         null, 
-                                        null, 
+                                        {
+                                            "arg_type": 100000, 
+                                            "args_list": [
+                                                2.0
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
                                         {
                                             "arg_type": 100340, 
                                             "args_list": [
@@ -4883,7 +4726,7 @@
                                     "op_arg_enable": [
                                         false, 
                                         false, 
-                                        false, 
+                                        true, 
                                         true
                                     ]
                                 }, 
@@ -4981,6 +4824,20 @@
                     "element_id": 1131557314000001, 
                     "enable": true, 
                     "event_type": "TRIGGER_COMPONENT_EVENT"
+                }, 
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 200220, 
+                            "args_list": [
+                                15
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "element_id": 1869754819000001, 
+                    "enable": true, 
+                    "event_type": "KEYBOARD_KEY_DOWN_EVENT"
                 }
             ], 
             "group_id": 0, 
@@ -5354,6 +5211,26 @@
                         {
                             "arg_type": 100238, 
                             "args_list": [
+                                1867785385
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1505313252000016, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "SEND_CUSTOM_EVENT", 
+                    "args_list": [
+                        {
+                            "arg_type": 100238, 
+                            "args_list": [
                                 1826902038
                             ], 
                             "sub_type": 1
@@ -5603,8 +5480,16 @@
                     "args_list": [
                         {
                             "arg_type": 100025, 
-                            "args_list": [], 
-                            "sub_type": "TRIGGER_PLAYER"
+                            "args_list": [
+                                {
+                                    "arg_type": 100240, 
+                                    "args_list": [
+                                        "玩家"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_CUS_EVENT_PARAM"
                         }, 
                         {
                             "arg_type": 100084, 
@@ -5643,30 +5528,16 @@
                 {
                     "args_list": [
                         {
-                            "arg_type": 200221, 
+                            "arg_type": 100238, 
                             "args_list": [
-                                240
+                                1867785385
                             ], 
                             "sub_type": 1
                         }
                     ], 
-                    "element_id": 1505313252000001, 
+                    "element_id": 1505313252000007, 
                     "enable": true, 
-                    "event_type": "MOUSE_KEY_DOWN_EVENT"
-                }, 
-                {
-                    "args_list": [
-                        {
-                            "arg_type": 200221, 
-                            "args_list": [
-                                241
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "element_id": 1505313252000002, 
-                    "enable": true, 
-                    "event_type": "MOUSE_KEY_DOWN_EVENT"
+                    "event_type": "RECEIVE_CUSTOM_EVENT"
                 }
             ], 
             "group_id": 0, 
@@ -5806,6 +5677,26 @@
                     ], 
                     "bp": false, 
                     "element_id": 1718759884000109, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "SEND_CUSTOM_EVENT", 
+                    "args_list": [
+                        {
+                            "arg_type": 100238, 
+                            "args_list": [
+                                1867785385
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1505313252000016, 
                     "enable": true
                 }, 
                 {
@@ -6119,380 +6010,6 @@
             "p_trigger_id": 1507471604, 
             "trigger_id": 1718759884, 
             "trigger_name": "暂停游戏", 
-            "valid": true, 
-            "var_data": [
-                {}, 
-                {}, 
-                []
-            ]
-        }, 
-        "1869754819": {
-            "action": [
-                {
-                    "action_type": "IF_THEN_ELSE", 
-                    "args_list": [
-                        {
-                            "arg_type": 100021, 
-                            "args_list": [
-                                {
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100001, 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100025, 
-                                                    "args_list": [], 
-                                                    "sub_type": "TRIGGER_PLAYER"
-                                                }, 
-                                                {
-                                                    "arg_type": 100070, 
-                                                    "args_list": [
-                                                        [
-                                                            "UI_COMP", 
-                                                            "UI_融汇贯通武功列表控件", 
-                                                            "local"
-                                                        ]
-                                                    ], 
-                                                    "sub_type": "VARIABLE"
-                                                }
-                                            ], 
-                                            "sub_type": "GET_UI_COMP_VISIBLE"
-                                        }, 
-                                        {
-                                            "arg_type": 100035, 
-                                            "args_list": [
-                                                "=="
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100001, 
-                                            "args_list": [
-                                                true
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "condition_type": "BOOL_COMPARE", 
-                                    "element_id": 1869754819000002, 
-                                    "enable": true
-                                }
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100022, 
-                            "args_list": [
-                                {
-                                    "action_type": "PLAY_SOUND_FOR_PLAYER", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100025, 
-                                            "args_list": [], 
-                                            "sub_type": "TRIGGER_PLAYER"
-                                        }, 
-                                        {
-                                            "arg_type": 100084, 
-                                            "args_list": [
-                                                134260341
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100001, 
-                                            "args_list": [
-                                                false
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 1010041305000005, 
-                                    "enable": true, 
-                                    "op_arg": [
-                                        null, 
-                                        null, 
-                                        null
-                                    ], 
-                                    "op_arg_enable": [
-                                        false, 
-                                        false, 
-                                        false
-                                    ]
-                                }, 
-                                {
-                                    "action_type": "PLAY_UI_COMP_ANIM_NEW", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100025, 
-                                            "args_list": [], 
-                                            "sub_type": "TRIGGER_PLAYER"
-                                        }, 
-                                        {
-                                            "arg_type": 100239, 
-                                            "args_list": [
-                                                "f130411b-292b-4bcf-9843-e819069893f0"
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 1131557314000020, 
-                                    "enable": true, 
-                                    "op_arg": [
-                                        null, 
-                                        null, 
-                                        null, 
-                                        {
-                                            "arg_type": 100340, 
-                                            "args_list": [
-                                                0
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "op_arg_enable": [
-                                        false, 
-                                        false, 
-                                        false, 
-                                        true
-                                    ]
-                                }, 
-                                {
-                                    "action_type": "RUN_ONCE_TIMER_BY_FRAME_NO_SAVE", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100002, 
-                                            "args_list": [
-                                                5
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100022, 
-                                            "args_list": [
-                                                {
-                                                    "action_type": "SET_UI_COMP_VISIBLE", 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100025, 
-                                                            "args_list": [], 
-                                                            "sub_type": "TRIGGER_PLAYER"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100001, 
-                                                            "args_list": [
-                                                                false
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100070, 
-                                                            "args_list": [
-                                                                [
-                                                                    "UI_COMP", 
-                                                                    "UI_融汇贯通武功列表控件", 
-                                                                    "local"
-                                                                ]
-                                                            ], 
-                                                            "sub_type": "VARIABLE"
-                                                        }
-                                                    ], 
-                                                    "bp": false, 
-                                                    "element_id": 1869754819000043, 
-                                                    "enable": true
-                                                }
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 1131557314000033, 
-                                    "enable": true, 
-                                    "local_var": {
-                                        "__tuple__": true, 
-                                        "items": [
-                                            {}, 
-                                            {}
-                                        ]
-                                    }
-                                }
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100022, 
-                            "args_list": [
-                                {
-                                    "action_type": "PLAY_SOUND_FOR_PLAYER", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100025, 
-                                            "args_list": [], 
-                                            "sub_type": "TRIGGER_PLAYER"
-                                        }, 
-                                        {
-                                            "arg_type": 100084, 
-                                            "args_list": [
-                                                134260341
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100001, 
-                                            "args_list": [
-                                                false
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 1869754819000053, 
-                                    "enable": true, 
-                                    "op_arg": [
-                                        null, 
-                                        null, 
-                                        null
-                                    ], 
-                                    "op_arg_enable": [
-                                        false, 
-                                        false, 
-                                        false
-                                    ]
-                                }, 
-                                {
-                                    "action_type": "PLAY_UI_COMP_ANIM_NEW", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100025, 
-                                            "args_list": [], 
-                                            "sub_type": "TRIGGER_PLAYER"
-                                        }, 
-                                        {
-                                            "arg_type": 100239, 
-                                            "args_list": [
-                                                "a331acdb-a11d-4aed-8042-1a68243d798a"
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 1131557314000008, 
-                                    "enable": true, 
-                                    "op_arg": [
-                                        null, 
-                                        null, 
-                                        null, 
-                                        {
-                                            "arg_type": 100340, 
-                                            "args_list": [
-                                                0
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "op_arg_enable": [
-                                        false, 
-                                        false, 
-                                        false, 
-                                        true
-                                    ]
-                                }, 
-                                {
-                                    "action_type": "RUN_ONCE_TIMER_BY_FRAME_NO_SAVE", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100002, 
-                                            "args_list": [
-                                                1
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100022, 
-                                            "args_list": [
-                                                {
-                                                    "action_type": "SET_UI_COMP_VISIBLE", 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100025, 
-                                                            "args_list": [], 
-                                                            "sub_type": "TRIGGER_PLAYER"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100001, 
-                                                            "args_list": [
-                                                                true
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100070, 
-                                                            "args_list": [
-                                                                [
-                                                                    "UI_COMP", 
-                                                                    "UI_融汇贯通武功列表控件", 
-                                                                    "local"
-                                                                ]
-                                                            ], 
-                                                            "sub_type": "VARIABLE"
-                                                        }
-                                                    ], 
-                                                    "bp": false, 
-                                                    "element_id": 1131557314000004, 
-                                                    "enable": true
-                                                }
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 1131557314000013, 
-                                    "enable": true, 
-                                    "local_var": {
-                                        "__tuple__": true, 
-                                        "items": [
-                                            {}, 
-                                            {}
-                                        ]
-                                    }
-                                }
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 1869754819000005, 
-                    "enable": true, 
-                    "fake_op": [
-                        2
-                    ]
-                }
-            ], 
-            "call_enabled": true, 
-            "condition": [], 
-            "enabled": false, 
-            "event": [
-                {
-                    "args_list": [
-                        {
-                            "arg_type": 200220, 
-                            "args_list": [
-                                15
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "element_id": 1869754819000001, 
-                    "enable": true, 
-                    "event_type": "KEYBOARD_KEY_DOWN_EVENT"
-                }
-            ], 
-            "group_id": 0, 
-            "is_conf": true, 
-            "p_trigger_id": 1507471604, 
-            "trigger_id": 1869754819, 
-            "trigger_name": "融会贯通武功显示隐藏按(TAB)", 
             "valid": true, 
             "var_data": [
                 {}, 
@@ -6898,7 +6415,7 @@
                         {
                             "arg_type": 100000, 
                             "args_list": [
-                                3000.0
+                                20000.0
                             ], 
                             "sub_type": 1
                         }
@@ -7326,6 +6843,26 @@
         "1953640907": {
             "action": [
                 {
+                    "action_type": "SEND_CUSTOM_EVENT", 
+                    "args_list": [
+                        {
+                            "arg_type": 100238, 
+                            "args_list": [
+                                1867785385
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1505313252000016, 
+                    "enable": true
+                }, 
+                {
                     "action_type": "SET_UI_COMP_VISIBLE", 
                     "args_list": [
                         {
@@ -7640,6 +7177,26 @@
         }, 
         "2054304207": {
             "action": [
+                {
+                    "action_type": "SEND_CUSTOM_EVENT", 
+                    "args_list": [
+                        {
+                            "arg_type": 100238, 
+                            "args_list": [
+                                1867785385
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1505313252000016, 
+                    "enable": true
+                }, 
                 {
                     "action_type": "IF_THEN_ELSE", 
                     "args_list": [
