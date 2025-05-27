@@ -59,7 +59,8 @@
                                     "arg_type": 100022, 
                                     "args_list": [
                                         777146441, 
-                                        1869299786
+                                        1869299786, 
+                                        1538277877
                                     ], 
                                     "sub_type": 1
                                 }, 
@@ -838,6 +839,39 @@
                     "bp": false, 
                     "element_id": 949203021000014, 
                     "enable": true
+                }, 
+                {
+                    "action_type": "UNIT_ADD_EXP", 
+                    "args_list": [
+                        {
+                            "arg_type": 100006, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [], 
+                                    "sub_type": "TRIGGER_PLAYER"
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "玩家的单位角色"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_UNIT_ENTITY_KV"
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                10000
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 949203021000017, 
+                    "enable": true
                 }
             ], 
             "call_enabled": true, 
@@ -1110,6 +1144,81 @@
                 {}, 
                 {}, 
                 []
+            ]
+        }, 
+        "1538277877": {
+            "action": [
+                {
+                    "action_type": "REVIVE", 
+                    "args_list": [
+                        {
+                            "arg_type": 100006, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [], 
+                                    "sub_type": "TRIGGER_PLAYER"
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "玩家的单位角色"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_UNIT_ENTITY_KV"
+                        }, 
+                        {
+                            "arg_type": 100004, 
+                            "args_list": [
+                                10001
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1538277877000002, 
+                    "enable": true
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": false, 
+            "event": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 200220, 
+                            "args_list": [
+                                4
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "element_id": 1538277877000001, 
+                    "enable": true, 
+                    "event_type": "KEYBOARD_KEY_DOWN_EVENT"
+                }
+            ], 
+            "group_id": 0, 
+            "is_conf": true, 
+            "p_trigger_id": 640385090, 
+            "trigger_id": 1538277877, 
+            "trigger_name": "复活玩家", 
+            "valid": true, 
+            "var_data": [
+                {
+                    "NEW_TIMER": {
+                        "提取随机点": -1
+                    }
+                }, 
+                {
+                    "提取随机点": 0
+                }, 
+                [
+                    "提取随机点"
+                ]
             ]
         }, 
         "1710407750": {
@@ -1458,86 +1567,35 @@
         "1869299786": {
             "action": [
                 {
-                    "action_type": "CREATE_PROJECTILE_NEW", 
+                    "action_type": "KILL_UNIT", 
                     "args_list": [
                         {
-                            "arg_type": 100062, 
-                            "args_list": [
-                                134251595
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100004, 
+                            "arg_type": 100006, 
                             "args_list": [
                                 {
-                                    "arg_type": 100006, 
+                                    "arg_type": 100025, 
+                                    "args_list": [], 
+                                    "sub_type": "TRIGGER_PLAYER"
+                                }, 
+                                {
+                                    "arg_type": 100003, 
                                     "args_list": [
-                                        {
-                                            "arg_type": 100025, 
-                                            "args_list": [], 
-                                            "sub_type": "TRIGGER_PLAYER"
-                                        }, 
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                "玩家的单位角色"
-                                            ], 
-                                            "sub_type": 1
-                                        }
+                                        "玩家的单位角色"
                                     ], 
-                                    "sub_type": "GET_UNIT_ENTITY_KV"
+                                    "sub_type": 1
                                 }
                             ], 
-                            "sub_type": "UNIT_ENTITY_POINT"
+                            "sub_type": "GET_UNIT_ENTITY_KV"
                         }, 
                         {
-                            "arg_type": 100025, 
-                            "args_list": [
-                                1
-                            ], 
-                            "sub_type": 1
+                            "arg_type": 100006, 
+                            "args_list": [], 
+                            "sub_type": "NONE_UNIT"
                         }
                     ], 
                     "bp": false, 
-                    "element_id": 1869299786000005, 
-                    "enable": true, 
-                    "op_arg": [
-                        null, 
-                        null, 
-                        {
-                            "arg_type": 100000, 
-                            "args_list": [
-                                5.0
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        null, 
-                        null, 
-                        {
-                            "arg_type": 100001, 
-                            "args_list": [
-                                true
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100001, 
-                            "args_list": [
-                                false
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "op_arg_enable": [
-                        false, 
-                        false, 
-                        true, 
-                        false, 
-                        false, 
-                        false, 
-                        false
-                    ]
+                    "element_id": 1869299786000008, 
+                    "enable": true
                 }
             ], 
             "call_enabled": true, 
@@ -1563,7 +1621,7 @@
             "is_conf": true, 
             "p_trigger_id": 640385090, 
             "trigger_id": 1869299786, 
-            "trigger_name": "创建敌人", 
+            "trigger_name": "杀死玩家", 
             "valid": true, 
             "var_data": [
                 {
