@@ -1,6 +1,64 @@
 {
     "action": [
         {
+            "action_type": "SET_UNIT_ALARM_RANGE", 
+            "args_list": [
+                {
+                    "arg_type": 100006, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "UNIT_ENTITY", 
+                                "提取创建的BOSS单位", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 11
+                }, 
+                {
+                    "arg_type": 100000, 
+                    "args_list": [
+                        10000.0
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 264266229001488, 
+            "enable": true
+        }, 
+        {
+            "action_type": "SET_UNIT_CANCEL_ALARM_RANGE", 
+            "args_list": [
+                {
+                    "arg_type": 100006, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "UNIT_ENTITY", 
+                                "提取创建的BOSS单位", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 11
+                }, 
+                {
+                    "arg_type": 100000, 
+                    "args_list": [
+                        10200.0
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 264266229001498, 
+            "enable": true
+        }, 
+        {
             "action_type": "SET_VARIABLE", 
             "args_list": [
                 {
@@ -194,14 +252,17 @@
     "var_data": [
         {
             "UNIT_ENTITY": {
-                "创建的敌人单位": 0
+                "创建的敌人单位": 0, 
+                "提取创建的BOSS单位": 0
             }
         }, 
         {
-            "创建的敌人单位": 0
+            "创建的敌人单位": 0, 
+            "提取创建的BOSS单位": 0
         }, 
         [
-            "创建的敌人单位"
+            "创建的敌人单位", 
+            "提取创建的BOSS单位"
         ]
     ]
 }

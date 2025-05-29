@@ -1,0 +1,477 @@
+{
+    "action": [
+        {
+            "action_type": "SET_VARIABLE", 
+            "args_list": [
+                {
+                    "arg_type": 100006, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "UNIT_ENTITY", 
+                                "提取创建的敌人单位", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 11
+                }, 
+                {
+                    "arg_type": 100006, 
+                    "args_list": [
+                        {
+                            "arg_type": 100116, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "UNIT_NAME", 
+                                        "传入的生成敌人类型", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": 2
+                        }, 
+                        {
+                            "arg_type": 100004, 
+                            "args_list": [
+                                [
+                                    "POINT", 
+                                    "消除单位重生特效存储点"
+                                ]
+                            ], 
+                            "sub_type": 19
+                        }, 
+                        {
+                            "arg_type": 100225, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100000, 
+                                    "args_list": [
+                                        180.0
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_ANGLE_BY_FLOAT"
+                        }, 
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [
+                                31
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "op_arg": [
+                        null
+                    ], 
+                    "op_arg_enable": [
+                        false
+                    ], 
+                    "sub_type": "CREATE_UNIT_NEW"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 890171887000858, 
+            "enable": true
+        }, 
+        {
+            "action_type": "SET_ENTITY_KV", 
+            "args_list": [
+                {
+                    "arg_type": 100006, 
+                    "args_list": [
+                        [
+                            "UNIT_ENTITY", 
+                            "提取创建的敌人单位", 
+                            "local"
+                        ]
+                    ], 
+                    "sub_type": 11
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        "召唤敌人的玩家ID"
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100002, 
+                    "args_list": [
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "PLAYER", 
+                                        "传入的玩家ID", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }
+                    ], 
+                    "sub_type": "PLAYER_ID_NUMBER"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 890171887001068, 
+            "enable": true
+        }, 
+        {
+            "action_type": "SET_ATTR", 
+            "args_list": [
+                {
+                    "arg_type": 100006, 
+                    "args_list": [
+                        [
+                            "UNIT_ENTITY", 
+                            "提取创建的敌人单位", 
+                            "local"
+                        ]
+                    ], 
+                    "sub_type": 11
+                }, 
+                {
+                    "arg_type": 100300, 
+                    "args_list": [
+                        "ATTR_BASE"
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100042, 
+                    "args_list": [
+                        "hp_max"
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100000, 
+                    "args_list": [
+                        {
+                            "arg_type": 100000, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [
+                                        [
+                                            "UNIT_ENTITY", 
+                                            "提取创建的敌人单位", 
+                                            "local"
+                                        ]
+                                    ], 
+                                    "sub_type": 11
+                                }, 
+                                {
+                                    "arg_type": 100301, 
+                                    "args_list": [
+                                        "ATTR_BASE"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100042, 
+                                    "args_list": [
+                                        "hp_max"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_UNIT_ATTR"
+                        }, 
+                        {
+                            "arg_type": 100017, 
+                            "args_list": [
+                                "*"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100000, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "FLOAT", 
+                                        "传入的血量系数修正", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": 2
+                        }
+                    ], 
+                    "sub_type": "ARITHMETIC_OPERATION"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1776730113000704, 
+            "enable": true
+        }, 
+        {
+            "action_type": "SET_ATTR", 
+            "args_list": [
+                {
+                    "arg_type": 100006, 
+                    "args_list": [
+                        [
+                            "UNIT_ENTITY", 
+                            "提取创建的敌人单位", 
+                            "local"
+                        ]
+                    ], 
+                    "sub_type": 11
+                }, 
+                {
+                    "arg_type": 100300, 
+                    "args_list": [
+                        "ATTR_BASE"
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100042, 
+                    "args_list": [
+                        "attack_phy"
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100000, 
+                    "args_list": [
+                        {
+                            "arg_type": 100000, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [
+                                        [
+                                            "UNIT_ENTITY", 
+                                            "提取创建的敌人单位", 
+                                            "local"
+                                        ]
+                                    ], 
+                                    "sub_type": 11
+                                }, 
+                                {
+                                    "arg_type": 100301, 
+                                    "args_list": [
+                                        "ATTR_BASE"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100042, 
+                                    "args_list": [
+                                        "attack_phy"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_UNIT_ATTR"
+                        }, 
+                        {
+                            "arg_type": 100017, 
+                            "args_list": [
+                                "*"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100000, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "FLOAT", 
+                                        "传入的伤害系数修正", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": 2
+                        }
+                    ], 
+                    "sub_type": "ARITHMETIC_OPERATION"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1776730113000711, 
+            "enable": true
+        }, 
+        {
+            "action_type": "FORCE_TRANSMIT_UNIT", 
+            "args_list": [
+                {
+                    "arg_type": 100006, 
+                    "args_list": [
+                        [
+                            "UNIT_ENTITY", 
+                            "提取创建的敌人单位", 
+                            "local"
+                        ]
+                    ], 
+                    "sub_type": 11
+                }, 
+                {
+                    "arg_type": 100004, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "POINT", 
+                                "传入的生成位置点", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 19
+                }
+            ], 
+            "bp": false, 
+            "element_id": 890171887000862, 
+            "enable": true, 
+            "op_arg": [
+                {
+                    "arg_type": 100001, 
+                    "args_list": [
+                        true
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "op_arg_enable": [
+                false
+            ]
+        }
+    ], 
+    "call_enabled": true, 
+    "condition": [], 
+    "enabled": true, 
+    "event": [], 
+    "func_category": "t_function", 
+    "func_comment": "", 
+    "func_des": "位置点：{传入的生成位置点}，类型：{传入的生成敌人类型}，出怪的玩家：{传入的玩家ID}，血量修正系数：{传入的血量系数修正}，伤害修正系数：{传入的伤害系数修正}", 
+    "func_id": "1350c1313c6711f0891b11e2a7471c84", 
+    "func_name": "新创建敌人模板", 
+    "func_param_list": [
+        {
+            "__tuple__": true, 
+            "items": [
+                "传入的生成位置点", 
+                true
+            ]
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                "传入的生成敌人类型", 
+                true
+            ]
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                "传入的玩家ID", 
+                true
+            ]
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                "传入的血量系数修正", 
+                true
+            ]
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                "传入的伤害系数修正", 
+                true
+            ]
+        }
+    ], 
+    "group_id": "FLnczDw3EfCM-xHip0cchM", 
+    "is_func": true, 
+    "is_official_func": false, 
+    "p_trigger_id": null, 
+    "trigger_id": 1173234180, 
+    "trigger_name": "新创建敌人模板", 
+    "valid": true, 
+    "var_data": [
+        {
+            "FLOAT": {
+                "传入的伤害系数修正": 0.0, 
+                "传入的血量系数修正": 0.0
+            }, 
+            "INTEGER": {
+                "提取随机池的ID值": 0
+            }, 
+            "NEW_TIMER": {}, 
+            "PLAYER": {
+                "传入的玩家ID": 0
+            }, 
+            "POINT": {
+                "传入的生成位置点": {
+                    "__tuple__": true, 
+                    "items": [
+                        0, 
+                        0, 
+                        0
+                    ]
+                }, 
+                "提取生怪随机点": {
+                    "__tuple__": true, 
+                    "items": [
+                        0, 
+                        0, 
+                        0
+                    ]
+                }
+            }, 
+            "RECTANGLE": {
+                "提取防守模式生成怪区域": 0
+            }, 
+            "TABLE": {
+                "表_怪物信息储存表": null
+            }, 
+            "UNIT_ENTITY": {
+                "提取创建的敌人单位": 0
+            }, 
+            "UNIT_NAME": {
+                "传入的生成敌人类型": 0
+            }
+        }, 
+        {
+            "传入的伤害系数修正": 0, 
+            "传入的玩家ID": 0, 
+            "传入的生成位置点": 0, 
+            "传入的生成敌人类型": 0, 
+            "传入的血量系数修正": 0, 
+            "提取创建的敌人单位": 0, 
+            "提取生怪随机点": 0, 
+            "提取防守模式生成怪区域": 0, 
+            "提取随机池的ID值": 0, 
+            "表_怪物信息储存表": 0
+        }, 
+        [
+            "传入的生成位置点", 
+            "传入的生成敌人类型", 
+            "传入的玩家ID", 
+            "传入的血量系数修正", 
+            "传入的伤害系数修正", 
+            "提取生怪随机点", 
+            "提取防守模式生成怪区域", 
+            "提取随机池的ID值", 
+            "提取创建的敌人单位", 
+            "表_怪物信息储存表"
+        ]
+    ]
+}
