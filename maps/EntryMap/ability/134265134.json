@@ -1,0 +1,467 @@
+{
+    "local_variable": {
+        "797913090": {
+            "variable_dict": {
+                "ABILITY": {
+                    "\u63d0\u53d6\u94c1\u638c\u62f3\u4e3b\u6280\u80fd": null
+                }, 
+                "NEW_TIMER": {}
+            }, 
+            "variable_length_dict": {
+                "\u63d0\u53d6\u94c1\u638c\u62f3\u4e3b\u6280\u80fd": 0
+            }
+        }, 
+        "1552793601": {
+            "variable_dict": {
+                "NEW_TIMER": {}
+            }, 
+            "variable_length_dict": {}
+        }
+    }, 
+    "trigger_dict": {
+        "797913090": {
+            "action": [
+                {
+                    "action_type": "SET_VARIABLE", 
+                    "args_list": [
+                        {
+                            "arg_type": 100030, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "ABILITY", 
+                                        "\u63d0\u53d6\u94c1\u638c\u62f3\u4e3b\u6280\u80fd", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100014, 
+                            "args_list": [], 
+                            "sub_type": "NONE_ABILITY"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 797913090000044, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "IF_THEN_ELSE", 
+                    "args_list": [
+                        {
+                            "arg_type": 100021, 
+                            "args_list": [
+                                {
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100006, 
+                                            "args_list": [], 
+                                            "sub_type": "ABILITY_OWNER"
+                                        }, 
+                                        {
+                                            "arg_type": 100039, 
+                                            "args_list": [
+                                                134280313
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "condition_type": "CHECK_HAS_ABILITY_TYPE", 
+                                    "element_id": 797913090000060, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "SET_ENTITY_KV", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100014, 
+                                            "args_list": [], 
+                                            "sub_type": "CUR_ABILITY"
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                "\u5df2\u589e\u52a0\u94c1\u638c\u62f3\u51fb\u9000"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100001, 
+                                            "args_list": [
+                                                true
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 797913090000094, 
+                                    "enable": true
+                                }, 
+                                {
+                                    "action_type": "SET_ENTITY_KV", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100014, 
+                                            "args_list": [], 
+                                            "sub_type": "DAMAGE_ABILITY"
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                "\u94c1\u638c\u62f3\u51fb\u9000\u503c"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100000, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100000, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100014, 
+                                                            "args_list": [], 
+                                                            "sub_type": "DAMAGE_ABILITY"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "\u94c1\u638c\u62f3\u51fb\u9000\u503c"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "GET_FLOAT_KV"
+                                                }, 
+                                                {
+                                                    "arg_type": 100017, 
+                                                    "args_list": [
+                                                        "+"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100000, 
+                                                    "args_list": [
+                                                        1.0
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "ARITHMETIC_OPERATION"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 797913090000100, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 797913090000051, 
+                    "enable": true, 
+                    "fake_op": []
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 100021, 
+                            "args_list": [
+                                {
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100006, 
+                                            "args_list": [], 
+                                            "sub_type": "GET_UNIT_FROM_EVENT"
+                                        }, 
+                                        {
+                                            "arg_type": 100035, 
+                                            "args_list": [
+                                                "=="
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100006, 
+                                            "args_list": [], 
+                                            "sub_type": "ABILITY_OWNER"
+                                        }
+                                    ], 
+                                    "condition_type": "UNIT_COMPARE", 
+                                    "element_id": 797913090000013, 
+                                    "enable": true
+                                }, 
+                                {
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100001, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100014, 
+                                                    "args_list": [], 
+                                                    "sub_type": "CUR_ABILITY"
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "\u5df2\u589e\u52a0\u94c1\u638c\u62f3\u51fb\u9000"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_BOOLEAN_KV"
+                                        }, 
+                                        {
+                                            "arg_type": 100035, 
+                                            "args_list": [
+                                                "=="
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100001, 
+                                            "args_list": [
+                                                false
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "condition_type": "BOOL_COMPARE", 
+                                    "element_id": 797913090000074, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "condition_type": "AND", 
+                    "element_id": 797913090000069, 
+                    "enable": true
+                }
+            ], 
+            "enabled": false, 
+            "event": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 100128, 
+                            "args_list": [
+                                "ET_ABILITY_OBTAIN"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "element_id": 104276248000001, 
+                    "enable": true, 
+                    "event_type": "GLOBAL_ABILITY_EVENT"
+                }
+            ], 
+            "group_id": 0, 
+            "is_conf": true, 
+            "p_trigger_id": 1552793601, 
+            "trigger_id": 797913090, 
+            "trigger_name": "\u5b50\u89e6\u53d1\u5b9e\u65f6\u5224\u5b9a", 
+            "valid": true, 
+            "var_data": [
+                {
+                    "ABILITY": {
+                        "\u63d0\u53d6\u94c1\u638c\u62f3\u4e3b\u6280\u80fd": null
+                    }, 
+                    "NEW_TIMER": {}
+                }, 
+                {
+                    "\u63d0\u53d6\u94c1\u638c\u62f3\u4e3b\u6280\u80fd": 0
+                }, 
+                [
+                    "\u63d0\u53d6\u94c1\u638c\u62f3\u4e3b\u6280\u80fd"
+                ]
+            ]
+        }, 
+        "873385987": {
+            "action": [
+                {
+                    "action_type": "CALL_TRIGGER_FUNC", 
+                    "args_list": [
+                        {
+                            "arg_type": 100177, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100014, 
+                                            "args_list": [], 
+                                            "sub_type": "CUR_ABILITY"
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                "\u5361\u724cID\u503c"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "sub_type": "GET_INTEGER_KV"
+                                }, 
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [], 
+                                    "sub_type": "ABILITY_OWNER"
+                                }
+                            ], 
+                            "op_arg": [], 
+                            "op_arg_enable": [], 
+                            "sub_type": "878525343d5611f08b85092c5b0204bc"
+                        }
+                    ], 
+                    "bp": false, 
+                    "call_rt_arg_idxes": [], 
+                    "element_id": 1552793601000009, 
+                    "enable": true
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": true, 
+            "event": [
+                {
+                    "args_list": [], 
+                    "element_id": 873385987000002, 
+                    "enable": true, 
+                    "event_type": "ABILITY_LOSE"
+                }
+            ], 
+            "group_id": 134265134, 
+            "p_trigger_id": null, 
+            "trigger_id": 873385987, 
+            "trigger_name": "\u5931\u53bb\u65f6", 
+            "valid": true, 
+            "var_data": [
+                {}, 
+                {}, 
+                []
+            ]
+        }, 
+        "1552793601": {
+            "action": [
+                {
+                    "action_type": "CALL_TRIGGER_FUNC", 
+                    "args_list": [
+                        {
+                            "arg_type": 100177, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100014, 
+                                            "args_list": [], 
+                                            "sub_type": "CUR_ABILITY"
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                "\u5361\u724cID\u503c"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "sub_type": "GET_INTEGER_KV"
+                                }, 
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [], 
+                                    "sub_type": "ABILITY_OWNER"
+                                }
+                            ], 
+                            "op_arg": [], 
+                            "op_arg_enable": [], 
+                            "sub_type": "c4b7ecc53d5511f0a540092c5b0204bc"
+                        }
+                    ], 
+                    "bp": false, 
+                    "call_rt_arg_idxes": [], 
+                    "element_id": 1552793601000009, 
+                    "enable": true
+                }, 
+                797913090
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": true, 
+            "event": [
+                {
+                    "args_list": [], 
+                    "element_id": 1552793601000001, 
+                    "enable": true, 
+                    "event_type": "ABILITY_OBTAIN"
+                }
+            ], 
+            "group_id": 134265134, 
+            "p_trigger_id": null, 
+            "trigger_id": 1552793601, 
+            "trigger_name": "\u83b7\u5f97\u65f6", 
+            "valid": true, 
+            "var_data": [
+                {
+                    "NEW_TIMER": {}
+                }, 
+                {}, 
+                []
+            ]
+        }
+    }, 
+    "trigger_group_info": [
+        {
+            "_trigger_group_": true, 
+            "group": [
+                {
+                    "__tuple__": true, 
+                    "items": [
+                        1552793601, 
+                        "\u83b7\u5f97\u65f6"
+                    ]
+                }, 
+                {
+                    "__tuple__": true, 
+                    "items": [
+                        873385987, 
+                        "\u5931\u53bb\u65f6"
+                    ]
+                }
+            ], 
+            "key": 134265134, 
+            "name": "134265134"
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                797913090, 
+                "\u5b50\u89e6\u53d1\u5b9e\u65f6\u5224\u5b9a"
+            ]
+        }
+    ], 
+    "trigger_version": "1.2", 
+    "variable_dict": {}, 
+    "variable_group_info": [], 
+    "variable_length_dict": {}
+}
