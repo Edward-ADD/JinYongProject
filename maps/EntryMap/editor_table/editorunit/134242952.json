@@ -175,7 +175,7 @@
     "billboard_scale_x": 1.0, 
     "billboard_scale_y": 1.0, 
     "blood_bar": 134218900, 
-    "blood_show_type": 0, 
+    "blood_show_type": 1, 
     "body_size": 1.0, 
     "build_ignore_dyn_collision": false, 
     "build_res_cost_list": {
@@ -212,10 +212,10 @@
         "items": []
     }, 
     "common_atk": [
-        134224669, 
+        134260168, 
         1
     ], 
-    "common_atk_type": 0, 
+    "common_atk_type": 2, 
     "counterattack_range": 0.0, 
     "critical_chance": 0.0, 
     "critical_chance_grow": 0.0, 
@@ -680,15 +680,25 @@
         "damage": {
             "__tuple__": true, 
             "items": [
-                "lambda unit: Fix32(unit.ability_source.api_get_float_attr('attack_phy'))", 
+                "lambda unit: Fix32(unit.ability_target.api_get_float_attr('attack_phy'))*(Fix32(1)+Fix32(unit.ability_target.api_get_float_attr('extra_dmg'))/Fix32(100))*(Fix32(1)+Fix32(unit.ability_target.api_get_float_attr('UPNENTy8EfCrXA3a4cgBXt'))/Fix32(100)) ", 
                 [
                     [
-                        "ability_source", 
+                        "ability_target", 
                         "ATTR_RESULT", 
                         "attack_phy"
+                    ], 
+                    [
+                        "ability_target", 
+                        "ATTR_RESULT", 
+                        "extra_dmg"
+                    ], 
+                    [
+                        "ability_target", 
+                        "ATTR_RESULT", 
+                        "UPNENTy8EfCrXA3a4cgBXt"
                     ]
                 ], 
-                "lambda unit: Fix32(unit.ability_source.api_get_float_attr('attack_phy'))", 
+                "lambda unit: Fix32(unit.ability_target.api_get_float_attr('attack_phy'))*(Fix32(1)+Fix32(unit.ability_target.api_get_float_attr('extra_dmg'))/Fix32(100))*(Fix32(1)+Fix32(unit.ability_target.api_get_float_attr('UPNENTy8EfCrXA3a4cgBXt'))/Fix32(100)) ", 
                 {
                     "unit.ability_source.ATTR_RESULT.attack_phy": {
                         "is_cm": false
@@ -698,14 +708,35 @@
                     }, 
                     "unit.ability_target.ATTR_RESULT.BP8yMJ5bEe6t39he030bMu": {
                         "is_cm": false
+                    }, 
+                    "unit.ability_target.ATTR_RESULT.UPNENTy8EfCrXA3a4cgBXt": {
+                        "is_cm": false
+                    }, 
+                    "unit.ability_target.ATTR_RESULT.attack_phy": {
+                        "is_cm": false
+                    }, 
+                    "unit.ability_target.ATTR_RESULT.extra_dmg": {
+                        "is_cm": false
                     }
                 }, 
                 [
                     [
                         "unit", 
-                        "ability_source", 
+                        "ability_target", 
                         "ATTR_RESULT", 
                         "attack_phy"
+                    ], 
+                    [
+                        "unit", 
+                        "ability_target", 
+                        "ATTR_RESULT", 
+                        "extra_dmg"
+                    ], 
+                    [
+                        "unit", 
+                        "ability_target", 
+                        "ATTR_RESULT", 
+                        "UPNENTy8EfCrXA3a4cgBXt"
                     ]
                 ]
             ]
