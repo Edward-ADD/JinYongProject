@@ -121,8 +121,8 @@
                                                         {
                                                             "__tuple__": true, 
                                                             "items": [
-                                                                "ABILITY_NAME", 
-                                                                "技能", 
+                                                                "ABILITY", 
+                                                                "传入技能", 
                                                                 "local"
                                                             ]
                                                         }
@@ -130,7 +130,7 @@
                                                     "sub_type": 1
                                                 }, 
                                                 {
-                                                    "arg_type": 100039, 
+                                                    "arg_type": 100014, 
                                                     "args_list": [
                                                         {
                                                             "arg_type": 100006, 
@@ -174,7 +174,7 @@
                                                             "sub_type": 1
                                                         }
                                                     ], 
-                                                    "sub_type": "GET_ABILITYKEY_BY_TYPE_AND_INDEX"
+                                                    "sub_type": "UNIT_ABILITY"
                                                 }
                                             ], 
                                             "bp": false, 
@@ -287,14 +287,11 @@
                                                 {
                                                     "arg_type": 100030, 
                                                     "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "ABILITY_NAME", 
-                                                                "技能", 
-                                                                "local"
-                                                            ]
-                                                        }
+                                                        [
+                                                            "ABILITY_NAME", 
+                                                            "技能类型值", 
+                                                            "local"
+                                                        ]
                                                     ], 
                                                     "sub_type": 1
                                                 }, 
@@ -348,6 +345,75 @@
                                             ], 
                                             "bp": false, 
                                             "element_id": 1450361332000346, 
+                                            "enable": false
+                                        }, 
+                                        {
+                                            "action_type": "SET_VARIABLE", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100030, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "ABILITY", 
+                                                                "传入技能", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100014, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100006, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100025, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "PLAYER", 
+                                                                                "玩家", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "VARIABLE"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        "玩家的单位角色"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_UNIT_ENTITY_KV"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100182, 
+                                                            "args_list": [
+                                                                3
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                1
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "UNIT_ABILITY"
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 1450361332001609, 
                                             "enable": true
                                         }
                                     ], 
@@ -456,14 +522,11 @@
                                                 {
                                                     "arg_type": 100030, 
                                                     "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "ABILITY_NAME", 
-                                                                "技能", 
-                                                                "local"
-                                                            ]
-                                                        }
+                                                        [
+                                                            "ABILITY_NAME", 
+                                                            "技能类型值", 
+                                                            "local"
+                                                        ]
                                                     ], 
                                                     "sub_type": 1
                                                 }, 
@@ -517,6 +580,75 @@
                                             ], 
                                             "bp": false, 
                                             "element_id": 1450361332000366, 
+                                            "enable": false
+                                        }, 
+                                        {
+                                            "action_type": "SET_VARIABLE", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100030, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "ABILITY", 
+                                                                "传入技能", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100014, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100006, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100025, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "PLAYER", 
+                                                                                "玩家", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "VARIABLE"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        "玩家的单位角色"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_UNIT_ENTITY_KV"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100182, 
+                                                            "args_list": [
+                                                                3
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                2
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "UNIT_ABILITY"
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 1450361332001628, 
                                             "enable": true
                                         }
                                     ], 
@@ -625,14 +757,11 @@
                                                 {
                                                     "arg_type": 100030, 
                                                     "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "ABILITY_NAME", 
-                                                                "技能", 
-                                                                "local"
-                                                            ]
-                                                        }
+                                                        [
+                                                            "ABILITY_NAME", 
+                                                            "技能类型值", 
+                                                            "local"
+                                                        ]
                                                     ], 
                                                     "sub_type": 1
                                                 }, 
@@ -686,6 +815,75 @@
                                             ], 
                                             "bp": false, 
                                             "element_id": 1450361332000385, 
+                                            "enable": false
+                                        }, 
+                                        {
+                                            "action_type": "SET_VARIABLE", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100030, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "ABILITY", 
+                                                                "传入技能", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100014, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100006, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100025, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "PLAYER", 
+                                                                                "玩家", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "VARIABLE"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        "玩家的单位角色"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_UNIT_ENTITY_KV"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100182, 
+                                                            "args_list": [
+                                                                3
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                3
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "UNIT_ABILITY"
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 1450361332001647, 
                                             "enable": true
                                         }
                                     ], 
@@ -794,14 +992,11 @@
                                                 {
                                                     "arg_type": 100030, 
                                                     "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "ABILITY_NAME", 
-                                                                "技能", 
-                                                                "local"
-                                                            ]
-                                                        }
+                                                        [
+                                                            "ABILITY_NAME", 
+                                                            "技能类型值", 
+                                                            "local"
+                                                        ]
                                                     ], 
                                                     "sub_type": 1
                                                 }, 
@@ -855,6 +1050,75 @@
                                             ], 
                                             "bp": false, 
                                             "element_id": 1450361332000404, 
+                                            "enable": false
+                                        }, 
+                                        {
+                                            "action_type": "SET_VARIABLE", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100030, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "ABILITY", 
+                                                                "传入技能", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100014, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100006, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100025, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "PLAYER", 
+                                                                                "玩家", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "VARIABLE"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        "玩家的单位角色"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_UNIT_ENTITY_KV"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100182, 
+                                                            "args_list": [
+                                                                3
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                4
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "UNIT_ABILITY"
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 1450361332001666, 
                                             "enable": true
                                         }
                                     ], 
@@ -963,14 +1227,11 @@
                                                 {
                                                     "arg_type": 100030, 
                                                     "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "ABILITY_NAME", 
-                                                                "技能", 
-                                                                "local"
-                                                            ]
-                                                        }
+                                                        [
+                                                            "ABILITY_NAME", 
+                                                            "技能类型值", 
+                                                            "local"
+                                                        ]
                                                     ], 
                                                     "sub_type": 1
                                                 }, 
@@ -1211,14 +1472,11 @@
                                                 {
                                                     "arg_type": 100030, 
                                                     "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "ABILITY_NAME", 
-                                                                "技能", 
-                                                                "local"
-                                                            ]
-                                                        }
+                                                        [
+                                                            "ABILITY_NAME", 
+                                                            "技能类型值", 
+                                                            "local"
+                                                        ]
                                                     ], 
                                                     "sub_type": 1
                                                 }, 
@@ -1459,14 +1717,11 @@
                                                 {
                                                     "arg_type": 100030, 
                                                     "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "ABILITY_NAME", 
-                                                                "技能", 
-                                                                "local"
-                                                            ]
-                                                        }
+                                                        [
+                                                            "ABILITY_NAME", 
+                                                            "技能类型值", 
+                                                            "local"
+                                                        ]
                                                     ], 
                                                     "sub_type": 1
                                                 }, 
@@ -1608,6 +1863,106 @@
                             "bp": false, 
                             "element_id": 1450361332000225, 
                             "enable": true
+                        }, 
+                        {
+                            "action_type": "CASE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "武功"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100022, 
+                                    "args_list": [
+                                        {
+                                            "action_type": "SET_UI_COMP_TEXT", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100025, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "PLAYER", 
+                                                                "玩家", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": "VARIABLE"
+                                                }, 
+                                                {
+                                                    "arg_type": 100070, 
+                                                    "args_list": [
+                                                        "d2d4b1b6-6efb-425f-a340-16e1953672d1"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "武功"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 1450361332001449, 
+                                            "enable": true
+                                        }, 
+                                        {
+                                            "action_type": "SET_UI_COMP_FONT_COLOR_HEX", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100025, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "PLAYER", 
+                                                                "玩家", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": "VARIABLE"
+                                                }, 
+                                                {
+                                                    "arg_type": 100070, 
+                                                    "args_list": [
+                                                        "d2d4b1b6-6efb-425f-a340-16e1953672d1"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "#70B7DA"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100000, 
+                                                    "args_list": [
+                                                        100.0
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 1450361332001450, 
+                                            "enable": true
+                                        }
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1450361332000612, 
+                            "enable": true
                         }
                     ], 
                     "sub_type": 1
@@ -1631,14 +1986,11 @@
                                         {
                                             "arg_type": 100039, 
                                             "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "ABILITY_NAME", 
-                                                        "技能", 
-                                                        "local"
-                                                    ]
-                                                }
+                                                [
+                                                    "ABILITY_NAME", 
+                                                    "技能类型值", 
+                                                    "local"
+                                                ]
                                             ], 
                                             "sub_type": "VARIABLE"
                                         }
@@ -1686,14 +2038,11 @@
                                         {
                                             "arg_type": 100039, 
                                             "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "ABILITY_NAME", 
-                                                        "技能", 
-                                                        "local"
-                                                    ]
-                                                }
+                                                [
+                                                    "ABILITY_NAME", 
+                                                    "技能类型值", 
+                                                    "local"
+                                                ]
                                             ], 
                                             "sub_type": "VARIABLE"
                                         }
@@ -1735,14 +2084,11 @@
                                         {
                                             "arg_type": 100039, 
                                             "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "ABILITY_NAME", 
-                                                        "技能", 
-                                                        "local"
-                                                    ]
-                                                }
+                                                [
+                                                    "ABILITY_NAME", 
+                                                    "技能类型值", 
+                                                    "local"
+                                                ]
                                             ], 
                                             "sub_type": "VARIABLE"
                                         }, 
@@ -1791,14 +2137,11 @@
                                         {
                                             "arg_type": 100039, 
                                             "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "ABILITY_NAME", 
-                                                        "技能", 
-                                                        "local"
-                                                    ]
-                                                }
+                                                [
+                                                    "ABILITY_NAME", 
+                                                    "技能类型值", 
+                                                    "local"
+                                                ]
                                             ], 
                                             "sub_type": "VARIABLE"
                                         }, 
@@ -1913,6 +2256,42 @@
                                 {
                                     "arg_type": 100070, 
                                     "args_list": [
+                                        "670d63ab-f74a-47f6-9086-25a15aecab2f"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1450361332001588, 
+                            "enable": true
+                        }, 
+                        {
+                            "action_type": "SET_UI_COMP_VISIBLE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "PLAYER", 
+                                                "玩家", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": "VARIABLE"
+                                }, 
+                                {
+                                    "arg_type": 100001, 
+                                    "args_list": [
+                                        true
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100070, 
+                                    "args_list": [
                                         "2ece0487-7ba1-4c41-9fc8-caf588d4345f"
                                     ], 
                                     "sub_type": 1
@@ -1979,6 +2358,399 @@
             "element_id": 1450361332000596, 
             "enable": true, 
             "fake_op": []
+        }, 
+        {
+            "action_type": "IF_THEN_ELSE", 
+            "args_list": [
+                {
+                    "arg_type": 100021, 
+                    "args_list": [
+                        {
+                            "args_list": [
+                                {
+                                    "arg_type": 100014, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "ABILITY", 
+                                                "传入技能", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }
+                            ], 
+                            "condition_type": "TYPE_IS_EXIST", 
+                            "element_id": 1450361332001562, 
+                            "enable": true
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "SET_UI_COMP_IMAGE_NEW", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "PLAYER", 
+                                                "玩家", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": "VARIABLE"
+                                }, 
+                                {
+                                    "arg_type": 100070, 
+                                    "args_list": [
+                                        "1bfdf097-2f3e-4a0f-8c3d-796466ee2a4f"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100115, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100014, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "ABILITY", 
+                                                        "传入技能", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 2
+                                        }
+                                    ], 
+                                    "sub_type": "GET_ICON"
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1450361332001488, 
+                            "enable": true
+                        }, 
+                        {
+                            "action_type": "SET_UI_COMP_TEXT", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "PLAYER", 
+                                                "玩家", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": "VARIABLE"
+                                }, 
+                                {
+                                    "arg_type": 100070, 
+                                    "args_list": [
+                                        "ef11741a-f85e-48d3-bea6-d76ccfb9ed7a"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100014, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "ABILITY", 
+                                                        "传入技能", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 2
+                                        }, 
+                                        {
+                                            "arg_type": 100221, 
+                                            "args_list": [
+                                                "name"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "sub_type": "GET_ABILITY_STR_ATTR"
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1450361332001498, 
+                            "enable": true
+                        }, 
+                        {
+                            "action_type": "SET_UI_COMP_TEXT", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "PLAYER", 
+                                                "玩家", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": "VARIABLE"
+                                }, 
+                                {
+                                    "arg_type": 100070, 
+                                    "args_list": [
+                                        "e3c68bdf-f5e3-4443-ba0e-fdb718abda48"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100014, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "ABILITY", 
+                                                        "传入技能", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 2
+                                        }, 
+                                        {
+                                            "arg_type": 100221, 
+                                            "args_list": [
+                                                "description"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "sub_type": "GET_ABILITY_STR_ATTR"
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1450361332001510, 
+                            "enable": true
+                        }, 
+                        {
+                            "action_type": "SET_UI_COMP_POSITION_NO_TRANS", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "PLAYER", 
+                                                "玩家", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": "VARIABLE"
+                                }, 
+                                {
+                                    "arg_type": 100070, 
+                                    "args_list": [
+                                        "2ece0487-7ba1-4c41-9fc8-caf588d4345f"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "PLAYER", 
+                                                        "玩家", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": "VARIABLE"
+                                        }
+                                    ], 
+                                    "sub_type": "GET_PLAYER_UI_POS_X"
+                                }, 
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "PLAYER", 
+                                                        "玩家", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": "VARIABLE"
+                                        }
+                                    ], 
+                                    "sub_type": "GET_PLAYER_UI_POS_Y"
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1450361332001522, 
+                            "enable": true
+                        }, 
+                        {
+                            "action_type": "SET_UI_COMP_VISIBLE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "PLAYER", 
+                                                "玩家", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": "VARIABLE"
+                                }, 
+                                {
+                                    "arg_type": 100001, 
+                                    "args_list": [
+                                        false
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100070, 
+                                    "args_list": [
+                                        "670d63ab-f74a-47f6-9086-25a15aecab2f"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1450361332001536, 
+                            "enable": true
+                        }, 
+                        {
+                            "action_type": "SET_UI_COMP_VISIBLE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "PLAYER", 
+                                                "玩家", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": "VARIABLE"
+                                }, 
+                                {
+                                    "arg_type": 100001, 
+                                    "args_list": [
+                                        true
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100070, 
+                                    "args_list": [
+                                        "2ece0487-7ba1-4c41-9fc8-caf588d4345f"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1450361332001575, 
+                            "enable": true
+                        }, 
+                        {
+                            "action_type": "SET_UI_COMP_FOLLOW_MOUSE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "PLAYER", 
+                                                "玩家", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": "VARIABLE"
+                                }, 
+                                {
+                                    "arg_type": 100070, 
+                                    "args_list": [
+                                        "2ece0487-7ba1-4c41-9fc8-caf588d4345f"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100001, 
+                                    "args_list": [
+                                        true
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1450361332001544, 
+                            "enable": true, 
+                            "op_arg": [
+                                null, 
+                                null
+                            ], 
+                            "op_arg_enable": [
+                                false, 
+                                false
+                            ]
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1450361332001476, 
+            "enable": true, 
+            "fake_op": []
         }
     ], 
     "call_enabled": true, 
@@ -2004,6 +2776,13 @@
                 "技能类型", 
                 true
             ]
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                "传入技能", 
+                false
+            ]
         }
     ], 
     "group_id": "sMI1jDo2EfCpI0VeJLqBCs", 
@@ -2015,9 +2794,11 @@
     "valid": true, 
     "var_data": [
         {
-            "ABILITY": {}, 
+            "ABILITY": {
+                "传入技能": null
+            }, 
             "ABILITY_NAME": {
-                "技能": 0
+                "技能类型值": 0
             }, 
             "NEW_TIMER": {}, 
             "PLAYER": {
@@ -2028,14 +2809,16 @@
             }
         }, 
         {
-            "技能": 0, 
+            "传入技能": 0, 
             "技能类型": 0, 
+            "技能类型值": 0, 
             "玩家": 0
         }, 
         [
+            "技能类型值", 
             "玩家", 
             "技能类型", 
-            "技能"
+            "传入技能"
         ]
     ]
 }
