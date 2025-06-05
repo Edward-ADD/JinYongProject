@@ -1,6 +1,108 @@
 {
     "action": [
         {
+            "action_type": "PROBABILITY_DO_ACTION", 
+            "args_list": [
+                {
+                    "arg_type": 100000, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "FLOAT", 
+                                "传入的暴击率", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 2
+                }, 
+                {
+                    "arg_type": 100001, 
+                    "args_list": [
+                        true
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "SET_VARIABLE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100030, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "BOOLEAN", 
+                                                "是否造成暴击", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100001, 
+                                    "args_list": [
+                                        true
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 800895493000141, 
+                            "enable": true
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "SET_VARIABLE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100030, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "BOOLEAN", 
+                                                "是否造成暴击", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100001, 
+                                    "args_list": [
+                                        false
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 800895493000144, 
+                            "enable": true
+                        }
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 800895493000129, 
+            "enable": true, 
+            "fake_op": [
+                3
+            ]
+        }, 
+        {
             "action_type": "IF_THEN_ELSE", 
             "args_list": [
                 {
@@ -114,14 +216,11 @@
                                 {
                                     "arg_type": 100014, 
                                     "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "ABILITY", 
-                                                "来源技能", 
-                                                "local"
-                                            ]
-                                        }
+                                        [
+                                            "ABILITY", 
+                                            "来源技能", 
+                                            "local"
+                                        ]
                                     ], 
                                     "sub_type": 2
                                 }, 
@@ -229,11 +328,22 @@
                                 {
                                     "arg_type": 100001, 
                                     "args_list": [
+                                        [
+                                            "BOOLEAN", 
+                                            "传入的暴击率", 
+                                            "local"
+                                        ]
+                                    ], 
+                                    "sub_type": "VARIABLE"
+                                }, 
+                                {
+                                    "arg_type": 100001, 
+                                    "args_list": [
                                         {
                                             "__tuple__": true, 
                                             "items": [
                                                 "BOOLEAN", 
-                                                "是否判断暴击", 
+                                                "是否造成暴击", 
                                                 "local"
                                             ]
                                         }
@@ -243,18 +353,11 @@
                                 {
                                     "arg_type": 100001, 
                                     "args_list": [
-                                        true
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100001, 
-                                    "args_list": [
                                         {
                                             "__tuple__": true, 
                                             "items": [
                                                 "BOOLEAN", 
-                                                "是否判断闪避", 
+                                                "是否无视闪避", 
                                                 "local"
                                             ]
                                         }
@@ -269,8 +372,8 @@
                                 null
                             ], 
                             "op_arg_enable": [
-                                true, 
                                 false, 
+                                true, 
                                 true, 
                                 false, 
                                 false, 
@@ -306,14 +409,11 @@
                                 {
                                     "arg_type": 100014, 
                                     "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "ABILITY", 
-                                                "来源技能", 
-                                                "local"
-                                            ]
-                                        }
+                                        [
+                                            "ABILITY", 
+                                            "来源技能", 
+                                            "local"
+                                        ]
                                     ], 
                                     "sub_type": 2
                                 }, 
@@ -371,7 +471,7 @@
                                             "__tuple__": true, 
                                             "items": [
                                                 "BOOLEAN", 
-                                                "是否判断暴击", 
+                                                "是否造成暴击", 
                                                 "local"
                                             ]
                                         }
@@ -381,9 +481,13 @@
                                 {
                                     "arg_type": 100001, 
                                     "args_list": [
-                                        true
+                                        [
+                                            "BOOLEAN", 
+                                            "传入的暴击率", 
+                                            "local"
+                                        ]
                                     ], 
-                                    "sub_type": 1
+                                    "sub_type": "VARIABLE"
                                 }, 
                                 {
                                     "arg_type": 100001, 
@@ -392,7 +496,7 @@
                                             "__tuple__": true, 
                                             "items": [
                                                 "BOOLEAN", 
-                                                "是否判断闪避", 
+                                                "是否无视闪避", 
                                                 "local"
                                             ]
                                         }
@@ -436,7 +540,7 @@
     "event": [], 
     "func_category": "t_function", 
     "func_comment": "", 
-    "func_des": "目标单位：{目标单位}来源单位：{来源单位}伤害值（计算前）：{伤害值（计算前）}是否判断暴击：{是否判断暴击}伤害类型：{伤害类型}", 
+    "func_des": "目标单位：{目标单位}，来源单位：{来源单位}，伤害值（计算前）：{伤害值（计算前）}，来源技能：{来源技能}，暴击率：{传入的暴击率}，伤害类型：{伤害类型}", 
     "func_id": "0b68397a3cbb11f0beb50ddae1c8015e", 
     "func_name": "造成伤害", 
     "func_param_list": [
@@ -465,20 +569,20 @@
             "__tuple__": true, 
             "items": [
                 "来源技能", 
-                false
-            ]
-        }, 
-        {
-            "__tuple__": true, 
-            "items": [
-                "是否判断暴击", 
                 true
             ]
         }, 
         {
             "__tuple__": true, 
             "items": [
-                "是否判断闪避", 
+                "传入的暴击率", 
+                true
+            ]
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                "是否无视闪避", 
                 false
             ]
         }, 
@@ -503,13 +607,14 @@
                 "来源技能": null
             }, 
             "BOOLEAN": {
-                "是否判断暴击": false, 
-                "是否判断闪避": true
+                "是否无视闪避": false, 
+                "是否造成暴击": false
             }, 
             "DAMAGE_TYPE": {
                 "伤害类型": 0
             }, 
             "FLOAT": {
+                "传入的暴击率": 0.0, 
                 "伤害值（计算前）": 0.0
             }, 
             "NEW_TIMER": {}, 
@@ -519,22 +624,24 @@
             }
         }, 
         {
+            "传入的暴击率": 0, 
             "伤害值（计算前）": 0, 
             "伤害类型": 0, 
-            "是否判断暴击": 0, 
-            "是否判断闪避": 0, 
+            "是否无视闪避": 0, 
+            "是否造成暴击": 0, 
             "来源单位": 0, 
             "来源技能": 0, 
             "目标单位": 0
         }, 
         [
+            "是否造成暴击", 
             "目标单位", 
             "来源单位", 
             "伤害值（计算前）", 
-            "是否判断暴击", 
-            "是否判断闪避", 
+            "伤害类型", 
+            "传入的暴击率", 
             "来源技能", 
-            "伤害类型"
+            "是否无视闪避"
         ]
     ]
 }

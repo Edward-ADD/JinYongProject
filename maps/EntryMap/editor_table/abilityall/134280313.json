@@ -13,10 +13,10 @@
     "ability_cast_range": {
         "__tuple__": true, 
         "items": [
-            "10.0"
+            "(396+66*ability_level)/100"
         ]
     }, 
-    "ability_cast_type": 3, 
+    "ability_cast_type": 2, 
     "ability_channel_time": 0.0, 
     "ability_cost": {
         "__tuple__": true, 
@@ -49,7 +49,7 @@
             "50"
         ]
     }, 
-    "ability_max_level": 1, 
+    "ability_max_level": 8, 
     "ability_max_stack_count": {
         "__tuple__": true, 
         "items": [
@@ -107,14 +107,14 @@
     "camp_priority_neutral": 1, 
     "camp_priority_self": 1, 
     "can_autocast_when_attack_target": false, 
-    "can_bs_interrupt": true, 
+    "can_bs_interrupt": false, 
     "can_cache": true, 
     "can_cast_interrupt": false, 
     "can_cast_when_hp_insufficient": false, 
     "can_cost_hp": false, 
-    "can_interrupt_others": true, 
+    "can_interrupt_others": false, 
     "can_prepare_interrupt": false, 
-    "can_ps_interrupt": true, 
+    "can_ps_interrupt": false, 
     "cast_ignore_ability_command": true, 
     "cast_ignore_move_command": true, 
     "cast_move_interrupt": false, 
@@ -127,7 +127,7 @@
     "cold_down_time": {
         "__tuple__": true, 
         "items": [
-            "0"
+            "2.4-0.3*ability_level"
         ]
     }, 
     "collection_animation": "", 
@@ -185,13 +185,62 @@
         "items": []
     }, 
     "influenced_by_cd_reduce": true, 
-    "influenced_by_move": true, 
-    "is_autocast": false, 
+    "influenced_by_move": false, 
+    "is_autocast": true, 
     "is_charge_ability": false, 
     "is_immediate": false, 
     "is_meele": false, 
     "key": 134280313, 
-    "kv": {}, 
+    "kv": {
+        "\u653b\u51fb\u6570\u91cf": {
+            "annotation": "", 
+            "desc": "", 
+            "etype": 1, 
+            "key": "\u653b\u51fb\u6570\u91cf", 
+            "prop_cls": "PInt", 
+            "remark": "", 
+            "show_in_attr": true, 
+            "sort": 3, 
+            "type": 2, 
+            "value": 0
+        }, 
+        "\u6b66\u529f\u4fee\u70bc\u989d\u5916\u6548\u679c": {
+            "annotation": "", 
+            "desc": "", 
+            "etype": 61, 
+            "key": "\u6b66\u529f\u4fee\u70bc\u989d\u5916\u6548\u679c", 
+            "prop_cls": "PInt", 
+            "remark": "", 
+            "show_in_attr": true, 
+            "sort": 1, 
+            "type": 35, 
+            "value": "\u94c1\u638c\u62f3\u8ffd\u52a0\u653b\u51fb\u6548\u679c"
+        }, 
+        "\u6b66\u529f\u6570\u503c\u8868\u683c": {
+            "annotation": "", 
+            "desc": "", 
+            "etype": 61, 
+            "key": "\u6b66\u529f\u6570\u503c\u8868\u683c", 
+            "prop_cls": "PInt", 
+            "remark": "", 
+            "show_in_attr": true, 
+            "sort": 0, 
+            "type": 35, 
+            "value": "\u94c1\u638c\u62f3\u57fa\u7840\u4fe1\u606f"
+        }, 
+        "\u94c1\u638c\u62f3\u51fb\u9000\u503c": {
+            "annotation": "", 
+            "desc": "", 
+            "etype": 2, 
+            "key": "\u94c1\u638c\u62f3\u51fb\u9000\u503c", 
+            "prop_cls": "PFloat", 
+            "remark": "", 
+            "show_in_attr": true, 
+            "sort": 2, 
+            "type": 1, 
+            "value": 0.0
+        }
+    }, 
     "magicbook_list": {
         "__tuple__": true, 
         "items": []
@@ -222,7 +271,14 @@
     "required_level": {
         "formula": "", 
         "required_levels": [
-            1
+            1, 
+            2, 
+            3, 
+            4, 
+            5, 
+            6, 
+            7, 
+            8
         ]
     }, 
     "sector_angle": {
