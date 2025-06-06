@@ -32,160 +32,123 @@
                             "arg_type": 100022, 
                             "args_list": [
                                 {
-                                    "action_type": "SEND_CUSTOM_EVENT", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100238, 
-                                            "args_list": [
-                                                1404075517
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 448860388000002, 
-                                    "enable": false
-                                }, 
-                                {
-                                    "action_type": "SEND_CUSTOM_EVENT", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100238, 
-                                            "args_list": [
-                                                1563734501
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 448860388000003, 
-                                    "enable": false
-                                }
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100022, 
-                            "args_list": [], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100003, 
-                            "args_list": [
-                                "玩家属性"
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 448860388000004, 
-                    "enable": true
-                }, 
-                {
-                    "action_type": "STORAGE_BOX", 
-                    "args_list": [
-                        {
-                            "arg_type": 100021, 
-                            "args_list": [], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100022, 
-                            "args_list": [
-                                {
-                                    "action_type": "STORAGE_BOX", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100021, 
-                                            "args_list": [], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100022, 
-                                            "args_list": [], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100022, 
-                                            "args_list": [], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                "场景"
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 448860388000006, 
-                                    "enable": true
-                                }, 
-                                {
                                     "action_type": "PICK_PLAYER_DO_ACTION", 
                                     "args_list": [
                                         {
                                             "arg_type": 100027, 
                                             "args_list": [
                                                 {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "PLAYER_GROUP", 
-                                                        "玩家游玩组"
-                                                    ]
+                                                    "arg_type": 100020, 
+                                                    "args_list": [
+                                                        1
+                                                    ], 
+                                                    "sub_type": 1
                                                 }
                                             ], 
-                                            "sub_type": 14
+                                            "sub_type": "TEAM_PLAYER"
                                         }, 
                                         {
                                             "arg_type": 100022, 
                                             "args_list": [
                                                 {
-                                                    "action_type": "REMOVE_BUFF_INS", 
+                                                    "action_type": "IF_THEN_ELSE", 
                                                     "args_list": [
                                                         {
-                                                            "arg_type": 100076, 
+                                                            "arg_type": 100021, 
                                                             "args_list": [
                                                                 {
-                                                                    "arg_type": 100006, 
                                                                     "args_list": [
                                                                         {
-                                                                            "arg_type": 100025, 
-                                                                            "args_list": [], 
-                                                                            "sub_type": "PICKED_PLAYER"
+                                                                            "arg_type": 100180, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100025, 
+                                                                                    "args_list": [], 
+                                                                                    "sub_type": "PICKED_PLAYER"
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "GET_ROLE_STATUS"
                                                                         }, 
                                                                         {
-                                                                            "arg_type": 100003, 
+                                                                            "arg_type": 100035, 
                                                                             "args_list": [
-                                                                                "玩家的单位角色"
+                                                                                "=="
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100180, 
+                                                                            "args_list": [
+                                                                                1
                                                                             ], 
                                                                             "sub_type": 1
                                                                         }
                                                                     ], 
-                                                                    "sub_type": "GET_UNIT_ENTITY_KV"
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100046, 
-                                                                    "args_list": [
-                                                                        134221002
-                                                                    ], 
-                                                                    "sub_type": 1
+                                                                    "condition_type": "PLAYER_STATE_COMPARE", 
+                                                                    "element_id": 448860388000050, 
+                                                                    "enable": true
                                                                 }
                                                             ], 
-                                                            "sub_type": "GET_LAST_MODIFIER_INSTANCE"
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100022, 
+                                                            "args_list": [
+                                                                {
+                                                                    "action_type": "CALL_TRIGGER_FUNC", 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100177, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100006, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100025, 
+                                                                                            "args_list": [], 
+                                                                                            "sub_type": "PICKED_PLAYER"
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100003, 
+                                                                                            "args_list": [
+                                                                                                "玩家的单位角色"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "GET_UNIT_ENTITY_KV"
+                                                                                }
+                                                                            ], 
+                                                                            "op_arg": [], 
+                                                                            "op_arg_enable": [], 
+                                                                            "sub_type": "bbfb8f1442bb11f0b8f4f18451c60a8f"
+                                                                        }
+                                                                    ], 
+                                                                    "bp": false, 
+                                                                    "call_rt_arg_idxes": [], 
+                                                                    "element_id": 448860388000061, 
+                                                                    "enable": true
+                                                                }
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100022, 
+                                                            "args_list": [], 
+                                                            "sub_type": 1
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 448860388000012, 
-                                                    "enable": true
+                                                    "element_id": 448860388000041, 
+                                                    "enable": true, 
+                                                    "fake_op": []
                                                 }
                                             ], 
                                             "sub_type": 1
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 448860388000016, 
+                                    "element_id": 448860388000031, 
                                     "enable": true
                                 }
                             ], 
@@ -199,13 +162,13 @@
                         {
                             "arg_type": 100003, 
                             "args_list": [
-                                "道具"
+                                "卡牌效果"
                             ], 
                             "sub_type": 1
                         }
                     ], 
                     "bp": false, 
-                    "element_id": 448860388000017, 
+                    "element_id": 448860388000028, 
                     "enable": true
                 }, 
                 {
