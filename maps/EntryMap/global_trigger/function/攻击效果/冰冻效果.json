@@ -158,110 +158,6 @@
                                 {
                                     "arg_type": 100030, 
                                     "args_list": [
-                                        [
-                                            "FLOAT", 
-                                            "计算对高手的冰冻概率", 
-                                            "local"
-                                        ]
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100000, 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100000, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100006, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "UNIT_ENTITY", 
-                                                                        "来源的单位", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 11
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100301, 
-                                                            "args_list": [
-                                                                "ATTR_RESULT"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100042, 
-                                                            "args_list": [
-                                                                "PgLqR5gHEe+i2S3Im3Pjlk"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_UNIT_ATTR"
-                                                }, 
-                                                {
-                                                    "arg_type": 100017, 
-                                                    "args_list": [
-                                                        "+"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100000, 
-                                                    "args_list": [
-                                                        [
-                                                            "FLOAT", 
-                                                            "传入的基础概率值", 
-                                                            "local"
-                                                        ]
-                                                    ], 
-                                                    "sub_type": 2
-                                                }
-                                            ], 
-                                            "sub_type": "ARITHMETIC_OPERATION"
-                                        }, 
-                                        {
-                                            "arg_type": 100017, 
-                                            "args_list": [
-                                                "+"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "FLOAT", 
-                                                        "传入的高手追加概率值", 
-                                                        "local"
-                                                    ]
-                                                }
-                                            ], 
-                                            "sub_type": 2
-                                        }
-                                    ], 
-                                    "sub_type": "ARITHMETIC_OPERATION"
-                                }
-                            ], 
-                            "bp": false, 
-                            "element_id": 1989558472000003, 
-                            "enable": true
-                        }, 
-                        {
-                            "action_type": "SET_VARIABLE", 
-                            "args_list": [
-                                {
-                                    "arg_type": 100030, 
-                                    "args_list": [
                                         {
                                             "__tuple__": true, 
                                             "items": [
@@ -553,7 +449,7 @@
                                                                             "__tuple__": true, 
                                                                             "items": [
                                                                                 "FLOAT", 
-                                                                                "计算冰冻时长", 
+                                                                                "计算冰冻数量", 
                                                                                 "local"
                                                                             ]
                                                                         }
@@ -607,78 +503,59 @@
                             "enable": true
                         }, 
                         {
-                            "action_type": "IF_THEN_ELSE", 
+                            "action_type": "PROBABILITY_DO_ACTION", 
                             "args_list": [
                                 {
-                                    "arg_type": 100021, 
+                                    "arg_type": 100000, 
                                     "args_list": [
                                         {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "FLOAT", 
+                                                "计算冰冻概率", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }, 
+                                {
+                                    "arg_type": 100001, 
+                                    "args_list": [
+                                        true
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100022, 
+                                    "args_list": [
+                                        {
+                                            "action_type": "SET_VARIABLE", 
                                             "args_list": [
                                                 {
-                                                    "arg_type": 100021, 
+                                                    "arg_type": 100030, 
                                                     "args_list": [
                                                         {
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100006, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "UNIT_ENTITY", 
-                                                                                "作用的单位", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": 11
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100003, 
-                                                                    "args_list": [
-                                                                        "高手"
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }
-                                                            ], 
-                                                            "condition_type": "UNIT_HAS_TAG", 
-                                                            "element_id": 1989558472000013, 
-                                                            "enable": true
-                                                        }, 
-                                                        {
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100006, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "UNIT_ENTITY", 
-                                                                                "作用的单位", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": 11
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100046, 
-                                                                    "args_list": [
-                                                                        134226232
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }
-                                                            ], 
-                                                            "condition_type": "UNIT_HAS_MODIFIER", 
-                                                            "element_id": 1989558472000014, 
-                                                            "enable": true
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "BOOLEAN", 
+                                                                "是否成功冰冻", 
+                                                                "local"
+                                                            ]
                                                         }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100001, 
+                                                    "args_list": [
+                                                        true
                                                     ], 
                                                     "sub_type": 1
                                                 }
                                             ], 
-                                            "condition_type": "OR", 
-                                            "element_id": 1989558472000015, 
+                                            "bp": false, 
+                                            "element_id": 1989558472000018, 
                                             "enable": true
                                         }
                                     ], 
@@ -686,160 +563,14 @@
                                 }, 
                                 {
                                     "arg_type": 100022, 
-                                    "args_list": [
-                                        {
-                                            "action_type": "PROBABILITY_DO_ACTION", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100000, 
-                                                    "args_list": [
-                                                        [
-                                                            "FLOAT", 
-                                                            "计算对高手的冰冻概率", 
-                                                            "local"
-                                                        ]
-                                                    ], 
-                                                    "sub_type": 2
-                                                }, 
-                                                {
-                                                    "arg_type": 100001, 
-                                                    "args_list": [
-                                                        true
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100022, 
-                                                    "args_list": [
-                                                        {
-                                                            "action_type": "SET_VARIABLE", 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100030, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "BOOLEAN", 
-                                                                                "是否成功冰冻", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100001, 
-                                                                    "args_list": [
-                                                                        true
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }
-                                                            ], 
-                                                            "bp": false, 
-                                                            "element_id": 1989558472000016, 
-                                                            "enable": true
-                                                        }
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100022, 
-                                                    "args_list": [], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "element_id": 1989558472000017, 
-                                            "enable": true, 
-                                            "fake_op": []
-                                        }
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100022, 
-                                    "args_list": [
-                                        {
-                                            "action_type": "PROBABILITY_DO_ACTION", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100000, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "FLOAT", 
-                                                                "计算冰冻概率", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 2
-                                                }, 
-                                                {
-                                                    "arg_type": 100001, 
-                                                    "args_list": [
-                                                        true
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100022, 
-                                                    "args_list": [
-                                                        {
-                                                            "action_type": "SET_VARIABLE", 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100030, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "BOOLEAN", 
-                                                                                "是否成功冰冻", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100001, 
-                                                                    "args_list": [
-                                                                        true
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }
-                                                            ], 
-                                                            "bp": false, 
-                                                            "element_id": 1989558472000018, 
-                                                            "enable": true
-                                                        }
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100022, 
-                                                    "args_list": [], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "element_id": 1989558472000019, 
-                                            "enable": true, 
-                                            "fake_op": []
-                                        }
-                                    ], 
+                                    "args_list": [], 
                                     "sub_type": 1
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 1989558472000020, 
+                            "element_id": 1989558472000019, 
                             "enable": true, 
-                            "fake_op": [
-                                2
-                            ]
+                            "fake_op": []
                         }, 
                         {
                             "action_type": "IF_THEN_ELSE", 
@@ -1535,20 +1266,6 @@
                                                                             "sub_type": 2
                                                                         }, 
                                                                         {
-                                                                            "arg_type": 100000, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "__tuple__": true, 
-                                                                                    "items": [
-                                                                                        "FLOAT", 
-                                                                                        "传入的高手追加概率值", 
-                                                                                        "local"
-                                                                                    ]
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": 2
-                                                                        }, 
-                                                                        {
                                                                             "arg_type": 100014, 
                                                                             "args_list": [
                                                                                 {
@@ -1619,7 +1336,7 @@
     "event": [], 
     "func_category": "t_function", 
     "func_comment": "", 
-    "func_des": "来源单位：{来源的单位}，作用单位：{作用的单位}，防御减少值：{传入的减少防御力}，冰冻时长：{传入的冰冻时长}，概率：{传入的基础概率值}，额外概率：{传入的追加概率值}，对高手的额外概率：{传入的高手追加概率值}，来源的技能：{冰冻来源的技能}", 
+    "func_des": "来源单位：{来源的单位}，作用单位：{作用的单位}，防御减少值：{传入的减少防御力}，冰冻时长：{传入的冰冻时长}，概率：{传入的基础概率值}，额外概率：{传入的追加概率值}，来源的技能：{冰冻来源的技能}", 
     "func_id": "eee52fd6a8b811ef9c48b35f0dba2aeb", 
     "func_name": "冰冻效果", 
     "func_param_list": [
@@ -1668,13 +1385,6 @@
         {
             "__tuple__": true, 
             "items": [
-                "传入的高手追加概率值", 
-                true
-            ]
-        }, 
-        {
-            "__tuple__": true, 
-            "items": [
                 "冰冻来源的技能", 
                 true
             ]
@@ -1700,11 +1410,9 @@
                 "传入的减少防御力": 0.0, 
                 "传入的基础概率值": 0.0, 
                 "传入的追加概率值": 0.0, 
-                "传入的高手追加概率值": 0.0, 
                 "计算冰冻数量": 0.0, 
                 "计算冰冻时长": 0.0, 
-                "计算冰冻概率": 0.0, 
-                "计算对高手的冰冻概率": 0.0
+                "计算冰冻概率": 0.0
             }, 
             "INTEGER": {
                 "循环冰冻数量i值": 0
@@ -1726,7 +1434,6 @@
             "传入的减少防御力": 0, 
             "传入的基础概率值": 0, 
             "传入的追加概率值": 0, 
-            "传入的高手追加概率值": 0, 
             "作用的单位": 0, 
             "冰冻来源的技能": 0, 
             "循环冰冻数量i值": 0, 
@@ -1736,15 +1443,13 @@
             "来源的单位": 0, 
             "计算冰冻数量": 0, 
             "计算冰冻时长": 0, 
-            "计算冰冻概率": 0, 
-            "计算对高手的冰冻概率": 0
+            "计算冰冻概率": 0
         }, 
         [
             "是否成功冰冻", 
             "计算冰冻概率", 
             "计算冰冻时长", 
             "计算冰冻数量", 
-            "计算对高手的冰冻概率", 
             "循环冰冻数量i值", 
             "提取范围冰冻的单位组", 
             "作用的单位", 
@@ -1753,7 +1458,6 @@
             "传入的冰冻时长", 
             "传入的基础概率值", 
             "传入的追加概率值", 
-            "传入的高手追加概率值", 
             "冰冻来源的技能", 
             "提取冰冻效果"
         ]

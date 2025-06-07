@@ -5,8 +5,15 @@
             "variable_length_dict": {}
         }, 
         "200572932": {
-            "variable_dict": {}, 
-            "variable_length_dict": {}
+            "variable_dict": {
+                "FLOAT": {
+                    "\u9ed8\u8ba4\u53d8\u91cf\u540d": 0.0
+                }, 
+                "NEW_TIMER": {}
+            }, 
+            "variable_length_dict": {
+                "\u9ed8\u8ba4\u53d8\u91cf\u540d": 0
+            }
         }, 
         "523284492": {
             "variable_dict": {}, 
@@ -163,6 +170,11 @@
                                     "arg_type": 100001, 
                                     "args_list": [], 
                                     "sub_type": "GET_IS_CRITICAL_HIT_FROM_EVENT"
+                                }, 
+                                {
+                                    "arg_type": 100000, 
+                                    "args_list": [], 
+                                    "sub_type": "HURT_DAMAGE"
                                 }
                             ], 
                             "op_arg": [], 
@@ -191,6 +203,82 @@
             "p_trigger_id": null, 
             "trigger_id": 200572932, 
             "trigger_name": "\u7ed3\u7b97\u5b8c\u6210\u9020\u6210\u4f24\u5bb3\u65f6", 
+            "valid": true, 
+            "var_data": [
+                {
+                    "FLOAT": {
+                        "\u9ed8\u8ba4\u53d8\u91cf\u540d": 0.0
+                    }, 
+                    "NEW_TIMER": {}
+                }, 
+                {
+                    "\u9ed8\u8ba4\u53d8\u91cf\u540d": 0
+                }, 
+                [
+                    "\u9ed8\u8ba4\u53d8\u91cf\u540d"
+                ]
+            ]
+        }, 
+        "227745806": {
+            "action": [
+                {
+                    "action_type": "CALL_TRIGGER_FUNC", 
+                    "args_list": [
+                        {
+                            "arg_type": 100177, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [], 
+                                    "sub_type": "DAMAGE_SOURCE_UNIT"
+                                }, 
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [], 
+                                    "sub_type": "DAMAGE_TARGET_UNIT"
+                                }, 
+                                {
+                                    "arg_type": 100014, 
+                                    "args_list": [], 
+                                    "sub_type": "DAMAGE_ABILITY"
+                                }, 
+                                {
+                                    "arg_type": 100001, 
+                                    "args_list": [], 
+                                    "sub_type": "GET_IS_CRITICAL_HIT_FROM_EVENT"
+                                }, 
+                                {
+                                    "arg_type": 100001, 
+                                    "args_list": [], 
+                                    "sub_type": "HURT_DAMAGE_IS_MISS"
+                                }
+                            ], 
+                            "op_arg": [], 
+                            "op_arg_enable": [], 
+                            "sub_type": "4bb6c6fe2d9911f09eea61796a15e5b4"
+                        }
+                    ], 
+                    "bp": false, 
+                    "call_rt_arg_idxes": [], 
+                    "element_id": 227745806000005, 
+                    "enable": true
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": true, 
+            "event": [
+                {
+                    "args_list": [], 
+                    "element_id": 227745806000002, 
+                    "enable": true, 
+                    "event_type": "UNIT_BE_HURT"
+                }
+            ], 
+            "group_id": 134236189, 
+            "p_trigger_id": null, 
+            "trigger_id": 227745806, 
+            "trigger_name": "\u5373\u5c06\u5f00\u59cb\u53d7\u5230\u4f24\u5bb3", 
             "valid": true, 
             "var_data": [
                 {}, 
@@ -1162,6 +1250,13 @@
                     "items": [
                         200572932, 
                         "\u7ed3\u7b97\u5b8c\u6210\u9020\u6210\u4f24\u5bb3\u65f6"
+                    ]
+                }, 
+                {
+                    "__tuple__": true, 
+                    "items": [
+                        227745806, 
+                        "\u5373\u5c06\u5f00\u59cb\u53d7\u5230\u4f24\u5bb3"
                     ]
                 }, 
                 {
