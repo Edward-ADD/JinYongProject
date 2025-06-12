@@ -32,7 +32,7 @@
             ], 
             "bp": false, 
             "element_id": 2125365725000019, 
-            "enable": false
+            "enable": true
         }, 
         1740263902, 
         936112607, 
@@ -41,10 +41,10 @@
         1097134574, 
         2048483826, 
         1973817843, 
-        1280856564, 
         1996878325, 
         1802502648, 
-        1552159248
+        1552159248, 
+        1180021343
     ], 
     "call_enabled": true, 
     "condition": [], 
@@ -498,40 +498,81 @@
                 []
             ]
         }, 
-        "1280856564": {
+        "1180021343": {
             "action": [
                 {
-                    "action_type": "IF_THEN_ELSE", 
+                    "action_type": "RUN_ONCE_TIMER_NO_SAVE", 
                     "args_list": [
                         {
-                            "arg_type": 100021, 
+                            "arg_type": 100000, 
+                            "args_list": [
+                                1.0
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100022, 
                             "args_list": [
                                 {
+                                    "action_type": "PLAY_UI_COMP_ANIM_NEW", 
                                     "args_list": [
                                         {
-                                            "arg_type": 100001, 
+                                            "arg_type": 100025, 
                                             "args_list": [
                                                 {
-                                                    "arg_type": 100025, 
+                                                    "arg_type": 100240, 
                                                     "args_list": [
-                                                        1
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100070, 
-                                                    "args_list": [
-                                                        "cd6b2733-d3d5-4125-a933-ee0c36d04d35"
+                                                        "玩家"
                                                     ], 
                                                     "sub_type": 1
                                                 }
                                             ], 
-                                            "sub_type": "GET_UI_COMP_VISIBLE"
+                                            "sub_type": "GET_CUS_EVENT_PARAM"
                                         }, 
                                         {
-                                            "arg_type": 100035, 
+                                            "arg_type": 100239, 
                                             "args_list": [
-                                                "=="
+                                                "f2f64d1b-059c-45aa-98a5-dbf1db16b676"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 1180021343000009, 
+                                    "enable": true, 
+                                    "op_arg": [
+                                        null, 
+                                        null, 
+                                        null, 
+                                        null
+                                    ], 
+                                    "op_arg_enable": [
+                                        false, 
+                                        false, 
+                                        false, 
+                                        false
+                                    ]
+                                }, 
+                                {
+                                    "action_type": "PLAY_SOUND_FOR_PLAYER", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100240, 
+                                                    "args_list": [
+                                                        "玩家"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_CUS_EVENT_PARAM"
+                                        }, 
+                                        {
+                                            "arg_type": 100084, 
+                                            "args_list": [
+                                                201333315
                                             ], 
                                             "sub_type": 1
                                         }, 
@@ -543,205 +584,75 @@
                                             "sub_type": 1
                                         }
                                     ], 
-                                    "condition_type": "BOOL_COMPARE", 
-                                    "element_id": 1280856564000243, 
-                                    "enable": true
-                                }
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100022, 
-                            "args_list": [
-                                {
-                                    "action_type": "SET_UI_COMP_VISIBLE", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100025, 
-                                            "args_list": [
-                                                1
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100001, 
-                                            "args_list": [
-                                                true
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100070, 
-                                            "args_list": [
-                                                "cd6b2733-d3d5-4125-a933-ee0c36d04d35"
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
                                     "bp": false, 
-                                    "element_id": 1280856564000213, 
-                                    "enable": true
-                                }, 
-                                {
-                                    "action_type": "SET_VARIABLE", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100030, 
-                                            "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "FLOAT", 
-                                                        "坐标初始X", 
-                                                        "local"
-                                                    ]
-                                                }
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100070, 
-                                                    "args_list": [
-                                                        "cd6b2733-d3d5-4125-a933-ee0c36d04d35"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "sub_type": "GET_UI_COMP_POS_X"
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 1280856564000183, 
-                                    "enable": true
-                                }, 
-                                {
-                                    "action_type": "SET_VARIABLE", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100030, 
-                                            "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "FLOAT", 
-                                                        "坐标初始Y", 
-                                                        "local"
-                                                    ]
-                                                }
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100070, 
-                                                    "args_list": [
-                                                        "cd6b2733-d3d5-4125-a933-ee0c36d04d35"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "sub_type": "GET_UI_COMP_POS_Y"
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 1280856564000188, 
-                                    "enable": true
-                                }, 
-                                {
-                                    "action_type": "SET_UI_COMP_ANIM_POS", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100025, 
-                                            "args_list": [
-                                                1
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100070, 
-                                            "args_list": [
-                                                "cd6b2733-d3d5-4125-a933-ee0c36d04d35"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "FLOAT", 
-                                                        "坐标初始X", 
-                                                        "local"
-                                                    ]
-                                                }
-                                            ], 
-                                            "sub_type": 2
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "FLOAT", 
-                                                        "坐标初始Y", 
-                                                        "local"
-                                                    ]
-                                                }
-                                            ], 
-                                            "sub_type": 2
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                310.95
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                120.5
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                1.0
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 1280856564000124, 
+                                    "element_id": 1180021343000016, 
                                     "enable": true, 
                                     "op_arg": [
-                                        {
-                                            "arg_type": 100313, 
-                                            "args_list": [
-                                                1
-                                            ], 
-                                            "sub_type": 1
-                                        }
+                                        null, 
+                                        null, 
+                                        null
                                     ], 
                                     "op_arg_enable": [
-                                        true
+                                        false, 
+                                        false, 
+                                        false
                                     ]
                                 }, 
                                 {
-                                    "action_type": "RUN_ONCE_TIMER_NO_SAVE", 
+                                    "action_type": "SEND_CUSTOM_EVENT", 
                                     "args_list": [
                                         {
-                                            "arg_type": 100000, 
+                                            "arg_type": 100238, 
                                             "args_list": [
-                                                1.1
+                                                1826902038
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100240, 
+                                                    "args_list": [
+                                                        "玩家"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_CUS_EVENT_PARAM"
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                "有武功吞噬#G成功！"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 1430196505000427, 
+                                    "enable": true
+                                }, 
+                                {
+                                    "action_type": "ITER_UI_COMP_DO", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100240, 
+                                                    "args_list": [
+                                                        "玩家"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_CUS_EVENT_PARAM"
+                                        }, 
+                                        {
+                                            "arg_type": 100070, 
+                                            "args_list": [
+                                                "b83dfc8f-fdb8-4c09-8102-6b0eb59fac20"
                                             ], 
                                             "sub_type": 1
                                         }, 
@@ -754,9 +665,15 @@
                                                         {
                                                             "arg_type": 100025, 
                                                             "args_list": [
-                                                                1
+                                                                {
+                                                                    "arg_type": 100240, 
+                                                                    "args_list": [
+                                                                        "玩家"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
                                                             ], 
-                                                            "sub_type": 1
+                                                            "sub_type": "GET_CUS_EVENT_PARAM"
                                                         }, 
                                                         {
                                                             "arg_type": 100001, 
@@ -767,116 +684,151 @@
                                                         }, 
                                                         {
                                                             "arg_type": 100070, 
-                                                            "args_list": [
-                                                                "cd6b2733-d3d5-4125-a933-ee0c36d04d35"
-                                                            ], 
-                                                            "sub_type": 1
+                                                            "args_list": [], 
+                                                            "sub_type": "FOR_EACH_UI_COMP"
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1280856564000265, 
+                                                    "element_id": 1430196505000395, 
                                                     "enable": true
                                                 }, 
                                                 {
-                                                    "action_type": "SET_UI_COMP_POSITION_NO_TRANS", 
+                                                    "action_type": "TRAVERSE_TABLE_NEW", 
                                                     "args_list": [
                                                         {
-                                                            "arg_type": 100025, 
+                                                            "arg_type": 100011, 
                                                             "args_list": [
-                                                                1
+                                                                "92ca30be-9b1b-4380-8b32-49c78e462fe4"
                                                             ], 
                                                             "sub_type": 1
                                                         }, 
                                                         {
-                                                            "arg_type": 100070, 
+                                                            "arg_type": 100022, 
                                                             "args_list": [
-                                                                "cd6b2733-d3d5-4125-a933-ee0c36d04d35"
+                                                                {
+                                                                    "action_type": "SET_UI_COMP_POSITION_NO_TRANS", 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100025, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100240, 
+                                                                                    "args_list": [
+                                                                                        "玩家"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "GET_CUS_EVENT_PARAM"
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100070, 
+                                                                            "args_list": [], 
+                                                                            "sub_type": "FOR_EACH_UI_COMP"
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100000, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100011, 
+                                                                                    "args_list": [
+                                                                                        "92ca30be-9b1b-4380-8b32-49c78e462fe4"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100002, 
+                                                                                    "args_list": [], 
+                                                                                    "sub_type": "ITER_TABLE_KEY_INT"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100003, 
+                                                                                    "args_list": [
+                                                                                        "初始x坐标"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "GET_FLOAT_TABLE_VAR_ND"
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100000, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100011, 
+                                                                                    "args_list": [
+                                                                                        "92ca30be-9b1b-4380-8b32-49c78e462fe4"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100002, 
+                                                                                    "args_list": [], 
+                                                                                    "sub_type": "ITER_TABLE_KEY_INT"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100003, 
+                                                                                    "args_list": [
+                                                                                        "初始y坐标"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "GET_FLOAT_TABLE_VAR_ND"
+                                                                        }
+                                                                    ], 
+                                                                    "bp": false, 
+                                                                    "element_id": 1430196505000386, 
+                                                                    "enable": true
+                                                                }
                                                             ], 
                                                             "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100000, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "FLOAT", 
-                                                                        "坐标初始X", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 2
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100000, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "FLOAT", 
-                                                                        "坐标初始Y", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 2
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 1280856564000266, 
-                                                    "enable": true
+                                                    "element_id": 1180021343000085, 
+                                                    "enable": true, 
+                                                    "op_arg": [
+                                                        {
+                                                            "arg_type": 100001, 
+                                                            "args_list": [
+                                                                true
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "op_arg_enable": [
+                                                        true
+                                                    ]
                                                 }
                                             ], 
                                             "sub_type": 1
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 1280856564000172, 
-                                    "enable": true, 
-                                    "local_var": {
-                                        "__tuple__": true, 
-                                        "items": [
-                                            {}, 
-                                            {}
-                                        ]
-                                    }
+                                    "element_id": 1430196505000446, 
+                                    "enable": true
                                 }
                             ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100022, 
-                            "args_list": [], 
                             "sub_type": 1
                         }
                     ], 
                     "bp": false, 
-                    "element_id": 1280856564000224, 
+                    "element_id": 1430196505000379, 
                     "enable": true, 
-                    "fake_op": [
-                        2
-                    ]
+                    "local_var": {
+                        "__tuple__": true, 
+                        "items": [
+                            {}, 
+                            {}
+                        ]
+                    }
                 }
             ], 
             "call_enabled": true, 
             "condition": [], 
             "enabled": false, 
             "event": [
-                {
-                    "args_list": [
-                        {
-                            "arg_type": 200220, 
-                            "args_list": [
-                                47
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "element_id": 1280856564000002, 
-                    "enable": true, 
-                    "event_type": "KEYBOARD_KEY_DOWN_EVENT"
-                }, 
                 {
                     "args_list": [
                         {
@@ -887,7 +839,7 @@
                             "sub_type": 1
                         }
                     ], 
-                    "element_id": 1280856564000268, 
+                    "element_id": 1180021343000003, 
                     "enable": true, 
                     "event_type": "RECEIVE_CUSTOM_EVENT"
                 }
@@ -895,8 +847,8 @@
             "group_id": 0, 
             "is_conf": true, 
             "p_trigger_id": 2125365725, 
-            "trigger_id": 1280856564, 
-            "trigger_name": "吞噬（临时)", 
+            "trigger_id": 1180021343, 
+            "trigger_name": "吞噬", 
             "valid": true, 
             "var_data": [
                 {}, 
@@ -907,47 +859,264 @@
         "1291624944": {
             "action": [
                 {
-                    "action_type": "SEND_CUSTOM_EVENT", 
+                    "action_type": "UNIT_ADD_ABILITY", 
                     "args_list": [
                         {
-                            "arg_type": 100238, 
+                            "arg_type": 100006, 
                             "args_list": [
-                                1025665870
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        1
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "玩家的单位角色"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_UNIT_ENTITY_KV"
+                        }, 
+                        {
+                            "arg_type": 100182, 
+                            "args_list": [
+                                2
                             ], 
                             "sub_type": 1
                         }, 
                         {
-                            "arg_type": 100003, 
+                            "arg_type": 100039, 
                             "args_list": [
-                                "金大侠"
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100003, 
-                            "args_list": [
-                                "金大侠大招"
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100025, 
-                            "args_list": [
-                                1
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100002, 
-                            "args_list": [
-                                1
+                                134220279
                             ], 
                             "sub_type": 1
                         }
                     ], 
                     "bp": false, 
-                    "element_id": 1291624944000010, 
-                    "enable": true
+                    "element_id": 1291624944000013, 
+                    "enable": true, 
+                    "op_arg": [
+                        null, 
+                        null, 
+                        null
+                    ], 
+                    "op_arg_enable": [
+                        false, 
+                        false, 
+                        false
+                    ]
+                }, 
+                {
+                    "action_type": "UNIT_ADD_ABILITY", 
+                    "args_list": [
+                        {
+                            "arg_type": 100006, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        1
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "玩家的单位角色"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_UNIT_ENTITY_KV"
+                        }, 
+                        {
+                            "arg_type": 100182, 
+                            "args_list": [
+                                2
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100039, 
+                            "args_list": [
+                                134219887
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1291624944000028, 
+                    "enable": true, 
+                    "op_arg": [
+                        null, 
+                        null, 
+                        null
+                    ], 
+                    "op_arg_enable": [
+                        false, 
+                        false, 
+                        false
+                    ]
+                }, 
+                {
+                    "action_type": "UNIT_ADD_ABILITY", 
+                    "args_list": [
+                        {
+                            "arg_type": 100006, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        1
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "玩家的单位角色"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_UNIT_ENTITY_KV"
+                        }, 
+                        {
+                            "arg_type": 100182, 
+                            "args_list": [
+                                2
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100039, 
+                            "args_list": [
+                                134250427
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1291624944000043, 
+                    "enable": true, 
+                    "op_arg": [
+                        null, 
+                        null, 
+                        null
+                    ], 
+                    "op_arg_enable": [
+                        false, 
+                        false, 
+                        false
+                    ]
+                }, 
+                {
+                    "action_type": "UNIT_ADD_ABILITY", 
+                    "args_list": [
+                        {
+                            "arg_type": 100006, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        1
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "玩家的单位角色"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_UNIT_ENTITY_KV"
+                        }, 
+                        {
+                            "arg_type": 100182, 
+                            "args_list": [
+                                2
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100039, 
+                            "args_list": [
+                                134219216
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1291624944000058, 
+                    "enable": true, 
+                    "op_arg": [
+                        null, 
+                        null, 
+                        null
+                    ], 
+                    "op_arg_enable": [
+                        false, 
+                        false, 
+                        false
+                    ]
+                }, 
+                {
+                    "action_type": "UNIT_ADD_ABILITY", 
+                    "args_list": [
+                        {
+                            "arg_type": 100006, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        1
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "玩家的单位角色"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_UNIT_ENTITY_KV"
+                        }, 
+                        {
+                            "arg_type": 100182, 
+                            "args_list": [
+                                2
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100039, 
+                            "args_list": [
+                                134263474
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1291624944000073, 
+                    "enable": true, 
+                    "op_arg": [
+                        null, 
+                        null, 
+                        null
+                    ], 
+                    "op_arg_enable": [
+                        false, 
+                        false, 
+                        false
+                    ]
                 }
             ], 
             "call_enabled": true, 
