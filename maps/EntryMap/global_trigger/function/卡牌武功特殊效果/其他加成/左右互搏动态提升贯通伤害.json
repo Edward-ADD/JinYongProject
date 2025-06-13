@@ -264,12 +264,146 @@
                                 }, 
                                 {
                                     "arg_type": 100022, 
-                                    "args_list": [], 
+                                    "args_list": [
+                                        {
+                                            "action_type": "SET_VARIABLE", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100030, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "FLOAT", 
+                                                                "原贯通伤害", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100000, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100000, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "FLOAT", 
+                                                                        "原贯通伤害", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 2
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100017, 
+                                                            "args_list": [
+                                                                "*"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100000, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100014, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "ABILITY", 
+                                                                                        "提取武功的技能", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 2
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100079, 
+                                                                            "args_list": [
+                                                                                "ability_level"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_ABILITY_INT_ATTR"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100017, 
+                                                                    "args_list": [
+                                                                        "*"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100000, 
+                                                                    "args_list": [
+                                                                        0.2
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "ARITHMETIC_OPERATION"
+                                                        }
+                                                    ], 
+                                                    "sub_type": "ARITHMETIC_OPERATION"
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 1580741233000076, 
+                                            "enable": true
+                                        }
+                                    ], 
                                     "sub_type": 1
                                 }, 
                                 {
                                     "arg_type": 100022, 
-                                    "args_list": [], 
+                                    "args_list": [
+                                        {
+                                            "action_type": "SET_VARIABLE", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100030, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "FLOAT", 
+                                                                "原贯通伤害", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100000, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "FLOAT", 
+                                                                "原贯通伤害", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 2
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 1580741233000072, 
+                                            "enable": true
+                                        }
+                                    ], 
                                     "sub_type": 1
                                 }
                             ], 
@@ -293,6 +427,28 @@
             "element_id": 1580741233000002, 
             "enable": true, 
             "fake_op": []
+        }, 
+        {
+            "action_type": 400342, 
+            "args_list": [
+                {
+                    "arg_type": 100000, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "FLOAT", 
+                                "原贯通伤害", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 2
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1580741233000065, 
+            "enable": true
         }
     ], 
     "call_enabled": true, 
@@ -301,7 +457,7 @@
     "event": [], 
     "func_category": "t_function", 
     "func_comment": "", 
-    "func_des": "函数描述{拥有武功的单位}", 
+    "func_des": "拥有武功的单位：{拥有武功的单位}，原贯通伤害：{原贯通伤害}", 
     "func_id": "9f55e3ee478c11f0ad6d35b4d0f80065", 
     "func_name": "左右互搏动态提升贯通伤害", 
     "func_param_list": [
@@ -310,6 +466,23 @@
             "items": [
                 "拥有武功的单位", 
                 true
+            ]
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                "原贯通伤害", 
+                true
+            ]
+        }
+    ], 
+    "func_return": true, 
+    "func_rtv_name_list": [
+        {
+            "__tuple__": true, 
+            "items": [
+                "返回的贯通伤害", 
+                "FLOAT"
             ]
         }
     ], 
@@ -325,17 +498,23 @@
             "ABILITY": {
                 "提取武功的技能": null
             }, 
+            "FLOAT": {
+                "原贯通伤害": 0.0
+            }, 
+            "NEW_TIMER": {}, 
             "UNIT_ENTITY": {
                 "拥有武功的单位": 0
             }
         }, 
         {
+            "原贯通伤害": 0, 
             "拥有武功的单位": 0, 
             "提取武功的技能": 0
         }, 
         [
             "拥有武功的单位", 
-            "提取武功的技能"
+            "提取武功的技能", 
+            "原贯通伤害"
         ]
     ]
 }
