@@ -29,8 +29,7 @@
                 }, 
                 "INTEGER": {
                     "\u5faa\u73af\u6295\u5c04\u7269\u6570\u91cfi\u503c": 0, 
-                    "\u63d0\u53d6\u706b\u7403\u7684\u6570\u91cf": 0, 
-                    "\u63d0\u53d6\u708e\u6cd5\u529f\u7684\u5c42\u6570": 0
+                    "\u63d0\u53d6\u706b\u7403\u7684\u6570\u91cf": 0
                 }, 
                 "PROJECTILE_ENTITY": {
                     "\u63d0\u53d6\u5185\u529f\u6295\u5c04\u7269": 0
@@ -42,7 +41,6 @@
                 "\u63d0\u53d6\u706b\u7403\u7684\u6570\u91cf": 0, 
                 "\u63d0\u53d6\u708e\u6cd5\u529f\u53d1\u5c04\u89d2\u5ea6": 0, 
                 "\u63d0\u53d6\u708e\u6cd5\u529f\u706b\u7403\u6bcf\u53d1\u504f\u79fb\u89d2\u5ea6": 0, 
-                "\u63d0\u53d6\u708e\u6cd5\u529f\u7684\u5c42\u6570": 0, 
                 "\u63d0\u53d6\u71c3\u70e7\u6b21\u6570\u8ba1\u7b97\u503c": 0, 
                 "\u63d0\u53d6\u71c3\u70e7\u8ba1\u7b97\u7684\u4f24\u5bb3": 0
             }
@@ -529,7 +527,7 @@
                                                         {
                                                             "arg_type": 100000, 
                                                             "args_list": [
-                                                                450.0
+                                                                4.5
                                                             ], 
                                                             "sub_type": 1
                                                         }
@@ -998,14 +996,25 @@
                         {
                             "arg_type": 100002, 
                             "args_list": [
-                                5
+                                {
+                                    "arg_type": 100014, 
+                                    "args_list": [], 
+                                    "sub_type": "CUR_ABILITY"
+                                }, 
+                                {
+                                    "arg_type": 100079, 
+                                    "args_list": [
+                                        "ability_max_level"
+                                    ], 
+                                    "sub_type": 1
+                                }
                             ], 
-                            "sub_type": 1
+                            "sub_type": "GET_ABILITY_INT_ATTR"
                         }
                     ], 
                     "bp": false, 
-                    "element_id": 700309507000002, 
-                    "enable": false
+                    "element_id": 705622018000023, 
+                    "enable": true
                 }, 
                 {
                     "action_type": "IF_THEN_ELSE", 
@@ -1163,38 +1172,24 @@
                                         {
                                             "arg_type": 100030, 
                                             "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "INTEGER", 
-                                                        "\u63d0\u53d6\u708e\u6cd5\u529f\u7684\u5c42\u6570", 
-                                                        "local"
-                                                    ]
-                                                }
+                                                [
+                                                    "FLOAT", 
+                                                    "\u63d0\u53d6\u708e\u6cd5\u529f\u53d1\u5c04\u89d2\u5ea6", 
+                                                    "local"
+                                                ]
                                             ], 
                                             "sub_type": 1
                                         }, 
                                         {
-                                            "arg_type": 100002, 
+                                            "arg_type": 100000, 
                                             "args_list": [
-                                                {
-                                                    "arg_type": 100014, 
-                                                    "args_list": [], 
-                                                    "sub_type": "CUR_ABILITY"
-                                                }, 
-                                                {
-                                                    "arg_type": 100079, 
-                                                    "args_list": [
-                                                        "ability_level"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }
+                                                45.0
                                             ], 
-                                            "sub_type": "GET_ABILITY_INT_ATTR"
+                                            "sub_type": 1
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 700309507000162, 
+                                    "element_id": 700309507000260, 
                                     "enable": true
                                 }, 
                                 {
@@ -1221,15 +1216,19 @@
                                                     "arg_type": 100002, 
                                                     "args_list": [
                                                         {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "\u63d0\u53d6\u708e\u6cd5\u529f\u7684\u5c42\u6570", 
-                                                                "local"
-                                                            ]
+                                                            "arg_type": 100014, 
+                                                            "args_list": [], 
+                                                            "sub_type": "CUR_ABILITY"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100079, 
+                                                            "args_list": [
+                                                                "ability_level"
+                                                            ], 
+                                                            "sub_type": 1
                                                         }
                                                     ], 
-                                                    "sub_type": 6
+                                                    "sub_type": "GET_ABILITY_INT_ATTR"
                                                 }, 
                                                 {
                                                     "arg_type": 100016, 
@@ -1290,11 +1289,14 @@
                                                 {
                                                     "arg_type": 100002, 
                                                     "args_list": [
-                                                        [
-                                                            "INTEGER", 
-                                                            "\u63d0\u53d6\u708e\u6cd5\u529f\u7684\u5c42\u6570", 
-                                                            "local"
-                                                        ]
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "INTEGER", 
+                                                                "\u63d0\u53d6\u706b\u7403\u7684\u6570\u91cf", 
+                                                                "local"
+                                                            ]
+                                                        }
                                                     ], 
                                                     "sub_type": 6
                                                 }
@@ -1427,13 +1429,20 @@
                                                 {
                                                     "arg_type": 100002, 
                                                     "args_list": [
-                                                        [
-                                                            "INTEGER", 
-                                                            "\u63d0\u53d6\u708e\u6cd5\u529f\u7684\u5c42\u6570", 
-                                                            "local"
-                                                        ]
+                                                        {
+                                                            "arg_type": 100014, 
+                                                            "args_list": [], 
+                                                            "sub_type": "CUR_ABILITY"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100079, 
+                                                            "args_list": [
+                                                                "ability_level"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
                                                     ], 
-                                                    "sub_type": 6
+                                                    "sub_type": "GET_ABILITY_INT_ATTR"
                                                 }, 
                                                 {
                                                     "arg_type": 100017, 
@@ -1484,11 +1493,14 @@
                                         {
                                             "arg_type": 100002, 
                                             "args_list": [
-                                                [
-                                                    "INTEGER", 
-                                                    "\u63d0\u53d6\u708e\u6cd5\u529f\u7684\u5c42\u6570", 
-                                                    "local"
-                                                ]
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "INTEGER", 
+                                                        "\u63d0\u53d6\u706b\u7403\u7684\u6570\u91cf", 
+                                                        "local"
+                                                    ]
+                                                }
                                             ], 
                                             "sub_type": 6
                                         }, 
@@ -1631,7 +1643,7 @@
                                                         {
                                                             "arg_type": 100000, 
                                                             "args_list": [
-                                                                150.0
+                                                                400.0
                                                             ], 
                                                             "sub_type": 1
                                                         }, 
@@ -1722,6 +1734,18 @@
                                                                                         0
                                                                                     ], 
                                                                                     "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100014, 
+                                                                                    "args_list": [], 
+                                                                                    "sub_type": "CUR_ABILITY"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100046, 
+                                                                                    "args_list": [
+                                                                                        134283071
+                                                                                    ], 
+                                                                                    "sub_type": 1
                                                                                 }
                                                                             ], 
                                                                             "op_arg": [], 
@@ -1731,7 +1755,7 @@
                                                                     ], 
                                                                     "bp": false, 
                                                                     "call_rt_arg_idxes": [], 
-                                                                    "element_id": 700309507000178, 
+                                                                    "element_id": 700309507000282, 
                                                                     "enable": true
                                                                 }
                                                             ], 
@@ -1755,14 +1779,11 @@
                                                         {
                                                             "arg_type": 100000, 
                                                             "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "FLOAT", 
-                                                                        "\u63d0\u53d6\u708e\u6cd5\u529f\u706b\u7403\u6bcf\u53d1\u504f\u79fb\u89d2\u5ea6", 
-                                                                        "local"
-                                                                    ]
-                                                                }
+                                                                [
+                                                                    "FLOAT", 
+                                                                    "\u63d0\u53d6\u708e\u6cd5\u529f\u53d1\u5c04\u89d2\u5ea6", 
+                                                                    "local"
+                                                                ]
                                                             ], 
                                                             "sub_type": 2
                                                         }, 
@@ -2001,7 +2022,7 @@
                                         {
                                             "arg_type": 100042, 
                                             "args_list": [
-                                                "eo0otJdxEe+uWC9VeiiygJ"
+                                                "V37jHJdxEe+Sgy9VeiiygP"
                                             ], 
                                             "sub_type": 1
                                         }, 
@@ -2067,7 +2088,7 @@
                                                 {
                                                     "arg_type": 100000, 
                                                     "args_list": [
-                                                        450.0
+                                                        4.5
                                                     ], 
                                                     "sub_type": 1
                                                 }
@@ -2120,8 +2141,7 @@
                     }, 
                     "INTEGER": {
                         "\u5faa\u73af\u6295\u5c04\u7269\u6570\u91cfi\u503c": 0, 
-                        "\u63d0\u53d6\u706b\u7403\u7684\u6570\u91cf": 0, 
-                        "\u63d0\u53d6\u708e\u6cd5\u529f\u7684\u5c42\u6570": 0
+                        "\u63d0\u53d6\u706b\u7403\u7684\u6570\u91cf": 0
                     }, 
                     "PROJECTILE_ENTITY": {
                         "\u63d0\u53d6\u5185\u529f\u6295\u5c04\u7269": 0
@@ -2133,12 +2153,10 @@
                     "\u63d0\u53d6\u706b\u7403\u7684\u6570\u91cf": 0, 
                     "\u63d0\u53d6\u708e\u6cd5\u529f\u53d1\u5c04\u89d2\u5ea6": 0, 
                     "\u63d0\u53d6\u708e\u6cd5\u529f\u706b\u7403\u6bcf\u53d1\u504f\u79fb\u89d2\u5ea6": 0, 
-                    "\u63d0\u53d6\u708e\u6cd5\u529f\u7684\u5c42\u6570": 0, 
                     "\u63d0\u53d6\u71c3\u70e7\u6b21\u6570\u8ba1\u7b97\u503c": 0, 
                     "\u63d0\u53d6\u71c3\u70e7\u8ba1\u7b97\u7684\u4f24\u5bb3": 0
                 }, 
                 [
-                    "\u63d0\u53d6\u708e\u6cd5\u529f\u7684\u5c42\u6570", 
                     "\u63d0\u53d6\u706b\u7403\u7684\u6570\u91cf", 
                     "\u63d0\u53d6\u708e\u6cd5\u529f\u53d1\u5c04\u89d2\u5ea6", 
                     "\u63d0\u53d6\u71c3\u70e7\u8ba1\u7b97\u7684\u4f24\u5bb3", 

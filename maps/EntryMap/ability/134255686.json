@@ -42,6 +42,7 @@
                 "INTEGER": {
                     "\u5faa\u73af\u4f24\u5bb3\u6bd4\u4f8b\u4e2a\u6570i\u503c": 0, 
                     "\u63d0\u53d6\u4f24\u5bb3\u6bd4\u4f8b\u4e2a\u6570": 0, 
+                    "\u63d0\u53d6\u53cd\u5f39\u6b21\u6570": 0, 
                     "\u63d0\u53d6\u653b\u51fb\u6b21\u6570": 0, 
                     "\u63d0\u53d6\u8ffd\u52a0\u7684\u53cd\u5f39\u6b21\u6570": 0, 
                     "\u653b\u51fb\u6bb5\u6570i\u503c": 0
@@ -66,6 +67,7 @@
                 "\u63d0\u53d6\u4f24\u5bb3\u6bd4\u4f8b\u5c5e\u6027": 0, 
                 "\u63d0\u53d6\u4f24\u5bb3\u6bd4\u4f8b\u6210\u957f\u767e\u5206\u6bd4": 0, 
                 "\u63d0\u53d6\u4f24\u5bb3\u6bd4\u4f8b\u6570\u503c": 0, 
+                "\u63d0\u53d6\u53cd\u5f39\u6b21\u6570": 0, 
                 "\u63d0\u53d6\u57fa\u7840\u653b\u51fb\u529b": 0, 
                 "\u63d0\u53d6\u57fa\u7840\u653b\u51fb\u8303\u56f4": 0, 
                 "\u63d0\u53d6\u57fa\u7840\u653b\u51fb\u95f4\u9694": 0, 
@@ -193,102 +195,6 @@
                                     ], 
                                     "bp": false, 
                                     "element_id": 416858114000106, 
-                                    "enable": true
-                                }, 
-                                {
-                                    "action_type": "ADD_ATTR", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100006, 
-                                            "args_list": [], 
-                                            "sub_type": "ABILITY_OWNER"
-                                        }, 
-                                        {
-                                            "arg_type": 100300, 
-                                            "args_list": [
-                                                "ATTR_BONUS"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100042, 
-                                            "args_list": [
-                                                "G9wUapgHEe+eky3Im3Pjlq"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100000, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100011, 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100014, 
-                                                                    "args_list": [], 
-                                                                    "sub_type": "CUR_ABILITY"
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100003, 
-                                                                    "args_list": [
-                                                                        "\u6b66\u529f\u4fee\u70bc\u989d\u5916\u6548\u679c"
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }
-                                                            ], 
-                                                            "sub_type": "GET_TABLE_KV"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100002, 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100014, 
-                                                                    "args_list": [], 
-                                                                    "sub_type": "CUR_ABILITY"
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100079, 
-                                                                    "args_list": [
-                                                                        "ability_level"
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }
-                                                            ], 
-                                                            "sub_type": "GET_ABILITY_INT_ATTR"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                "\u8ffd\u52a0\u53cd\u5f39\u503c"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_FLOAT_TABLE_VAR_ND"
-                                                }, 
-                                                {
-                                                    "arg_type": 100017, 
-                                                    "args_list": [
-                                                        "*"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100000, 
-                                                    "args_list": [
-                                                        -1.0
-                                                    ], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "sub_type": "ARITHMETIC_OPERATION"
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 416858114000109, 
                                     "enable": true
                                 }
                             ], 
@@ -759,14 +665,127 @@
                         {
                             "arg_type": 100002, 
                             "args_list": [
-                                4
+                                {
+                                    "arg_type": 100014, 
+                                    "args_list": [], 
+                                    "sub_type": "CUR_ABILITY"
+                                }, 
+                                {
+                                    "arg_type": 100079, 
+                                    "args_list": [
+                                        "ability_max_level"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_ABILITY_INT_ATTR"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 705622018000023, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "STORAGE_BOX", 
+                    "args_list": [
+                        {
+                            "arg_type": 100021, 
+                            "args_list": [], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "SET_VARIABLE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100030, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "INTEGER", 
+                                                        "\u63d0\u53d6\u53cd\u5f39\u6b21\u6570", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100011, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100014, 
+                                                            "args_list": [], 
+                                                            "sub_type": "CUR_ABILITY"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "\u6b66\u529f\u4fee\u70bc\u989d\u5916\u6548\u679c"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "GET_TABLE_KV"
+                                                }, 
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100014, 
+                                                            "args_list": [], 
+                                                            "sub_type": "CUR_ABILITY"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100079, 
+                                                            "args_list": [
+                                                                "ability_level"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "GET_ABILITY_INT_ATTR"
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "\u53cd\u5f39\u6b21\u6570"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_INTEGER_TABLE_VAR_ND"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 1731489795000041, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "\u53cd\u5f39\u6a21\u677f"
                             ], 
                             "sub_type": 1
                         }
                     ], 
                     "bp": false, 
-                    "element_id": 1894211587000002, 
-                    "enable": false
+                    "element_id": 1731489795000005, 
+                    "enable": true
                 }, 
                 {
                     "action_type": "STORAGE_BOX", 
@@ -853,82 +872,6 @@
                                     ], 
                                     "bp": false, 
                                     "element_id": 416858114000106, 
-                                    "enable": true
-                                }, 
-                                {
-                                    "action_type": "ADD_ATTR", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100006, 
-                                            "args_list": [], 
-                                            "sub_type": "ABILITY_OWNER"
-                                        }, 
-                                        {
-                                            "arg_type": 100300, 
-                                            "args_list": [
-                                                "ATTR_BONUS"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100042, 
-                                            "args_list": [
-                                                "G9wUapgHEe+eky3Im3Pjlq"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100011, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100014, 
-                                                            "args_list": [], 
-                                                            "sub_type": "CUR_ABILITY"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                "\u6b66\u529f\u4fee\u70bc\u989d\u5916\u6548\u679c"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_TABLE_KV"
-                                                }, 
-                                                {
-                                                    "arg_type": 100002, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100014, 
-                                                            "args_list": [], 
-                                                            "sub_type": "CUR_ABILITY"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100079, 
-                                                            "args_list": [
-                                                                "ability_level"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_ABILITY_INT_ATTR"
-                                                }, 
-                                                {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        "\u8ffd\u52a0\u53cd\u5f39\u503c"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "sub_type": "GET_FLOAT_TABLE_VAR_ND"
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 416858114000109, 
                                     "enable": true
                                 }
                             ], 
@@ -3003,32 +2946,59 @@
                                                                                                     "arg_type": 100002, 
                                                                                                     "args_list": [
                                                                                                         {
-                                                                                                            "arg_type": 100000, 
+                                                                                                            "arg_type": 100002, 
                                                                                                             "args_list": [
                                                                                                                 {
-                                                                                                                    "arg_type": 100006, 
-                                                                                                                    "args_list": [], 
-                                                                                                                    "sub_type": "ABILITY_OWNER"
-                                                                                                                }, 
-                                                                                                                {
-                                                                                                                    "arg_type": 100301, 
-                                                                                                                    "args_list": [
-                                                                                                                        "ATTR_RESULT"
-                                                                                                                    ], 
-                                                                                                                    "sub_type": 1
-                                                                                                                }, 
-                                                                                                                {
-                                                                                                                    "arg_type": 100042, 
-                                                                                                                    "args_list": [
-                                                                                                                        "G9wUapgHEe+eky3Im3Pjlq"
-                                                                                                                    ], 
-                                                                                                                    "sub_type": 1
+                                                                                                                    "__tuple__": true, 
+                                                                                                                    "items": [
+                                                                                                                        "INTEGER", 
+                                                                                                                        "\u63d0\u53d6\u53cd\u5f39\u6b21\u6570", 
+                                                                                                                        "local"
+                                                                                                                    ]
                                                                                                                 }
                                                                                                             ], 
-                                                                                                            "sub_type": "GET_UNIT_ATTR"
+                                                                                                            "sub_type": 6
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100016, 
+                                                                                                            "args_list": [
+                                                                                                                "+"
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100002, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "arg_type": 100000, 
+                                                                                                                    "args_list": [
+                                                                                                                        {
+                                                                                                                            "arg_type": 100006, 
+                                                                                                                            "args_list": [], 
+                                                                                                                            "sub_type": "ABILITY_OWNER"
+                                                                                                                        }, 
+                                                                                                                        {
+                                                                                                                            "arg_type": 100301, 
+                                                                                                                            "args_list": [
+                                                                                                                                "ATTR_RESULT"
+                                                                                                                            ], 
+                                                                                                                            "sub_type": 1
+                                                                                                                        }, 
+                                                                                                                        {
+                                                                                                                            "arg_type": 100042, 
+                                                                                                                            "args_list": [
+                                                                                                                                "G9wUapgHEe+eky3Im3Pjlq"
+                                                                                                                            ], 
+                                                                                                                            "sub_type": 1
+                                                                                                                        }
+                                                                                                                    ], 
+                                                                                                                    "sub_type": "GET_UNIT_ATTR"
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": "F2I"
                                                                                                         }
                                                                                                     ], 
-                                                                                                    "sub_type": "F2I"
+                                                                                                    "sub_type": "MATH_OPERATION"
                                                                                                 }, 
                                                                                                 {
                                                                                                     "arg_type": 100002, 
@@ -3219,6 +3189,7 @@
                     "INTEGER": {
                         "\u5faa\u73af\u4f24\u5bb3\u6bd4\u4f8b\u4e2a\u6570i\u503c": 0, 
                         "\u63d0\u53d6\u4f24\u5bb3\u6bd4\u4f8b\u4e2a\u6570": 0, 
+                        "\u63d0\u53d6\u53cd\u5f39\u6b21\u6570": 0, 
                         "\u63d0\u53d6\u653b\u51fb\u6b21\u6570": 0, 
                         "\u63d0\u53d6\u8ffd\u52a0\u7684\u53cd\u5f39\u6b21\u6570": 0, 
                         "\u653b\u51fb\u6bb5\u6570i\u503c": 0
@@ -3243,6 +3214,7 @@
                     "\u63d0\u53d6\u4f24\u5bb3\u6bd4\u4f8b\u5c5e\u6027": 0, 
                     "\u63d0\u53d6\u4f24\u5bb3\u6bd4\u4f8b\u6210\u957f\u767e\u5206\u6bd4": 0, 
                     "\u63d0\u53d6\u4f24\u5bb3\u6bd4\u4f8b\u6570\u503c": 0, 
+                    "\u63d0\u53d6\u53cd\u5f39\u6b21\u6570": 0, 
                     "\u63d0\u53d6\u57fa\u7840\u653b\u51fb\u529b": 0, 
                     "\u63d0\u53d6\u57fa\u7840\u653b\u51fb\u8303\u56f4": 0, 
                     "\u63d0\u53d6\u57fa\u7840\u653b\u51fb\u95f4\u9694": 0, 
@@ -3282,7 +3254,8 @@
                     "\u63d0\u53d6\u5b9e\u9645\u653b\u51fb\u95f4\u9694", 
                     "\u63d0\u53d6\u7d22\u654c\u7684\u654c\u4eba", 
                     "\u63d0\u53d6\u8ffd\u52a0\u7684\u53cd\u5f39\u6b21\u6570", 
-                    "\u63d0\u53d6\u8ffd\u52a0\u7684\u53cd\u5f39\u4f24\u5bb3\u52a0\u6210"
+                    "\u63d0\u53d6\u8ffd\u52a0\u7684\u53cd\u5f39\u4f24\u5bb3\u52a0\u6210", 
+                    "\u63d0\u53d6\u53cd\u5f39\u6b21\u6570"
                 ]
             ]
         }
