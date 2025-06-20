@@ -10,6 +10,10 @@
                 "\u63d0\u53d6\u6b66\u529f\u7684\u6280\u80fd": 0
             }
         }, 
+        "663834627": {
+            "variable_dict": {}, 
+            "variable_length_dict": {}
+        }, 
         "1913036803": {
             "variable_dict": {
                 "FLOAT": {
@@ -48,6 +52,40 @@
     }, 
     "trigger_dict": {
         "432410627": {
+            "action": [
+                663834627
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": true, 
+            "event": [
+                {
+                    "args_list": [], 
+                    "element_id": 432410627000001, 
+                    "enable": true, 
+                    "event_type": "ABILITY_OBTAIN"
+                }
+            ], 
+            "group_id": 134279574, 
+            "p_trigger_id": null, 
+            "trigger_id": 432410627, 
+            "trigger_name": "\u83b7\u5f97\u6280\u80fd\u65f6", 
+            "valid": true, 
+            "var_data": [
+                {
+                    "ABILITY": {
+                        "\u63d0\u53d6\u6b66\u529f\u7684\u6280\u80fd": null
+                    }
+                }, 
+                {
+                    "\u63d0\u53d6\u6b66\u529f\u7684\u6280\u80fd": 0
+                }, 
+                [
+                    "\u63d0\u53d6\u6b66\u529f\u7684\u6280\u80fd"
+                ]
+            ]
+        }, 
+        "663834627": {
             "action": [
                 {
                     "action_type": "STORAGE_BOX", 
@@ -101,7 +139,7 @@
                                                 {
                                                     "arg_type": 100039, 
                                                     "args_list": [
-                                                        134232613
+                                                        134243231
                                                     ], 
                                                     "sub_type": 1
                                                 }
@@ -199,7 +237,7 @@
                                                                 {
                                                                     "arg_type": 100039, 
                                                                     "args_list": [
-                                                                        134232613
+                                                                        134243231
                                                                     ], 
                                                                     "sub_type": 1
                                                                 }
@@ -288,32 +326,38 @@
             ], 
             "call_enabled": true, 
             "condition": [], 
-            "enabled": true, 
+            "enabled": false, 
             "event": [
                 {
-                    "args_list": [], 
-                    "element_id": 432410627000001, 
+                    "args_list": [
+                        {
+                            "arg_type": 100006, 
+                            "args_list": [], 
+                            "sub_type": "ABILITY_OWNER"
+                        }, 
+                        {
+                            "arg_type": 100007, 
+                            "args_list": [
+                                "ET_UNIT_BORN"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "element_id": 663834627000001, 
                     "enable": true, 
-                    "event_type": "ABILITY_OBTAIN"
+                    "event_type": "SPECIAL_UNIT_EVENT"
                 }
             ], 
-            "group_id": 134279574, 
-            "p_trigger_id": null, 
-            "trigger_id": 432410627, 
-            "trigger_name": "\u83b7\u5f97\u6280\u80fd\u65f6", 
+            "group_id": 0, 
+            "is_conf": true, 
+            "p_trigger_id": 432410627, 
+            "trigger_id": 663834627, 
+            "trigger_name": "\u83b7\u53d6\u4fe1\u606f", 
             "valid": true, 
             "var_data": [
-                {
-                    "ABILITY": {
-                        "\u63d0\u53d6\u6b66\u529f\u7684\u6280\u80fd": null
-                    }
-                }, 
-                {
-                    "\u63d0\u53d6\u6b66\u529f\u7684\u6280\u80fd": 0
-                }, 
-                [
-                    "\u63d0\u53d6\u6b66\u529f\u7684\u6280\u80fd"
-                ]
+                {}, 
+                {}, 
+                []
             ]
         }, 
         "1913036803": {
@@ -1792,6 +1836,13 @@
             ], 
             "key": 134279574, 
             "name": "134279574"
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                663834627, 
+                "\u83b7\u53d6\u4fe1\u606f"
+            ]
         }
     ], 
     "trigger_version": "1.2", 
