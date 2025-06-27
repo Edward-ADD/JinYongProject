@@ -79,6 +79,41 @@
                                     "condition_type": "MODIFIER_HAS_TAG", 
                                     "element_id": 520916997000026, 
                                     "enable": true
+                                }, 
+                                {
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100077, 
+                                            "args_list": [], 
+                                            "sub_type": "TRIGGER_PROJECTILE"
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100025, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100006, 
+                                                                    "args_list": [], 
+                                                                    "sub_type": "ABILITY_OWNER"
+                                                                }
+                                                            ], 
+                                                            "sub_type": "OWNER_PLAYER"
+                                                        }
+                                                    ], 
+                                                    "sub_type": "PLAYER_ID_NUMBER"
+                                                }
+                                            ], 
+                                            "sub_type": "ANY_VAR_TO_STR"
+                                        }
+                                    ], 
+                                    "condition_type": "MODIFIER_HAS_TAG", 
+                                    "element_id": 520916997690189, 
+                                    "enable": true
                                 }
                             ], 
                             "sub_type": 1
@@ -800,6 +835,41 @@
             "group_id": 134269562, 
             "is_conf": true, 
             "p_trigger_id": 1152229380, 
+            "sub_trigger_owner_set_var_action": {
+                "action_type": "SET_VARIABLE", 
+                "args_list": [
+                    {
+                        "arg_type": 100178, 
+                        "args_list": [
+                            {
+                                "__tuple__": true, 
+                                "items": [
+                                    "DYNAMIC_TRIGGER_INSTANCE", 
+                                    "\u6280\u6cd5\u89e6\u53d1\u5668", 
+                                    "actor"
+                                ]
+                            }
+                        ], 
+                        "sub_type": "VARIABLE"
+                    }, 
+                    {
+                        "arg_type": 100178, 
+                        "args_list": [
+                            {
+                                "arg_type": 100068, 
+                                "args_list": [
+                                    520916997
+                                ], 
+                                "sub_type": 1
+                            }
+                        ], 
+                        "sub_type": "REG_ABILITY_TRIGGER"
+                    }
+                ], 
+                "bp": false, 
+                "element_id": 520916997690183, 
+                "enable": true
+            }, 
             "trigger_id": 520916997, 
             "trigger_name": "\u5b50\u89e6\u53d1\u5668", 
             "valid": true, 
@@ -1075,6 +1145,53 @@
                 []
             ]
         }, 
+        "1557323782": {
+            "action": [
+                {
+                    "action_type": "UNREG_TRIGGER", 
+                    "args_list": [
+                        {
+                            "arg_type": 100178, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "DYNAMIC_TRIGGER_INSTANCE", 
+                                        "\u6280\u6cd5\u89e6\u53d1\u5668", 
+                                        "actor"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1557323782000005, 
+                    "enable": true
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": true, 
+            "event": [
+                {
+                    "args_list": [], 
+                    "element_id": 1557323782000002, 
+                    "enable": true, 
+                    "event_type": "ABILITY_LOSE"
+                }
+            ], 
+            "group_id": 134269562, 
+            "p_trigger_id": null, 
+            "trigger_id": 1557323782, 
+            "trigger_name": "\u65b0\u5efa\u89e6\u53d1\u5668", 
+            "valid": true, 
+            "var_data": [
+                {}, 
+                {}, 
+                []
+            ]
+        }, 
         "1568333826": {
             "action": [
                 {
@@ -1307,6 +1424,13 @@
                         1568333826, 
                         "AbilityPercastEnds"
                     ]
+                }, 
+                {
+                    "__tuple__": true, 
+                    "items": [
+                        1557323782, 
+                        "\u65b0\u5efa\u89e6\u53d1\u5668"
+                    ]
                 }
             ], 
             "key": 134269562, 
@@ -1321,7 +1445,21 @@
         }
     ], 
     "trigger_version": "1.2", 
-    "variable_dict": {}, 
-    "variable_group_info": [], 
-    "variable_length_dict": {}
+    "variable_dict": {
+        "DYNAMIC_TRIGGER_INSTANCE": {
+            "\u6280\u6cd5\u89e6\u53d1\u5668": 0
+        }
+    }, 
+    "variable_group_info": [
+        {
+            "__tuple__": true, 
+            "items": [
+                "\u6280\u6cd5\u89e6\u53d1\u5668", 
+                "\u6280\u6cd5\u89e6\u53d1\u5668"
+            ]
+        }
+    ], 
+    "variable_length_dict": {
+        "\u6280\u6cd5\u89e6\u53d1\u5668": 0
+    }
 }
