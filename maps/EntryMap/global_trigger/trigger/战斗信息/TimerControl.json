@@ -68,6 +68,35 @@
                             "bp": false, 
                             "element_id": 1606488286000004, 
                             "enable": true
+                        }, 
+                        {
+                            "action_type": "SET_VARIABLE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100030, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "UI_COMP", 
+                                                "按钮_跳过等待时间", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100070, 
+                                    "args_list": [
+                                        "27afcb79-7e98-4f40-a0d6-da7f37a20c2c"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1606488286684845, 
+                            "enable": true
                         }
                     ], 
                     "sub_type": 1
@@ -155,7 +184,89 @@
             "element_id": 1606488286000011, 
             "enable": true
         }, 
-        650186975
+        650186975, 
+        {
+            "action_type": "STORAGE_BOX", 
+            "args_list": [
+                {
+                    "arg_type": 100021, 
+                    "args_list": [], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "CREATE_UI_COMP_EVENT_EX_EX", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100070, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "UI_COMP", 
+                                                "按钮_跳过等待时间", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": "VARIABLE"
+                                }, 
+                                {
+                                    "arg_type": 100072, 
+                                    "args_list": [
+                                        30
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "跳过等待出怪"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1606488286684861, 
+                            "enable": true, 
+                            "op_arg": [
+                                null, 
+                                {
+                                    "arg_type": 100001, 
+                                    "args_list": [
+                                        false
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "op_arg_enable": [
+                                false, 
+                                false
+                            ]
+                        }, 
+                        25010776
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        "跳过效果"
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 650186975925259, 
+            "enable": true
+        }
     ], 
     "call_enabled": true, 
     "condition": [], 
@@ -177,6 +288,707 @@
     "group_id": "fO97RS+vEfC9iw2rEsnuRG", 
     "p_trigger_id": null, 
     "sub_trigger": {
+        "25010776": {
+            "action": [
+                {
+                    "action_type": "DELETE_TIMER", 
+                    "args_list": [
+                        {
+                            "arg_type": 100181, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "NEW_TIMER", 
+                                        "全局计时器_第一回合等待"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 25010776000160, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "DELETE_TIMER", 
+                    "args_list": [
+                        {
+                            "arg_type": 100181, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "NEW_TIMER", 
+                                        "全局计时器_下一波来临时"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 25010776000009, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "DELETE_TIMER", 
+                    "args_list": [
+                        {
+                            "arg_type": 100181, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "NEW_TIMER", 
+                                        "全局计时器_等待触发出怪表现效果"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 25010776000014, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "DELETE_TIMER", 
+                    "args_list": [
+                        {
+                            "arg_type": 100181, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "NEW_TIMER", 
+                                        "全局计时器_等待触发出怪"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 25010776000019, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "PICK_PLAYER_DO_ACTION", 
+                    "args_list": [
+                        {
+                            "arg_type": 100027, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100020, 
+                                    "args_list": [
+                                        1
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "TEAM_PLAYER"
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "SET_UI_COMP_VISIBLE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [], 
+                                            "sub_type": "PICKED_PLAYER"
+                                        }, 
+                                        {
+                                            "arg_type": 100001, 
+                                            "args_list": [
+                                                false
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100070, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "UI_COMP", 
+                                                        "按钮_跳过等待时间", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": "VARIABLE"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 650186975925338, 
+                                    "enable": true
+                                }, 
+                                {
+                                    "action_type": "SET_UI_COMP_ANIM_OPACITY", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [], 
+                                            "sub_type": "PICKED_PLAYER"
+                                        }, 
+                                        {
+                                            "arg_type": 100070, 
+                                            "args_list": [
+                                                "7c245a26-561a-4c28-90dc-77b286245faf"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100000, 
+                                            "args_list": [
+                                                100.0
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100000, 
+                                            "args_list": [
+                                                0.0
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100000, 
+                                            "args_list": [
+                                                0.5
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 650186975925282, 
+                                    "enable": true, 
+                                    "op_arg": [
+                                        null
+                                    ], 
+                                    "op_arg_enable": [
+                                        false
+                                    ]
+                                }, 
+                                {
+                                    "action_type": "RUN_ONCE_TIMER_NO_SAVE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100000, 
+                                            "args_list": [
+                                                1.0
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100022, 
+                                            "args_list": [
+                                                {
+                                                    "action_type": "SET_UI_COMP_VISIBLE", 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100025, 
+                                                            "args_list": [], 
+                                                            "sub_type": "PICKED_PLAYER"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100001, 
+                                                            "args_list": [
+                                                                false
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100070, 
+                                                            "args_list": [
+                                                                "7c245a26-561a-4c28-90dc-77b286245faf"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "bp": false, 
+                                                    "element_id": 650186975925283, 
+                                                    "enable": true
+                                                }
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 650186975925284, 
+                                    "enable": true, 
+                                    "local_var": {
+                                        "__tuple__": true, 
+                                        "items": [
+                                            {}, 
+                                            {}
+                                        ]
+                                    }
+                                }
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 650186975925285, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "IF_THEN_ELSE", 
+                    "args_list": [
+                        {
+                            "arg_type": 100021, 
+                            "args_list": [
+                                {
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "INTEGER", 
+                                                        "战斗信息_游戏回合"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 6
+                                        }, 
+                                        {
+                                            "arg_type": 100015, 
+                                            "args_list": [
+                                                "=="
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                1
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "condition_type": "FLOAT_COMPARE", 
+                                    "element_id": 25010776000126, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "SEND_CUSTOM_EVENT", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100238, 
+                                            "args_list": [
+                                                1079706731
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 1749979208925479, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "SET_VARIABLE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                [
+                                                    "INTEGER", 
+                                                    "回合计时_时间动态记录值"
+                                                ]
+                                            ], 
+                                            "sub_type": 6
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                1
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 650186975000037, 
+                                    "enable": true
+                                }, 
+                                {
+                                    "action_type": "SET_VARIABLE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100030, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "INTEGER", 
+                                                        "回合计时_提取当前回合最大总时长"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100011, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100011, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "TABLE", 
+                                                                        "战斗信息_当前地图回合时间表"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": "VARIABLE"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "STRING", 
+                                                                        "战斗信息_当前选择的模式"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 2
+                                                        }
+                                                    ], 
+                                                    "sub_type": "GET_TABLE_TABLE_VAR_1D"
+                                                }, 
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "INTEGER", 
+                                                                "战斗信息_游戏回合"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 6
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "本回合总时长"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_INTEGER_TABLE_VAR_ND"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 650186975000038, 
+                                    "enable": true
+                                }, 
+                                {
+                                    "action_type": "SET_UI_COMP_TEXT", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100027, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100020, 
+                                                    "args_list": [
+                                                        1
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "TEAM_PLAYER"
+                                        }, 
+                                        {
+                                            "arg_type": 100070, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "UI_COMP", 
+                                                        "文本_当前回合数", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": "VARIABLE"
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "INTEGER", 
+                                                                                "战斗信息_游戏回合"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 6
+                                                                }
+                                                            ], 
+                                                            "op_arg": [
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        0
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "op_arg_enable": [
+                                                                false
+                                                            ], 
+                                                            "sub_type": "INT_TO_STR"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        "/"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100002, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "INTEGER", 
+                                                                                        "战斗信息_本轮游戏最大回合数"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 6
+                                                                        }
+                                                                    ], 
+                                                                    "op_arg": [
+                                                                        {
+                                                                            "arg_type": 100002, 
+                                                                            "args_list": [
+                                                                                0
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "op_arg_enable": [
+                                                                        false
+                                                                    ], 
+                                                                    "sub_type": "INT_TO_STR"
+                                                                }
+                                                            ], 
+                                                            "op_arg": [
+                                                                null, 
+                                                                null, 
+                                                                null, 
+                                                                null, 
+                                                                null, 
+                                                                null, 
+                                                                null, 
+                                                                null
+                                                            ], 
+                                                            "op_arg_enable": [
+                                                                false, 
+                                                                false, 
+                                                                false, 
+                                                                false, 
+                                                                false, 
+                                                                false, 
+                                                                false, 
+                                                                false
+                                                            ], 
+                                                            "sub_type": "STR_JOIN"
+                                                        }
+                                                    ], 
+                                                    "op_arg": [
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null
+                                                    ], 
+                                                    "op_arg_enable": [
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false
+                                                    ], 
+                                                    "sub_type": "STR_JOIN"
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "回合"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "op_arg": [
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null
+                                            ], 
+                                            "op_arg_enable": [
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false
+                                            ], 
+                                            "sub_type": "STR_JOIN"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 650186975925384, 
+                                    "enable": true
+                                }, 
+                                {
+                                    "action_type": "SET_VARIABLE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100030, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "BOOLEAN", 
+                                                        "战斗信息_是否达到回合间隔"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100001, 
+                                            "args_list": [
+                                                false
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 650186975000040, 
+                                    "enable": true
+                                }, 
+                                {
+                                    "action_type": "SEND_CUSTOM_EVENT", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100238, 
+                                            "args_list": [
+                                                1017925612
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 650186975000041, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 25010776000117, 
+                    "enable": true, 
+                    "fake_op": [
+                        2
+                    ]
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": false, 
+            "event": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 100067, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "跳过等待出怪"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "STR_TO_UI_EVENT"
+                        }
+                    ], 
+                    "element_id": 25010776000002, 
+                    "enable": true, 
+                    "event_type": "TRIGGER_COMPONENT_EVENT"
+                }
+            ], 
+            "group_id": 0, 
+            "is_conf": true, 
+            "p_trigger_id": 1606488286, 
+            "trigger_id": 25010776, 
+            "trigger_name": "跳过等待时间", 
+            "valid": true, 
+            "var_data": [
+                {}, 
+                {}, 
+                []
+            ]
+        }, 
         "650186975": {
             "action": [
                 {
@@ -208,15 +1020,9 @@
                                 {
                                     "arg_type": 100003, 
                                     "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "STRING", 
-                                                "战斗信息_当前选择的模式"
-                                            ]
-                                        }
+                                        "防守模式"
                                     ], 
-                                    "sub_type": 2
+                                    "sub_type": 1
                                 }
                             ], 
                             "sub_type": "GET_INTEGER_TABLE_VAR_1D"
@@ -263,44 +1069,6 @@
                                     "arg_type": 100003, 
                                     "args_list": [
                                         {
-                                            "arg_type": 100002, 
-                                            "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "INTEGER", 
-                                                        "战斗信息_游戏回合"
-                                                    ]
-                                                }
-                                            ], 
-                                            "sub_type": 6
-                                        }
-                                    ], 
-                                    "op_arg": [
-                                        {
-                                            "arg_type": 100002, 
-                                            "args_list": [
-                                                0
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "op_arg_enable": [
-                                        false
-                                    ], 
-                                    "sub_type": "INT_TO_STR"
-                                }, 
-                                {
-                                    "arg_type": 100003, 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                "/"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
                                             "arg_type": 100003, 
                                             "args_list": [
                                                 {
@@ -310,7 +1078,7 @@
                                                             "__tuple__": true, 
                                                             "items": [
                                                                 "INTEGER", 
-                                                                "战斗信息_本轮游戏最大回合数"
+                                                                "战斗信息_游戏回合"
                                                             ]
                                                         }
                                                     ], 
@@ -330,6 +1098,70 @@
                                                 false
                                             ], 
                                             "sub_type": "INT_TO_STR"
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "/"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "INTEGER", 
+                                                                        "战斗信息_本轮游戏最大回合数"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }
+                                                    ], 
+                                                    "op_arg": [
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                0
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "op_arg_enable": [
+                                                        false
+                                                    ], 
+                                                    "sub_type": "INT_TO_STR"
+                                                }
+                                            ], 
+                                            "op_arg": [
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null
+                                            ], 
+                                            "op_arg_enable": [
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false
+                                            ], 
+                                            "sub_type": "STR_JOIN"
                                         }
                                     ], 
                                     "op_arg": [
@@ -353,6 +1185,13 @@
                                         false
                                     ], 
                                     "sub_type": "STR_JOIN"
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "回合"
+                                    ], 
+                                    "sub_type": 1
                                 }
                             ], 
                             "op_arg": [
@@ -1209,6 +2048,60 @@
                                                                                     "enable": true
                                                                                 }, 
                                                                                 {
+                                                                                    "action_type": "SET_VARIABLE", 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100030, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "__tuple__": true, 
+                                                                                                    "items": [
+                                                                                                        "INTEGER", 
+                                                                                                        "战斗信息_游戏回合"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100002, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "arg_type": 100002, 
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "__tuple__": true, 
+                                                                                                            "items": [
+                                                                                                                "INTEGER", 
+                                                                                                                "战斗信息_游戏回合"
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "sub_type": 6
+                                                                                                }, 
+                                                                                                {
+                                                                                                    "arg_type": 100016, 
+                                                                                                    "args_list": [
+                                                                                                        "+"
+                                                                                                    ], 
+                                                                                                    "sub_type": 1
+                                                                                                }, 
+                                                                                                {
+                                                                                                    "arg_type": 100002, 
+                                                                                                    "args_list": [
+                                                                                                        1
+                                                                                                    ], 
+                                                                                                    "sub_type": 1
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": "MATH_OPERATION"
+                                                                                        }
+                                                                                    ], 
+                                                                                    "bp": false, 
+                                                                                    "element_id": 25010776000147, 
+                                                                                    "enable": true
+                                                                                }, 
+                                                                                {
                                                                                     "action_type": "IF_THEN_ELSE", 
                                                                                     "args_list": [
                                                                                         {
@@ -1312,8 +2205,167 @@
                                                                                                     "enable": true
                                                                                                 }, 
                                                                                                 {
-                                                                                                    "action_type": "RUN_COUNT_TIMER_NO_SAVE", 
+                                                                                                    "action_type": "PICK_PLAYER_DO_ACTION", 
                                                                                                     "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100027, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "arg_type": 100020, 
+                                                                                                                    "args_list": [
+                                                                                                                        1
+                                                                                                                    ], 
+                                                                                                                    "sub_type": 1
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": "TEAM_PLAYER"
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100022, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "action_type": "IF_THEN_ELSE", 
+                                                                                                                    "args_list": [
+                                                                                                                        {
+                                                                                                                            "arg_type": 100021, 
+                                                                                                                            "args_list": [
+                                                                                                                                {
+                                                                                                                                    "args_list": [
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100180, 
+                                                                                                                                            "args_list": [
+                                                                                                                                                {
+                                                                                                                                                    "arg_type": 100025, 
+                                                                                                                                                    "args_list": [], 
+                                                                                                                                                    "sub_type": "PICKED_PLAYER"
+                                                                                                                                                }
+                                                                                                                                            ], 
+                                                                                                                                            "sub_type": "GET_ROLE_STATUS"
+                                                                                                                                        }, 
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100035, 
+                                                                                                                                            "args_list": [
+                                                                                                                                                "=="
+                                                                                                                                            ], 
+                                                                                                                                            "sub_type": 1
+                                                                                                                                        }, 
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100180, 
+                                                                                                                                            "args_list": [
+                                                                                                                                                1
+                                                                                                                                            ], 
+                                                                                                                                            "sub_type": 1
+                                                                                                                                        }
+                                                                                                                                    ], 
+                                                                                                                                    "condition_type": "PLAYER_STATE_COMPARE", 
+                                                                                                                                    "element_id": 650186975925314, 
+                                                                                                                                    "enable": true
+                                                                                                                                }
+                                                                                                                            ], 
+                                                                                                                            "sub_type": 1
+                                                                                                                        }, 
+                                                                                                                        {
+                                                                                                                            "arg_type": 100022, 
+                                                                                                                            "args_list": [
+                                                                                                                                {
+                                                                                                                                    "action_type": "SET_UI_COMP_VISIBLE", 
+                                                                                                                                    "args_list": [
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100025, 
+                                                                                                                                            "args_list": [], 
+                                                                                                                                            "sub_type": "PICKED_PLAYER"
+                                                                                                                                        }, 
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100001, 
+                                                                                                                                            "args_list": [
+                                                                                                                                                true
+                                                                                                                                            ], 
+                                                                                                                                            "sub_type": 1
+                                                                                                                                        }, 
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100070, 
+                                                                                                                                            "args_list": [
+                                                                                                                                                "7c245a26-561a-4c28-90dc-77b286245faf"
+                                                                                                                                            ], 
+                                                                                                                                            "sub_type": 1
+                                                                                                                                        }
+                                                                                                                                    ], 
+                                                                                                                                    "bp": false, 
+                                                                                                                                    "element_id": 650186975925288, 
+                                                                                                                                    "enable": true
+                                                                                                                                }, 
+                                                                                                                                {
+                                                                                                                                    "action_type": "SET_UI_COMP_VISIBLE", 
+                                                                                                                                    "args_list": [
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100025, 
+                                                                                                                                            "args_list": [], 
+                                                                                                                                            "sub_type": "PICKED_PLAYER"
+                                                                                                                                        }, 
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100001, 
+                                                                                                                                            "args_list": [
+                                                                                                                                                true
+                                                                                                                                            ], 
+                                                                                                                                            "sub_type": 1
+                                                                                                                                        }, 
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100070, 
+                                                                                                                                            "args_list": [
+                                                                                                                                                {
+                                                                                                                                                    "__tuple__": true, 
+                                                                                                                                                    "items": [
+                                                                                                                                                        "UI_COMP", 
+                                                                                                                                                        "按钮_跳过等待时间", 
+                                                                                                                                                        "local"
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            ], 
+                                                                                                                                            "sub_type": "VARIABLE"
+                                                                                                                                        }
+                                                                                                                                    ], 
+                                                                                                                                    "bp": false, 
+                                                                                                                                    "element_id": 650186975925327, 
+                                                                                                                                    "enable": true
+                                                                                                                                }
+                                                                                                                            ], 
+                                                                                                                            "sub_type": 1
+                                                                                                                        }, 
+                                                                                                                        {
+                                                                                                                            "arg_type": 100022, 
+                                                                                                                            "args_list": [], 
+                                                                                                                            "sub_type": 1
+                                                                                                                        }
+                                                                                                                    ], 
+                                                                                                                    "bp": false, 
+                                                                                                                    "element_id": 650186975925305, 
+                                                                                                                    "enable": true, 
+                                                                                                                    "fake_op": []
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "bp": false, 
+                                                                                                    "element_id": 650186975925296, 
+                                                                                                    "enable": true
+                                                                                                }, 
+                                                                                                {
+                                                                                                    "action_type": "RUN_COUNT_TIMER", 
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100181, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "__tuple__": true, 
+                                                                                                                    "items": [
+                                                                                                                        "NEW_TIMER", 
+                                                                                                                        "全局计时器_下一波来临时"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": "VARIABLE"
+                                                                                                        }, 
                                                                                                         {
                                                                                                             "arg_type": 100000, 
                                                                                                             "args_list": [
@@ -1405,7 +2457,7 @@
                                                                                                                                                         }
                                                                                                                                                     ], 
                                                                                                                                                     "condition_type": "PLAYER_STATE_COMPARE", 
-                                                                                                                                                    "element_id": 1749979208925210, 
+                                                                                                                                                    "element_id": 650186975925252, 
                                                                                                                                                     "enable": true
                                                                                                                                                 }
                                                                                                                                             ], 
@@ -1592,7 +2644,7 @@
                                                                                                                                                         }
                                                                                                                                                     ], 
                                                                                                                                                     "bp": false, 
-                                                                                                                                                    "element_id": 1749979208925211, 
+                                                                                                                                                    "element_id": 650186975925253, 
                                                                                                                                                     "enable": true
                                                                                                                                                 }
                                                                                                                                             ], 
@@ -1605,7 +2657,7 @@
                                                                                                                                         }
                                                                                                                                     ], 
                                                                                                                                     "bp": false, 
-                                                                                                                                    "element_id": 1749979208925213, 
+                                                                                                                                    "element_id": 650186975925254, 
                                                                                                                                     "enable": true, 
                                                                                                                                     "fake_op": []
                                                                                                                                 }
@@ -1614,7 +2666,7 @@
                                                                                                                         }
                                                                                                                     ], 
                                                                                                                     "bp": false, 
-                                                                                                                    "element_id": 1749979208925214, 
+                                                                                                                    "element_id": 650186975925255, 
                                                                                                                     "enable": true
                                                                                                                 }, 
                                                                                                                 {
@@ -1664,7 +2716,7 @@
                                                                                                                         }
                                                                                                                     ], 
                                                                                                                     "bp": false, 
-                                                                                                                    "element_id": 1749979208925215, 
+                                                                                                                    "element_id": 650186975925256, 
                                                                                                                     "enable": true
                                                                                                                 }
                                                                                                             ], 
@@ -1683,8 +2735,21 @@
                                                                                                     }
                                                                                                 }, 
                                                                                                 {
-                                                                                                    "action_type": "RUN_ONCE_TIMER_NO_SAVE", 
+                                                                                                    "action_type": "RUN_ONCE_TIMER", 
                                                                                                     "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100181, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "__tuple__": true, 
+                                                                                                                    "items": [
+                                                                                                                        "NEW_TIMER", 
+                                                                                                                        "全局计时器_等待触发出怪表现效果"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": "VARIABLE"
+                                                                                                        }, 
                                                                                                         {
                                                                                                             "arg_type": 100002, 
                                                                                                             "args_list": [
@@ -1728,6 +2793,40 @@
                                                                                                                             "arg_type": 100022, 
                                                                                                                             "args_list": [
                                                                                                                                 {
+                                                                                                                                    "action_type": "SET_UI_COMP_VISIBLE", 
+                                                                                                                                    "args_list": [
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100025, 
+                                                                                                                                            "args_list": [], 
+                                                                                                                                            "sub_type": "PICKED_PLAYER"
+                                                                                                                                        }, 
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100001, 
+                                                                                                                                            "args_list": [
+                                                                                                                                                false
+                                                                                                                                            ], 
+                                                                                                                                            "sub_type": 1
+                                                                                                                                        }, 
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100070, 
+                                                                                                                                            "args_list": [
+                                                                                                                                                {
+                                                                                                                                                    "__tuple__": true, 
+                                                                                                                                                    "items": [
+                                                                                                                                                        "UI_COMP", 
+                                                                                                                                                        "按钮_跳过等待时间", 
+                                                                                                                                                        "local"
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            ], 
+                                                                                                                                            "sub_type": "VARIABLE"
+                                                                                                                                        }
+                                                                                                                                    ], 
+                                                                                                                                    "bp": false, 
+                                                                                                                                    "element_id": 650186975925474, 
+                                                                                                                                    "enable": true
+                                                                                                                                }, 
+                                                                                                                                {
                                                                                                                                     "action_type": "SET_UI_COMP_ANIM_OPACITY", 
                                                                                                                                     "args_list": [
                                                                                                                                         {
@@ -1765,7 +2864,7 @@
                                                                                                                                         }
                                                                                                                                     ], 
                                                                                                                                     "bp": false, 
-                                                                                                                                    "element_id": 464220637000119, 
+                                                                                                                                    "element_id": 650186975925475, 
                                                                                                                                     "enable": true, 
                                                                                                                                     "op_arg": [
                                                                                                                                         null
@@ -1805,13 +2904,13 @@
                                                                                                                                                         {
                                                                                                                                                             "arg_type": 100070, 
                                                                                                                                                             "args_list": [
-                                                                                                                                                                "fd78e2c7-4dee-4864-8eea-0bf7b552bdfa"
+                                                                                                                                                                "7c245a26-561a-4c28-90dc-77b286245faf"
                                                                                                                                                             ], 
                                                                                                                                                             "sub_type": 1
                                                                                                                                                         }
                                                                                                                                                     ], 
                                                                                                                                                     "bp": false, 
-                                                                                                                                                    "element_id": 464220637000147, 
+                                                                                                                                                    "element_id": 650186975925476, 
                                                                                                                                                     "enable": true
                                                                                                                                                 }
                                                                                                                                             ], 
@@ -1819,7 +2918,7 @@
                                                                                                                                         }
                                                                                                                                     ], 
                                                                                                                                     "bp": false, 
-                                                                                                                                    "element_id": 464220637000047, 
+                                                                                                                                    "element_id": 650186975925477, 
                                                                                                                                     "enable": true, 
                                                                                                                                     "local_var": {
                                                                                                                                         "__tuple__": true, 
@@ -1834,7 +2933,7 @@
                                                                                                                         }
                                                                                                                     ], 
                                                                                                                     "bp": false, 
-                                                                                                                    "element_id": 464220637000109, 
+                                                                                                                    "element_id": 650186975925478, 
                                                                                                                     "enable": true
                                                                                                                 }
                                                                                                             ], 
@@ -1968,8 +3067,21 @@
                                                                                             "arg_type": 100022, 
                                                                                             "args_list": [
                                                                                                 {
-                                                                                                    "action_type": "RUN_ONCE_TIMER_NO_SAVE", 
+                                                                                                    "action_type": "RUN_ONCE_TIMER", 
                                                                                                     "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100181, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "__tuple__": true, 
+                                                                                                                    "items": [
+                                                                                                                        "NEW_TIMER", 
+                                                                                                                        "全局计时器_等待触发出怪"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": "VARIABLE"
+                                                                                                        }, 
                                                                                                         {
                                                                                                             "arg_type": 100002, 
                                                                                                             "args_list": [
@@ -1986,60 +3098,6 @@
                                                                                                         {
                                                                                                             "arg_type": 100022, 
                                                                                                             "args_list": [
-                                                                                                                {
-                                                                                                                    "action_type": "SET_VARIABLE", 
-                                                                                                                    "args_list": [
-                                                                                                                        {
-                                                                                                                            "arg_type": 100030, 
-                                                                                                                            "args_list": [
-                                                                                                                                {
-                                                                                                                                    "__tuple__": true, 
-                                                                                                                                    "items": [
-                                                                                                                                        "INTEGER", 
-                                                                                                                                        "战斗信息_游戏回合"
-                                                                                                                                    ]
-                                                                                                                                }
-                                                                                                                            ], 
-                                                                                                                            "sub_type": 1
-                                                                                                                        }, 
-                                                                                                                        {
-                                                                                                                            "arg_type": 100002, 
-                                                                                                                            "args_list": [
-                                                                                                                                {
-                                                                                                                                    "arg_type": 100002, 
-                                                                                                                                    "args_list": [
-                                                                                                                                        {
-                                                                                                                                            "__tuple__": true, 
-                                                                                                                                            "items": [
-                                                                                                                                                "INTEGER", 
-                                                                                                                                                "战斗信息_游戏回合"
-                                                                                                                                            ]
-                                                                                                                                        }
-                                                                                                                                    ], 
-                                                                                                                                    "sub_type": 6
-                                                                                                                                }, 
-                                                                                                                                {
-                                                                                                                                    "arg_type": 100016, 
-                                                                                                                                    "args_list": [
-                                                                                                                                        "+"
-                                                                                                                                    ], 
-                                                                                                                                    "sub_type": 1
-                                                                                                                                }, 
-                                                                                                                                {
-                                                                                                                                    "arg_type": 100002, 
-                                                                                                                                    "args_list": [
-                                                                                                                                        1
-                                                                                                                                    ], 
-                                                                                                                                    "sub_type": 1
-                                                                                                                                }
-                                                                                                                            ], 
-                                                                                                                            "sub_type": "MATH_OPERATION"
-                                                                                                                        }
-                                                                                                                    ], 
-                                                                                                                    "bp": false, 
-                                                                                                                    "element_id": 650186975000036, 
-                                                                                                                    "enable": true
-                                                                                                                }, 
                                                                                                                 {
                                                                                                                     "action_type": "SET_VARIABLE", 
                                                                                                                     "args_list": [
@@ -2062,7 +3120,7 @@
                                                                                                                         }
                                                                                                                     ], 
                                                                                                                     "bp": false, 
-                                                                                                                    "element_id": 650186975000037, 
+                                                                                                                    "element_id": 650186975925371, 
                                                                                                                     "enable": true
                                                                                                                 }, 
                                                                                                                 {
@@ -2141,7 +3199,7 @@
                                                                                                                         }
                                                                                                                     ], 
                                                                                                                     "bp": false, 
-                                                                                                                    "element_id": 650186975000038, 
+                                                                                                                    "element_id": 650186975925372, 
                                                                                                                     "enable": true
                                                                                                                 }, 
                                                                                                                 {
@@ -2178,36 +3236,159 @@
                                                                                                                             "arg_type": 100003, 
                                                                                                                             "args_list": [
                                                                                                                                 {
-                                                                                                                                    "arg_type": 100002, 
+                                                                                                                                    "arg_type": 100003, 
                                                                                                                                     "args_list": [
                                                                                                                                         {
-                                                                                                                                            "__tuple__": true, 
-                                                                                                                                            "items": [
-                                                                                                                                                "INTEGER", 
-                                                                                                                                                "战斗信息_游戏回合"
-                                                                                                                                            ]
+                                                                                                                                            "arg_type": 100003, 
+                                                                                                                                            "args_list": [
+                                                                                                                                                {
+                                                                                                                                                    "arg_type": 100002, 
+                                                                                                                                                    "args_list": [
+                                                                                                                                                        {
+                                                                                                                                                            "__tuple__": true, 
+                                                                                                                                                            "items": [
+                                                                                                                                                                "INTEGER", 
+                                                                                                                                                                "战斗信息_游戏回合"
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ], 
+                                                                                                                                                    "sub_type": 6
+                                                                                                                                                }
+                                                                                                                                            ], 
+                                                                                                                                            "op_arg": [
+                                                                                                                                                {
+                                                                                                                                                    "arg_type": 100002, 
+                                                                                                                                                    "args_list": [
+                                                                                                                                                        0
+                                                                                                                                                    ], 
+                                                                                                                                                    "sub_type": 1
+                                                                                                                                                }
+                                                                                                                                            ], 
+                                                                                                                                            "op_arg_enable": [
+                                                                                                                                                false
+                                                                                                                                            ], 
+                                                                                                                                            "sub_type": "INT_TO_STR"
+                                                                                                                                        }, 
+                                                                                                                                        {
+                                                                                                                                            "arg_type": 100003, 
+                                                                                                                                            "args_list": [
+                                                                                                                                                {
+                                                                                                                                                    "arg_type": 100003, 
+                                                                                                                                                    "args_list": [
+                                                                                                                                                        "/"
+                                                                                                                                                    ], 
+                                                                                                                                                    "sub_type": 1
+                                                                                                                                                }, 
+                                                                                                                                                {
+                                                                                                                                                    "arg_type": 100003, 
+                                                                                                                                                    "args_list": [
+                                                                                                                                                        {
+                                                                                                                                                            "arg_type": 100002, 
+                                                                                                                                                            "args_list": [
+                                                                                                                                                                {
+                                                                                                                                                                    "__tuple__": true, 
+                                                                                                                                                                    "items": [
+                                                                                                                                                                        "INTEGER", 
+                                                                                                                                                                        "战斗信息_本轮游戏最大回合数"
+                                                                                                                                                                    ]
+                                                                                                                                                                }
+                                                                                                                                                            ], 
+                                                                                                                                                            "sub_type": 6
+                                                                                                                                                        }
+                                                                                                                                                    ], 
+                                                                                                                                                    "op_arg": [
+                                                                                                                                                        {
+                                                                                                                                                            "arg_type": 100002, 
+                                                                                                                                                            "args_list": [
+                                                                                                                                                                0
+                                                                                                                                                            ], 
+                                                                                                                                                            "sub_type": 1
+                                                                                                                                                        }
+                                                                                                                                                    ], 
+                                                                                                                                                    "op_arg_enable": [
+                                                                                                                                                        false
+                                                                                                                                                    ], 
+                                                                                                                                                    "sub_type": "INT_TO_STR"
+                                                                                                                                                }
+                                                                                                                                            ], 
+                                                                                                                                            "op_arg": [
+                                                                                                                                                null, 
+                                                                                                                                                null, 
+                                                                                                                                                null, 
+                                                                                                                                                null, 
+                                                                                                                                                null, 
+                                                                                                                                                null, 
+                                                                                                                                                null, 
+                                                                                                                                                null
+                                                                                                                                            ], 
+                                                                                                                                            "op_arg_enable": [
+                                                                                                                                                false, 
+                                                                                                                                                false, 
+                                                                                                                                                false, 
+                                                                                                                                                false, 
+                                                                                                                                                false, 
+                                                                                                                                                false, 
+                                                                                                                                                false, 
+                                                                                                                                                false
+                                                                                                                                            ], 
+                                                                                                                                            "sub_type": "STR_JOIN"
                                                                                                                                         }
                                                                                                                                     ], 
-                                                                                                                                    "sub_type": 6
-                                                                                                                                }
-                                                                                                                            ], 
-                                                                                                                            "op_arg": [
+                                                                                                                                    "op_arg": [
+                                                                                                                                        null, 
+                                                                                                                                        null, 
+                                                                                                                                        null, 
+                                                                                                                                        null, 
+                                                                                                                                        null, 
+                                                                                                                                        null, 
+                                                                                                                                        null, 
+                                                                                                                                        null
+                                                                                                                                    ], 
+                                                                                                                                    "op_arg_enable": [
+                                                                                                                                        false, 
+                                                                                                                                        false, 
+                                                                                                                                        false, 
+                                                                                                                                        false, 
+                                                                                                                                        false, 
+                                                                                                                                        false, 
+                                                                                                                                        false, 
+                                                                                                                                        false
+                                                                                                                                    ], 
+                                                                                                                                    "sub_type": "STR_JOIN"
+                                                                                                                                }, 
                                                                                                                                 {
-                                                                                                                                    "arg_type": 100002, 
+                                                                                                                                    "arg_type": 100003, 
                                                                                                                                     "args_list": [
-                                                                                                                                        0
+                                                                                                                                        "回合"
                                                                                                                                     ], 
                                                                                                                                     "sub_type": 1
                                                                                                                                 }
                                                                                                                             ], 
+                                                                                                                            "op_arg": [
+                                                                                                                                null, 
+                                                                                                                                null, 
+                                                                                                                                null, 
+                                                                                                                                null, 
+                                                                                                                                null, 
+                                                                                                                                null, 
+                                                                                                                                null, 
+                                                                                                                                null
+                                                                                                                            ], 
                                                                                                                             "op_arg_enable": [
+                                                                                                                                false, 
+                                                                                                                                false, 
+                                                                                                                                false, 
+                                                                                                                                false, 
+                                                                                                                                false, 
+                                                                                                                                false, 
+                                                                                                                                false, 
                                                                                                                                 false
                                                                                                                             ], 
-                                                                                                                            "sub_type": "INT_TO_STR"
+                                                                                                                            "sub_type": "STR_JOIN"
                                                                                                                         }
                                                                                                                     ], 
                                                                                                                     "bp": false, 
-                                                                                                                    "element_id": 650186975000039, 
+                                                                                                                    "element_id": 650186975925384, 
                                                                                                                     "enable": true
                                                                                                                 }, 
                                                                                                                 {
@@ -2235,7 +3416,7 @@
                                                                                                                         }
                                                                                                                     ], 
                                                                                                                     "bp": false, 
-                                                                                                                    "element_id": 650186975000040, 
+                                                                                                                    "element_id": 650186975925374, 
                                                                                                                     "enable": true
                                                                                                                 }, 
                                                                                                                 {
@@ -2250,7 +3431,7 @@
                                                                                                                         }
                                                                                                                     ], 
                                                                                                                     "bp": false, 
-                                                                                                                    "element_id": 650186975000041, 
+                                                                                                                    "element_id": 650186975925375, 
                                                                                                                     "enable": true
                                                                                                                 }
                                                                                                             ], 
@@ -2419,17 +3600,20 @@
         {
             "NEW_TIMER": {}, 
             "UI_COMP": {
+                "按钮_跳过等待时间": "", 
                 "文本_当前回合数": "", 
                 "文本_当前时间数": ""
             }
         }, 
         {
+            "按钮_跳过等待时间": 0, 
             "文本_当前回合数": 0, 
             "文本_当前时间数": 0
         }, 
         [
             "文本_当前回合数", 
-            "文本_当前时间数"
+            "文本_当前时间数", 
+            "按钮_跳过等待时间"
         ]
     ]
 }
