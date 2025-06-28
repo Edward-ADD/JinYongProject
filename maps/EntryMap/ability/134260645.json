@@ -202,6 +202,105 @@
         "781266945": {
             "action": [
                 {
+                    "action_type": "PICK_UNIT_DO_ACTION", 
+                    "args_list": [
+                        {
+                            "arg_type": 100026, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "UNIT_GROUP", 
+                                        "\u63d0\u53d6\u521b\u5efa\u654c\u4eba\u7684\u5355\u4f4d\u7ec4", 
+                                        "actor"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": 14
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "IF_THEN_ELSE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100021, 
+                                            "args_list": [
+                                                {
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100001, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100006, 
+                                                                    "args_list": [], 
+                                                                    "sub_type": "FOR_EACH_SELECTED_UNIT"
+                                                                }
+                                                            ], 
+                                                            "sub_type": "IS_UNIT_ALIVE"
+                                                        }
+                                                    ], 
+                                                    "condition_type": "BOOL_NOT", 
+                                                    "element_id": 781266945003202, 
+                                                    "enable": true
+                                                }
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100022, 
+                                            "args_list": [
+                                                {
+                                                    "action_type": "REMOVE_UNIT_ENTITY_IN_GROUP", 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100026, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "UNIT_GROUP", 
+                                                                        "\u63d0\u53d6\u521b\u5efa\u654c\u4eba\u7684\u5355\u4f4d\u7ec4", 
+                                                                        "actor"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 14
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100006, 
+                                                            "args_list": [], 
+                                                            "sub_type": "FOR_EACH_SELECTED_UNIT"
+                                                        }
+                                                    ], 
+                                                    "bp": false, 
+                                                    "element_id": 781266945003205, 
+                                                    "enable": true
+                                                }
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100022, 
+                                            "args_list": [], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 781266945003189, 
+                                    "enable": true, 
+                                    "fake_op": []
+                                }
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 781266945003184, 
+                    "enable": true
+                }, 
+                {
                     "action_type": "SET_VARIABLE", 
                     "args_list": [
                         {
@@ -4700,6 +4799,9 @@
     "variable_dict": {
         "ANGLE": {
             "\u65b9\u5411": 0.0
+        }, 
+        "UNIT_GROUP": {
+            "\u63d0\u53d6\u521b\u5efa\u654c\u4eba\u7684\u5355\u4f4d\u7ec4": []
         }
     }, 
     "variable_group_info": [
@@ -4709,9 +4811,17 @@
                 "\u65b9\u5411", 
                 "\u65b9\u5411"
             ]
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                "\u63d0\u53d6\u521b\u5efa\u654c\u4eba\u7684\u5355\u4f4d\u7ec4", 
+                "\u63d0\u53d6\u521b\u5efa\u654c\u4eba\u7684\u5355\u4f4d\u7ec4"
+            ]
         }
     ], 
     "variable_length_dict": {
+        "\u63d0\u53d6\u521b\u5efa\u654c\u4eba\u7684\u5355\u4f4d\u7ec4": 0, 
         "\u65b9\u5411": 0
     }
 }
