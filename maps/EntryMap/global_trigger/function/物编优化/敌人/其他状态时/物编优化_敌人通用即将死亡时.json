@@ -1,17 +1,89 @@
 {
     "action": [
         {
-            "action_type": "CALL_TRIGGER_FUNC", 
+            "action_type": "IF_THEN_ELSE", 
             "args_list": [
                 {
-                    "arg_type": 100177, 
+                    "arg_type": 100021, 
                     "args_list": [
                         {
-                            "arg_type": 100006, 
                             "args_list": [
                                 {
-                                    "arg_type": 100025, 
+                                    "arg_type": 100006, 
                                     "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "UNIT_ENTITY", 
+                                                "传入的凶手单位", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 11
+                                }, 
+                                {
+                                    "arg_type": 100035, 
+                                    "args_list": [
+                                        "!="
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [], 
+                                    "sub_type": "NONE_UNIT"
+                                }
+                            ], 
+                            "condition_type": "UNIT_COMPARE", 
+                            "element_id": 1154940993927440, 
+                            "enable": true
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "CALL_TRIGGER_FUNC", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100177, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100006, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100025, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100006, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "UNIT_ENTITY", 
+                                                                        "传入的凶手单位", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 11
+                                                        }
+                                                    ], 
+                                                    "sub_type": "OWNER_PLAYER"
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "玩家的单位角色"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_UNIT_ENTITY_KV"
+                                        }, 
                                         {
                                             "arg_type": 100006, 
                                             "args_list": [
@@ -19,7 +91,7 @@
                                                     "__tuple__": true, 
                                                     "items": [
                                                         "UNIT_ENTITY", 
-                                                        "传入的凶手单位", 
+                                                        "传入的死亡单位", 
                                                         "local"
                                                     ]
                                                 }
@@ -27,67 +99,108 @@
                                             "sub_type": 11
                                         }
                                     ], 
-                                    "sub_type": "OWNER_PLAYER"
-                                }, 
-                                {
-                                    "arg_type": 100003, 
-                                    "args_list": [
-                                        "玩家的单位角色"
-                                    ], 
-                                    "sub_type": 1
+                                    "op_arg": [], 
+                                    "op_arg_enable": [], 
+                                    "sub_type": "f4f634ac480e11f0ab0d5f982f74b701"
                                 }
                             ], 
-                            "sub_type": "GET_UNIT_ENTITY_KV"
+                            "bp": false, 
+                            "call_rt_arg_idxes": [], 
+                            "element_id": 886350324000049, 
+                            "enable": true
                         }, 
                         {
-                            "arg_type": 100006, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "UNIT_ENTITY", 
-                                        "传入的死亡单位", 
-                                        "local"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": 11
-                        }
-                    ], 
-                    "op_arg": [], 
-                    "op_arg_enable": [], 
-                    "sub_type": "f4f634ac480e11f0ab0d5f982f74b701"
-                }
-            ], 
-            "bp": false, 
-            "call_rt_arg_idxes": [], 
-            "element_id": 886350324000049, 
-            "enable": true
-        }, 
-        {
-            "action_type": "STORAGE_BOX", 
-            "args_list": [
-                {
-                    "arg_type": 100021, 
-                    "args_list": [], 
-                    "sub_type": 1
-                }, 
-                {
-                    "arg_type": 100022, 
-                    "args_list": [
-                        {
-                            "action_type": "IF_THEN_ELSE", 
+                            "action_type": "STORAGE_BOX", 
                             "args_list": [
                                 {
                                     "arg_type": 100021, 
+                                    "args_list": [], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100022, 
                                     "args_list": [
                                         {
+                                            "action_type": "IF_THEN_ELSE", 
                                             "args_list": [
                                                 {
-                                                    "arg_type": 100002, 
+                                                    "arg_type": 100021, 
                                                     "args_list": [
                                                         {
-                                                            "arg_type": 100025, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100025, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100006, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "UNIT_ENTITY", 
+                                                                                                "传入的凶手单位", 
+                                                                                                "local"
+                                                                                            ]
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": 11
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "OWNER_PLAYER"
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "PLAYER_ID_NUMBER"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100015, 
+                                                                    "args_list": [
+                                                                        "!="
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100006, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "UNIT_ENTITY", 
+                                                                                        "传入的死亡单位", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 11
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100003, 
+                                                                            "args_list": [
+                                                                                "召唤敌人的玩家ID"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_INTEGER_KV"
+                                                                }
+                                                            ], 
+                                                            "condition_type": "FLOAT_COMPARE", 
+                                                            "element_id": 886350324000046, 
+                                                            "enable": true
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100022, 
+                                                    "args_list": [
+                                                        {
+                                                            "action_type": "SET_ENTITY_KV", 
                                                             "args_list": [
                                                                 {
                                                                     "arg_type": 100006, 
@@ -102,93 +215,39 @@
                                                                         }
                                                                     ], 
                                                                     "sub_type": 11
-                                                                }
-                                                            ], 
-                                                            "sub_type": "OWNER_PLAYER"
-                                                        }
-                                                    ], 
-                                                    "sub_type": "PLAYER_ID_NUMBER"
-                                                }, 
-                                                {
-                                                    "arg_type": 100015, 
-                                                    "args_list": [
-                                                        "!="
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100002, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100006, 
-                                                            "args_list": [
+                                                                }, 
                                                                 {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "UNIT_ENTITY", 
-                                                                        "传入的死亡单位", 
-                                                                        "local"
-                                                                    ]
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        "是否对应玩家击杀"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100001, 
+                                                                    "args_list": [
+                                                                        false
+                                                                    ], 
+                                                                    "sub_type": 1
                                                                 }
                                                             ], 
-                                                            "sub_type": 11
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                "召唤敌人的玩家ID"
-                                                            ], 
-                                                            "sub_type": 1
+                                                            "bp": false, 
+                                                            "element_id": 886350324000076, 
+                                                            "enable": true
                                                         }
-                                                    ], 
-                                                    "sub_type": "GET_INTEGER_KV"
-                                                }
-                                            ], 
-                                            "condition_type": "FLOAT_COMPARE", 
-                                            "element_id": 886350324000046, 
-                                            "enable": true
-                                        }
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100022, 
-                                    "args_list": [
-                                        {
-                                            "action_type": "SET_ENTITY_KV", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100006, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "UNIT_ENTITY", 
-                                                                "传入的凶手单位", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 11
-                                                }, 
-                                                {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        "是否对应玩家击杀"
                                                     ], 
                                                     "sub_type": 1
                                                 }, 
                                                 {
-                                                    "arg_type": 100001, 
-                                                    "args_list": [
-                                                        false
-                                                    ], 
+                                                    "arg_type": 100022, 
+                                                    "args_list": [], 
                                                     "sub_type": 1
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 886350324000076, 
-                                            "enable": true
+                                            "element_id": 886350324000017, 
+                                            "enable": true, 
+                                            "fake_op": []
                                         }
                                     ], 
                                     "sub_type": 1
@@ -197,12 +256,18 @@
                                     "arg_type": 100022, 
                                     "args_list": [], 
                                     "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "控制组队抢怪"
+                                    ], 
+                                    "sub_type": 1
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 886350324000017, 
-                            "enable": true, 
-                            "fake_op": []
+                            "element_id": 886350324000012, 
+                            "enable": true
                         }
                     ], 
                     "sub_type": 1
@@ -211,18 +276,12 @@
                     "arg_type": 100022, 
                     "args_list": [], 
                     "sub_type": 1
-                }, 
-                {
-                    "arg_type": 100003, 
-                    "args_list": [
-                        "控制组队抢怪"
-                    ], 
-                    "sub_type": 1
                 }
             ], 
             "bp": false, 
-            "element_id": 886350324000012, 
-            "enable": true
+            "element_id": 886350324000079, 
+            "enable": true, 
+            "fake_op": []
         }
     ], 
     "call_enabled": true, 

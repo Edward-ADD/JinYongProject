@@ -51,39 +51,102 @@
         "520634928": {
             "action": [
                 {
-                    "action_type": "CALL_TRIGGER_FUNC", 
+                    "action_type": "IF_THEN_ELSE", 
                     "args_list": [
                         {
-                            "arg_type": 100177, 
+                            "arg_type": 100021, 
                             "args_list": [
                                 {
-                                    "arg_type": 100006, 
                                     "args_list": [
                                         {
-                                            "arg_type": 100025, 
-                                            "args_list": [], 
-                                            "sub_type": "TRIGGER_PLAYER"
+                                            "arg_type": 100006, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100025, 
+                                                    "args_list": [], 
+                                                    "sub_type": "TRIGGER_PLAYER"
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "玩家的单位角色"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_UNIT_ENTITY_KV"
                                         }, 
                                         {
-                                            "arg_type": 100003, 
+                                            "arg_type": 100035, 
                                             "args_list": [
-                                                "玩家的单位角色"
+                                                "!="
                                             ], 
                                             "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100006, 
+                                            "args_list": [], 
+                                            "sub_type": "NONE_UNIT"
                                         }
                                     ], 
-                                    "sub_type": "GET_UNIT_ENTITY_KV"
+                                    "condition_type": "UNIT_COMPARE", 
+                                    "element_id": 520634928000027, 
+                                    "enable": true
                                 }
                             ], 
-                            "op_arg": [], 
-                            "op_arg_enable": [], 
-                            "sub_type": "f95bcc8f44e511f0988273dd2894714d"
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "CALL_TRIGGER_FUNC", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100177, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100006, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100025, 
+                                                            "args_list": [], 
+                                                            "sub_type": "TRIGGER_PLAYER"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "玩家的单位角色"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "GET_UNIT_ENTITY_KV"
+                                                }
+                                            ], 
+                                            "op_arg": [], 
+                                            "op_arg_enable": [], 
+                                            "sub_type": "f95bcc8f44e511f0988273dd2894714d"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "call_rt_arg_idxes": [], 
+                                    "element_id": 520634928000014, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [], 
+                            "sub_type": 1
                         }
                     ], 
                     "bp": false, 
-                    "call_rt_arg_idxes": [], 
-                    "element_id": 520634928000014, 
-                    "enable": true
+                    "element_id": 520634928000018, 
+                    "enable": true, 
+                    "fake_op": []
                 }
             ], 
             "call_enabled": true, 
@@ -179,7 +242,7 @@
                                                         {
                                                             "arg_type": 100000, 
                                                             "args_list": [
-                                                                200.0
+                                                                10.0
                                                             ], 
                                                             "sub_type": 1
                                                         }
@@ -320,7 +383,7 @@
                                         {
                                             "arg_type": 100000, 
                                             "args_list": [
-                                                -200.0
+                                                -10.0
                                             ], 
                                             "sub_type": 1
                                         }

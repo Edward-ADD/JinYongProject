@@ -149,54 +149,123 @@
             "enable": false
         }, 
         {
-            "action_type": "SET_TABLE_VALUE_ND", 
+            "action_type": "SET_VARIABLE", 
             "args_list": [
                 {
-                    "arg_type": 100011, 
+                    "arg_type": 100030, 
                     "args_list": [
                         {
-                            "arg_type": 100014, 
+                            "__tuple__": true, 
+                            "items": [
+                                "STRING", 
+                                "提取卡牌分类", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                "1ec1d4a2-4312-4cbc-bed7-f1a9382d0d53"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
                             "args_list": [
                                 {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "ABILITY", 
-                                        "获得的卡牌技能", 
-                                        "local"
-                                    ]
+                                    "arg_type": 100014, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "ABILITY", 
+                                                "获得的卡牌技能", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "卡牌ID值"
+                                    ], 
+                                    "sub_type": 1
                                 }
                             ], 
-                            "sub_type": 2
+                            "sub_type": "GET_INTEGER_KV"
                         }, 
                         {
                             "arg_type": 100003, 
                             "args_list": [
-                                "武功数值表格"
+                                "卡牌分类"
                             ], 
                             "sub_type": 1
                         }
                     ], 
-                    "sub_type": "GET_TABLE_KV"
-                }, 
+                    "sub_type": "GET_STRING_TABLE_VAR_ND"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 47952472000051, 
+            "enable": true
+        }, 
+        {
+            "action_type": "IF_THEN_ELSE", 
+            "args_list": [
                 {
-                    "arg_type": 100003, 
-                    "args_list": [
-                        "攻击"
-                    ], 
-                    "sub_type": 1
-                }, 
-                {
-                    "arg_type": 100003, 
-                    "args_list": [
-                        "基础数值"
-                    ], 
-                    "sub_type": 1
-                }, 
-                {
-                    "arg_type": 100000, 
+                    "arg_type": 100021, 
                     "args_list": [
                         {
-                            "arg_type": 100000, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "STRING", 
+                                                "提取卡牌分类", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }, 
+                                {
+                                    "arg_type": 100035, 
+                                    "args_list": [
+                                        "=="
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "主动"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "condition_type": "STRING_COMPARE", 
+                            "element_id": 47952472000062, 
+                            "enable": true
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "SET_TABLE_VALUE_ND", 
                             "args_list": [
                                 {
                                     "arg_type": 100011, 
@@ -238,71 +307,132 @@
                                         "基础数值"
                                     ], 
                                     "sub_type": 1
-                                }
-                            ], 
-                            "sub_type": "GET_FLOAT_TABLE_VAR_ND"
-                        }, 
-                        {
-                            "arg_type": 100017, 
-                            "args_list": [
-                                "*"
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100000, 
-                            "args_list": [
+                                }, 
                                 {
-                                    "arg_type": 100011, 
+                                    "arg_type": 100000, 
                                     "args_list": [
                                         {
-                                            "arg_type": 100014, 
+                                            "arg_type": 100000, 
                                             "args_list": [
                                                 {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "ABILITY", 
-                                                        "获得的卡牌技能", 
-                                                        "local"
-                                                    ]
+                                                    "arg_type": 100011, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100014, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "ABILITY", 
+                                                                        "获得的卡牌技能", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 2
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "武功数值表格"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "GET_TABLE_KV"
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "攻击"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "基础数值"
+                                                    ], 
+                                                    "sub_type": 1
                                                 }
                                             ], 
-                                            "sub_type": 2
+                                            "sub_type": "GET_FLOAT_TABLE_VAR_ND"
                                         }, 
                                         {
-                                            "arg_type": 100003, 
+                                            "arg_type": 100017, 
                                             "args_list": [
-                                                "武功数值表格"
+                                                "*"
                                             ], 
                                             "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100000, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100011, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100014, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "ABILITY", 
+                                                                        "获得的卡牌技能", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 2
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "武功数值表格"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "GET_TABLE_KV"
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "攻击间隔"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "基础数值"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_FLOAT_TABLE_VAR_ND"
                                         }
                                     ], 
-                                    "sub_type": "GET_TABLE_KV"
-                                }, 
-                                {
-                                    "arg_type": 100003, 
-                                    "args_list": [
-                                        "攻击间隔"
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100003, 
-                                    "args_list": [
-                                        "基础数值"
-                                    ], 
-                                    "sub_type": 1
+                                    "sub_type": "ARITHMETIC_OPERATION"
                                 }
                             ], 
-                            "sub_type": "GET_FLOAT_TABLE_VAR_ND"
+                            "bp": false, 
+                            "element_id": 47952472000031, 
+                            "enable": true
                         }
                     ], 
-                    "sub_type": "ARITHMETIC_OPERATION"
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [], 
+                    "sub_type": 1
                 }
             ], 
             "bp": false, 
-            "element_id": 47952472000031, 
-            "enable": true
+            "element_id": 47952472000034, 
+            "enable": true, 
+            "fake_op": []
         }, 
         {
             "action_type": "CALL_TRIGGER_FUNC", 
@@ -401,15 +531,20 @@
                 "获得的卡牌技能": null
             }, 
             "NEW_TIMER": {}, 
+            "STRING": {
+                "提取卡牌分类": ""
+            }, 
             "UNIT_ENTITY": {
                 "获得卡牌的单位": 0
             }
         }, 
         {
+            "提取卡牌分类": 0, 
             "获得卡牌的单位": 0, 
             "获得的卡牌技能": 0
         }, 
         [
+            "提取卡牌分类", 
             "获得的卡牌技能", 
             "获得卡牌的单位"
         ]

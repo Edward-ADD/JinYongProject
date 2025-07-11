@@ -419,136 +419,6 @@
                                     "arg_type": 100022, 
                                     "args_list": [
                                         {
-                                            "action_type": "SET_VARIABLE", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100030, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "STRING", 
-                                                                "提取遍历技能组里的技能标签", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100011, 
-                                                            "args_list": [
-                                                                "1ec1d4a2-4312-4cbc-bed7-f1a9382d0d53"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100002, 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100014, 
-                                                                    "args_list": [], 
-                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100003, 
-                                                                    "args_list": [
-                                                                        "卡牌ID值"
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }
-                                                            ], 
-                                                            "sub_type": "GET_INTEGER_KV"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                "流派名字"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_STRING_TABLE_VAR_ND"
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "element_id": 1430196505000299, 
-                                            "enable": true
-                                        }, 
-                                        {
-                                            "action_type": "SET_UI_COMP_IMAGE_NEW", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100025, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100006, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "UNIT_ENTITY", 
-                                                                        "判定吞噬的单位", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 11
-                                                        }
-                                                    ], 
-                                                    "sub_type": "OWNER_PLAYER"
-                                                }, 
-                                                {
-                                                    "arg_type": 100070, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100011, 
-                                                            "args_list": [
-                                                                "92ca30be-9b1b-4380-8b32-49c78e462fe4"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100002, 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100014, 
-                                                                    "args_list": [], 
-                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
-                                                                }
-                                                            ], 
-                                                            "sub_type": "INDEX_OF_ABILITY"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                "吞噬控件图标"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_UI_COMP_TABLE_VAR_ND"
-                                                }, 
-                                                {
-                                                    "arg_type": 100115, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100014, 
-                                                            "args_list": [], 
-                                                            "sub_type": "FOR_EACH_SELECTED_ABILITY"
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_ICON"
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "element_id": 1430196505000434, 
-                                            "enable": true
-                                        }, 
-                                        {
                                             "action_type": "IF_THEN_ELSE", 
                                             "args_list": [
                                                 {
@@ -557,25 +427,49 @@
                                                         {
                                                             "args_list": [
                                                                 {
-                                                                    "arg_type": 100003, 
+                                                                    "arg_type": 100002, 
                                                                     "args_list": [
-                                                                        [
-                                                                            "STRING", 
-                                                                            "提取传入技能的流派标签", 
-                                                                            "local"
-                                                                        ]
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "INTEGER", 
+                                                                                "循环技能遍历i值", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
                                                                     ], 
-                                                                    "sub_type": 2
+                                                                    "sub_type": 6
                                                                 }, 
                                                                 {
-                                                                    "arg_type": 100035, 
+                                                                    "arg_type": 100015, 
                                                                     "args_list": [
-                                                                        "=="
+                                                                        "<="
                                                                     ], 
                                                                     "sub_type": 1
                                                                 }, 
                                                                 {
-                                                                    "arg_type": 100003, 
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        8
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "condition_type": "FLOAT_COMPARE", 
+                                                            "element_id": 1430196505000457, 
+                                                            "enable": true
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100022, 
+                                                    "args_list": [
+                                                        {
+                                                            "action_type": "SET_VARIABLE", 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100030, 
                                                                     "args_list": [
                                                                         {
                                                                             "__tuple__": true, 
@@ -586,12 +480,530 @@
                                                                             ]
                                                                         }
                                                                     ], 
-                                                                    "sub_type": 2
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100011, 
+                                                                            "args_list": [
+                                                                                "1ec1d4a2-4312-4cbc-bed7-f1a9382d0d53"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100002, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100014, 
+                                                                                    "args_list": [], 
+                                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100003, 
+                                                                                    "args_list": [
+                                                                                        "卡牌ID值"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "GET_INTEGER_KV"
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100003, 
+                                                                            "args_list": [
+                                                                                "流派名字"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_STRING_TABLE_VAR_ND"
                                                                 }
                                                             ], 
-                                                            "condition_type": "STRING_COMPARE", 
-                                                            "element_id": 1430196505000316, 
+                                                            "bp": false, 
+                                                            "element_id": 1430196505000299, 
                                                             "enable": true
+                                                        }, 
+                                                        {
+                                                            "action_type": "SET_UI_COMP_IMAGE_NEW", 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100025, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100006, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "UNIT_ENTITY", 
+                                                                                        "判定吞噬的单位", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 11
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "OWNER_PLAYER"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100070, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100011, 
+                                                                            "args_list": [
+                                                                                "92ca30be-9b1b-4380-8b32-49c78e462fe4"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100002, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100014, 
+                                                                                    "args_list": [], 
+                                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "INDEX_OF_ABILITY"
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100003, 
+                                                                            "args_list": [
+                                                                                "吞噬控件图标"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_UI_COMP_TABLE_VAR_ND"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100115, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100014, 
+                                                                            "args_list": [], 
+                                                                            "sub_type": "FOR_EACH_SELECTED_ABILITY"
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_ICON"
+                                                                }
+                                                            ], 
+                                                            "bp": false, 
+                                                            "element_id": 1430196505000434, 
+                                                            "enable": true
+                                                        }, 
+                                                        {
+                                                            "action_type": "IF_THEN_ELSE", 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100021, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100003, 
+                                                                                    "args_list": [
+                                                                                        [
+                                                                                            "STRING", 
+                                                                                            "提取传入技能的流派标签", 
+                                                                                            "local"
+                                                                                        ]
+                                                                                    ], 
+                                                                                    "sub_type": 2
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100035, 
+                                                                                    "args_list": [
+                                                                                        "=="
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100003, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "STRING", 
+                                                                                                "提取遍历技能组里的技能标签", 
+                                                                                                "local"
+                                                                                            ]
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": 2
+                                                                                }
+                                                                            ], 
+                                                                            "condition_type": "STRING_COMPARE", 
+                                                                            "element_id": 1430196505000316, 
+                                                                            "enable": true
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100022, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "action_type": "SET_UI_COMP_VISIBLE", 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100025, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100006, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "__tuple__": true, 
+                                                                                                    "items": [
+                                                                                                        "UNIT_ENTITY", 
+                                                                                                        "判定吞噬的单位", 
+                                                                                                        "local"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": 11
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "OWNER_PLAYER"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100001, 
+                                                                                    "args_list": [
+                                                                                        true
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100070, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100011, 
+                                                                                            "args_list": [
+                                                                                                "92ca30be-9b1b-4380-8b32-49c78e462fe4"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100002, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "arg_type": 100014, 
+                                                                                                    "args_list": [], 
+                                                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": "INDEX_OF_ABILITY"
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100003, 
+                                                                                            "args_list": [
+                                                                                                "吞噬控件"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "GET_UI_COMP_TABLE_VAR_ND"
+                                                                                }
+                                                                            ], 
+                                                                            "bp": false, 
+                                                                            "element_id": 1430196505000390, 
+                                                                            "enable": true
+                                                                        }, 
+                                                                        {
+                                                                            "action_type": "SET_UI_COMP_ANIM_POS", 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100025, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100006, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "__tuple__": true, 
+                                                                                                    "items": [
+                                                                                                        "UNIT_ENTITY", 
+                                                                                                        "判定吞噬的单位", 
+                                                                                                        "local"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": 11
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "OWNER_PLAYER"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100070, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100011, 
+                                                                                            "args_list": [
+                                                                                                "92ca30be-9b1b-4380-8b32-49c78e462fe4"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100002, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "arg_type": 100014, 
+                                                                                                    "args_list": [], 
+                                                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": "INDEX_OF_ABILITY"
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100003, 
+                                                                                            "args_list": [
+                                                                                                "吞噬控件"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "GET_UI_COMP_TABLE_VAR_ND"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100000, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100011, 
+                                                                                            "args_list": [
+                                                                                                "92ca30be-9b1b-4380-8b32-49c78e462fe4"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100002, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "arg_type": 100014, 
+                                                                                                    "args_list": [], 
+                                                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": "INDEX_OF_ABILITY"
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100003, 
+                                                                                            "args_list": [
+                                                                                                "初始x坐标"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "GET_FLOAT_TABLE_VAR_ND"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100000, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100011, 
+                                                                                            "args_list": [
+                                                                                                "92ca30be-9b1b-4380-8b32-49c78e462fe4"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100002, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "arg_type": 100014, 
+                                                                                                    "args_list": [], 
+                                                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": "INDEX_OF_ABILITY"
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100003, 
+                                                                                            "args_list": [
+                                                                                                "初始y坐标"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "GET_FLOAT_TABLE_VAR_ND"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100000, 
+                                                                                    "args_list": [
+                                                                                        310.0
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100000, 
+                                                                                    "args_list": [
+                                                                                        120.0
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100000, 
+                                                                                    "args_list": [
+                                                                                        1.0
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }
+                                                                            ], 
+                                                                            "bp": false, 
+                                                                            "element_id": 1280856564000278, 
+                                                                            "enable": true, 
+                                                                            "op_arg": [
+                                                                                {
+                                                                                    "arg_type": 100313, 
+                                                                                    "args_list": [
+                                                                                        1
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }
+                                                                            ], 
+                                                                            "op_arg_enable": [
+                                                                                true
+                                                                            ]
+                                                                        }, 
+                                                                        {
+                                                                            "action_type": "UNIT_ADD_ABILITY", 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100006, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "UNIT_ENTITY", 
+                                                                                                "判定吞噬的单位", 
+                                                                                                "local"
+                                                                                            ]
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": 11
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100182, 
+                                                                                    "args_list": [
+                                                                                        0
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100039, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100014, 
+                                                                                            "args_list": [], 
+                                                                                            "sub_type": "FOR_EACH_SELECTED_ABILITY"
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "ABILITY_NAME_OF_ABILITY"
+                                                                                }
+                                                                            ], 
+                                                                            "bp": false, 
+                                                                            "element_id": 1430196505000149, 
+                                                                            "enable": true, 
+                                                                            "op_arg": [
+                                                                                null, 
+                                                                                null, 
+                                                                                null
+                                                                            ], 
+                                                                            "op_arg_enable": [
+                                                                                false, 
+                                                                                false, 
+                                                                                false
+                                                                            ]
+                                                                        }, 
+                                                                        {
+                                                                            "action_type": "UNIT_REMOVE_ABILITIES_IN_TYPE", 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100006, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "UNIT_ENTITY", 
+                                                                                                "判定吞噬的单位", 
+                                                                                                "local"
+                                                                                            ]
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": 11
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100182, 
+                                                                                    "args_list": [
+                                                                                        2
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100039, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100014, 
+                                                                                            "args_list": [], 
+                                                                                            "sub_type": "FOR_EACH_SELECTED_ABILITY"
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "ABILITY_NAME_OF_ABILITY"
+                                                                                }
+                                                                            ], 
+                                                                            "bp": false, 
+                                                                            "element_id": 1430196505000159, 
+                                                                            "enable": true
+                                                                        }, 
+                                                                        {
+                                                                            "action_type": "SEND_CUSTOM_EVENT", 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100238, 
+                                                                                    "args_list": [
+                                                                                        2080321141
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100025, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100006, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "__tuple__": true, 
+                                                                                                    "items": [
+                                                                                                        "UNIT_ENTITY", 
+                                                                                                        "判定吞噬的单位", 
+                                                                                                        "local"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": 11
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "OWNER_PLAYER"
+                                                                                }
+                                                                            ], 
+                                                                            "bp": false, 
+                                                                            "element_id": 1430196505000421, 
+                                                                            "enable": true
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100022, 
+                                                                    "args_list": [], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "bp": false, 
+                                                            "element_id": 1430196505000094, 
+                                                            "enable": true, 
+                                                            "fake_op": []
                                                         }
                                                     ], 
                                                     "sub_type": 1
@@ -600,363 +1012,64 @@
                                                     "arg_type": 100022, 
                                                     "args_list": [
                                                         {
-                                                            "action_type": "SET_UI_COMP_VISIBLE", 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100025, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "arg_type": 100006, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "__tuple__": true, 
-                                                                                    "items": [
-                                                                                        "UNIT_ENTITY", 
-                                                                                        "判定吞噬的单位", 
-                                                                                        "local"
-                                                                                    ]
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": 11
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "OWNER_PLAYER"
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100001, 
-                                                                    "args_list": [
-                                                                        true
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100070, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "arg_type": 100011, 
-                                                                            "args_list": [
-                                                                                "92ca30be-9b1b-4380-8b32-49c78e462fe4"
-                                                                            ], 
-                                                                            "sub_type": 1
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100002, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "arg_type": 100014, 
-                                                                                    "args_list": [], 
-                                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": "INDEX_OF_ABILITY"
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100003, 
-                                                                            "args_list": [
-                                                                                "吞噬控件"
-                                                                            ], 
-                                                                            "sub_type": 1
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "GET_UI_COMP_TABLE_VAR_ND"
-                                                                }
-                                                            ], 
+                                                            "action_type": "BREAK_LOOP", 
+                                                            "args_list": [], 
                                                             "bp": false, 
-                                                            "element_id": 1430196505000390, 
+                                                            "element_id": 1430196505000469, 
                                                             "enable": true
-                                                        }, 
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 1430196505000448, 
+                                            "enable": true, 
+                                            "fake_op": [
+                                                2
+                                            ]
+                                        }, 
+                                        {
+                                            "action_type": "SET_VARIABLE", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100030, 
+                                                    "args_list": [
                                                         {
-                                                            "action_type": "SET_UI_COMP_ANIM_POS", 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100025, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "arg_type": 100006, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "__tuple__": true, 
-                                                                                    "items": [
-                                                                                        "UNIT_ENTITY", 
-                                                                                        "判定吞噬的单位", 
-                                                                                        "local"
-                                                                                    ]
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": 11
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "OWNER_PLAYER"
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100070, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "arg_type": 100011, 
-                                                                            "args_list": [
-                                                                                "92ca30be-9b1b-4380-8b32-49c78e462fe4"
-                                                                            ], 
-                                                                            "sub_type": 1
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100002, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "arg_type": 100014, 
-                                                                                    "args_list": [], 
-                                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": "INDEX_OF_ABILITY"
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100003, 
-                                                                            "args_list": [
-                                                                                "吞噬控件"
-                                                                            ], 
-                                                                            "sub_type": 1
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "GET_UI_COMP_TABLE_VAR_ND"
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100000, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "arg_type": 100011, 
-                                                                            "args_list": [
-                                                                                "92ca30be-9b1b-4380-8b32-49c78e462fe4"
-                                                                            ], 
-                                                                            "sub_type": 1
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100002, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "arg_type": 100014, 
-                                                                                    "args_list": [], 
-                                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": "INDEX_OF_ABILITY"
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100003, 
-                                                                            "args_list": [
-                                                                                "初始x坐标"
-                                                                            ], 
-                                                                            "sub_type": 1
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "GET_FLOAT_TABLE_VAR_ND"
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100000, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "arg_type": 100011, 
-                                                                            "args_list": [
-                                                                                "92ca30be-9b1b-4380-8b32-49c78e462fe4"
-                                                                            ], 
-                                                                            "sub_type": 1
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100002, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "arg_type": 100014, 
-                                                                                    "args_list": [], 
-                                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": "INDEX_OF_ABILITY"
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100003, 
-                                                                            "args_list": [
-                                                                                "初始y坐标"
-                                                                            ], 
-                                                                            "sub_type": 1
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "GET_FLOAT_TABLE_VAR_ND"
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100000, 
-                                                                    "args_list": [
-                                                                        310.0
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100000, 
-                                                                    "args_list": [
-                                                                        120.0
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100000, 
-                                                                    "args_list": [
-                                                                        1.0
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }
-                                                            ], 
-                                                            "bp": false, 
-                                                            "element_id": 1280856564000278, 
-                                                            "enable": true, 
-                                                            "op_arg": [
-                                                                {
-                                                                    "arg_type": 100313, 
-                                                                    "args_list": [
-                                                                        1
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }
-                                                            ], 
-                                                            "op_arg_enable": [
-                                                                true
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "INTEGER", 
+                                                                "循环技能遍历i值", 
+                                                                "local"
                                                             ]
-                                                        }, 
-                                                        {
-                                                            "action_type": "UNIT_ADD_ABILITY", 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100006, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "UNIT_ENTITY", 
-                                                                                "判定吞噬的单位", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": 11
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100182, 
-                                                                    "args_list": [
-                                                                        0
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100039, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "arg_type": 100014, 
-                                                                            "args_list": [], 
-                                                                            "sub_type": "FOR_EACH_SELECTED_ABILITY"
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "ABILITY_NAME_OF_ABILITY"
-                                                                }
-                                                            ], 
-                                                            "bp": false, 
-                                                            "element_id": 1430196505000149, 
-                                                            "enable": true, 
-                                                            "op_arg": [
-                                                                null, 
-                                                                null, 
-                                                                null
-                                                            ], 
-                                                            "op_arg_enable": [
-                                                                false, 
-                                                                false, 
-                                                                false
-                                                            ]
-                                                        }, 
-                                                        {
-                                                            "action_type": "UNIT_REMOVE_ABILITIES_IN_TYPE", 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100006, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "UNIT_ENTITY", 
-                                                                                "判定吞噬的单位", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": 11
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100182, 
-                                                                    "args_list": [
-                                                                        2
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100039, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "arg_type": 100014, 
-                                                                            "args_list": [], 
-                                                                            "sub_type": "FOR_EACH_SELECTED_ABILITY"
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "ABILITY_NAME_OF_ABILITY"
-                                                                }
-                                                            ], 
-                                                            "bp": false, 
-                                                            "element_id": 1430196505000159, 
-                                                            "enable": true
-                                                        }, 
-                                                        {
-                                                            "action_type": "SEND_CUSTOM_EVENT", 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100238, 
-                                                                    "args_list": [
-                                                                        2080321141
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100025, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "arg_type": 100006, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "__tuple__": true, 
-                                                                                    "items": [
-                                                                                        "UNIT_ENTITY", 
-                                                                                        "判定吞噬的单位", 
-                                                                                        "local"
-                                                                                    ]
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": 11
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "OWNER_PLAYER"
-                                                                }
-                                                            ], 
-                                                            "bp": false, 
-                                                            "element_id": 1430196505000421, 
-                                                            "enable": true
                                                         }
                                                     ], 
                                                     "sub_type": 1
                                                 }, 
                                                 {
-                                                    "arg_type": 100022, 
-                                                    "args_list": [], 
-                                                    "sub_type": 1
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "INTEGER", 
+                                                                        "循环技能遍历i值", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }
+                                                    ], 
+                                                    "sub_type": "INT_PLUS_ONE"
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 1430196505000094, 
-                                            "enable": true, 
-                                            "fake_op": []
+                                            "element_id": 1430196505000438, 
+                                            "enable": true
                                         }
                                     ], 
                                     "sub_type": 1
@@ -1054,6 +1167,7 @@
                 "传入流派技能": null
             }, 
             "INTEGER": {
+                "循环技能遍历i值": 1, 
                 "提取传入技能的同流派所需数量": 0, 
                 "提取判定数量计数": 0, 
                 "被吞噬技能ID": 0
@@ -1070,6 +1184,7 @@
         {
             "传入流派技能": 0, 
             "判定吞噬的单位": 0, 
+            "循环技能遍历i值": 0, 
             "提取传入技能的同流派所需数量": 0, 
             "提取传入技能的流派标签": 0, 
             "提取判定数量计数": 0, 
@@ -1082,6 +1197,7 @@
             "提取传入技能的流派标签", 
             "提取传入技能的同流派所需数量", 
             "提取遍历技能组里的技能标签", 
+            "循环技能遍历i值", 
             "判定吞噬的单位", 
             "传入流派技能"
         ]
