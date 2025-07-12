@@ -36,7 +36,7 @@
                                 }
                             ], 
                             "condition_type": "ABILITY_ENTITY_COMPARE", 
-                            "element_id": 798278298000127, 
+                            "element_id": 979817121000001, 
                             "enable": true
                         }
                     ], 
@@ -111,7 +111,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000137, 
+                            "element_id": 979817121000002, 
                             "enable": true
                         }, 
                         {
@@ -207,7 +207,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000153, 
+                            "element_id": 979817121000003, 
                             "enable": true
                         }
                     ], 
@@ -220,7 +220,7 @@
                 }
             ], 
             "bp": false, 
-            "element_id": 798278298000118, 
+            "element_id": 979817121000004, 
             "enable": true, 
             "fake_op": []
         }, 
@@ -260,7 +260,7 @@
                                 }
                             ], 
                             "condition_type": "UNIT_COMPARE", 
-                            "element_id": 798278298000246, 
+                            "element_id": 979817121000005, 
                             "enable": true
                         }
                     ], 
@@ -359,7 +359,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000257, 
+                            "element_id": 979817121000006, 
                             "enable": true
                         }, 
                         {
@@ -371,8 +371,8 @@
                                         {
                                             "__tuple__": true, 
                                             "items": [
-                                                "STRING", 
-                                                "品级_字母类型", 
+                                                "INTEGER", 
+                                                "提取追加的战力基础值", 
                                                 "local"
                                             ]
                                         }
@@ -380,55 +380,49 @@
                                     "sub_type": 1
                                 }, 
                                 {
-                                    "arg_type": 100003, 
+                                    "arg_type": 100002, 
                                     "args_list": [
                                         {
                                             "arg_type": 100011, 
                                             "args_list": [
-                                                "86d79e8d-8a0b-472b-a1f9-ebbc57eaf064"
+                                                "f8eeec48-94d2-4436-8bc4-07a126a9736d"
                                             ], 
                                             "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100002, 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100006, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "UNIT_ENTITY", 
-                                                                "获得进化的单位", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 11
-                                                }, 
-                                                {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        "卡牌角色ID"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "sub_type": "GET_INTEGER_KV"
                                         }, 
                                         {
                                             "arg_type": 100003, 
                                             "args_list": [
-                                                "等阶"
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "STRING", 
+                                                        "追加战力的局内类型", 
+                                                        "local"
+                                                    ]
+                                                }
                                             ], 
-                                            "sub_type": 1
+                                            "sub_type": 2
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "STRING", 
+                                                        "品级_等级类型", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 2
                                         }
                                     ], 
-                                    "sub_type": "GET_STRING_TABLE_VAR_ND"
+                                    "sub_type": "GET_INTEGER_TABLE_VAR_ND"
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000586, 
+                            "element_id": 979817121000007, 
                             "enable": true
                         }
                     ], 
@@ -441,7 +435,7 @@
                 }
             ], 
             "bp": false, 
-            "element_id": 798278298000237, 
+            "element_id": 979817121000008, 
             "enable": true, 
             "fake_op": []
         }, 
@@ -481,7 +475,7 @@
                                 }
                             ], 
                             "condition_type": "ABILITY_ENTITY_COMPARE", 
-                            "element_id": 798278298000333, 
+                            "element_id": 979817121000009, 
                             "enable": true
                         }
                     ], 
@@ -556,7 +550,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000343, 
+                            "element_id": 979817121000010, 
                             "enable": true
                         }, 
                         {
@@ -652,7 +646,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000359, 
+                            "element_id": 979817121000011, 
                             "enable": true
                         }
                     ], 
@@ -665,7 +659,7 @@
                 }
             ], 
             "bp": false, 
-            "element_id": 798278298000329, 
+            "element_id": 979817121000012, 
             "enable": true, 
             "fake_op": []
         }, 
@@ -733,31 +727,58 @@
                                                             "arg_type": 100000, 
                                                             "args_list": [
                                                                 {
-                                                                    "arg_type": 100002, 
+                                                                    "arg_type": 100000, 
                                                                     "args_list": [
                                                                         {
-                                                                            "arg_type": 100014, 
+                                                                            "arg_type": 100002, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100014, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "ABILITY", 
+                                                                                                "获得武功", 
+                                                                                                "local"
+                                                                                            ]
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": 2
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100079, 
+                                                                                    "args_list": [
+                                                                                        "ability_level"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "GET_ABILITY_INT_ATTR"
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100017, 
+                                                                            "args_list": [
+                                                                                "*"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100002, 
                                                                             "args_list": [
                                                                                 {
                                                                                     "__tuple__": true, 
                                                                                     "items": [
-                                                                                        "ABILITY", 
-                                                                                        "获得武功", 
+                                                                                        "INTEGER", 
+                                                                                        "提取追加的战力基础值", 
                                                                                         "local"
                                                                                     ]
                                                                                 }
                                                                             ], 
-                                                                            "sub_type": 2
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100079, 
-                                                                            "args_list": [
-                                                                                "ability_level"
-                                                                            ], 
-                                                                            "sub_type": 1
+                                                                            "sub_type": 6
                                                                         }
                                                                     ], 
-                                                                    "sub_type": "GET_ABILITY_INT_ATTR"
+                                                                    "sub_type": "ARITHMETIC_OPERATION"
                                                                 }, 
                                                                 {
                                                                     "arg_type": 100017, 
@@ -767,18 +788,11 @@
                                                                     "sub_type": 1
                                                                 }, 
                                                                 {
-                                                                    "arg_type": 100002, 
+                                                                    "arg_type": 100000, 
                                                                     "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "INTEGER", 
-                                                                                "提取追加的战力基础值", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
+                                                                        -1.0
                                                                     ], 
-                                                                    "sub_type": 6
+                                                                    "sub_type": 1
                                                                 }
                                                             ], 
                                                             "sub_type": "ARITHMETIC_OPERATION"
@@ -788,7 +802,7 @@
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000104, 
+                                            "element_id": 979817121000013, 
                                             "enable": true
                                         }
                                     ], 
@@ -796,7 +810,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000008, 
+                            "element_id": 979817121000014, 
                             "enable": true
                         }, 
                         {
@@ -843,31 +857,58 @@
                                                             "arg_type": 100000, 
                                                             "args_list": [
                                                                 {
-                                                                    "arg_type": 100002, 
+                                                                    "arg_type": 100000, 
                                                                     "args_list": [
                                                                         {
-                                                                            "arg_type": 100014, 
+                                                                            "arg_type": 100002, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100014, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "ABILITY", 
+                                                                                                "获得武功", 
+                                                                                                "local"
+                                                                                            ]
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": 2
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100079, 
+                                                                                    "args_list": [
+                                                                                        "ability_level"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "GET_ABILITY_INT_ATTR"
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100017, 
+                                                                            "args_list": [
+                                                                                "*"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100002, 
                                                                             "args_list": [
                                                                                 {
                                                                                     "__tuple__": true, 
                                                                                     "items": [
-                                                                                        "ABILITY", 
-                                                                                        "获得武功", 
+                                                                                        "INTEGER", 
+                                                                                        "提取追加的战力基础值", 
                                                                                         "local"
                                                                                     ]
                                                                                 }
                                                                             ], 
-                                                                            "sub_type": 2
-                                                                        }, 
-                                                                        {
-                                                                            "arg_type": 100079, 
-                                                                            "args_list": [
-                                                                                "ability_level"
-                                                                            ], 
-                                                                            "sub_type": 1
+                                                                            "sub_type": 6
                                                                         }
                                                                     ], 
-                                                                    "sub_type": "GET_ABILITY_INT_ATTR"
+                                                                    "sub_type": "ARITHMETIC_OPERATION"
                                                                 }, 
                                                                 {
                                                                     "arg_type": 100017, 
@@ -877,18 +918,11 @@
                                                                     "sub_type": 1
                                                                 }, 
                                                                 {
-                                                                    "arg_type": 100002, 
+                                                                    "arg_type": 100000, 
                                                                     "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "INTEGER", 
-                                                                                "提取追加的战力基础值", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
+                                                                        -1.0
                                                                     ], 
-                                                                    "sub_type": 6
+                                                                    "sub_type": 1
                                                                 }
                                                             ], 
                                                             "sub_type": "ARITHMETIC_OPERATION"
@@ -898,7 +932,7 @@
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000186, 
+                                            "element_id": 979817121000015, 
                                             "enable": true
                                         }
                                     ], 
@@ -906,7 +940,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000015, 
+                            "element_id": 979817121000016, 
                             "enable": true
                         }, 
                         {
@@ -950,19 +984,39 @@
                                                     "arg_type": 100002, 
                                                     "args_list": [
                                                         {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "提取追加的战力基础值", 
-                                                                "local"
-                                                            ]
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "INTEGER", 
+                                                                        "提取追加的战力基础值", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100016, 
+                                                            "args_list": [
+                                                                "*"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                -1
+                                                            ], 
+                                                            "sub_type": 1
                                                         }
                                                     ], 
-                                                    "sub_type": 6
+                                                    "sub_type": "MATH_OPERATION"
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000207, 
+                                            "element_id": 979817121000017, 
                                             "enable": true
                                         }
                                     ], 
@@ -970,7 +1024,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000022, 
+                            "element_id": 979817121000018, 
                             "enable": true
                         }, 
                         {
@@ -1014,19 +1068,39 @@
                                                     "arg_type": 100002, 
                                                     "args_list": [
                                                         {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "提取追加的战力基础值", 
-                                                                "local"
-                                                            ]
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "INTEGER", 
+                                                                        "提取追加的战力基础值", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100016, 
+                                                            "args_list": [
+                                                                "*"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                -1
+                                                            ], 
+                                                            "sub_type": 1
                                                         }
                                                     ], 
-                                                    "sub_type": 6
+                                                    "sub_type": "MATH_OPERATION"
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000234, 
+                                            "element_id": 979817121000019, 
                                             "enable": true
                                         }
                                     ], 
@@ -1034,7 +1108,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000029, 
+                            "element_id": 979817121000020, 
                             "enable": true
                         }, 
                         {
@@ -1051,69 +1125,6 @@
                                     "arg_type": 100022, 
                                     "args_list": [
                                         {
-                                            "action_type": "SET_VARIABLE", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100030, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "提取追加的战力基础值", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100002, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100011, 
-                                                            "args_list": [
-                                                                "f8eeec48-94d2-4436-8bc4-07a126a9736d"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "STRING", 
-                                                                        "追加战力的局内类型", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 2
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "STRING", 
-                                                                        "品级_等级类型", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 2
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_INTEGER_TABLE_VAR_ND"
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "element_id": 798278298000274, 
-                                            "enable": true
-                                        }, 
-                                        {
                                             "action_type": "ROLE_CHANGE_RES", 
                                             "args_list": [
                                                 {
@@ -1141,19 +1152,39 @@
                                                     "arg_type": 100002, 
                                                     "args_list": [
                                                         {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "提取追加的战力基础值", 
-                                                                "local"
-                                                            ]
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "INTEGER", 
+                                                                        "提取追加的战力基础值", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100016, 
+                                                            "args_list": [
+                                                                "*"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                -1
+                                                            ], 
+                                                            "sub_type": 1
                                                         }
                                                     ], 
-                                                    "sub_type": 6
+                                                    "sub_type": "MATH_OPERATION"
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000311, 
+                                            "element_id": 979817121000021, 
                                             "enable": true
                                         }
                                     ], 
@@ -1161,7 +1192,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000036, 
+                            "element_id": 979817121000022, 
                             "enable": true
                         }, 
                         {
@@ -1178,102 +1209,6 @@
                                     "arg_type": 100022, 
                                     "args_list": [
                                         {
-                                            "action_type": "SET_VARIABLE", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100030, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "提取追加的战力基础值", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100002, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100011, 
-                                                            "args_list": [
-                                                                "f8eeec48-94d2-4436-8bc4-07a126a9736d"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "STRING", 
-                                                                        "追加战力的局内类型", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 2
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100003, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "STRING", 
-                                                                                "品级_字母类型", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": 2
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100003, 
-                                                                    "args_list": [
-                                                                        "数值"
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }
-                                                            ], 
-                                                            "op_arg": [
-                                                                null, 
-                                                                null, 
-                                                                null, 
-                                                                null, 
-                                                                null, 
-                                                                null, 
-                                                                null, 
-                                                                null
-                                                            ], 
-                                                            "op_arg_enable": [
-                                                                false, 
-                                                                false, 
-                                                                false, 
-                                                                false, 
-                                                                false, 
-                                                                false, 
-                                                                false, 
-                                                                false
-                                                            ], 
-                                                            "sub_type": "STR_JOIN"
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_INTEGER_TABLE_VAR_ND"
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "element_id": 798278298000641, 
-                                            "enable": true
-                                        }, 
-                                        {
                                             "action_type": "ROLE_CHANGE_RES", 
                                             "args_list": [
                                                 {
@@ -1301,19 +1236,39 @@
                                                     "arg_type": 100002, 
                                                     "args_list": [
                                                         {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "提取追加的战力基础值", 
-                                                                "local"
-                                                            ]
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "INTEGER", 
+                                                                        "提取追加的战力基础值", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100016, 
+                                                            "args_list": [
+                                                                "*"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                -1
+                                                            ], 
+                                                            "sub_type": 1
                                                         }
                                                     ], 
-                                                    "sub_type": 6
+                                                    "sub_type": "MATH_OPERATION"
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000320, 
+                                            "element_id": 979817121000023, 
                                             "enable": true
                                         }
                                     ], 
@@ -1321,7 +1276,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000043, 
+                            "element_id": 979817121000024, 
                             "enable": true
                         }, 
                         {
@@ -1365,19 +1320,39 @@
                                                     "arg_type": 100002, 
                                                     "args_list": [
                                                         {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "提取追加的战力基础值", 
-                                                                "local"
-                                                            ]
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "INTEGER", 
+                                                                        "提取追加的战力基础值", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100016, 
+                                                            "args_list": [
+                                                                "*"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                -1
+                                                            ], 
+                                                            "sub_type": 1
                                                         }
                                                     ], 
-                                                    "sub_type": 6
+                                                    "sub_type": "MATH_OPERATION"
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000369, 
+                                            "element_id": 979817121000025, 
                                             "enable": true
                                         }
                                     ], 
@@ -1385,7 +1360,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000050, 
+                            "element_id": 979817121000026, 
                             "enable": true
                         }, 
                         {
@@ -1454,7 +1429,7 @@
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000446, 
+                                            "element_id": 979817121000027, 
                                             "enable": true
                                         }, 
                                         {
@@ -1517,7 +1492,7 @@
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000463, 
+                                            "element_id": 979817121000028, 
                                             "enable": true
                                         }, 
                                         {
@@ -1548,19 +1523,39 @@
                                                     "arg_type": 100002, 
                                                     "args_list": [
                                                         {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "提取追加的战力基础值", 
-                                                                "local"
-                                                            ]
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "INTEGER", 
+                                                                        "提取追加的战力基础值", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100016, 
+                                                            "args_list": [
+                                                                "*"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                -1
+                                                            ], 
+                                                            "sub_type": 1
                                                         }
                                                     ], 
-                                                    "sub_type": 6
+                                                    "sub_type": "MATH_OPERATION"
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000480, 
+                                            "element_id": 979817121000029, 
                                             "enable": true
                                         }
                                     ], 
@@ -1568,7 +1563,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000057, 
+                            "element_id": 979817121000030, 
                             "enable": true
                         }, 
                         {
@@ -1637,7 +1632,7 @@
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000502, 
+                                            "element_id": 979817121000031, 
                                             "enable": true
                                         }, 
                                         {
@@ -1700,7 +1695,7 @@
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000519, 
+                                            "element_id": 979817121000032, 
                                             "enable": true
                                         }, 
                                         {
@@ -1731,19 +1726,39 @@
                                                     "arg_type": 100002, 
                                                     "args_list": [
                                                         {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "提取追加的战力基础值", 
-                                                                "local"
-                                                            ]
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "INTEGER", 
+                                                                        "提取追加的战力基础值", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100016, 
+                                                            "args_list": [
+                                                                "*"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                -1
+                                                            ], 
+                                                            "sub_type": 1
                                                         }
                                                     ], 
-                                                    "sub_type": 6
+                                                    "sub_type": "MATH_OPERATION"
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 798278298000532, 
+                                            "element_id": 979817121000033, 
                                             "enable": true
                                         }
                                     ], 
@@ -1751,7 +1766,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000064, 
+                            "element_id": 979817121000034, 
                             "enable": true
                         }, 
                         {
@@ -1771,7 +1786,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000071, 
+                            "element_id": 979817121000035, 
                             "enable": true
                         }, 
                         {
@@ -1827,7 +1842,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000541, 
+                            "element_id": 979817121000036, 
                             "enable": true
                         }, 
                         {
@@ -1890,7 +1905,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000558, 
+                            "element_id": 979817121000037, 
                             "enable": true
                         }, 
                         {
@@ -1921,19 +1936,39 @@
                                     "arg_type": 100002, 
                                     "args_list": [
                                         {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "INTEGER", 
-                                                "提取追加的战力基础值", 
-                                                "local"
-                                            ]
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "INTEGER", 
+                                                        "提取追加的战力基础值", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 6
+                                        }, 
+                                        {
+                                            "arg_type": 100016, 
+                                            "args_list": [
+                                                "*"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                -1
+                                            ], 
+                                            "sub_type": 1
                                         }
                                     ], 
-                                    "sub_type": 6
+                                    "sub_type": "MATH_OPERATION"
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000571, 
+                            "element_id": 979817121000038, 
                             "enable": true
                         }
                     ], 
@@ -1941,7 +1976,7 @@
                 }
             ], 
             "bp": false, 
-            "element_id": 798278298000002, 
+            "element_id": 979817121000039, 
             "enable": true
         }
     ], 
@@ -1952,8 +1987,8 @@
     "func_category": "t_function", 
     "func_comment": "", 
     "func_des": "战力类型：{追加战力的局内类型}，玩家：{追加战力的玩家}", 
-    "func_id": "aef8a8235ef311f09851c5fae048c8de", 
-    "func_name": "追加战力", 
+    "func_id": "9325d65d5f0e11f09050dfaf85b2d9cf", 
+    "func_name": "减少战力", 
     "func_param_list": [
         {
             "__tuple__": true, 
@@ -2005,12 +2040,12 @@
             ]
         }
     ], 
-    "group_id": "pDaCXF7zEfCv5MX64EjI3m", 
+    "group_id": "ecJYvF8EEfCq2t+vhbLZzz", 
     "is_func": true, 
     "is_official_func": false, 
     "p_trigger_id": null, 
-    "trigger_id": 798278298, 
-    "trigger_name": "追加战力", 
+    "trigger_id": 979817121, 
+    "trigger_name": "减少战力", 
     "valid": true, 
     "var_data": [
         {
