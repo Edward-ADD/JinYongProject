@@ -10,10 +10,6 @@
                 "_AttackTarget": 0
             }
         }, 
-        "1400868867": {
-            "variable_dict": {}, 
-            "variable_length_dict": {}
-        }, 
         "1482657793": {
             "variable_dict": {}, 
             "variable_length_dict": {}
@@ -208,14 +204,27 @@
                                             "arg_type": 100177, 
                                             "args_list": [
                                                 {
-                                                    "arg_type": 100006, 
+                                                    "arg_type": 100014, 
                                                     "args_list": [], 
-                                                    "sub_type": "MOVER_COLLIDE_UNIT"
+                                                    "sub_type": "DAMAGE_ABILITY"
                                                 }, 
                                                 {
                                                     "arg_type": 100006, 
-                                                    "args_list": [], 
-                                                    "sub_type": "ABILITY_OWNER"
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100014, 
+                                                            "args_list": [], 
+                                                            "sub_type": "CUR_ABILITY"
+                                                        }
+                                                    ], 
+                                                    "sub_type": "TARGET_UNIT_IN_ABILITY"
+                                                }, 
+                                                {
+                                                    "arg_type": 100064, 
+                                                    "args_list": [
+                                                        0
+                                                    ], 
+                                                    "sub_type": 1
                                                 }, 
                                                 {
                                                     "arg_type": 100000, 
@@ -243,55 +252,19 @@
                                                     "sub_type": "GET_UNIT_ATTR"
                                                 }, 
                                                 {
-                                                    "arg_type": 100014, 
+                                                    "arg_type": 100006, 
                                                     "args_list": [], 
-                                                    "sub_type": "DAMAGE_ABILITY"
-                                                }, 
-                                                {
-                                                    "arg_type": 100000, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100006, 
-                                                            "args_list": [], 
-                                                            "sub_type": "ABILITY_OWNER"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100301, 
-                                                            "args_list": [
-                                                                "ATTR_RESULT"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100042, 
-                                                            "args_list": [
-                                                                "critical_chance"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_UNIT_ATTR"
-                                                }, 
-                                                {
-                                                    "arg_type": 100064, 
-                                                    "args_list": [
-                                                        0
-                                                    ], 
-                                                    "sub_type": 1
+                                                    "sub_type": "ABILITY_OWNER"
                                                 }
                                             ], 
-                                            "op_arg": [
-                                                null
-                                            ], 
-                                            "op_arg_enable": [
-                                                false
-                                            ], 
-                                            "sub_type": "0b68397a3cbb11f0beb50ddae1c8015e"
+                                            "op_arg": [], 
+                                            "op_arg_enable": [], 
+                                            "sub_type": "1513516b5c5f11f0b1ba03a572ef8116"
                                         }
                                     ], 
                                     "bp": false, 
                                     "call_rt_arg_idxes": [], 
-                                    "element_id": 358760450000765, 
+                                    "element_id": 1948413954970908, 
                                     "enable": true
                                 }, 
                                 {
@@ -516,222 +489,8 @@
                 ]
             ]
         }, 
-        "1400868867": {
-            "action": [
-                {
-                    "action_type": "SET_ENTITY_KV", 
-                    "args_list": [
-                        {
-                            "arg_type": 100006, 
-                            "args_list": [], 
-                            "sub_type": "ABILITY_OWNER"
-                        }, 
-                        {
-                            "arg_type": 100003, 
-                            "args_list": [
-                                "\u91ca\u653e\u6280\u80fd\u4e2d"
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100001, 
-                            "args_list": [
-                                false
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 846008324000078, 
-                    "enable": true
-                }, 
-                {
-                    "action_type": "RUN_ONCE_TIMER_NO_SAVE", 
-                    "args_list": [
-                        {
-                            "arg_type": 100000, 
-                            "args_list": [
-                                1.5
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100022, 
-                            "args_list": [
-                                {
-                                    "action_type": "PLAY_ANIMATION", 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100006, 
-                                            "args_list": [], 
-                                            "sub_type": "ABILITY_OWNER"
-                                        }, 
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                "walk"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100000, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100006, 
-                                                            "args_list": [], 
-                                                            "sub_type": "ABILITY_OWNER"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100301, 
-                                                            "args_list": [
-                                                                "ATTR_RESULT"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100042, 
-                                                            "args_list": [
-                                                                "attack_speed"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_UNIT_ATTR"
-                                                }, 
-                                                {
-                                                    "arg_type": 100017, 
-                                                    "args_list": [
-                                                        "/"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100000, 
-                                                    "args_list": [
-                                                        100.0
-                                                    ], 
-                                                    "sub_type": 1
-                                                }
-                                            ], 
-                                            "sub_type": "ARITHMETIC_OPERATION"
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                0
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                -1
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100001, 
-                                            "args_list": [
-                                                false
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100001, 
-                                            "args_list": [
-                                                false
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "bp": false, 
-                                    "element_id": 846548994000032, 
-                                    "enable": true, 
-                                    "op_arg": [
-                                        {
-                                            "arg_type": 100000, 
-                                            "args_list": [
-                                                -1.0
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        null
-                                    ], 
-                                    "op_arg_enable": [
-                                        false, 
-                                        false
-                                    ]
-                                }
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 1400868867000035, 
-                    "enable": true, 
-                    "local_var": {
-                        "__tuple__": true, 
-                        "items": [
-                            {}, 
-                            {}
-                        ]
-                    }
-                }
-            ], 
-            "call_enabled": true, 
-            "condition": [], 
-            "enabled": true, 
-            "event": [
-                {
-                    "args_list": [], 
-                    "element_id": 1400868867000002, 
-                    "enable": true, 
-                    "event_type": "ABILITY_CST_END"
-                }
-            ], 
-            "group_id": 134227162, 
-            "p_trigger_id": null, 
-            "trigger_id": 1400868867, 
-            "trigger_name": "AbilityEnds", 
-            "valid": true, 
-            "var_data": [
-                {}, 
-                {}, 
-                []
-            ]
-        }, 
         "1482657793": {
             "action": [
-                {
-                    "action_type": "SET_ENTITY_KV", 
-                    "args_list": [
-                        {
-                            "arg_type": 100006, 
-                            "args_list": [], 
-                            "sub_type": "ABILITY_OWNER"
-                        }, 
-                        {
-                            "arg_type": 100003, 
-                            "args_list": [
-                                "\u91ca\u653e\u6280\u80fd\u4e2d"
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100001, 
-                            "args_list": [
-                                true
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 846008324000078, 
-                    "enable": true
-                }, 
                 {
                     "action_type": "PLAY_ANIMATION", 
                     "args_list": [
@@ -890,13 +649,6 @@
                     "items": [
                         358760450, 
                         "AbilityShot"
-                    ]
-                }, 
-                {
-                    "__tuple__": true, 
-                    "items": [
-                        1400868867, 
-                        "AbilityEnds"
                     ]
                 }
             ], 
