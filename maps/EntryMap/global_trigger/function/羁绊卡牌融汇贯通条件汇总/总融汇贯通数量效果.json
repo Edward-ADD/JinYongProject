@@ -275,63 +275,122 @@
                                     "arg_type": 100022, 
                                     "args_list": [
                                         {
-                                            "action_type": "UNIT_ADD_ABILITY", 
+                                            "action_type": "CALL_TRIGGER_FUNC", 
                                             "args_list": [
                                                 {
-                                                    "arg_type": 100006, 
+                                                    "arg_type": 100177, 
                                                     "args_list": [
                                                         {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "UNIT_ENTITY", 
-                                                                "判定吞噬的单位", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 11
-                                                }, 
-                                                {
-                                                    "arg_type": 100182, 
-                                                    "args_list": [
-                                                        0
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100039, 
-                                                    "args_list": [
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100014, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "ABILITY", 
+                                                                                "传入流派技能", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 2
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        "卡牌ID值"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_INTEGER_KV"
+                                                        }, 
                                                         {
-                                                            "arg_type": 100014, 
+                                                            "arg_type": 100006, 
                                                             "args_list": [
                                                                 {
                                                                     "__tuple__": true, 
                                                                     "items": [
-                                                                        "ABILITY", 
-                                                                        "传入流派技能", 
+                                                                        "UNIT_ENTITY", 
+                                                                        "判定吞噬的单位", 
                                                                         "local"
                                                                     ]
                                                                 }
                                                             ], 
-                                                            "sub_type": 2
+                                                            "sub_type": 11
                                                         }
                                                     ], 
-                                                    "sub_type": "ABILITY_NAME_OF_ABILITY"
+                                                    "op_arg": [], 
+                                                    "op_arg_enable": [], 
+                                                    "sub_type": "b6ada37c711111f08091af79d99e66a5"
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 2000322855000001, 
-                                            "enable": true, 
-                                            "op_arg": [
-                                                null, 
-                                                null, 
-                                                null
+                                            "call_rt_arg_idxes": [], 
+                                            "element_id": 2000322855000290, 
+                                            "enable": true
+                                        }, 
+                                        {
+                                            "action_type": "CALL_TRIGGER_FUNC", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100177, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "吞噬武功"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100025, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100006, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "UNIT_ENTITY", 
+                                                                                "判定吞噬的单位", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 11
+                                                                }
+                                                            ], 
+                                                            "sub_type": "OWNER_PLAYER"
+                                                        }
+                                                    ], 
+                                                    "op_arg": [
+                                                        {
+                                                            "arg_type": 100014, 
+                                                            "args_list": [], 
+                                                            "sub_type": "FOR_EACH_SELECTED_ABILITY"
+                                                        }, 
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null
+                                                    ], 
+                                                    "op_arg_enable": [
+                                                        true, 
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false
+                                                    ], 
+                                                    "sub_type": "aef8a8235ef311f09851c5fae048c8de"
+                                                }
                                             ], 
-                                            "op_arg_enable": [
-                                                false, 
-                                                false, 
-                                                false
-                                            ]
+                                            "bp": false, 
+                                            "call_rt_arg_idxes": [], 
+                                            "element_id": 1535009442000061, 
+                                            "enable": true
                                         }, 
                                         {
                                             "action_type": "SEND_CUSTOM_EVENT", 
@@ -400,115 +459,6 @@
                                             ], 
                                             "bp": false, 
                                             "element_id": 220516645000227, 
-                                            "enable": true
-                                        }, 
-                                        {
-                                            "action_type": "UNIT_REMOVE_ABILITIES_IN_TYPE", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100006, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "UNIT_ENTITY", 
-                                                                "判定吞噬的单位", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 11
-                                                }, 
-                                                {
-                                                    "arg_type": 100182, 
-                                                    "args_list": [
-                                                        2
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100039, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100014, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "ABILITY", 
-                                                                        "传入流派技能", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 2
-                                                        }
-                                                    ], 
-                                                    "sub_type": "ABILITY_NAME_OF_ABILITY"
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "element_id": 2000322855000002, 
-                                            "enable": true
-                                        }, 
-                                        {
-                                            "action_type": "CALL_TRIGGER_FUNC", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100177, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                "吞噬武功"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100025, 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100006, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "UNIT_ENTITY", 
-                                                                                "判定吞噬的单位", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": 11
-                                                                }
-                                                            ], 
-                                                            "sub_type": "OWNER_PLAYER"
-                                                        }
-                                                    ], 
-                                                    "op_arg": [
-                                                        {
-                                                            "arg_type": 100014, 
-                                                            "args_list": [], 
-                                                            "sub_type": "FOR_EACH_SELECTED_ABILITY"
-                                                        }, 
-                                                        null, 
-                                                        null, 
-                                                        null, 
-                                                        null
-                                                    ], 
-                                                    "op_arg_enable": [
-                                                        true, 
-                                                        false, 
-                                                        false, 
-                                                        false, 
-                                                        false
-                                                    ], 
-                                                    "sub_type": "aef8a8235ef311f09851c5fae048c8de"
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "call_rt_arg_idxes": [], 
-                                            "element_id": 1535009442000061, 
                                             "enable": true
                                         }, 
                                         {
