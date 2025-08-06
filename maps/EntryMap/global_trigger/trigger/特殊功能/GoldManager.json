@@ -815,7 +815,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 777146441000037, 
-                    "enable": true
+                    "enable": false
                 }, 
                 {
                     "action_type": "SEND_CUSTOM_EVENT", 
@@ -842,7 +842,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 777146441000044, 
-                    "enable": true
+                    "enable": false
                 }, 
                 {
                     "action_type": "SEND_CUSTOM_EVENT", 
@@ -869,7 +869,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 777146441000051, 
-                    "enable": true
+                    "enable": false
                 }, 
                 {
                     "action_type": "SEND_CUSTOM_EVENT", 
@@ -896,7 +896,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 777146441000058, 
-                    "enable": true
+                    "enable": false
                 }, 
                 {
                     "action_type": "SEND_CUSTOM_EVENT", 
@@ -923,7 +923,95 @@
                     ], 
                     "bp": false, 
                     "element_id": 777146441000065, 
-                    "enable": true
+                    "enable": false
+                }, 
+                {
+                    "action_type": "FOR_INT_DO_ACTION_NEW", 
+                    "args_list": [
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "INTEGER", 
+                                        "循环的i值", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": 6
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                1
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                30
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100022, 
+                            "args_list": [
+                                {
+                                    "action_type": "SEND_CUSTOM_EVENT", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100238, 
+                                            "args_list": [
+                                                1647455204
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [], 
+                                            "sub_type": "TRIGGER_PLAYER"
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        1
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        74
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "RANDOM_INT"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 777146441000768, 
+                                    "enable": true
+                                }
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 777146441000765, 
+                    "enable": true, 
+                    "op_arg": [
+                        null
+                    ], 
+                    "op_arg_enable": [
+                        false
+                    ]
                 }, 
                 {
                     "action_type": "TRIGGER_UI_EVENT", 
@@ -1044,9 +1132,18 @@
             "trigger_name": "出发战斗", 
             "valid": true, 
             "var_data": [
-                {}, 
-                {}, 
-                []
+                {
+                    "INTEGER": {
+                        "循环的i值": 0
+                    }, 
+                    "NEW_TIMER": {}
+                }, 
+                {
+                    "循环的i值": 0
+                }, 
+                [
+                    "循环的i值"
+                ]
             ]
         }, 
         "787952300": {
@@ -2647,58 +2744,54 @@
         "1538277877": {
             "action": [
                 {
-                    "action_type": "PRINT_MESSAGE_ACTION_TO_DIALOG", 
+                    "action_type": "UNIT_ADD_ABILITY", 
                     "args_list": [
                         {
-                            "arg_type": 100175, 
+                            "arg_type": 100006, 
                             "args_list": [
-                                3
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [], 
+                                    "sub_type": "TRIGGER_PLAYER"
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "玩家的单位角色"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_UNIT_ENTITY_KV"
+                        }, 
+                        {
+                            "arg_type": 100182, 
+                            "args_list": [
+                                2
                             ], 
                             "sub_type": 1
                         }, 
                         {
-                            "arg_type": 100003, 
+                            "arg_type": 100039, 
                             "args_list": [
-                                "有触发测试打印效果"
+                                134221811
                             ], 
                             "sub_type": 1
                         }
                     ], 
                     "bp": false, 
-                    "element_id": 1538277877000303, 
-                    "enable": true
-                }, 
-                {
-                    "action_type": "DUMP_TABLE", 
-                    "args_list": [
-                        {
-                            "arg_type": 100011, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "TABLE", 
-                                        "全局表_玩家当前洗词条的所需资源"
-                                    ]
-                                }, 
-                                {
-                                    "arg_type": 100002, 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100025, 
-                                            "args_list": [], 
-                                            "sub_type": "TRIGGER_PLAYER"
-                                        }
-                                    ], 
-                                    "sub_type": "PLAYER_ID_NUMBER"
-                                }
-                            ], 
-                            "sub_type": "VARIABLE"
-                        }
+                    "element_id": 1538277877000576, 
+                    "enable": true, 
+                    "op_arg": [
+                        null, 
+                        null, 
+                        null
                     ], 
-                    "bp": false, 
-                    "element_id": 1687388898000573, 
-                    "enable": true
+                    "op_arg_enable": [
+                        false, 
+                        false, 
+                        false
+                    ]
                 }
             ], 
             "call_enabled": true, 
