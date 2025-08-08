@@ -38,62 +38,103 @@
             "enable": true
         }, 
         {
-            "action_type": "SET_PLAYER_SAVE_TABLE_VALUE", 
+            "action_type": "IF_THEN_ELSE", 
             "args_list": [
                 {
-                    "arg_type": 100025, 
+                    "arg_type": 100021, 
                     "args_list": [
-                        [
-                            "PLAYER", 
-                            "玩家"
-                        ], 
                         {
-                            "arg_type": 100002, 
                             "args_list": [
-                                [
-                                    "INTEGER", 
-                                    "玩家id", 
-                                    "local"
-                                ]
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [
+                                                [
+                                                    "PLAYER", 
+                                                    "玩家"
+                                                ], 
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        [
+                                                            "INTEGER", 
+                                                            "玩家id", 
+                                                            "local"
+                                                        ]
+                                                    ], 
+                                                    "sub_type": 6
+                                                }
+                                            ], 
+                                            "sub_type": "VARIABLE"
+                                        }, 
+                                        {
+                                            "arg_type": 100247, 
+                                            "args_list": [
+                                                [
+                                                    "TABLE_SAVE", 
+                                                    "签到存档表"
+                                                ], 
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        [
+                                                            "INTEGER", 
+                                                            "玩家id", 
+                                                            "local"
+                                                        ]
+                                                    ], 
+                                                    "sub_type": 6
+                                                }
+                                            ], 
+                                            "sub_type": 2
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                "last_check_seven"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "op_arg": [
+                                        null, 
+                                        null
+                                    ], 
+                                    "op_arg_enable": [
+                                        false, 
+                                        false
+                                    ], 
+                                    "sub_type": "GET_PLAYER_SAVE_TABLE_VALUE_INTEGER"
+                                }, 
+                                {
+                                    "arg_type": 100015, 
+                                    "args_list": [
+                                        ">"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        0
+                                    ], 
+                                    "sub_type": 1
+                                }
                             ], 
-                            "sub_type": 6
+                            "condition_type": "FLOAT_COMPARE", 
+                            "element_id": 38711314000086, 
+                            "enable": true
                         }
-                    ], 
-                    "sub_type": "VARIABLE"
-                }, 
-                {
-                    "arg_type": 100247, 
-                    "args_list": [
-                        [
-                            "TABLE_SAVE", 
-                            "签到存档表"
-                        ], 
-                        {
-                            "arg_type": 100002, 
-                            "args_list": [
-                                [
-                                    "INTEGER", 
-                                    "玩家id", 
-                                    "local"
-                                ]
-                            ], 
-                            "sub_type": 6
-                        }
-                    ], 
-                    "sub_type": 2
-                }, 
-                {
-                    "arg_type": 100003, 
-                    "args_list": [
-                        "last_check"
                     ], 
                     "sub_type": 1
                 }, 
                 {
-                    "arg_type": 100002, 
+                    "arg_type": 100022, 
                     "args_list": [
                         {
-                            "arg_type": 100002, 
+                            "action_type": "SET_PLAYER_SAVE_TABLE_VALUE", 
                             "args_list": [
                                 {
                                     "arg_type": 100025, 
@@ -140,11 +181,97 @@
                                 {
                                     "arg_type": 100003, 
                                     "args_list": [
-                                        "last_check"
+                                        "last_check_seven"
                                     ], 
                                     "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100025, 
+                                                    "args_list": [
+                                                        [
+                                                            "PLAYER", 
+                                                            "玩家"
+                                                        ], 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                [
+                                                                    "INTEGER", 
+                                                                    "玩家id", 
+                                                                    "local"
+                                                                ]
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }
+                                                    ], 
+                                                    "sub_type": "VARIABLE"
+                                                }, 
+                                                {
+                                                    "arg_type": 100247, 
+                                                    "args_list": [
+                                                        [
+                                                            "TABLE_SAVE", 
+                                                            "签到存档表"
+                                                        ], 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                [
+                                                                    "INTEGER", 
+                                                                    "玩家id", 
+                                                                    "local"
+                                                                ]
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }
+                                                    ], 
+                                                    "sub_type": 2
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "last_check_seven"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "op_arg": [
+                                                null, 
+                                                null
+                                            ], 
+                                            "op_arg_enable": [
+                                                false, 
+                                                false
+                                            ], 
+                                            "sub_type": "GET_PLAYER_SAVE_TABLE_VALUE_INTEGER"
+                                        }, 
+                                        {
+                                            "arg_type": 100016, 
+                                            "args_list": [
+                                                "-"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                1
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "sub_type": "MATH_OPERATION"
                                 }
                             ], 
+                            "bp": false, 
+                            "element_id": 38711314000003, 
+                            "enable": true, 
                             "op_arg": [
                                 null, 
                                 null
@@ -152,38 +279,279 @@
                             "op_arg_enable": [
                                 false, 
                                 false
-                            ], 
-                            "sub_type": "GET_PLAYER_SAVE_TABLE_VALUE_INTEGER"
-                        }, 
-                        {
-                            "arg_type": 100016, 
-                            "args_list": [
-                                "-"
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100002, 
-                            "args_list": [
-                                1
-                            ], 
-                            "sub_type": 1
+                            ]
                         }
                     ], 
-                    "sub_type": "MATH_OPERATION"
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [], 
+                    "sub_type": 1
                 }
             ], 
             "bp": false, 
-            "element_id": 38711314000003, 
+            "element_id": 38711314000077, 
             "enable": true, 
-            "op_arg": [
-                null, 
-                null
+            "fake_op": []
+        }, 
+        {
+            "action_type": "IF_THEN_ELSE", 
+            "args_list": [
+                {
+                    "arg_type": 100021, 
+                    "args_list": [
+                        {
+                            "args_list": [
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [
+                                                [
+                                                    "PLAYER", 
+                                                    "玩家"
+                                                ], 
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        [
+                                                            "INTEGER", 
+                                                            "玩家id", 
+                                                            "local"
+                                                        ]
+                                                    ], 
+                                                    "sub_type": 6
+                                                }
+                                            ], 
+                                            "sub_type": "VARIABLE"
+                                        }, 
+                                        {
+                                            "arg_type": 100247, 
+                                            "args_list": [
+                                                [
+                                                    "TABLE_SAVE", 
+                                                    "签到存档表"
+                                                ], 
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        [
+                                                            "INTEGER", 
+                                                            "玩家id", 
+                                                            "local"
+                                                        ]
+                                                    ], 
+                                                    "sub_type": 6
+                                                }
+                                            ], 
+                                            "sub_type": 2
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                "last_check_thirty"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "op_arg": [
+                                        null, 
+                                        null
+                                    ], 
+                                    "op_arg_enable": [
+                                        false, 
+                                        false
+                                    ], 
+                                    "sub_type": "GET_PLAYER_SAVE_TABLE_VALUE_INTEGER"
+                                }, 
+                                {
+                                    "arg_type": 100015, 
+                                    "args_list": [
+                                        ">"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        0
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "condition_type": "FLOAT_COMPARE", 
+                            "element_id": 38711314000128, 
+                            "enable": true
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "SET_PLAYER_SAVE_TABLE_VALUE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [
+                                        [
+                                            "PLAYER", 
+                                            "玩家"
+                                        ], 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                [
+                                                    "INTEGER", 
+                                                    "玩家id", 
+                                                    "local"
+                                                ]
+                                            ], 
+                                            "sub_type": 6
+                                        }
+                                    ], 
+                                    "sub_type": "VARIABLE"
+                                }, 
+                                {
+                                    "arg_type": 100247, 
+                                    "args_list": [
+                                        [
+                                            "TABLE_SAVE", 
+                                            "签到存档表"
+                                        ], 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                [
+                                                    "INTEGER", 
+                                                    "玩家id", 
+                                                    "local"
+                                                ]
+                                            ], 
+                                            "sub_type": 6
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "last_check_thirty"
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100025, 
+                                                    "args_list": [
+                                                        [
+                                                            "PLAYER", 
+                                                            "玩家"
+                                                        ], 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                [
+                                                                    "INTEGER", 
+                                                                    "玩家id", 
+                                                                    "local"
+                                                                ]
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }
+                                                    ], 
+                                                    "sub_type": "VARIABLE"
+                                                }, 
+                                                {
+                                                    "arg_type": 100247, 
+                                                    "args_list": [
+                                                        [
+                                                            "TABLE_SAVE", 
+                                                            "签到存档表"
+                                                        ], 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                [
+                                                                    "INTEGER", 
+                                                                    "玩家id", 
+                                                                    "local"
+                                                                ]
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }
+                                                    ], 
+                                                    "sub_type": 2
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "last_check_thirty"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "op_arg": [
+                                                null, 
+                                                null
+                                            ], 
+                                            "op_arg_enable": [
+                                                false, 
+                                                false
+                                            ], 
+                                            "sub_type": "GET_PLAYER_SAVE_TABLE_VALUE_INTEGER"
+                                        }, 
+                                        {
+                                            "arg_type": 100016, 
+                                            "args_list": [
+                                                "-"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                1
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "sub_type": "MATH_OPERATION"
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 38711314000037, 
+                            "enable": true, 
+                            "op_arg": [
+                                null, 
+                                null
+                            ], 
+                            "op_arg_enable": [
+                                false, 
+                                false
+                            ]
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [], 
+                    "sub_type": 1
+                }
             ], 
-            "op_arg_enable": [
-                false, 
-                false
-            ]
+            "bp": false, 
+            "element_id": 38711314000124, 
+            "enable": true, 
+            "fake_op": []
         }, 
         {
             "action_type": "SEND_CUSTOM_EVENT", 
@@ -224,31 +592,38 @@
                 {
                     "arg_type": 100238, 
                     "args_list": [
-                        1336439815
+                        1921843720
                     ], 
                     "sub_type": 1
                 }, 
                 {
-                    "arg_type": 100002, 
-                    "args_list": [
-                        [
-                            "INTEGER", 
-                            "玩家id", 
-                            "local"
-                        ]
-                    ], 
-                    "sub_type": 6
-                }, 
-                {
-                    "arg_type": 100002, 
-                    "args_list": [
-                        38
-                    ], 
-                    "sub_type": 1
+                    "arg_type": 100025, 
+                    "args_list": [], 
+                    "sub_type": "TRIGGER_PLAYER"
                 }
             ], 
             "bp": false, 
-            "element_id": 38711314000005, 
+            "element_id": 38711314000008, 
+            "enable": true
+        }, 
+        {
+            "action_type": "SEND_CUSTOM_EVENT", 
+            "args_list": [
+                {
+                    "arg_type": 100238, 
+                    "args_list": [
+                        1391738360
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100025, 
+                    "args_list": [], 
+                    "sub_type": "TRIGGER_PLAYER"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 474918932000033, 
             "enable": true
         }
     ], 
