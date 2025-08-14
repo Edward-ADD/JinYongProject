@@ -249,27 +249,34 @@
                             ], 
                             "bp": false, 
                             "element_id": 2022576979000063, 
-                            "enable": true
+                            "enable": false
                         }, 
                         {
-                            "action_type": "SET_VARIABLE", 
+                            "action_type": "SET_BILLBOARD_TEXT", 
                             "args_list": [
                                 {
-                                    "arg_type": 100030, 
+                                    "arg_type": 100006, 
                                     "args_list": [
                                         {
                                             "__tuple__": true, 
                                             "items": [
-                                                "INTEGER", 
-                                                "秒数", 
+                                                "UNIT_ENTITY", 
+                                                "单位", 
                                                 "local"
                                             ]
                                         }
                                     ], 
+                                    "sub_type": 11
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "倒计时秒数"
+                                    ], 
                                     "sub_type": 1
                                 }, 
                                 {
-                                    "arg_type": 100002, 
+                                    "arg_type": 100003, 
                                     "args_list": [
                                         {
                                             "arg_type": 100002, 
@@ -284,28 +291,22 @@
                                                 }
                                             ], 
                                             "sub_type": 6
-                                        }, 
-                                        {
-                                            "arg_type": 100016, 
-                                            "args_list": [
-                                                "-"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100002, 
-                                            "args_list": [
-                                                1
-                                            ], 
-                                            "sub_type": 1
                                         }
                                     ], 
-                                    "sub_type": "MATH_OPERATION"
+                                    "sub_type": "ANY_VAR_TO_STR"
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 2022576979000125, 
-                            "enable": true
+                            "element_id": 2022576979000161, 
+                            "enable": true, 
+                            "op_arg": [
+                                null, 
+                                null
+                            ], 
+                            "op_arg_enable": [
+                                false, 
+                                false
+                            ]
                         }, 
                         {
                             "action_type": "IF_THEN_ELSE", 
@@ -402,6 +403,62 @@
                             "element_id": 2022576979000082, 
                             "enable": true, 
                             "fake_op": []
+                        }, 
+                        {
+                            "action_type": "SET_VARIABLE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100030, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "INTEGER", 
+                                                "秒数", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "INTEGER", 
+                                                        "秒数", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 6
+                                        }, 
+                                        {
+                                            "arg_type": 100016, 
+                                            "args_list": [
+                                                "-"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                1
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "sub_type": "MATH_OPERATION"
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 2022576979000125, 
+                            "enable": true
                         }
                     ], 
                     "sub_type": 1
@@ -417,6 +474,28 @@
                     {}
                 ]
             }
+        }, 
+        {
+            "action_type": 400342, 
+            "args_list": [
+                {
+                    "arg_type": 100006, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "UNIT_ENTITY", 
+                                "单位", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 11
+                }
+            ], 
+            "bp": false, 
+            "element_id": 2022576979000170, 
+            "enable": true
         }
     ], 
     "call_enabled": true, 
@@ -469,6 +548,16 @@
             "items": [
                 "计时销毁", 
                 true
+            ]
+        }
+    ], 
+    "func_return": true, 
+    "func_rtv_name_list": [
+        {
+            "__tuple__": true, 
+            "items": [
+                "单位", 
+                "UNIT_ENTITY"
             ]
         }
     ], 
