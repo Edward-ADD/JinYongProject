@@ -1,0 +1,221 @@
+{
+    "action": [
+        {
+            "action_type": "TRAVERSE_TABLE_NEW", 
+            "args_list": [
+                {
+                    "arg_type": 100011, 
+                    "args_list": [
+                        "f646f655-ed12-42ff-ab20-cb3ab9933de6"
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "SET_VARIABLE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100030, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "ROLE_RES_KEY", 
+                                                "表格信息_资源属性", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100037, 
+                                    "args_list": [], 
+                                    "sub_type": "ITER_ROLE_RES_KEY_TABLE_VAR"
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1253008224000014, 
+                            "enable": true
+                        }, 
+                        1924690785
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1253008224000006, 
+            "enable": true, 
+            "op_arg": [
+                {
+                    "arg_type": 100001, 
+                    "args_list": [
+                        true
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "op_arg_enable": [
+                true
+            ]
+        }
+    ], 
+    "call_enabled": true, 
+    "condition": [], 
+    "enabled": true, 
+    "event": [
+        {
+            "args_list": [], 
+            "element_id": 1253008224000002, 
+            "enable": true, 
+            "event_type": "INIT_FINISHED"
+        }
+    ], 
+    "group_id": "iQp+-3mCEfCFZjGIHbLTVv", 
+    "p_trigger_id": null, 
+    "sub_trigger": {
+        "1924690785": {
+            "action": [
+                {
+                    "action_type": "SET_PLAYER_SAVE_TABLE_VALUE", 
+                    "args_list": [
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }, 
+                        {
+                            "arg_type": 100247, 
+                            "args_list": [
+                                2
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100037, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "ROLE_RES_KEY", 
+                                                "表格信息_资源属性", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }
+                            ], 
+                            "sub_type": "GET_ROLE_RES_NAME"
+                        }, 
+                        {
+                            "arg_type": 100000, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [], 
+                                    "sub_type": "TRIGGER_PLAYER"
+                                }, 
+                                {
+                                    "arg_type": 100037, 
+                                    "args_list": [], 
+                                    "sub_type": "ROLE_RES_KEY_IN_EVENT"
+                                }
+                            ], 
+                            "sub_type": "GET_ROLE_RES"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1924690785000015, 
+                    "enable": true, 
+                    "op_arg": [
+                        null, 
+                        null
+                    ], 
+                    "op_arg_enable": [
+                        false, 
+                        false
+                    ]
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 100037, 
+                            "args_list": [], 
+                            "sub_type": "ROLE_RES_KEY_IN_EVENT"
+                        }, 
+                        {
+                            "arg_type": 100035, 
+                            "args_list": [
+                                "=="
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100037, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "ROLE_RES_KEY", 
+                                        "表格信息_资源属性", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": 2
+                        }
+                    ], 
+                    "condition_type": "ROLE_RES_TYPE_COMPARE", 
+                    "element_id": 1924690785000006, 
+                    "enable": true
+                }
+            ], 
+            "enabled": false, 
+            "event": [
+                {
+                    "args_list": [], 
+                    "element_id": 520634928000002, 
+                    "enable": true, 
+                    "event_type": "ROLE_RESOURCE_CHANGED"
+                }
+            ], 
+            "group_id": 0, 
+            "is_conf": true, 
+            "p_trigger_id": 1253008224, 
+            "trigger_id": 1924690785, 
+            "trigger_name": "资源_属性变化", 
+            "valid": true, 
+            "var_data": [
+                {}, 
+                {}, 
+                []
+            ]
+        }
+    }, 
+    "trigger_id": 1253008224, 
+    "trigger_name": "PlayerMoneyMessage", 
+    "valid": true, 
+    "var_data": [
+        {
+            "NEW_TIMER": {}, 
+            "ROLE_RES_KEY": {
+                "表格信息_资源属性": ""
+            }
+        }, 
+        {
+            "表格信息_资源属性": 0
+        }, 
+        [
+            "表格信息_资源属性"
+        ]
+    ]
+}

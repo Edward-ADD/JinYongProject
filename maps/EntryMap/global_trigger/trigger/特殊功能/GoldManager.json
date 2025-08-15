@@ -27,8 +27,7 @@
                                         481902661, 
                                         1891733772, 
                                         360558660, 
-                                        1536234076, 
-                                        998949587
+                                        1536234076
                                     ], 
                                     "sub_type": 1
                                 }, 
@@ -124,12 +123,12 @@
                                 {
                                     "arg_type": 100022, 
                                     "args_list": [
+                                        998949587, 
                                         1365103408, 
                                         442381105, 
                                         777146441, 
                                         1460671065, 
                                         1869299786, 
-                                        1538277877, 
                                         787952300
                                     ], 
                                     "sub_type": 1
@@ -270,7 +269,8 @@
             "bp": false, 
             "element_id": 640385090000009, 
             "enable": true
-        }
+        }, 
+        1990067042
     ], 
     "call_enabled": true, 
     "condition": [], 
@@ -1781,34 +1781,27 @@
         "787952300": {
             "action": [
                 {
-                    "action_type": "ROLE_CHANGE_RES", 
+                    "action_type": "KILL_UNIT", 
                     "args_list": [
                         {
-                            "arg_type": 100025, 
+                            "arg_type": 100006, 
+                            "args_list": [
+                                1
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100006, 
                             "args_list": [], 
-                            "sub_type": "TRIGGER_PLAYER"
-                        }, 
-                        {
-                            "arg_type": 100037, 
-                            "args_list": [
-                                "hj+g3yr6EfCUEje3J23GgV"
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100002, 
-                            "args_list": [
-                                8000
-                            ], 
-                            "sub_type": 1
+                            "sub_type": "NONE_UNIT"
                         }
                     ], 
                     "bp": false, 
-                    "element_id": 787952300000058, 
+                    "element_id": 787952300000064, 
                     "enable": true
                 }
             ], 
-            "call_enabled": false, 
+            "call_enabled": true, 
             "condition": [], 
             "enabled": false, 
             "event": [
@@ -1817,7 +1810,7 @@
                         {
                             "arg_type": 200220, 
                             "args_list": [
-                                75
+                                81
                             ], 
                             "sub_type": 1
                         }
@@ -1831,7 +1824,7 @@
             "is_conf": true, 
             "p_trigger_id": 640385090, 
             "trigger_id": 787952300, 
-            "trigger_name": "子触发器_6", 
+            "trigger_name": "杀死水晶", 
             "valid": true, 
             "var_data": [
                 {}, 
@@ -3349,103 +3342,6 @@
                 []
             ]
         }, 
-        "1538277877": {
-            "action": [
-                {
-                    "action_type": "UNIT_ADD_ABILITY", 
-                    "args_list": [
-                        {
-                            "arg_type": 100006, 
-                            "args_list": [
-                                {
-                                    "arg_type": 100025, 
-                                    "args_list": [], 
-                                    "sub_type": "TRIGGER_PLAYER"
-                                }, 
-                                {
-                                    "arg_type": 100003, 
-                                    "args_list": [
-                                        "玩家的单位角色"
-                                    ], 
-                                    "sub_type": 1
-                                }
-                            ], 
-                            "sub_type": "GET_UNIT_ENTITY_KV"
-                        }, 
-                        {
-                            "arg_type": 100182, 
-                            "args_list": [
-                                2
-                            ], 
-                            "sub_type": 1
-                        }, 
-                        {
-                            "arg_type": 100039, 
-                            "args_list": [
-                                134226991
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "bp": false, 
-                    "element_id": 1538277877000576, 
-                    "enable": true, 
-                    "op_arg": [
-                        null, 
-                        null, 
-                        null
-                    ], 
-                    "op_arg_enable": [
-                        false, 
-                        false, 
-                        false
-                    ]
-                }
-            ], 
-            "call_enabled": true, 
-            "condition": [], 
-            "enabled": false, 
-            "event": [
-                {
-                    "args_list": [
-                        {
-                            "arg_type": 200220, 
-                            "args_list": [
-                                81
-                            ], 
-                            "sub_type": 1
-                        }
-                    ], 
-                    "element_id": 1538277877000001, 
-                    "enable": true, 
-                    "event_type": "KEYBOARD_KEY_DOWN_EVENT"
-                }
-            ], 
-            "group_id": 0, 
-            "is_conf": true, 
-            "p_trigger_id": 640385090, 
-            "trigger_id": 1538277877, 
-            "trigger_name": "复活玩家", 
-            "valid": true, 
-            "var_data": [
-                {
-                    "NEW_TIMER": {
-                        "提取随机点": -1
-                    }, 
-                    "UNIT_ENTITY": {
-                        "地雷单位": 0
-                    }
-                }, 
-                {
-                    "地雷单位": 0, 
-                    "提取随机点": 0
-                }, 
-                [
-                    "提取随机点", 
-                    "地雷单位"
-                ]
-            ]
-        }, 
         "1710407750": {
             "action": [
                 {
@@ -3977,7 +3873,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 1869299786000468, 
-                    "enable": false
+                    "enable": true
                 }, 
                 {
                     "action_type": "ADD_ATTR", 
@@ -4071,7 +3967,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 1869299786000500, 
-                    "enable": false
+                    "enable": true
                 }, 
                 {
                     "action_type": "ADD_ATTR", 
@@ -4118,7 +4014,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 1869299786000515, 
-                    "enable": false
+                    "enable": true
                 }, 
                 {
                     "action_type": "ADD_ATTR", 
@@ -4165,7 +4061,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 1869299786000344, 
-                    "enable": false
+                    "enable": true
                 }, 
                 {
                     "action_type": "ADD_ATTR", 
@@ -4212,7 +4108,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 1869299786000382, 
-                    "enable": false
+                    "enable": true
                 }, 
                 {
                     "action_type": "ADD_ATTR", 
@@ -4259,7 +4155,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 1869299786000387, 
-                    "enable": false
+                    "enable": true
                 }, 
                 {
                     "action_type": "ADD_ATTR", 
@@ -4306,7 +4202,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 1869299786000392, 
-                    "enable": false
+                    "enable": true
                 }, 
                 {
                     "action_type": "ADD_ATTR", 
@@ -4353,7 +4249,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 1869299786000397, 
-                    "enable": false
+                    "enable": true
                 }, 
                 {
                     "action_type": "ADD_ATTR", 
@@ -4400,7 +4296,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 1869299786000402, 
-                    "enable": false
+                    "enable": true
                 }, 
                 {
                     "action_type": "ADD_ATTR", 
@@ -4447,7 +4343,7 @@
                     ], 
                     "bp": false, 
                     "element_id": 1869299786000462, 
-                    "enable": false
+                    "enable": true
                 }
             ], 
             "call_enabled": true, 
@@ -4573,6 +4469,60 @@
                 {
                     "INTEGER": {}
                 }, 
+                {}, 
+                []
+            ]
+        }, 
+        "1990067042": {
+            "action": [
+                {
+                    "action_type": "KILL_UNIT", 
+                    "args_list": [
+                        {
+                            "arg_type": 100006, 
+                            "args_list": [
+                                1
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100006, 
+                            "args_list": [], 
+                            "sub_type": "NONE_UNIT"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1990067042000007, 
+                    "enable": true
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": false, 
+            "event": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 200220, 
+                            "args_list": [
+                                81
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "element_id": 1990067042000002, 
+                    "enable": true, 
+                    "event_type": "KEYBOARD_KEY_DOWN_EVENT"
+                }
+            ], 
+            "group_id": 0, 
+            "is_conf": true, 
+            "p_trigger_id": 640385090, 
+            "trigger_id": 1990067042, 
+            "trigger_name": "子触发器_14", 
+            "valid": true, 
+            "var_data": [
+                {}, 
                 {}, 
                 []
             ]
