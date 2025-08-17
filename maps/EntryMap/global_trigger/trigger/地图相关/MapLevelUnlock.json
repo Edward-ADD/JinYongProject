@@ -1107,69 +1107,119 @@
                                                 {
                                                     "args_list": [
                                                         {
-                                                            "arg_type": 100002, 
+                                                            "arg_type": 100001, 
                                                             "args_list": [
                                                                 {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "INTEGER", 
-                                                                        "循环难度选择i值", 
-                                                                        "local"
-                                                                    ]
+                                                                    "arg_type": 100025, 
+                                                                    "args_list": [], 
+                                                                    "sub_type": "TRIGGER_PLAYER"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100247, 
+                                                                    "args_list": [
+                                                                        1
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100003, 
+                                                                            "args_list": [
+                                                                                "难度"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100003, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100002, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "INTEGER", 
+                                                                                                "循环难度选择i值", 
+                                                                                                "local"
+                                                                                            ]
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": 6
+                                                                                }
+                                                                            ], 
+                                                                            "op_arg": [
+                                                                                {
+                                                                                    "arg_type": 100002, 
+                                                                                    "args_list": [
+                                                                                        0
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }
+                                                                            ], 
+                                                                            "op_arg_enable": [
+                                                                                false
+                                                                            ], 
+                                                                            "sub_type": "INT_TO_STR"
+                                                                        }
+                                                                    ], 
+                                                                    "op_arg": [
+                                                                        null, 
+                                                                        null, 
+                                                                        null, 
+                                                                        null, 
+                                                                        null, 
+                                                                        null, 
+                                                                        null, 
+                                                                        null
+                                                                    ], 
+                                                                    "op_arg_enable": [
+                                                                        false, 
+                                                                        false, 
+                                                                        false, 
+                                                                        false, 
+                                                                        false, 
+                                                                        false, 
+                                                                        false, 
+                                                                        false
+                                                                    ], 
+                                                                    "sub_type": "STR_JOIN"
                                                                 }
                                                             ], 
-                                                            "sub_type": 6
+                                                            "op_arg": [
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        "是否解锁"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                null
+                                                            ], 
+                                                            "op_arg_enable": [
+                                                                true, 
+                                                                false
+                                                            ], 
+                                                            "sub_type": "GET_PLAYER_SAVE_TABLE_VALUE_BOOLEAN"
                                                         }, 
                                                         {
-                                                            "arg_type": 100015, 
+                                                            "arg_type": 100035, 
                                                             "args_list": [
-                                                                ">"
+                                                                "=="
                                                             ], 
                                                             "sub_type": 1
                                                         }, 
                                                         {
-                                                            "arg_type": 100002, 
+                                                            "arg_type": 100001, 
                                                             "args_list": [
-                                                                1
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "condition_type": "FLOAT_COMPARE", 
-                                                    "element_id": 1592787813000004, 
-                                                    "enable": true
-                                                }
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100022, 
-                                            "args_list": [
-                                                {
-                                                    "action_type": "SEND_CUSTOM_EVENT", 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100238, 
-                                                            "args_list": [
-                                                                1826902038
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100025, 
-                                                            "args_list": [], 
-                                                            "sub_type": "TRIGGER_PLAYER"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                "该难度还未解锁噢！"
+                                                                true
                                                             ], 
                                                             "sub_type": 1
                                                         }
                                                     ], 
-                                                    "bp": false, 
-                                                    "element_id": 1592787813000005, 
+                                                    "condition_type": "BOOL_COMPARE", 
+                                                    "element_id": 1592787813000029, 
                                                     "enable": true
                                                 }
                                             ], 
@@ -1212,10 +1262,43 @@
                                                 }
                                             ], 
                                             "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100022, 
+                                            "args_list": [
+                                                {
+                                                    "action_type": "SEND_CUSTOM_EVENT", 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100238, 
+                                                            "args_list": [
+                                                                1826902038
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100025, 
+                                                            "args_list": [], 
+                                                            "sub_type": "TRIGGER_PLAYER"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "该难度还未解锁噢！"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "bp": false, 
+                                                    "element_id": 1592787813000066, 
+                                                    "enable": true
+                                                }
+                                            ], 
+                                            "sub_type": 1
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 1592787813000013, 
+                                    "element_id": 1592787813000019, 
                                     "enable": true, 
                                     "fake_op": [
                                         2

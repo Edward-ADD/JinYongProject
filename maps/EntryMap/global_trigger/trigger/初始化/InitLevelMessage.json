@@ -1239,6 +1239,104 @@
                             "arg_type": 100022, 
                             "args_list": [
                                 {
+                                    "action_type": "SET_PLAYER_SAVE_TABLE_VALUE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100240, 
+                                                    "args_list": [
+                                                        "触发事件的玩家"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_CUS_EVENT_PARAM"
+                                        }, 
+                                        {
+                                            "arg_type": 100247, 
+                                            "args_list": [
+                                                18
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                "是否已跳过教程"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100001, 
+                                            "args_list": [
+                                                false
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 536466284000597, 
+                                    "enable": true, 
+                                    "op_arg": [
+                                        null, 
+                                        null
+                                    ], 
+                                    "op_arg_enable": [
+                                        false, 
+                                        false
+                                    ]
+                                }, 
+                                {
+                                    "action_type": "SET_PLAYER_SAVE_TABLE_VALUE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100240, 
+                                                    "args_list": [
+                                                        "触发事件的玩家"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_CUS_EVENT_PARAM"
+                                        }, 
+                                        {
+                                            "arg_type": 100247, 
+                                            "args_list": [
+                                                18
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                "流程表开关记录"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100011, 
+                                            "args_list": [], 
+                                            "sub_type": "GET_NEW_TABLE"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 536466284000077, 
+                                    "enable": true, 
+                                    "op_arg": [
+                                        null, 
+                                        null
+                                    ], 
+                                    "op_arg_enable": [
+                                        false, 
+                                        false
+                                    ]
+                                }, 
+                                {
                                     "action_type": "TRAVERSE_TABLE_NEW", 
                                     "args_list": [
                                         {
@@ -1276,8 +1374,10 @@
                                                         }, 
                                                         {
                                                             "arg_type": 100003, 
-                                                            "args_list": [], 
-                                                            "sub_type": "ITER_STRING_TABLE_VAR"
+                                                            "args_list": [
+                                                                "流程表开关记录"
+                                                            ], 
+                                                            "sub_type": 1
                                                         }, 
                                                         {
                                                             "arg_type": 100001, 
@@ -1288,14 +1388,18 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 536466284000077, 
+                                                    "element_id": 536466284000633, 
                                                     "enable": true, 
                                                     "op_arg": [
-                                                        null, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [], 
+                                                            "sub_type": "ITER_STRING_TABLE_VAR"
+                                                        }, 
                                                         null
                                                     ], 
                                                     "op_arg_enable": [
-                                                        false, 
+                                                        true, 
                                                         false
                                                     ]
                                                 }
@@ -1449,7 +1553,7 @@
                                                         {
                                                             "arg_type": 100015, 
                                                             "args_list": [
-                                                                "<"
+                                                                "!="
                                                             ], 
                                                             "sub_type": 1
                                                         }, 
@@ -1478,78 +1582,102 @@
                                             "arg_type": 100022, 
                                             "args_list": [
                                                 {
-                                                    "action_type": "SET_VARIABLE", 
+                                                    "action_type": "SET_PLAYER_SAVE_TABLE_VALUE", 
                                                     "args_list": [
                                                         {
-                                                            "arg_type": 100030, 
+                                                            "arg_type": 100025, 
                                                             "args_list": [
                                                                 {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "INTEGER", 
-                                                                        "提取表格差值", 
-                                                                        "local"
-                                                                    ]
+                                                                    "arg_type": 100240, 
+                                                                    "args_list": [
+                                                                        "触发事件的玩家"
+                                                                    ], 
+                                                                    "sub_type": 1
                                                                 }
+                                                            ], 
+                                                            "sub_type": "GET_CUS_EVENT_PARAM"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100247, 
+                                                            "args_list": [
+                                                                18
                                                             ], 
                                                             "sub_type": 1
                                                         }, 
                                                         {
-                                                            "arg_type": 100002, 
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "是否已跳过教程"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100001, 
+                                                            "args_list": [
+                                                                false
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "bp": false, 
+                                                    "element_id": 536466284000652, 
+                                                    "enable": true, 
+                                                    "op_arg": [
+                                                        null, 
+                                                        null
+                                                    ], 
+                                                    "op_arg_enable": [
+                                                        false, 
+                                                        false
+                                                    ]
+                                                }, 
+                                                {
+                                                    "action_type": "SET_PLAYER_SAVE_TABLE_VALUE", 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100025, 
                                                             "args_list": [
                                                                 {
-                                                                    "arg_type": 100002, 
+                                                                    "arg_type": 100240, 
                                                                     "args_list": [
-                                                                        {
-                                                                            "arg_type": 100011, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "arg_type": 100025, 
-                                                                                    "args_list": [
-                                                                                        {
-                                                                                            "arg_type": 100240, 
-                                                                                            "args_list": [
-                                                                                                "触发事件的玩家"
-                                                                                            ], 
-                                                                                            "sub_type": 1
-                                                                                        }
-                                                                                    ], 
-                                                                                    "sub_type": "GET_CUS_EVENT_PARAM"
-                                                                                }, 
-                                                                                {
-                                                                                    "arg_type": 100247, 
-                                                                                    "args_list": [
-                                                                                        18
-                                                                                    ], 
-                                                                                    "sub_type": 1
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": "GET_PLAYER_SAVE_DATA_TABLE_VALUE"
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "GET_TABLE_LENGTH"
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100016, 
-                                                                    "args_list": [
-                                                                        "+"
-                                                                    ], 
-                                                                    "sub_type": 1
-                                                                }, 
-                                                                {
-                                                                    "arg_type": 100002, 
-                                                                    "args_list": [
-                                                                        1
+                                                                        "触发事件的玩家"
                                                                     ], 
                                                                     "sub_type": 1
                                                                 }
                                                             ], 
-                                                            "sub_type": "MATH_OPERATION"
+                                                            "sub_type": "GET_CUS_EVENT_PARAM"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100247, 
+                                                            "args_list": [
+                                                                18
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "流程表开关记录"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100011, 
+                                                            "args_list": [], 
+                                                            "sub_type": "GET_NEW_TABLE"
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 105742950000486, 
-                                                    "enable": false
+                                                    "element_id": 536466284000665, 
+                                                    "enable": true, 
+                                                    "op_arg": [
+                                                        null, 
+                                                        null
+                                                    ], 
+                                                    "op_arg_enable": [
+                                                        false, 
+                                                        false
+                                                    ]
                                                 }, 
                                                 {
                                                     "action_type": "TRAVERSE_TABLE_NEW", 
@@ -1589,8 +1717,10 @@
                                                                         }, 
                                                                         {
                                                                             "arg_type": 100003, 
-                                                                            "args_list": [], 
-                                                                            "sub_type": "ITER_STRING_TABLE_VAR"
+                                                                            "args_list": [
+                                                                                "流程表开关记录"
+                                                                            ], 
+                                                                            "sub_type": 1
                                                                         }, 
                                                                         {
                                                                             "arg_type": 100001, 
@@ -1601,14 +1731,18 @@
                                                                         }
                                                                     ], 
                                                                     "bp": false, 
-                                                                    "element_id": 536466284000203, 
+                                                                    "element_id": 536466284000684, 
                                                                     "enable": true, 
                                                                     "op_arg": [
-                                                                        null, 
+                                                                        {
+                                                                            "arg_type": 100003, 
+                                                                            "args_list": [], 
+                                                                            "sub_type": "ITER_STRING_TABLE_VAR"
+                                                                        }, 
                                                                         null
                                                                     ], 
                                                                     "op_arg_enable": [
-                                                                        false, 
+                                                                        true, 
                                                                         false
                                                                     ]
                                                                 }
@@ -1617,7 +1751,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 536466284000197, 
+                                                    "element_id": 536466284000678, 
                                                     "enable": true, 
                                                     "op_arg": [
                                                         {
@@ -2425,7 +2559,7 @@
                     ]
                 }
             ], 
-            "call_enabled": true, 
+            "call_enabled": false, 
             "condition": [], 
             "enabled": false, 
             "event": [
