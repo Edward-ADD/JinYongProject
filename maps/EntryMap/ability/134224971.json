@@ -12,11 +12,15 @@
         }, 
         "827432962": {
             "variable_dict": {
+                "MOVER_ENTITY": {
+                    "\u51b2\u523a\u8fd0\u52a8\u5668": 0
+                }, 
                 "PROJECTILE_ENTITY": {
                     "\u8036\u5f8b\u8f9b\u51b2\u950b\u7279\u6548\u6295\u5c04\u7269": 0
                 }
             }, 
             "variable_length_dict": {
+                "\u51b2\u523a\u8fd0\u52a8\u5668": 0, 
                 "\u8036\u5f8b\u8f9b\u51b2\u950b\u7279\u6548\u6295\u5c04\u7269": 0
             }
         }
@@ -694,7 +698,7 @@
                         false, 
                         false, 
                         false, 
-                        false, 
+                        true, 
                         false, 
                         false, 
                         false, 
@@ -705,8 +709,22 @@
                     ]
                 }, 
                 {
-                    "action_type": "CREATE_STRAIGHT_MOVER", 
+                    "action_type": "CREATE_STRAIGHT_MOVER_SAVE", 
                     "args_list": [
+                        {
+                            "arg_type": 100263, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "MOVER_ENTITY", 
+                                        "\u51b2\u523a\u8fd0\u52a8\u5668", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": 6
+                        }, 
                         {
                             "arg_type": 100006, 
                             "args_list": [], 
@@ -772,16 +790,19 @@
                                             "arg_type": 100263, 
                                             "args_list": [
                                                 {
-                                                    "arg_type": 100006, 
-                                                    "args_list": [], 
-                                                    "sub_type": "ABILITY_OWNER"
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "MOVER_ENTITY", 
+                                                        "\u51b2\u523a\u8fd0\u52a8\u5668", 
+                                                        "local"
+                                                    ]
                                                 }
                                             ], 
-                                            "sub_type": "GET_UNIT_MOVER"
+                                            "sub_type": 6
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 827432962000216, 
+                                    "element_id": 827432962970939, 
                                     "enable": true
                                 }, 
                                 {
@@ -801,7 +822,7 @@
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 827432962000227, 
+                                    "element_id": 827432962970940, 
                                     "enable": true
                                 }
                             ], 
@@ -871,7 +892,7 @@
                                     ], 
                                     "bp": false, 
                                     "call_rt_arg_idxes": [], 
-                                    "element_id": 1948413954970908, 
+                                    "element_id": 827432962970941, 
                                     "enable": true
                                 }, 
                                 {
@@ -891,7 +912,7 @@
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 827432962000184, 
+                                    "element_id": 827432962970942, 
                                     "enable": true, 
                                     "op_arg": [
                                         null, 
@@ -999,7 +1020,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 827432962000322, 
+                                                    "element_id": 827432962970943, 
                                                     "enable": true
                                                 }, 
                                                 {
@@ -1019,7 +1040,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 827432962000323, 
+                                                    "element_id": 827432962970944, 
                                                     "enable": true
                                                 }
                                             ], 
@@ -1061,7 +1082,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 827432962000326, 
+                                                    "element_id": 827432962970945, 
                                                     "enable": true
                                                 }, 
                                                 {
@@ -1081,7 +1102,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 827432962000335, 
+                                                    "element_id": 827432962970946, 
                                                     "enable": true
                                                 }, 
                                                 {
@@ -1100,7 +1121,7 @@
                                                         }
                                                     ], 
                                                     "bp": false, 
-                                                    "element_id": 827432962000355, 
+                                                    "element_id": 827432962970947, 
                                                     "enable": true
                                                 }
                                             ], 
@@ -1113,7 +1134,7 @@
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 964726788000107, 
+                                    "element_id": 827432962970948, 
                                     "enable": true, 
                                     "fake_op": [
                                         8
@@ -1196,8 +1217,8 @@
                     "element_id": 827432962000058, 
                     "enable": true, 
                     "fake_op": [
-                        8, 
-                        9
+                        9, 
+                        10
                     ], 
                     "local_var": {
                         "__tuple__": true, 
@@ -1271,7 +1292,7 @@
                         true, 
                         false, 
                         false, 
-                        false, 
+                        true, 
                         false, 
                         false, 
                         false, 
@@ -1300,15 +1321,20 @@
             "valid": true, 
             "var_data": [
                 {
+                    "MOVER_ENTITY": {
+                        "\u51b2\u523a\u8fd0\u52a8\u5668": 0
+                    }, 
                     "PROJECTILE_ENTITY": {
                         "\u8036\u5f8b\u8f9b\u51b2\u950b\u7279\u6548\u6295\u5c04\u7269": 0
                     }
                 }, 
                 {
+                    "\u51b2\u523a\u8fd0\u52a8\u5668": 0, 
                     "\u8036\u5f8b\u8f9b\u51b2\u950b\u7279\u6548\u6295\u5c04\u7269": 0
                 }, 
                 [
-                    "\u8036\u5f8b\u8f9b\u51b2\u950b\u7279\u6548\u6295\u5c04\u7269"
+                    "\u8036\u5f8b\u8f9b\u51b2\u950b\u7279\u6548\u6295\u5c04\u7269", 
+                    "\u51b2\u523a\u8fd0\u52a8\u5668"
                 ]
             ]
         }
