@@ -3,6 +3,7 @@
         462058119, 
         1825653364, 
         600961653, 
+        843084643, 
         {
             "action_type": "STORAGE_BOX", 
             "args_list": [
@@ -431,6 +432,35 @@
                                             ], 
                                             "bp": false, 
                                             "element_id": 309977731667440, 
+                                            "enable": true
+                                        }, 
+                                        {
+                                            "action_type": "SET_VARIABLE", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100030, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "UI_COMP", 
+                                                                "UI_详细信息点数所需", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100070, 
+                                                    "args_list": [
+                                                        "56ef833d-e9a6-4c10-980f-60996d6845c7"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 309977731667492, 
                                             "enable": true
                                         }
                                     ], 
@@ -2427,6 +2457,61 @@
                                         {
                                             "arg_type": 100003, 
                                             "args_list": [
+                                                "剩余天赋点数"
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                0
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 462058119000126, 
+                                    "enable": true, 
+                                    "op_arg": [
+                                        {
+                                            "arg_type": 100002, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "INTEGER", 
+                                                        "循环天赋树交互i值", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 6
+                                        }, 
+                                        null
+                                    ], 
+                                    "op_arg_enable": [
+                                        false, 
+                                        false
+                                    ]
+                                }, 
+                                {
+                                    "action_type": "SET_PLAYER_SAVE_TABLE_VALUE", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [], 
+                                            "sub_type": "TRIGGER_PLAYER"
+                                        }, 
+                                        {
+                                            "arg_type": 100247, 
+                                            "args_list": [
+                                                3
+                                            ], 
+                                            "sub_type": 1
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
                                                 "已使用的总点数"
                                             ], 
                                             "sub_type": 1
@@ -2482,7 +2567,7 @@
                                         {
                                             "arg_type": 100003, 
                                             "args_list": [
-                                                "剩余天赋点数"
+                                                "天赋总等级"
                                             ], 
                                             "sub_type": 1
                                         }, 
@@ -2495,7 +2580,7 @@
                                         }
                                     ], 
                                     "bp": false, 
-                                    "element_id": 462058119000126, 
+                                    "element_id": 462058119000240, 
                                     "enable": true, 
                                     "op_arg": [
                                         {
@@ -2992,6 +3077,59 @@
                     "bp": false, 
                     "element_id": 462058119000161, 
                     "enable": true
+                }, 
+                {
+                    "action_type": "ROLE_SET_RES", 
+                    "args_list": [
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }, 
+                        {
+                            "arg_type": 100037, 
+                            "args_list": [
+                                "iFHgl315EfC6-MmqWT5l4T"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [], 
+                                    "sub_type": "TRIGGER_PLAYER"
+                                }, 
+                                {
+                                    "arg_type": 100247, 
+                                    "args_list": [
+                                        3
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        "天赋总等级"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "op_arg": [
+                                null, 
+                                null
+                            ], 
+                            "op_arg_enable": [
+                                false, 
+                                false
+                            ], 
+                            "sub_type": "GET_PLAYER_SAVE_TABLE_VALUE_INTEGER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 462058119000253, 
+                    "enable": true
                 }
             ], 
             "call_enabled": true, 
@@ -3020,6 +3158,131 @@
         "600961653": {
             "action": [
                 {
+                    "action_type": "SET_PLAYER_SAVE_TABLE_VALUE", 
+                    "args_list": [
+                        {
+                            "arg_type": 100025, 
+                            "args_list": [], 
+                            "sub_type": "TRIGGER_PLAYER"
+                        }, 
+                        {
+                            "arg_type": 100247, 
+                            "args_list": [
+                                3
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "已使用的总点数"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100000, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [], 
+                                            "sub_type": "TRIGGER_PLAYER"
+                                        }, 
+                                        {
+                                            "arg_type": 100037, 
+                                            "args_list": [
+                                                "p9mF9Fx2EfCX8+u2yNKpEq"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "sub_type": "GET_ROLE_RES"
+                                }
+                            ], 
+                            "sub_type": "F2I"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1235755654000067, 
+                    "enable": true, 
+                    "op_arg": [
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "INTEGER", 
+                                        "循环天赋树交互i值", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": 6
+                        }, 
+                        null
+                    ], 
+                    "op_arg_enable": [
+                        false, 
+                        false
+                    ]
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 100037, 
+                            "args_list": [], 
+                            "sub_type": "ROLE_RES_KEY_IN_EVENT"
+                        }, 
+                        {
+                            "arg_type": 100035, 
+                            "args_list": [
+                                "=="
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100037, 
+                            "args_list": [
+                                "p9mF9Fx2EfCX8+u2yNKpEq"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "condition_type": "ROLE_RES_TYPE_COMPARE", 
+                    "element_id": 520634928000005, 
+                    "enable": true
+                }
+            ], 
+            "enabled": false, 
+            "event": [
+                {
+                    "args_list": [], 
+                    "element_id": 1825653364000003, 
+                    "enable": true, 
+                    "event_type": "ROLE_RESOURCE_CHANGED"
+                }
+            ], 
+            "group_id": 0, 
+            "is_conf": true, 
+            "p_trigger_id": 309977731, 
+            "trigger_id": 600961653, 
+            "trigger_name": "天赋树_天赋树已使用点数", 
+            "valid": true, 
+            "var_data": [
+                {}, 
+                {}, 
+                []
+            ]
+        }, 
+        "843084643": {
+            "action": [
+                {
                     "action_type": "SET_UI_COMP_TEXT", 
                     "args_list": [
                         {
@@ -3040,7 +3303,7 @@
                                 {
                                     "arg_type": 100003, 
                                     "args_list": [
-                                        "已使用的总点数："
+                                        "当前天赋总等级："
                                     ], 
                                     "sub_type": 1
                                 }, 
@@ -3058,7 +3321,7 @@
                                                 {
                                                     "arg_type": 100037, 
                                                     "args_list": [
-                                                        "p9mF9Fx2EfCX8+u2yNKpEq"
+                                                        "iFHgl315EfC6-MmqWT5l4T"
                                                     ], 
                                                     "sub_type": 1
                                                 }
@@ -3127,7 +3390,7 @@
                         {
                             "arg_type": 100003, 
                             "args_list": [
-                                "已使用的总点数"
+                                "天赋总等级"
                             ], 
                             "sub_type": 1
                         }, 
@@ -3145,7 +3408,7 @@
                                         {
                                             "arg_type": 100037, 
                                             "args_list": [
-                                                "p9mF9Fx2EfCX8+u2yNKpEq"
+                                                "iFHgl315EfC6-MmqWT5l4T"
                                             ], 
                                             "sub_type": 1
                                         }
@@ -3221,7 +3484,7 @@
                         {
                             "arg_type": 100037, 
                             "args_list": [
-                                "p9mF9Fx2EfCX8+u2yNKpEq"
+                                "iFHgl315EfC6-MmqWT5l4T"
                             ], 
                             "sub_type": 1
                         }
@@ -3243,8 +3506,8 @@
             "group_id": 0, 
             "is_conf": true, 
             "p_trigger_id": 309977731, 
-            "trigger_id": 600961653, 
-            "trigger_name": "天赋树_天赋树已使用点数", 
+            "trigger_id": 843084643, 
+            "trigger_name": "天赋树_天赋树总等级变化", 
             "valid": true, 
             "var_data": [
                 {}, 
@@ -3771,9 +4034,66 @@
                                                                         {
                                                                             "arg_type": 100002, 
                                                                             "args_list": [
-                                                                                0
+                                                                                {
+                                                                                    "arg_type": 100000, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100000, 
+                                                                                            "args_list": [
+                                                                                                100.0
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100017, 
+                                                                                            "args_list": [
+                                                                                                "+"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100000, 
+                                                                                            "args_list": [
+                                                                                                {
+                                                                                                    "arg_type": 100000, 
+                                                                                                    "args_list": [
+                                                                                                        10.0
+                                                                                                    ], 
+                                                                                                    "sub_type": 1
+                                                                                                }, 
+                                                                                                {
+                                                                                                    "arg_type": 100017, 
+                                                                                                    "args_list": [
+                                                                                                        "*"
+                                                                                                    ], 
+                                                                                                    "sub_type": 1
+                                                                                                }, 
+                                                                                                {
+                                                                                                    "arg_type": 100000, 
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100025, 
+                                                                                                            "args_list": [], 
+                                                                                                            "sub_type": "TRIGGER_PLAYER"
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100037, 
+                                                                                                            "args_list": [
+                                                                                                                "iFHgl315EfC6-MmqWT5l4T"
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "sub_type": "GET_ROLE_RES"
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": "ARITHMETIC_OPERATION"
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "ARITHMETIC_OPERATION"
+                                                                                }
                                                                             ], 
-                                                                            "sub_type": 1
+                                                                            "sub_type": "F2I"
                                                                         }
                                                                     ], 
                                                                     "condition_type": "FLOAT_COMPARE", 
@@ -4233,9 +4553,86 @@
                                                                                         {
                                                                                             "arg_type": 100002, 
                                                                                             "args_list": [
-                                                                                                -1
+                                                                                                {
+                                                                                                    "arg_type": 100002, 
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100000, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "arg_type": 100000, 
+                                                                                                                    "args_list": [
+                                                                                                                        100.0
+                                                                                                                    ], 
+                                                                                                                    "sub_type": 1
+                                                                                                                }, 
+                                                                                                                {
+                                                                                                                    "arg_type": 100017, 
+                                                                                                                    "args_list": [
+                                                                                                                        "+"
+                                                                                                                    ], 
+                                                                                                                    "sub_type": 1
+                                                                                                                }, 
+                                                                                                                {
+                                                                                                                    "arg_type": 100000, 
+                                                                                                                    "args_list": [
+                                                                                                                        {
+                                                                                                                            "arg_type": 100000, 
+                                                                                                                            "args_list": [
+                                                                                                                                10.0
+                                                                                                                            ], 
+                                                                                                                            "sub_type": 1
+                                                                                                                        }, 
+                                                                                                                        {
+                                                                                                                            "arg_type": 100017, 
+                                                                                                                            "args_list": [
+                                                                                                                                "*"
+                                                                                                                            ], 
+                                                                                                                            "sub_type": 1
+                                                                                                                        }, 
+                                                                                                                        {
+                                                                                                                            "arg_type": 100000, 
+                                                                                                                            "args_list": [
+                                                                                                                                {
+                                                                                                                                    "arg_type": 100025, 
+                                                                                                                                    "args_list": [], 
+                                                                                                                                    "sub_type": "TRIGGER_PLAYER"
+                                                                                                                                }, 
+                                                                                                                                {
+                                                                                                                                    "arg_type": 100037, 
+                                                                                                                                    "args_list": [
+                                                                                                                                        "iFHgl315EfC6-MmqWT5l4T"
+                                                                                                                                    ], 
+                                                                                                                                    "sub_type": 1
+                                                                                                                                }
+                                                                                                                            ], 
+                                                                                                                            "sub_type": "GET_ROLE_RES"
+                                                                                                                        }
+                                                                                                                    ], 
+                                                                                                                    "sub_type": "ARITHMETIC_OPERATION"
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": "ARITHMETIC_OPERATION"
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "sub_type": "F2I"
+                                                                                                }, 
+                                                                                                {
+                                                                                                    "arg_type": 100016, 
+                                                                                                    "args_list": [
+                                                                                                        "*"
+                                                                                                    ], 
+                                                                                                    "sub_type": 1
+                                                                                                }, 
+                                                                                                {
+                                                                                                    "arg_type": 100002, 
+                                                                                                    "args_list": [
+                                                                                                        -1
+                                                                                                    ], 
+                                                                                                    "sub_type": 1
+                                                                                                }
                                                                                             ], 
-                                                                                            "sub_type": 1
+                                                                                            "sub_type": "MATH_OPERATION"
                                                                                         }
                                                                                     ], 
                                                                                     "bp": false, 
@@ -4260,13 +4657,97 @@
                                                                                         {
                                                                                             "arg_type": 100002, 
                                                                                             "args_list": [
+                                                                                                {
+                                                                                                    "arg_type": 100000, 
+                                                                                                    "args_list": [
+                                                                                                        {
+                                                                                                            "arg_type": 100000, 
+                                                                                                            "args_list": [
+                                                                                                                100.0
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100017, 
+                                                                                                            "args_list": [
+                                                                                                                "+"
+                                                                                                            ], 
+                                                                                                            "sub_type": 1
+                                                                                                        }, 
+                                                                                                        {
+                                                                                                            "arg_type": 100000, 
+                                                                                                            "args_list": [
+                                                                                                                {
+                                                                                                                    "arg_type": 100000, 
+                                                                                                                    "args_list": [
+                                                                                                                        10.0
+                                                                                                                    ], 
+                                                                                                                    "sub_type": 1
+                                                                                                                }, 
+                                                                                                                {
+                                                                                                                    "arg_type": 100017, 
+                                                                                                                    "args_list": [
+                                                                                                                        "*"
+                                                                                                                    ], 
+                                                                                                                    "sub_type": 1
+                                                                                                                }, 
+                                                                                                                {
+                                                                                                                    "arg_type": 100000, 
+                                                                                                                    "args_list": [
+                                                                                                                        {
+                                                                                                                            "arg_type": 100025, 
+                                                                                                                            "args_list": [], 
+                                                                                                                            "sub_type": "TRIGGER_PLAYER"
+                                                                                                                        }, 
+                                                                                                                        {
+                                                                                                                            "arg_type": 100037, 
+                                                                                                                            "args_list": [
+                                                                                                                                "iFHgl315EfC6-MmqWT5l4T"
+                                                                                                                            ], 
+                                                                                                                            "sub_type": 1
+                                                                                                                        }
+                                                                                                                    ], 
+                                                                                                                    "sub_type": "GET_ROLE_RES"
+                                                                                                                }
+                                                                                                            ], 
+                                                                                                            "sub_type": "ARITHMETIC_OPERATION"
+                                                                                                        }
+                                                                                                    ], 
+                                                                                                    "sub_type": "ARITHMETIC_OPERATION"
+                                                                                                }
+                                                                                            ], 
+                                                                                            "sub_type": "F2I"
+                                                                                        }
+                                                                                    ], 
+                                                                                    "bp": false, 
+                                                                                    "element_id": 1235755654515981, 
+                                                                                    "enable": true
+                                                                                }, 
+                                                                                {
+                                                                                    "action_type": "ROLE_CHANGE_RES", 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100025, 
+                                                                                            "args_list": [], 
+                                                                                            "sub_type": "TRIGGER_PLAYER"
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100037, 
+                                                                                            "args_list": [
+                                                                                                "iFHgl315EfC6-MmqWT5l4T"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100002, 
+                                                                                            "args_list": [
                                                                                                 1
                                                                                             ], 
                                                                                             "sub_type": 1
                                                                                         }
                                                                                     ], 
                                                                                     "bp": false, 
-                                                                                    "element_id": 1235755654515981, 
+                                                                                    "element_id": 1235755654915366, 
                                                                                     "enable": true
                                                                                 }
                                                                             ], 
@@ -4911,6 +5392,148 @@
                                     "enable": true
                                 }, 
                                 {
+                                    "action_type": "SET_UI_COMP_TEXT", 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [], 
+                                            "sub_type": "TRIGGER_PLAYER"
+                                        }, 
+                                        {
+                                            "arg_type": 100070, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "UI_COMP", 
+                                                        "UI_详细信息点数所需", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": "VARIABLE"
+                                        }, 
+                                        {
+                                            "arg_type": 100003, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        "天赋所需点数："
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100000, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100000, 
+                                                                            "args_list": [
+                                                                                100.0
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100017, 
+                                                                            "args_list": [
+                                                                                "+"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100000, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100000, 
+                                                                                    "args_list": [
+                                                                                        10.0
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100017, 
+                                                                                    "args_list": [
+                                                                                        "*"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100000, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100025, 
+                                                                                            "args_list": [], 
+                                                                                            "sub_type": "TRIGGER_PLAYER"
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100037, 
+                                                                                            "args_list": [
+                                                                                                "iFHgl315EfC6-MmqWT5l4T"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "GET_ROLE_RES"
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "ARITHMETIC_OPERATION"
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "ARITHMETIC_OPERATION"
+                                                                }
+                                                            ], 
+                                                            "sub_type": "F2I"
+                                                        }
+                                                    ], 
+                                                    "op_arg": [
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                0
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "op_arg_enable": [
+                                                        false
+                                                    ], 
+                                                    "sub_type": "INT_TO_STR"
+                                                }
+                                            ], 
+                                            "op_arg": [
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null, 
+                                                null
+                                            ], 
+                                            "op_arg_enable": [
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false, 
+                                                false
+                                            ], 
+                                            "sub_type": "STR_JOIN"
+                                        }
+                                    ], 
+                                    "bp": false, 
+                                    "element_id": 1503957628515977, 
+                                    "enable": true
+                                }, 
+                                {
                                     "action_type": "IF_THEN_ELSE", 
                                     "args_list": [
                                         {
@@ -4952,9 +5575,66 @@
                                                         {
                                                             "arg_type": 100002, 
                                                             "args_list": [
-                                                                0
+                                                                {
+                                                                    "arg_type": 100000, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100000, 
+                                                                            "args_list": [
+                                                                                100.0
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100017, 
+                                                                            "args_list": [
+                                                                                "+"
+                                                                            ], 
+                                                                            "sub_type": 1
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100000, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "arg_type": 100000, 
+                                                                                    "args_list": [
+                                                                                        10.0
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100017, 
+                                                                                    "args_list": [
+                                                                                        "*"
+                                                                                    ], 
+                                                                                    "sub_type": 1
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100000, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "arg_type": 100025, 
+                                                                                            "args_list": [], 
+                                                                                            "sub_type": "TRIGGER_PLAYER"
+                                                                                        }, 
+                                                                                        {
+                                                                                            "arg_type": 100037, 
+                                                                                            "args_list": [
+                                                                                                "iFHgl315EfC6-MmqWT5l4T"
+                                                                                            ], 
+                                                                                            "sub_type": 1
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "GET_ROLE_RES"
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "ARITHMETIC_OPERATION"
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "ARITHMETIC_OPERATION"
+                                                                }
                                                             ], 
-                                                            "sub_type": 1
+                                                            "sub_type": "F2I"
                                                         }
                                                     ], 
                                                     "condition_type": "FLOAT_COMPARE", 
@@ -5034,6 +5714,47 @@
                                                     "bp": false, 
                                                     "element_id": 1503957628000183, 
                                                     "enable": true
+                                                }, 
+                                                {
+                                                    "action_type": "SET_UI_COMP_FONT_COLOR_HEX", 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100025, 
+                                                            "args_list": [], 
+                                                            "sub_type": "TRIGGER_PLAYER"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100070, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "UI_COMP", 
+                                                                        "UI_详细信息点数所需", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": "VARIABLE"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "#fe0000"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100000, 
+                                                            "args_list": [
+                                                                100.0
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "bp": false, 
+                                                    "element_id": 1503957628515986, 
+                                                    "enable": true
                                                 }
                                             ], 
                                             "sub_type": 1
@@ -5073,6 +5794,47 @@
                                                     ], 
                                                     "bp": false, 
                                                     "element_id": 1503957628000194, 
+                                                    "enable": true
+                                                }, 
+                                                {
+                                                    "action_type": "SET_UI_COMP_FONT_COLOR_HEX", 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100025, 
+                                                            "args_list": [], 
+                                                            "sub_type": "TRIGGER_PLAYER"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100070, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "UI_COMP", 
+                                                                        "UI_详细信息点数所需", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": "VARIABLE"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "#ffffff"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100000, 
+                                                            "args_list": [
+                                                                100.0
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "bp": false, 
+                                                    "element_id": 1503957628516006, 
                                                     "enable": true
                                                 }, 
                                                 {
@@ -8492,7 +9254,7 @@
                                                                         {
                                                                             "arg_type": 100037, 
                                                                             "args_list": [
-                                                                                "p9mF9Fx2EfCX8+u2yNKpEq"
+                                                                                "iFHgl315EfC6-MmqWT5l4T"
                                                                             ], 
                                                                             "sub_type": 1
                                                                         }
@@ -8520,7 +9282,7 @@
                                                                 {
                                                                     "arg_type": 100003, 
                                                                     "args_list": [
-                                                                        "解锁该层所需点数"
+                                                                        "解锁该层所需等级"
                                                                     ], 
                                                                     "sub_type": 1
                                                                 }
@@ -9024,6 +9786,7 @@
                 "UI_详细信息天赋名": "", 
                 "UI_详细信息描述文本": "", 
                 "UI_详细信息框": "", 
+                "UI_详细信息点数所需": "", 
                 "UI_详细信息特殊提示": "", 
                 "UI_详细信息等级文本": ""
             }
@@ -9041,6 +9804,7 @@
             "UI_详细信息天赋名": 0, 
             "UI_详细信息描述文本": 0, 
             "UI_详细信息框": 0, 
+            "UI_详细信息点数所需": 0, 
             "UI_详细信息特殊提示": 0, 
             "UI_详细信息等级文本": 0, 
             "循环天赋树交互i值": 0
@@ -9060,7 +9824,8 @@
             "UI_详细信息特殊提示", 
             "UI_详细信息描述文本", 
             "UI_详细信息等级文本", 
-            "UI_详细信息图标"
+            "UI_详细信息图标", 
+            "UI_详细信息点数所需"
         ]
     ]
 }
