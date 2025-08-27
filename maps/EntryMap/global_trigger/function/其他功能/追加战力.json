@@ -270,27 +270,12 @@
                     "arg_type": 100022, 
                     "args_list": [
                         {
-                            "action_type": "SET_VARIABLE", 
+                            "action_type": "IF_THEN_ELSE", 
                             "args_list": [
                                 {
-                                    "arg_type": 100030, 
+                                    "arg_type": 100021, 
                                     "args_list": [
                                         {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "STRING", 
-                                                "品级_等级类型", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100003, 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100003, 
                                             "args_list": [
                                                 {
                                                     "arg_type": 100002, 
@@ -311,9 +296,14 @@
                                                         }
                                                     ], 
                                                     "sub_type": "GET_UNIT_LEVEL"
-                                                }
-                                            ], 
-                                            "op_arg": [
+                                                }, 
+                                                {
+                                                    "arg_type": 100015, 
+                                                    "args_list": [
+                                                        ">"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
                                                 {
                                                     "arg_type": 100002, 
                                                     "args_list": [
@@ -322,114 +312,191 @@
                                                     "sub_type": 1
                                                 }
                                             ], 
-                                            "op_arg_enable": [
-                                                false
-                                            ], 
-                                            "sub_type": "INT_TO_STR"
-                                        }, 
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                "级"
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "op_arg": [
-                                        null, 
-                                        null, 
-                                        null, 
-                                        null, 
-                                        null, 
-                                        null, 
-                                        null, 
-                                        null
-                                    ], 
-                                    "op_arg_enable": [
-                                        false, 
-                                        false, 
-                                        false, 
-                                        false, 
-                                        false, 
-                                        false, 
-                                        false, 
-                                        false
-                                    ], 
-                                    "sub_type": "STR_JOIN"
-                                }
-                            ], 
-                            "bp": false, 
-                            "element_id": 798278298000257, 
-                            "enable": true
-                        }, 
-                        {
-                            "action_type": "SET_VARIABLE", 
-                            "args_list": [
-                                {
-                                    "arg_type": 100030, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "STRING", 
-                                                "品级_字母类型", 
-                                                "local"
-                                            ]
+                                            "condition_type": "FLOAT_COMPARE", 
+                                            "element_id": 979817121000061, 
+                                            "enable": true
                                         }
                                     ], 
                                     "sub_type": 1
                                 }, 
                                 {
-                                    "arg_type": 100003, 
+                                    "arg_type": 100022, 
                                     "args_list": [
                                         {
-                                            "arg_type": 100011, 
-                                            "args_list": [
-                                                "86d79e8d-8a0b-472b-a1f9-ebbc57eaf064"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100002, 
+                                            "action_type": "SET_VARIABLE", 
                                             "args_list": [
                                                 {
-                                                    "arg_type": 100006, 
+                                                    "arg_type": 100030, 
                                                     "args_list": [
                                                         {
                                                             "__tuple__": true, 
                                                             "items": [
-                                                                "UNIT_ENTITY", 
-                                                                "获得进化的单位", 
+                                                                "STRING", 
+                                                                "品级_等级类型", 
                                                                 "local"
                                                             ]
                                                         }
                                                     ], 
-                                                    "sub_type": 11
+                                                    "sub_type": 1
                                                 }, 
                                                 {
                                                     "arg_type": 100003, 
                                                     "args_list": [
-                                                        "卡牌角色ID"
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "arg_type": 100006, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "UNIT_ENTITY", 
+                                                                                        "获得进化的单位", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 11
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": "GET_UNIT_LEVEL"
+                                                                }
+                                                            ], 
+                                                            "op_arg": [
+                                                                {
+                                                                    "arg_type": 100002, 
+                                                                    "args_list": [
+                                                                        0
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "op_arg_enable": [
+                                                                false
+                                                            ], 
+                                                            "sub_type": "INT_TO_STR"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "级"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
                                                     ], 
-                                                    "sub_type": 1
+                                                    "op_arg": [
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null, 
+                                                        null
+                                                    ], 
+                                                    "op_arg_enable": [
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false, 
+                                                        false
+                                                    ], 
+                                                    "sub_type": "STR_JOIN"
                                                 }
                                             ], 
-                                            "sub_type": "GET_INTEGER_KV"
+                                            "bp": false, 
+                                            "element_id": 798278298000257, 
+                                            "enable": true
                                         }, 
                                         {
-                                            "arg_type": 100003, 
+                                            "action_type": "SET_VARIABLE", 
                                             "args_list": [
-                                                "等阶"
+                                                {
+                                                    "arg_type": 100030, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "STRING", 
+                                                                "品级_字母类型", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100011, 
+                                                            "args_list": [
+                                                                "86d79e8d-8a0b-472b-a1f9-ebbc57eaf064"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100006, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "UNIT_ENTITY", 
+                                                                                "获得进化的单位", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 11
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        "卡牌角色ID"
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }
+                                                            ], 
+                                                            "sub_type": "GET_INTEGER_KV"
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "等阶"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "GET_STRING_TABLE_VAR_ND"
+                                                }
                                             ], 
-                                            "sub_type": 1
+                                            "bp": false, 
+                                            "element_id": 798278298000586, 
+                                            "enable": true
                                         }
                                     ], 
-                                    "sub_type": "GET_STRING_TABLE_VAR_ND"
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100022, 
+                                    "args_list": [], 
+                                    "sub_type": 1
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 798278298000586, 
-                            "enable": true
+                            "element_id": 798278298000646, 
+                            "enable": true, 
+                            "fake_op": []
                         }
                     ], 
                     "sub_type": 1
@@ -1766,174 +1833,175 @@
                                 }, 
                                 {
                                     "arg_type": 100022, 
-                                    "args_list": [], 
+                                    "args_list": [
+                                        {
+                                            "action_type": "SET_VARIABLE", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100030, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "STRING", 
+                                                                "品级_文字类型", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100003, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100011, 
+                                                            "args_list": [
+                                                                "26421a8b-034b-4c7b-85a9-2ea111e0a6bc"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100002, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "INTEGER", 
+                                                                        "物品传入的叠加值", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 6
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                "物品等级"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }
+                                                    ], 
+                                                    "sub_type": "GET_STRING_TABLE_VAR_ND"
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 798278298000541, 
+                                            "enable": true
+                                        }, 
+                                        {
+                                            "action_type": "SET_VARIABLE", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100030, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "INTEGER", 
+                                                                "提取追加的战力基础值", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100011, 
+                                                            "args_list": [
+                                                                "f8eeec48-94d2-4436-8bc4-07a126a9736d"
+                                                            ], 
+                                                            "sub_type": 1
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "STRING", 
+                                                                        "追加战力的局内类型", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 2
+                                                        }, 
+                                                        {
+                                                            "arg_type": 100003, 
+                                                            "args_list": [
+                                                                {
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "STRING", 
+                                                                        "品级_文字类型", 
+                                                                        "local"
+                                                                    ]
+                                                                }
+                                                            ], 
+                                                            "sub_type": 2
+                                                        }
+                                                    ], 
+                                                    "sub_type": "GET_INTEGER_TABLE_VAR_ND"
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 798278298000558, 
+                                            "enable": true
+                                        }, 
+                                        {
+                                            "action_type": "ROLE_CHANGE_RES", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100025, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "PLAYER", 
+                                                                "追加战力的玩家", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": "VARIABLE"
+                                                }, 
+                                                {
+                                                    "arg_type": 100037, 
+                                                    "args_list": [
+                                                        "OAEkSl5PEfCk6T9w3Glaxy"
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100002, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "INTEGER", 
+                                                                "提取追加的战力基础值", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 6
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 798278298000571, 
+                                            "enable": true
+                                        }
+                                    ], 
                                     "sub_type": 1
                                 }
                             ], 
                             "bp": false, 
                             "element_id": 798278298000071, 
-                            "enable": true
-                        }, 
-                        {
-                            "action_type": "SET_VARIABLE", 
-                            "args_list": [
-                                {
-                                    "arg_type": 100030, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "STRING", 
-                                                "品级_文字类型", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100003, 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100011, 
-                                            "args_list": [
-                                                "26421a8b-034b-4c7b-85a9-2ea111e0a6bc"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100002, 
-                                            "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "INTEGER", 
-                                                        "物品传入的叠加值", 
-                                                        "local"
-                                                    ]
-                                                }
-                                            ], 
-                                            "sub_type": 6
-                                        }, 
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                "物品等级"
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "sub_type": "GET_STRING_TABLE_VAR_ND"
-                                }
-                            ], 
-                            "bp": false, 
-                            "element_id": 798278298000541, 
-                            "enable": true
-                        }, 
-                        {
-                            "action_type": "SET_VARIABLE", 
-                            "args_list": [
-                                {
-                                    "arg_type": 100030, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "INTEGER", 
-                                                "提取追加的战力基础值", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100002, 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100011, 
-                                            "args_list": [
-                                                "f8eeec48-94d2-4436-8bc4-07a126a9736d"
-                                            ], 
-                                            "sub_type": 1
-                                        }, 
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "STRING", 
-                                                        "追加战力的局内类型", 
-                                                        "local"
-                                                    ]
-                                                }
-                                            ], 
-                                            "sub_type": 2
-                                        }, 
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                {
-                                                    "__tuple__": true, 
-                                                    "items": [
-                                                        "STRING", 
-                                                        "品级_文字类型", 
-                                                        "local"
-                                                    ]
-                                                }
-                                            ], 
-                                            "sub_type": 2
-                                        }
-                                    ], 
-                                    "sub_type": "GET_INTEGER_TABLE_VAR_ND"
-                                }
-                            ], 
-                            "bp": false, 
-                            "element_id": 798278298000558, 
-                            "enable": true
-                        }, 
-                        {
-                            "action_type": "ROLE_CHANGE_RES", 
-                            "args_list": [
-                                {
-                                    "arg_type": 100025, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "PLAYER", 
-                                                "追加战力的玩家", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": "VARIABLE"
-                                }, 
-                                {
-                                    "arg_type": 100037, 
-                                    "args_list": [
-                                        "OAEkSl5PEfCk6T9w3Glaxy"
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100002, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "INTEGER", 
-                                                "提取追加的战力基础值", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": 6
-                                }
-                            ], 
-                            "bp": false, 
-                            "element_id": 798278298000571, 
                             "enable": true
                         }
                     ], 
