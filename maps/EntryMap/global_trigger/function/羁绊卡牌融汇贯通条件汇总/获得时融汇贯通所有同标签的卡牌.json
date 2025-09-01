@@ -235,40 +235,86 @@
                                         {
                                             "args_list": [
                                                 {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        [
-                                                            "STRING", 
-                                                            "提取传入技能的流派标签", 
-                                                            "local"
-                                                        ]
-                                                    ], 
-                                                    "sub_type": 2
-                                                }, 
-                                                {
-                                                    "arg_type": 100035, 
-                                                    "args_list": [
-                                                        "=="
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100003, 
+                                                    "arg_type": 100021, 
                                                     "args_list": [
                                                         {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "STRING", 
-                                                                "提取遍历技能组里的技能标签", 
-                                                                "local"
-                                                            ]
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        [
+                                                                            "STRING", 
+                                                                            "提取传入技能的流派标签", 
+                                                                            "local"
+                                                                        ]
+                                                                    ], 
+                                                                    "sub_type": 2
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100035, 
+                                                                    "args_list": [
+                                                                        "=="
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100003, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "STRING", 
+                                                                                "提取遍历技能组里的技能标签", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 2
+                                                                }
+                                                            ], 
+                                                            "condition_type": "STRING_COMPARE", 
+                                                            "element_id": 1430196505000246, 
+                                                            "enable": true
+                                                        }, 
+                                                        {
+                                                            "args_list": [
+                                                                {
+                                                                    "arg_type": 100014, 
+                                                                    "args_list": [], 
+                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100035, 
+                                                                    "args_list": [
+                                                                        "!="
+                                                                    ], 
+                                                                    "sub_type": 1
+                                                                }, 
+                                                                {
+                                                                    "arg_type": 100014, 
+                                                                    "args_list": [
+                                                                        {
+                                                                            "__tuple__": true, 
+                                                                            "items": [
+                                                                                "ABILITY", 
+                                                                                "传入流派技能", 
+                                                                                "local"
+                                                                            ]
+                                                                        }
+                                                                    ], 
+                                                                    "sub_type": 2
+                                                                }
+                                                            ], 
+                                                            "condition_type": "ABILITY_ENTITY_COMPARE", 
+                                                            "element_id": 966246695000608, 
+                                                            "enable": true
                                                         }
                                                     ], 
-                                                    "sub_type": 2
+                                                    "sub_type": 1
                                                 }
                                             ], 
-                                            "condition_type": "STRING_COMPARE", 
-                                            "element_id": 1430196505000246, 
+                                            "condition_type": "AND", 
+                                            "element_id": 966246695000589, 
                                             "enable": true
                                         }
                                     ], 
@@ -508,17 +554,8 @@
                                                             "args_list": [
                                                                 {
                                                                     "arg_type": 100014, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "ABILITY", 
-                                                                                "传入流派技能", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": 2
+                                                                    "args_list": [], 
+                                                                    "sub_type": "FOR_EACH_SELECTED_ABILITY"
                                                                 }, 
                                                                 {
                                                                     "arg_type": 100003, 
@@ -630,17 +667,8 @@
                                                     "args_list": [
                                                         {
                                                             "arg_type": 100014, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "ABILITY", 
-                                                                        "传入流派技能", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 2
+                                                            "args_list": [], 
+                                                            "sub_type": "FOR_EACH_SELECTED_ABILITY"
                                                         }
                                                     ], 
                                                     "sub_type": "ABILITY_NAME_OF_ABILITY"
@@ -682,7 +710,7 @@
                                             ], 
                                             "bp": false, 
                                             "element_id": 895414563000584, 
-                                            "enable": false
+                                            "enable": true
                                         }, 
                                         {
                                             "action_type": "SEND_CUSTOM_EVENT", 
