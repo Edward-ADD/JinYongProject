@@ -1,568 +1,6 @@
 {
     "action": [
         {
-            "action_type": "SET_VARIABLE", 
-            "args_list": [
-                {
-                    "arg_type": 100028, 
-                    "args_list": [
-                        [
-                            "TABLE", 
-                            "全局表_记录英雄品级排序表"
-                        ], 
-                        {
-                            "arg_type": 100002, 
-                            "args_list": [
-                                {
-                                    "arg_type": 100025, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "PLAYER", 
-                                                "触发的玩家", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": "VARIABLE"
-                                }
-                            ], 
-                            "sub_type": "PLAYER_ID_NUMBER"
-                        }
-                    ], 
-                    "sub_type": 1
-                }, 
-                {
-                    "arg_type": 100011, 
-                    "args_list": [], 
-                    "sub_type": "GET_NEW_TABLE"
-                }
-            ], 
-            "bp": false, 
-            "element_id": 114975616000062, 
-            "enable": true
-        }, 
-        {
-            "action_type": "TRAVERSE_TABLE_NEW", 
-            "args_list": [
-                {
-                    "arg_type": 100011, 
-                    "args_list": [
-                        "86d79e8d-8a0b-472b-a1f9-ebbc57eaf064"
-                    ], 
-                    "sub_type": 1
-                }, 
-                {
-                    "arg_type": 100022, 
-                    "args_list": [
-                        {
-                            "action_type": "SET_VARIABLE", 
-                            "args_list": [
-                                {
-                                    "arg_type": 100030, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "STRING", 
-                                                "表格信息_遍历英雄的品级", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100003, 
-                                    "args_list": [
-                                        {
-                                            "arg_type": 100011, 
-                                            "args_list": [], 
-                                            "sub_type": "ITER_TABLE_TABLE_VAR"
-                                        }, 
-                                        {
-                                            "arg_type": 100003, 
-                                            "args_list": [
-                                                "等阶"
-                                            ], 
-                                            "sub_type": 1
-                                        }
-                                    ], 
-                                    "sub_type": "GET_STRING_TABLE_VAR_1D"
-                                }
-                            ], 
-                            "bp": false, 
-                            "element_id": 114975616000010, 
-                            "enable": true
-                        }, 
-                        {
-                            "action_type": "IF_THEN_ELSE", 
-                            "args_list": [
-                                {
-                                    "arg_type": 100021, 
-                                    "args_list": [
-                                        {
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "STRING", 
-                                                                "表格信息_遍历英雄的品级", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 2
-                                                }, 
-                                                {
-                                                    "arg_type": 100035, 
-                                                    "args_list": [
-                                                        "=="
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "STRING", 
-                                                                "刷新的品级", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 2
-                                                }
-                                            ], 
-                                            "condition_type": "STRING_COMPARE", 
-                                            "element_id": 114975616000030, 
-                                            "enable": true
-                                        }
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100022, 
-                                    "args_list": [
-                                        {
-                                            "action_type": "SET_VARIABLE", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100030, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "STRING", 
-                                                                "表格信息_遍历英雄的名字", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100011, 
-                                                            "args_list": [], 
-                                                            "sub_type": "ITER_TABLE_TABLE_VAR"
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100003, 
-                                                            "args_list": [
-                                                                "角色名字"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "GET_STRING_TABLE_VAR_1D"
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "element_id": 114975616000040, 
-                                            "enable": true
-                                        }, 
-                                        {
-                                            "action_type": "SET_TABLE_VALUE_ND", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100011, 
-                                                    "args_list": [
-                                                        [
-                                                            "TABLE", 
-                                                            "全局表_记录英雄品级排序表"
-                                                        ], 
-                                                        {
-                                                            "arg_type": 100002, 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100025, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "PLAYER", 
-                                                                                "触发的玩家", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "VARIABLE"
-                                                                }
-                                                            ], 
-                                                            "sub_type": "PLAYER_ID_NUMBER"
-                                                        }
-                                                    ], 
-                                                    "sub_type": "VARIABLE"
-                                                }, 
-                                                {
-                                                    "arg_type": 100002, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "循环的表格i值", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 6
-                                                }, 
-                                                {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        "角色名字"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "STRING", 
-                                                                "表格信息_遍历英雄的名字", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 2
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "element_id": 114975616000072, 
-                                            "enable": true
-                                        }, 
-                                        {
-                                            "action_type": "SET_TABLE_VALUE_ND", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100011, 
-                                                    "args_list": [
-                                                        [
-                                                            "TABLE", 
-                                                            "全局表_记录英雄品级排序表"
-                                                        ], 
-                                                        {
-                                                            "arg_type": 100002, 
-                                                            "args_list": [
-                                                                {
-                                                                    "arg_type": 100025, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "PLAYER", 
-                                                                                "触发的玩家", 
-                                                                                "local"
-                                                                            ]
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "VARIABLE"
-                                                                }
-                                                            ], 
-                                                            "sub_type": "PLAYER_ID_NUMBER"
-                                                        }
-                                                    ], 
-                                                    "sub_type": "VARIABLE"
-                                                }, 
-                                                {
-                                                    "arg_type": 100002, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "循环的表格i值", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 6
-                                                }, 
-                                                {
-                                                    "arg_type": 100003, 
-                                                    "args_list": [
-                                                        "角色ID"
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100002, 
-                                                    "args_list": [], 
-                                                    "sub_type": "ITER_TABLE_KEY_INT"
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "element_id": 114975616000214, 
-                                            "enable": true
-                                        }, 
-                                        {
-                                            "action_type": "SET_VARIABLE", 
-                                            "args_list": [
-                                                {
-                                                    "arg_type": 100030, 
-                                                    "args_list": [
-                                                        {
-                                                            "__tuple__": true, 
-                                                            "items": [
-                                                                "INTEGER", 
-                                                                "循环的表格i值", 
-                                                                "local"
-                                                            ]
-                                                        }
-                                                    ], 
-                                                    "sub_type": 1
-                                                }, 
-                                                {
-                                                    "arg_type": 100002, 
-                                                    "args_list": [
-                                                        {
-                                                            "arg_type": 100002, 
-                                                            "args_list": [
-                                                                {
-                                                                    "__tuple__": true, 
-                                                                    "items": [
-                                                                        "INTEGER", 
-                                                                        "循环的表格i值", 
-                                                                        "local"
-                                                                    ]
-                                                                }
-                                                            ], 
-                                                            "sub_type": 6
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100016, 
-                                                            "args_list": [
-                                                                "+"
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }, 
-                                                        {
-                                                            "arg_type": 100002, 
-                                                            "args_list": [
-                                                                1
-                                                            ], 
-                                                            "sub_type": 1
-                                                        }
-                                                    ], 
-                                                    "sub_type": "MATH_OPERATION"
-                                                }
-                                            ], 
-                                            "bp": false, 
-                                            "element_id": 114975616000113, 
-                                            "enable": true
-                                        }
-                                    ], 
-                                    "sub_type": 1
-                                }, 
-                                {
-                                    "arg_type": 100022, 
-                                    "args_list": [], 
-                                    "sub_type": 1
-                                }
-                            ], 
-                            "bp": false, 
-                            "element_id": 114975616000021, 
-                            "enable": true, 
-                            "fake_op": []
-                        }
-                    ], 
-                    "sub_type": 1
-                }
-            ], 
-            "bp": false, 
-            "element_id": 114975616000003, 
-            "enable": true, 
-            "op_arg": [
-                {
-                    "arg_type": 100001, 
-                    "args_list": [
-                        true
-                    ], 
-                    "sub_type": 1
-                }
-            ], 
-            "op_arg_enable": [
-                true
-            ]
-        }, 
-        {
-            "action_type": "SORT_TABLE_BY", 
-            "args_list": [
-                {
-                    "arg_type": 100011, 
-                    "args_list": [
-                        [
-                            "TABLE", 
-                            "全局表_记录英雄品级排序表"
-                        ], 
-                        {
-                            "arg_type": 100002, 
-                            "args_list": [
-                                {
-                                    "arg_type": 100025, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "PLAYER", 
-                                                "触发的玩家", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": "VARIABLE"
-                                }
-                            ], 
-                            "sub_type": "PLAYER_ID_NUMBER"
-                        }
-                    ], 
-                    "sub_type": "VARIABLE"
-                }, 
-                {
-                    "arg_type": 100003, 
-                    "args_list": [
-                        "角色ID"
-                    ], 
-                    "sub_type": 1
-                }, 
-                {
-                    "arg_type": 100319, 
-                    "args_list": [
-                        0
-                    ], 
-                    "sub_type": 1
-                }
-            ], 
-            "bp": false, 
-            "element_id": 114975616000235, 
-            "enable": true, 
-            "op_arg": [
-                null
-            ], 
-            "op_arg_enable": [
-                false
-            ]
-        }, 
-        {
-            "action_type": "SORT_TABLE_BY", 
-            "args_list": [
-                {
-                    "arg_type": 100011, 
-                    "args_list": [
-                        [
-                            "TABLE", 
-                            "全局表_记录英雄品级排序表"
-                        ], 
-                        {
-                            "arg_type": 100002, 
-                            "args_list": [
-                                {
-                                    "arg_type": 100025, 
-                                    "args_list": [
-                                        {
-                                            "__tuple__": true, 
-                                            "items": [
-                                                "PLAYER", 
-                                                "触发的玩家", 
-                                                "local"
-                                            ]
-                                        }
-                                    ], 
-                                    "sub_type": "VARIABLE"
-                                }
-                            ], 
-                            "sub_type": "PLAYER_ID_NUMBER"
-                        }
-                    ], 
-                    "sub_type": "VARIABLE"
-                }, 
-                {
-                    "arg_type": 100003, 
-                    "args_list": [
-                        "解锁进度"
-                    ], 
-                    "sub_type": 1
-                }, 
-                {
-                    "arg_type": 100319, 
-                    "args_list": [
-                        0
-                    ], 
-                    "sub_type": 1
-                }
-            ], 
-            "bp": false, 
-            "element_id": 114975616000248, 
-            "enable": true, 
-            "op_arg": [
-                null
-            ], 
-            "op_arg_enable": [
-                false
-            ]
-        }, 
-        {
-            "action_type": "SET_VARIABLE", 
-            "args_list": [
-                {
-                    "arg_type": 100030, 
-                    "args_list": [
-                        {
-                            "__tuple__": true, 
-                            "items": [
-                                "INTEGER", 
-                                "循环更新显示的列表i值", 
-                                "local"
-                            ]
-                        }
-                    ], 
-                    "sub_type": 1
-                }, 
-                {
-                    "arg_type": 100002, 
-                    "args_list": [
-                        1
-                    ], 
-                    "sub_type": 1
-                }
-            ], 
-            "bp": false, 
-            "element_id": 114975616000650, 
-            "enable": true
-        }, 
-        {
             "action_type": "ITER_UI_COMP_DO", 
             "args_list": [
                 {
@@ -582,7 +20,7 @@
                 {
                     "arg_type": 100070, 
                     "args_list": [
-                        "ad6dfb73-50f4-4d2c-9596-f6dbb3e2ca62"
+                        "c5e70cc6-11f9-4617-9366-ca7f60a250c0"
                     ], 
                     "sub_type": 1
                 }, 
@@ -624,29 +62,12 @@
                                                         {
                                                             "arg_type": 100011, 
                                                             "args_list": [
-                                                                [
-                                                                    "TABLE", 
-                                                                    "全局表_记录英雄品级排序表"
-                                                                ], 
                                                                 {
-                                                                    "arg_type": 100002, 
-                                                                    "args_list": [
-                                                                        {
-                                                                            "arg_type": 100025, 
-                                                                            "args_list": [
-                                                                                {
-                                                                                    "__tuple__": true, 
-                                                                                    "items": [
-                                                                                        "PLAYER", 
-                                                                                        "触发的玩家", 
-                                                                                        "local"
-                                                                                    ]
-                                                                                }
-                                                                            ], 
-                                                                            "sub_type": "VARIABLE"
-                                                                        }
-                                                                    ], 
-                                                                    "sub_type": "PLAYER_ID_NUMBER"
+                                                                    "__tuple__": true, 
+                                                                    "items": [
+                                                                        "TABLE", 
+                                                                        "全局表_英雄品质排行"
+                                                                    ]
                                                                 }
                                                             ], 
                                                             "sub_type": "VARIABLE"
@@ -656,7 +77,7 @@
                                                 }
                                             ], 
                                             "condition_type": "FLOAT_COMPARE", 
-                                            "element_id": 114975616000714, 
+                                            "element_id": 902988690000499, 
                                             "enable": true
                                         }
                                     ], 
@@ -696,7 +117,7 @@
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 114975616000599, 
+                                            "element_id": 902988690000500, 
                                             "enable": true
                                         }, 
                                         {
@@ -761,7 +182,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000275, 
+                                                            "element_id": 902988690000501, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -815,7 +236,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000289, 
+                                                            "element_id": 902988690000502, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -869,7 +290,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000298, 
+                                                            "element_id": 902988690000503, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -923,7 +344,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000315, 
+                                                            "element_id": 902988690000504, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -1004,7 +425,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000333, 
+                                                            "element_id": 902988690000505, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -1085,7 +506,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000354, 
+                                                            "element_id": 902988690000506, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -1139,7 +560,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000377, 
+                                                            "element_id": 902988690000507, 
                                                             "enable": true
                                                         }
                                                     ], 
@@ -1159,7 +580,7 @@
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 114975616000401, 
+                                            "element_id": 902988690000508, 
                                             "enable": true
                                         }, 
                                         {
@@ -1220,29 +641,12 @@
                                                                                 {
                                                                                     "arg_type": 100011, 
                                                                                     "args_list": [
-                                                                                        [
-                                                                                            "TABLE", 
-                                                                                            "全局表_记录英雄品级排序表"
-                                                                                        ], 
                                                                                         {
-                                                                                            "arg_type": 100002, 
-                                                                                            "args_list": [
-                                                                                                {
-                                                                                                    "arg_type": 100025, 
-                                                                                                    "args_list": [
-                                                                                                        {
-                                                                                                            "__tuple__": true, 
-                                                                                                            "items": [
-                                                                                                                "PLAYER", 
-                                                                                                                "触发的玩家", 
-                                                                                                                "local"
-                                                                                                            ]
-                                                                                                        }
-                                                                                                    ], 
-                                                                                                    "sub_type": "VARIABLE"
-                                                                                                }
-                                                                                            ], 
-                                                                                            "sub_type": "PLAYER_ID_NUMBER"
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "TABLE", 
+                                                                                                "全局表_英雄品质排行"
+                                                                                            ]
                                                                                         }
                                                                                     ], 
                                                                                     "sub_type": "VARIABLE"
@@ -1283,7 +687,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000414, 
+                                                            "element_id": 902988690000509, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -1343,29 +747,12 @@
                                                                                         {
                                                                                             "arg_type": 100011, 
                                                                                             "args_list": [
-                                                                                                [
-                                                                                                    "TABLE", 
-                                                                                                    "全局表_记录英雄品级排序表"
-                                                                                                ], 
                                                                                                 {
-                                                                                                    "arg_type": 100002, 
-                                                                                                    "args_list": [
-                                                                                                        {
-                                                                                                            "arg_type": 100025, 
-                                                                                                            "args_list": [
-                                                                                                                {
-                                                                                                                    "__tuple__": true, 
-                                                                                                                    "items": [
-                                                                                                                        "PLAYER", 
-                                                                                                                        "触发的玩家", 
-                                                                                                                        "local"
-                                                                                                                    ]
-                                                                                                                }
-                                                                                                            ], 
-                                                                                                            "sub_type": "VARIABLE"
-                                                                                                        }
-                                                                                                    ], 
-                                                                                                    "sub_type": "PLAYER_ID_NUMBER"
+                                                                                                    "__tuple__": true, 
+                                                                                                    "items": [
+                                                                                                        "TABLE", 
+                                                                                                        "全局表_英雄品质排行"
+                                                                                                    ]
                                                                                                 }
                                                                                             ], 
                                                                                             "sub_type": "VARIABLE"
@@ -1423,7 +810,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000432, 
+                                                            "element_id": 902988690000510, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -1463,29 +850,12 @@
                                                                         {
                                                                             "arg_type": 100011, 
                                                                             "args_list": [
-                                                                                [
-                                                                                    "TABLE", 
-                                                                                    "全局表_记录英雄品级排序表"
-                                                                                ], 
                                                                                 {
-                                                                                    "arg_type": 100002, 
-                                                                                    "args_list": [
-                                                                                        {
-                                                                                            "arg_type": 100025, 
-                                                                                            "args_list": [
-                                                                                                {
-                                                                                                    "__tuple__": true, 
-                                                                                                    "items": [
-                                                                                                        "PLAYER", 
-                                                                                                        "触发的玩家", 
-                                                                                                        "local"
-                                                                                                    ]
-                                                                                                }
-                                                                                            ], 
-                                                                                            "sub_type": "VARIABLE"
-                                                                                        }
-                                                                                    ], 
-                                                                                    "sub_type": "PLAYER_ID_NUMBER"
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "TABLE", 
+                                                                                        "全局表_英雄品质排行"
+                                                                                    ]
                                                                                 }
                                                                             ], 
                                                                             "sub_type": "VARIABLE"
@@ -1516,7 +886,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000454, 
+                                                            "element_id": 902988690000511, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -1566,29 +936,12 @@
                                                                                 {
                                                                                     "arg_type": 100011, 
                                                                                     "args_list": [
-                                                                                        [
-                                                                                            "TABLE", 
-                                                                                            "全局表_记录英雄品级排序表"
-                                                                                        ], 
                                                                                         {
-                                                                                            "arg_type": 100002, 
-                                                                                            "args_list": [
-                                                                                                {
-                                                                                                    "arg_type": 100025, 
-                                                                                                    "args_list": [
-                                                                                                        {
-                                                                                                            "__tuple__": true, 
-                                                                                                            "items": [
-                                                                                                                "PLAYER", 
-                                                                                                                "触发的玩家", 
-                                                                                                                "local"
-                                                                                                            ]
-                                                                                                        }
-                                                                                                    ], 
-                                                                                                    "sub_type": "VARIABLE"
-                                                                                                }
-                                                                                            ], 
-                                                                                            "sub_type": "PLAYER_ID_NUMBER"
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "TABLE", 
+                                                                                                "全局表_英雄品质排行"
+                                                                                            ]
                                                                                         }
                                                                                     ], 
                                                                                     "sub_type": "VARIABLE"
@@ -1629,7 +982,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000460, 
+                                                            "element_id": 902988690000512, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -1677,15 +1030,41 @@
                                                                             "arg_type": 100003, 
                                                                             "args_list": [
                                                                                 {
-                                                                                    "__tuple__": true, 
-                                                                                    "items": [
-                                                                                        "STRING", 
-                                                                                        "刷新的品级", 
-                                                                                        "local"
-                                                                                    ]
+                                                                                    "arg_type": 100011, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "TABLE", 
+                                                                                                "全局表_英雄品质排行"
+                                                                                            ]
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "VARIABLE"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100002, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "INTEGER", 
+                                                                                                "循环更新显示的列表i值", 
+                                                                                                "local"
+                                                                                            ]
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": 6
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100003, 
+                                                                                    "args_list": [
+                                                                                        "角色品级"
+                                                                                    ], 
+                                                                                    "sub_type": 1
                                                                                 }
                                                                             ], 
-                                                                            "sub_type": 2
+                                                                            "sub_type": "GET_STRING_TABLE_VAR_ND"
                                                                         }, 
                                                                         {
                                                                             "arg_type": 100003, 
@@ -1699,7 +1078,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000464, 
+                                                            "element_id": 902988690000513, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -1737,19 +1116,45 @@
                                                                     "arg_type": 100003, 
                                                                     "args_list": [
                                                                         {
-                                                                            "__tuple__": true, 
-                                                                            "items": [
-                                                                                "STRING", 
-                                                                                "刷新的品级", 
-                                                                                "local"
-                                                                            ]
+                                                                            "arg_type": 100011, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "TABLE", 
+                                                                                        "全局表_英雄品质排行"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": "VARIABLE"
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100002, 
+                                                                            "args_list": [
+                                                                                {
+                                                                                    "__tuple__": true, 
+                                                                                    "items": [
+                                                                                        "INTEGER", 
+                                                                                        "循环更新显示的列表i值", 
+                                                                                        "local"
+                                                                                    ]
+                                                                                }
+                                                                            ], 
+                                                                            "sub_type": 6
+                                                                        }, 
+                                                                        {
+                                                                            "arg_type": 100003, 
+                                                                            "args_list": [
+                                                                                "角色品级"
+                                                                            ], 
+                                                                            "sub_type": 1
                                                                         }
                                                                     ], 
-                                                                    "sub_type": 2
+                                                                    "sub_type": "GET_STRING_TABLE_VAR_ND"
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000485, 
+                                                            "element_id": 902988690000514, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -1797,15 +1202,41 @@
                                                                             "arg_type": 100003, 
                                                                             "args_list": [
                                                                                 {
-                                                                                    "__tuple__": true, 
-                                                                                    "items": [
-                                                                                        "STRING", 
-                                                                                        "刷新的品级", 
-                                                                                        "local"
-                                                                                    ]
+                                                                                    "arg_type": 100011, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "TABLE", 
+                                                                                                "全局表_英雄品质排行"
+                                                                                            ]
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": "VARIABLE"
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100002, 
+                                                                                    "args_list": [
+                                                                                        {
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "INTEGER", 
+                                                                                                "循环更新显示的列表i值", 
+                                                                                                "local"
+                                                                                            ]
+                                                                                        }
+                                                                                    ], 
+                                                                                    "sub_type": 6
+                                                                                }, 
+                                                                                {
+                                                                                    "arg_type": 100003, 
+                                                                                    "args_list": [
+                                                                                        "角色品级"
+                                                                                    ], 
+                                                                                    "sub_type": 1
                                                                                 }
                                                                             ], 
-                                                                            "sub_type": 2
+                                                                            "sub_type": "GET_STRING_TABLE_VAR_ND"
                                                                         }, 
                                                                         {
                                                                             "arg_type": 100003, 
@@ -1826,7 +1257,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000491, 
+                                                            "element_id": 902988690000515, 
                                                             "enable": true
                                                         }, 
                                                         {
@@ -1862,29 +1293,12 @@
                                                                                 {
                                                                                     "arg_type": 100011, 
                                                                                     "args_list": [
-                                                                                        [
-                                                                                            "TABLE", 
-                                                                                            "全局表_记录英雄品级排序表"
-                                                                                        ], 
                                                                                         {
-                                                                                            "arg_type": 100002, 
-                                                                                            "args_list": [
-                                                                                                {
-                                                                                                    "arg_type": 100025, 
-                                                                                                    "args_list": [
-                                                                                                        {
-                                                                                                            "__tuple__": true, 
-                                                                                                            "items": [
-                                                                                                                "PLAYER", 
-                                                                                                                "触发的玩家", 
-                                                                                                                "local"
-                                                                                                            ]
-                                                                                                        }
-                                                                                                    ], 
-                                                                                                    "sub_type": "VARIABLE"
-                                                                                                }
-                                                                                            ], 
-                                                                                            "sub_type": "PLAYER_ID_NUMBER"
+                                                                                            "__tuple__": true, 
+                                                                                            "items": [
+                                                                                                "TABLE", 
+                                                                                                "全局表_英雄品质排行"
+                                                                                            ]
                                                                                         }
                                                                                     ], 
                                                                                     "sub_type": "VARIABLE"
@@ -1986,7 +1400,7 @@
                                                                                                 }
                                                                                             ], 
                                                                                             "bp": false, 
-                                                                                            "element_id": 114975616000804, 
+                                                                                            "element_id": 902988690000598, 
                                                                                             "enable": true
                                                                                         }
                                                                                     ], 
@@ -1994,7 +1408,7 @@
                                                                                 }
                                                                             ], 
                                                                             "bp": false, 
-                                                                            "element_id": 114975616000805, 
+                                                                            "element_id": 902988690000517, 
                                                                             "enable": true
                                                                         }, 
                                                                         {
@@ -2050,7 +1464,7 @@
                                                                                                 }
                                                                                             ], 
                                                                                             "bp": false, 
-                                                                                            "element_id": 114975616000806, 
+                                                                                            "element_id": 902988690000602, 
                                                                                             "enable": true
                                                                                         }
                                                                                     ], 
@@ -2058,7 +1472,7 @@
                                                                                 }
                                                                             ], 
                                                                             "bp": false, 
-                                                                            "element_id": 114975616000807, 
+                                                                            "element_id": 902988690000519, 
                                                                             "enable": true
                                                                         }
                                                                     ], 
@@ -2066,7 +1480,7 @@
                                                                 }
                                                             ], 
                                                             "bp": false, 
-                                                            "element_id": 114975616000540, 
+                                                            "element_id": 902988690000520, 
                                                             "enable": true
                                                         }
                                                     ], 
@@ -2086,7 +1500,7 @@
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 114975616000404, 
+                                            "element_id": 902988690000521, 
                                             "enable": true
                                         }
                                     ], 
@@ -2126,7 +1540,7 @@
                                                 }
                                             ], 
                                             "bp": false, 
-                                            "element_id": 114975616000608, 
+                                            "element_id": 902988690000522, 
                                             "enable": true
                                         }
                                     ], 
@@ -2134,7 +1548,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 114975616000581, 
+                            "element_id": 902988690000523, 
                             "enable": true, 
                             "fake_op": [
                                 2
@@ -2193,7 +1607,7 @@
                                 }
                             ], 
                             "bp": false, 
-                            "element_id": 114975616000262, 
+                            "element_id": 902988690000524, 
                             "enable": true
                         }
                     ], 
@@ -2211,17 +1625,10 @@
     "event": [], 
     "func_category": "t_function", 
     "func_comment": "", 
-    "func_des": "品级：{刷新的品级}，玩家：{触发的玩家}", 
-    "func_id": "a5ef01f4899111f095fe2d78f1fa9252", 
-    "func_name": "英雄升级ui - 刷新选择列表", 
+    "func_des": "玩家：{触发的玩家}", 
+    "func_id": "fbbf1b25985011f0b4de51ae4843fd8a", 
+    "func_name": "局外备战ui - 刷新列表", 
     "func_param_list": [
-        {
-            "__tuple__": true, 
-            "items": [
-                "刷新的品级", 
-                true
-            ]
-        }, 
         {
             "__tuple__": true, 
             "items": [
@@ -2230,12 +1637,12 @@
             ]
         }
     ], 
-    "group_id": "ov37HImREfCR9C148fqSUj", 
+    "group_id": "95sWFphQEfCv4VGuSEP9iv", 
     "is_func": true, 
     "is_official_func": false, 
     "p_trigger_id": null, 
-    "trigger_id": 114975616, 
-    "trigger_name": "英雄升级ui - 刷新选择列表", 
+    "trigger_id": 902988690, 
+    "trigger_name": "局外备战ui - 刷新列表", 
     "valid": true, 
     "var_data": [
         {
@@ -2243,15 +1650,10 @@
                 "循环更新显示的列表i值": 1, 
                 "循环的表格i值": 1
             }, 
-            "NEW_TIMER": {}, 
             "PLAYER": {
                 "触发的玩家": 0
             }, 
-            "STRING": {
-                "刷新的品级": "", 
-                "表格信息_遍历英雄的名字": "", 
-                "表格信息_遍历英雄的品级": ""
-            }, 
+            "STRING": {}, 
             "UI_COMP": {
                 "UI_主属性类型名": "", 
                 "UI_主属性颜色框": "", 
@@ -2270,18 +1672,12 @@
             "UI_英雄品级文本": 0, 
             "UI_英雄品级背景": 0, 
             "UI_英雄头像": 0, 
-            "刷新的品级": 0, 
             "循环更新显示的列表i值": 0, 
             "循环的表格i值": 0, 
-            "表格信息_遍历英雄的名字": 0, 
-            "表格信息_遍历英雄的品级": 0, 
             "触发的玩家": 0
         }, 
         [
-            "表格信息_遍历英雄的品级", 
-            "表格信息_遍历英雄的名字", 
-            "循环的表格i值", 
-            "循环更新显示的列表i值", 
+            "触发的玩家", 
             "UI_英雄头像", 
             "UI_主属性颜色框", 
             "UI_英雄名", 
@@ -2289,8 +1685,8 @@
             "UI_英雄品级背景", 
             "UI_英雄品级文本", 
             "UI_未解锁组件", 
-            "刷新的品级", 
-            "触发的玩家"
+            "循环更新显示的列表i值", 
+            "循环的表格i值"
         ]
     ]
 }
