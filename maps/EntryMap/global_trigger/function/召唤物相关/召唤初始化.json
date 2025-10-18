@@ -1,41 +1,12 @@
 {
     "action": [
         {
-            "action_type": "SET_VARIABLE", 
+            "action_type": "IF_THEN_ELSE", 
             "args_list": [
                 {
-                    "arg_type": 100006, 
+                    "arg_type": 100021, 
                     "args_list": [
                         {
-                            "__tuple__": true, 
-                            "items": [
-                                "UNIT_ENTITY", 
-                                "仆从", 
-                                "local"
-                            ]
-                        }
-                    ], 
-                    "sub_type": 11
-                }, 
-                {
-                    "arg_type": 100006, 
-                    "args_list": [
-                        {
-                            "arg_type": 100116, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "UNIT_NAME", 
-                                        "仆从单位类型", 
-                                        "local"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": 2
-                        }, 
-                        {
-                            "arg_type": 100004, 
                             "args_list": [
                                 {
                                     "arg_type": 100006, 
@@ -44,7 +15,61 @@
                                             "__tuple__": true, 
                                             "items": [
                                                 "UNIT_ENTITY", 
-                                                "主人单位", 
+                                                "是否传入现有单位", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 11
+                                }, 
+                                {
+                                    "arg_type": 100035, 
+                                    "args_list": [
+                                        "!="
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [], 
+                                    "sub_type": "NONE_UNIT"
+                                }
+                            ], 
+                            "condition_type": "UNIT_COMPARE", 
+                            "element_id": 994636404230952, 
+                            "enable": true
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "SET_VARIABLE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "UNIT_ENTITY", 
+                                                "仆从", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 11
+                                }, 
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "UNIT_ENTITY", 
+                                                "是否传入现有单位", 
                                                 "local"
                                             ]
                                         }
@@ -52,48 +77,121 @@
                                     "sub_type": 11
                                 }
                             ], 
-                            "sub_type": "UNIT_ENTITY_POINT"
-                        }, 
-                        {
-                            "arg_type": 100225, 
-                            "args_list": [
-                                {
-                                    "arg_type": 100000, 
-                                    "args_list": [
-                                        180.0
-                                    ], 
-                                    "sub_type": 1
-                                }
-                            ], 
-                            "sub_type": "GET_ANGLE_BY_FLOAT"
-                        }, 
-                        {
-                            "arg_type": 100006, 
-                            "args_list": [
-                                {
-                                    "__tuple__": true, 
-                                    "items": [
-                                        "UNIT_ENTITY", 
-                                        "主人单位", 
-                                        "local"
-                                    ]
-                                }
-                            ], 
-                            "sub_type": 11
+                            "bp": false, 
+                            "element_id": 994636404230963, 
+                            "enable": true
                         }
                     ], 
-                    "op_arg": [
-                        null
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "SET_VARIABLE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "UNIT_ENTITY", 
+                                                "仆从", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 11
+                                }, 
+                                {
+                                    "arg_type": 100006, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100116, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "UNIT_NAME", 
+                                                        "仆从单位类型", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 2
+                                        }, 
+                                        {
+                                            "arg_type": 100004, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100006, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "UNIT_ENTITY", 
+                                                                "主人单位", 
+                                                                "local"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 11
+                                                }
+                                            ], 
+                                            "sub_type": "UNIT_ENTITY_POINT"
+                                        }, 
+                                        {
+                                            "arg_type": 100225, 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100000, 
+                                                    "args_list": [
+                                                        180.0
+                                                    ], 
+                                                    "sub_type": 1
+                                                }
+                                            ], 
+                                            "sub_type": "GET_ANGLE_BY_FLOAT"
+                                        }, 
+                                        {
+                                            "arg_type": 100006, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "UNIT_ENTITY", 
+                                                        "主人单位", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 11
+                                        }
+                                    ], 
+                                    "op_arg": [
+                                        null
+                                    ], 
+                                    "op_arg_enable": [
+                                        false
+                                    ], 
+                                    "sub_type": "CREATE_UNIT_NEW"
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 994636404000002, 
+                            "enable": true
+                        }
                     ], 
-                    "op_arg_enable": [
-                        false
-                    ], 
-                    "sub_type": "CREATE_UNIT_NEW"
+                    "sub_type": 1
                 }
             ], 
             "bp": false, 
-            "element_id": 994636404000002, 
-            "enable": true
+            "element_id": 994636404230943, 
+            "enable": true, 
+            "fake_op": [
+                2
+            ]
         }, 
         {
             "action_type": "SET_ENTITY_KV", 
@@ -518,6 +616,13 @@
                 "仆从AI类型", 
                 true
             ]
+        }, 
+        {
+            "__tuple__": true, 
+            "items": [
+                "是否传入现有单位", 
+                false
+            ]
         }
     ], 
     "group_id": "VIhbN0ezEfCKVDMfH0tjAu", 
@@ -538,7 +643,8 @@
             }, 
             "UNIT_ENTITY": {
                 "主人单位": 0, 
-                "仆从": 0
+                "仆从": 0, 
+                "是否传入现有单位": 0
             }, 
             "UNIT_NAME": {
                 "仆从单位类型": 0
@@ -549,14 +655,16 @@
             "仆从": 0, 
             "仆从AI类型": 0, 
             "仆从单位类型": 0, 
-            "仆从持续时间/S": 0
+            "仆从持续时间/S": 0, 
+            "是否传入现有单位": 0
         }, 
         [
             "主人单位", 
             "仆从单位类型", 
             "仆从持续时间/S", 
             "仆从", 
-            "仆从AI类型"
+            "仆从AI类型", 
+            "是否传入现有单位"
         ]
     ]
 }
